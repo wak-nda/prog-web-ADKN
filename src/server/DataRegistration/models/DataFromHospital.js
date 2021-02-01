@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import  mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 let DataFromHospitalSchema = new Schema({
@@ -34,5 +34,5 @@ let DataFromHospitalSchema = new Schema({
 
 
 mongoose.model('datafromhospital', DataFromHospitalSchema);
-const DataFromHospital2 = mongoose.model('datafromhospital');
-export const DataFromHospital = DataFromHospital2;
+const DataFromHospital = mongoose.model('datafromhospital');
+export {DataFromHospital} ;
