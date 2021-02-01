@@ -1,24 +1,47 @@
 // import getCSV from 'get-csv';
 import  parse  from 'csv-parse';
 import * as assert  from 'assert'
-const output = []
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 
 
 const loadFile = async (filePath) => {
+    const output = []
+    const headers = [];
+
+    const fileContent = await fs.readFileSync(path.resolve( __dirname,"../data/donnees-hospitalieres.csv"));
     const parser = parse({
         delimiter: ';'
     })
 
     parser.on('readable', function(){
         let record
+        let index = 0;
         while (record = parser.read()) {
-            output.push(record)
+            if (index=== 0){
+                headers.push(record)
+            }
+            else{
+                output.push(record);
+            }
+
+            index++;
         }
+
     })
 
     parser.on('end', function(){
-        console.table(output);
+        return {headers, output};
     })
+
+    parser.write(fileContent);
+    console.table(headers);
+    parser.end();
+
 }
 
 export const loadFileCSV = loadFile;
