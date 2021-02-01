@@ -1,6 +1,6 @@
 import Koa from 'koa';
 import cors from '@koa/cors';
-import bodyParser  from 'koa-bodyparser';
+import bodyParser from 'koa-bodyparser';
 
 import logger from 'koa-logger';
 
@@ -16,8 +16,20 @@ const filePath = "https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1
 // app.use(logger());
 // app.use(cors({origin: '*', exposeHeaders: '*'}));
 
+// (async () => {
+//     try {
+//         await mongoose.connect(`mongodb+srv://${configDB.userName}:${configDB.password}@${configDB.host}/${configDB.name}?retryWrites=true&w=majority`, {
+//             useNewUrlParser: true,
+//             useCreateIndex: true
+//         });
+//         mongoose.set('debug', true);
+//
+//     } catch (e) {
+//     }
+// })();
 
-
+mongoose.connect(`mongodb+srv://${configDB.userName}:${configDB.password}@${configDB.host}/${configDB.name}?retryWrites=true&w=majority`, {poolSize: 10, bufferMaxEntries: 0, reconnectTries: 5000, useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.set('debug', true);
 
 (async () => {
     try {
@@ -27,16 +39,7 @@ const filePath = "https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1
     } catch (e) {
         console.error(e);
     }
-
-
 })();
-
-mongoose.connect(`mongodb+srv://${configDB.userName}:${configDB.password}@${configDB.host}/${configDB.name}?retryWrites=true&w=majority`, {
-    useNewUrlParser: true,
-    useCreateIndex: true
-});
-
-mongoose.set('debug', true);
 
 
 // start();
