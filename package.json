@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "newback",
   "version": "1.0.0",
   "description": "",
@@ -15,6 +16,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "csv-parse": "^4.15.0",
     "koa-logger": "^3.2.1",
     "mocha": "^7.2.0"
   },
