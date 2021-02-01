@@ -7,8 +7,8 @@
     "test": "mocha test/ -R spec --recursive --exit"
   },
   "config": {
-    "app": "localhost",
-    },
+    "app": "localhost"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
