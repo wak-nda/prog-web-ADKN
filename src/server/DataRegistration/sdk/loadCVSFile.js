@@ -23,13 +23,13 @@ const loadFile = async (filePath) => {
     parser.on('readable', async function(){
         let record
         let index = 0;
-        while (record = parser.read()) {
+        while (record = parser.read() ) {
             if (index=== 0){
                 headers.push(record)
             }
             else{
                 output.push(record);
-                await  addDataFromHospital(output[0],output[1],output[2],output[3],output[4],output[5],output[6])
+                await  addDataFromHospital(record[0],record[1],record[2],record[3],record[4],record[5],record[6]);
             }
             index++;
         }
