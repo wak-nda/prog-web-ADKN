@@ -12,18 +12,24 @@ const app = new Koa();
 const PORT = 9000;
 const filePath = "https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7";
 
-app.use(bodyParser());
-app.use(logger());
-app.use(cors({origin: '*', exposeHeaders: '*'}));
+// app.use(bodyParser());
+// app.use(logger());
+// app.use(cors({origin: '*', exposeHeaders: '*'}));
 
 
 
 
-const server = app.listen(PORT, () => {
-    loadFileCSV(filePath);
-    console.log(`Server listening on port: ${PORT}`);
+(async () => {
+    try {
+        console.log(`Updating`);
+        const results = await loadFileCSV(filePath);
+        //console.table(results)
+    } catch (e) {
+        console.error(e);
+    }
 
-});
+
+})();
 
 mongoose.connect(`mongodb+srv://${configDB.userName}:${configDB.password}@${configDB.host}/${configDB.name}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
@@ -33,4 +39,4 @@ mongoose.connect(`mongodb+srv://${configDB.userName}:${configDB.password}@${conf
 mongoose.set('debug', true);
 
 
-export const serverApp = server  ;
+// start();

@@ -5,6 +5,7 @@
   "description": "",
   "scripts": {
     "start": "node app.js",
+    "doUpdate": "node update.js",
     "test": "mocha test/ -R spec --recursive --exit"
   },
   "config": {
