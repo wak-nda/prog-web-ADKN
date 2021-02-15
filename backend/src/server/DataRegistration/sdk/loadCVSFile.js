@@ -38,14 +38,14 @@ const loadFile = async (filePath) => {
             })
 
             parser.on('end',  async function(){
-                //return {headers, output};
+
                 resolve({headers, output});
             })
 
             parser.write(fileContent);
             parser.end();
 
-            //console.table(headers);
+
         })
     )
 }
