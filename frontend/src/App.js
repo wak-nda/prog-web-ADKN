@@ -14,7 +14,7 @@ import { ThemeContext } from './context/ThemeContext';
 import { HistoryContextProvider } from './context/HistoryContext';
 import './App.scss';
 import { Login } from './pages/Login';
-import { CovidTracker } from './pages/CovidTracker';
+import { CovidTracker } from './pages/CovidTracker/CovidTracker';
 
 const App = () => {
 	const [theme, setTheme] = useState();
