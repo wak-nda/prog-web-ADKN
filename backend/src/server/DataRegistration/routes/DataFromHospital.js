@@ -1,27 +1,31 @@
-// const Router = require('koa-router');
-// const router = new Router();
-// const f = require('../../utils/functions');
-// const customerRegistrationSdk = require('../sdk/customerRegistration');
-// const customerFinderSdk = require('../sdk/customerFinder');
+import  KoaRouter  from 'koa-router';
+const DataFromHospitalRouter= new KoaRouter();
+import * as f from '../../utils/functions.js';
 // var jwt = require('jsonwebtoken');
 // var crypto = require('crypto');
+import * as DataFromHospital from '../sdk/DataFromHospital.js';
 // const KEY = "m yincredibl y(!!1!11!)<'SECRET>)Key'!";
 // const PUBLIC_VAPID = 'BNOJyTgwrEwK9lbetRcougxkRgLpPs1DX0YCfA5ZzXu4z9p_Et5EnvMja7MGfCqyFCY4FnFnJVICM4bMUcnrxWg';
 // const PRIVATE_VAPID = '_kRzHiscHBIGftfA7IehH9EA3RvBl8SBYhXBAMz6GrI';
 // const webpush = require('web-push');
 // webpush.setVapidDetails('mailto:you@domain.com', PUBLIC_VAPID, PRIVATE_VAPID);
-//
-//
-// /**
-//  * Récupérer la liste de tous les utilisateurs
-//  * @author Paul Marie
-//  * @name Route : Récupération de la liste de tous les utilisateurs
-//  */
-// router.get('/api/getUsers', async (ctx) => {
-//     const users = await customerFinderSdk.getUsers();
-//     f.success(ctx, users);
-// });
-//
+
+
+/**
+ * Récupérer toutes les données hospitalières
+ * @author Paul Marie
+ * @name Route : Récupération de la liste de tous les utilisateurs
+ */
+DataFromHospitalRouter.get('/api/getDataFromHospitals', async (ctx) => {
+    const data = await DataFromHospital.getDataFromHospital();
+    f.success(ctx, data);
+});
+
+
+DataFromHospitalRouter.get('/api/getDataFromHospitalAfterDate/:date', async (ctx) => {
+    const data = await DataFromHospital.getDataFromHospitalAfterDate(ctx.params.date);
+    f.success(ctx, data);
+});
 // /**
 //  * Recherche d'un utilisateur précis
 //  * @author Paul Marie
@@ -177,6 +181,5 @@
 // router.post('/api/user/sign', async (ctx) => {
 //
 // });
-//
-//
-// module.exports = router;
+
+export const dataFromHospital =DataFromHospitalRouter;

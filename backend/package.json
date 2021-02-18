@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "doUpdate": "node update.js",
-    "test": "mocha test/ -R spec --recursive --exit"
+    "test": "mocha test/ -R spec --recursive --exit",
+    "dev": "./node_modules/.bin/nodemon app/index.js"
   },
   "config": {
     "app": "localhost"
@@ -32,6 +33,7 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "mongoose": "^5.8.6",
-    "multer": "^1.4.2"
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7"
   }
 }
