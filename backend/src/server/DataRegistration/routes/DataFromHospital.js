@@ -21,6 +21,11 @@ DataFromHospitalRouter.get('/api/getDataFromHospitals', async (ctx) => {
     f.success(ctx, data);
 });
 
+
+DataFromHospitalRouter.get('/api/getDataFromHospitalAfterDate/:date', async (ctx) => {
+    const data = await DataFromHospital.getDataFromHospitalAfterDate(ctx.params.date);
+    f.success(ctx, data);
+});
 // /**
 //  * Recherche d'un utilisateur précis
 //  * @author Paul Marie

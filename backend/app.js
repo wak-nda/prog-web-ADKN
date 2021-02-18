@@ -16,7 +16,7 @@ const filePath = "https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1
 
 app.use(bodyParser());
 app.use(logger());
-app.use(dataFromHospital.routes);
+app.use(dataFromHospital.routes());
 app.use(cors({origin: '*', exposeHeaders: '*'}));
 
 
