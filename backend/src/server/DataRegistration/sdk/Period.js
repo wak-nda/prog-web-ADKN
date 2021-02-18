@@ -3,7 +3,7 @@
  * @version 0.1
  */
 
-import { PeriodSchema } from '../models/Period';
+import { PeriodSchema } from '../models/Period.js';
 
 
 /*************************************************************************************************
