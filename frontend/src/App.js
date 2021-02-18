@@ -6,7 +6,6 @@ import {
 	Route,
 } from 'react-router-dom';
 
-import { Home } from './pages/Home';
 import { Covid19Map } from './pages/Covid-19Map';
 import { Itunes } from './pages/Itunes';
 import { Error404 } from './pages/Error404';
@@ -14,6 +13,7 @@ import useLocalStorage from './lib/useLocalStorage';
 import { ThemeContext } from './context/ThemeContext';
 import { HistoryContextProvider } from './context/HistoryContext';
 import './App.scss';
+import { Login } from './pages/Login';
 
 const App = () => {
 	const [theme, setTheme] = useState();
@@ -44,7 +44,7 @@ const App = () => {
 							<Itunes />
 						</Route>
 						<Route exact path="/">
-							<Home />
+							<Login />
 						</Route>
 						<Route path="*">
 							<Error404 />
