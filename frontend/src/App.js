@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
+
 import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
 } from 'react-router-dom';
 
+import { Covid19Map } from './pages/Covid-19Map';
 import { Itunes } from './pages/Itunes';
 import { Error404 } from './pages/Error404';
 import useLocalStorage from './lib/useLocalStorage';
@@ -32,6 +34,9 @@ const App = () => {
 			<HistoryContextProvider>
 				<Router>
 					<Switch>
+						<Route path="/covid-19-map">
+							<Covid19Map />
+						</Route>
 						<Route path={[
 							'/itunes/:search',
 							'/itunes',
