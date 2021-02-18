@@ -29,6 +29,23 @@ async function getDataFromHospital(){
     return DataFromHospital.find();
 }
 
+async function getTotalData(){
+    let numberOfHospitalized = 0;
+    let numberOfPeopleInRea = 0;
+    let numberOfDeaths = 0;
+    let numberOfRecovered = 0;
+    let lastUpdateDate = "";
+    const hospitalDataFromDatabase = await DataFromHospital.find();
+    for (let data of hospitalDataFromDatabase){
+        numberOfHospitalized += data['hosp'];
+        numberOfPeopleInRea += data['rea'];
+        numberOfDeaths += data['dc'];
+        numberOfRecovered += data['rad'];
+        lastUpdateDate = data['jour']
+    }
+    return {'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate};
+}
+
 async function getDataFromHospitalAfterDate(date){
     console.log(date);
     const dateToCompare= Date.parse(date);
@@ -92,4 +109,4 @@ async function getDataFromHospitalInPeriod(startDate, endDate){
       return dataInPeriod;
 }
 
-export { addDataFromHospital, getDataFromHospital, getDataFromHospitalBeforeDate, getDataFromHospitalInPeriod, getDataFromHospitalAfterDate }
+export { addDataFromHospital, getDataFromHospital, getDataFromHospitalBeforeDate, getDataFromHospitalInPeriod, getDataFromHospitalAfterDate, getTotalData }
