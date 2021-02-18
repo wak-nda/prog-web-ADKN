@@ -16,7 +16,7 @@ import { TrackSearch } from '../components/Track/Search';
 import { TrackDetails } from '../components/Track/Details';
 import { ThemeContext } from '../context/ThemeContext';
 
-import './Itunes.scss';
+import '../css/Itunes.scss';
 import { ADD_TO_HISTORY, HistoryContext } from '../context/HistoryContext';
 
 export const Itunes = () => {
