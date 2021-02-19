@@ -13,13 +13,7 @@ const KEY = "m yincredibl y(!!1!11!)<'SECRET>)Key'!";
  * @route {POST} paulkoffi.com:3000/api/login
  */
 router.post('/api/user', async (ctx) => {
-    console.log('ici');
-    console.log(ctx.request.body.mail);
-
-    console.log(ctx.request.body.password);
     var password = crypto.createHash('sha256').update(ctx.request.body.password).digest('hex');
-    console.log('ici');
-
     const user = await Users.getUserByEmailAndPassword(ctx.request.body.mail, password);
     console.log('ici');
 
@@ -34,8 +28,7 @@ router.post('/api/user', async (ctx) => {
         var token = jwt.sign(payload, KEY, {algorithm: 'HS256', expiresIn: "15d"});
         const response =
             {
-                "firstName": user.firstName,
-                "lastName": user.lastName,
+                "name": user.firstName + user.lastName,
                 "token": token,
                 "res" : true
             }

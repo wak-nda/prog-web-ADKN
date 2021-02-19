@@ -7,14 +7,18 @@ import { faUserSecret, faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// import AuthHelperMethods from '../services/AuthHelperMethods';
+import AuthHelperMethods from '../services/AuthHelperMethods';
 import { login } from '../services/Login';
-// import {fetchItunesSongs} from "../lib/fetchItunesSongs";
 
 export const Login = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const history = useHistory();
+	const Auth = new AuthHelperMethods();
+
+	if (!Auth.loggedIn()) {
+		history.push('/home');
+	}
 
 	function validateForm() {
 		return email.length > 0 && password.length > 0;
@@ -25,7 +29,7 @@ export const Login = () => {
 		const response = await login(email, password);
 
 		// console.table(...response.data);
-		console.log(response.data.res);
+		// console.log(response.data.res);
 		if (response.data.res) {
 			history.push('/home');
 		} else {

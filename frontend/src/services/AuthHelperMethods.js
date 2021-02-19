@@ -3,27 +3,13 @@ import decode from 'jwt-decode';
 export default class AuthHelperMethods {
 	// Initializing important variables
 
-	login = (username, password) => {
-		this.fetch('http://localhost:9000/api/user', {
-			method: 'POST',
-			body: JSON.stringify({
-				mail: username,
-				password: password
-			})
-		}).then(res => {
-			console.log('ici');
-			if (res.res) {
-				this.setToken(res.token);// Setting the token in localStorage
-			}
-			return Promise.resolve(res);
-		});
-	};
-
-
 	loggedIn = () => {
 		// Checks if there is a saved token and it's still valid
-		const token = this.getToken() // Getting token from localstorage
-		return !!token && !this.isTokenExpired(token) // handwaiving here
+		const token = this.getToken();// Getting token from localstorage
+		if (token == null) {
+			return true;
+		}
+		return this.isTokenExpired(token);
 	};
 
 	isTokenExpired = (token) => {
@@ -45,42 +31,9 @@ export default class AuthHelperMethods {
 	};
 
 	getToken = () => localStorage.getItem('id_token');
-	// logout = () => {
-	// 	// Clear user token and profile data from localStorage
-	// 	localStorage.removeItem('id_token');
-	// };
 
-	getConfirm = () => {
-		// Using jwt-decode npm package to decode the token
-		const answer = decode(this.getToken());
-		console.log('Recieved answer!');
-		return answer;
+	logout = () => {
+		// Clear user token and profile data from localStorage
+		localStorage.removeItem('id_token');
 	};
-
-	fetch = async (url, options) => fetch(url, {
-		crossDomain: true,
-		// headers,
-		...options
-	})
-		.then(response => response.json())
-		// performs api calls sending the required authentication headers
-		// const headers = {
-		// 	Accept: 'application/json',
-		// 	'Content-Type': 'application/json'
-		// };
-		// Setting Authorization header
-		// Authorization: Bearer xxxxxxx.xxxxxxxx.xxxxxx
-		// if (this.loggedIn()) {
-		// 	headers['Authorization'] = 'Bearer ' + this.getToken();
-		// }
-
-		// return
-	// };
-
-	// checkStatus = (response) => response;
-		// raises an error in case response status is not a success
-		// if (response.status >= 200 && response.status < 300) { // Success status lies between 200 to 300
-		// 	return response
-		// }
-	// };
 }
