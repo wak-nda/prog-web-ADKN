@@ -27,7 +27,6 @@ export const Login = () => {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		const response = await login(email, password);
-
 		// console.table(...response.data);
 		// console.log(response.data.res);
 		if (response.data.res) {

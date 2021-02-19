@@ -15,7 +15,7 @@ export const login = async (email, password) => {
 	} catch (err) {
 		// eslint-disable-next-line no-console
 		console.log(err);
-		throw err;
+		return { data: { res: false } };
 	}
 };
 
