@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect, useState } from 'react';
+
 import {
 	BrowserRouter as Router,
 	Switch,
 	Route,
 } from 'react-router-dom';
 
+import { Covid19Map } from './pages/Covid-19Map';
 import { Itunes } from './pages/Itunes';
 import { Error404 } from './pages/Error404';
 import useLocalStorage from './lib/useLocalStorage';
@@ -12,6 +14,7 @@ import { ThemeContext } from './context/ThemeContext';
 import { HistoryContextProvider } from './context/HistoryContext';
 import './App.scss';
 import { Login } from './pages/Login';
+import { CovidTracker } from './pages/CovidTracker/CovidTracker';
 
 const App = () => {
 	const [theme, setTheme] = useState();
@@ -31,6 +34,9 @@ const App = () => {
 			<HistoryContextProvider>
 				<Router>
 					<Switch>
+						<Route path="/covid-19-map">
+							<Covid19Map />
+						</Route>
 						<Route path={[
 							'/itunes/:search',
 							'/itunes',
@@ -40,6 +46,9 @@ const App = () => {
 						</Route>
 						<Route exact path="/">
 							<Login />
+						</Route>
+						<Route exact path="/covidtracker">
+							<CovidTracker />
 						</Route>
 						<Route path="*">
 							<Error404 />

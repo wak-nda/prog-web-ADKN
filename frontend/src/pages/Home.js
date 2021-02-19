@@ -8,8 +8,9 @@ export const Home = () => (
 			<Col>
 				<h1>Home</h1>
 				<Link to="/itunes">Itunes APP</Link>
+				<br />
+				<Link to="/covid-19-map">Covid-19 map</Link>
 			</Col>
 		</Row>
 	</Container>
 );
-
