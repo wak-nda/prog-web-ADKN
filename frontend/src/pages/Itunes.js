@@ -1,8 +1,8 @@
 import {
-	useState, useEffect, useContext, useCallback,
+	useState, useEffect, useContext, useCallback
 } from 'react';
 import {
-	Route, Switch, useHistory, useRouteMatch,
+	Route, Switch, useHistory, useRouteMatch
 } from 'react-router-dom';
 import { Container } from 'reactstrap';
 
@@ -41,7 +41,7 @@ export const Itunes = () => {
 			if (response.resultCount) {
 				setNoResult(false);
 				const tracksFromResponse = response.results.filter(
-					(r) => r.kind === 'song',
+					(r) => r.kind === 'song'
 				);
 
 				setTracks(tracksFromResponse);

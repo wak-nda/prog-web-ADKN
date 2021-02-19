@@ -7,6 +7,8 @@ module.exports = {
 		'plugin:jest/recommended',
 	],
 	rules: {
+		'comma-dangle': ["error", "never"],
+		"object-shorthand": ["warn", "never"],
 		'linebreak-style': ["warn", "windows"],
 		'react/jsx-one-expression-per-line': 0, // Buggy
 		'import/prefer-default-export': 0,

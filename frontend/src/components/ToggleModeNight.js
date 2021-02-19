@@ -31,7 +31,7 @@ export const ToggleModeNight = () => {
 						),
 						unchecked: (
 							<FontAwesomeIcon icon={faSun} className="fa faSun" />
-						),
+						)
 					}}
 					defaultChecked={theme === 'dark'}
 					onChange={handleChangeMode}

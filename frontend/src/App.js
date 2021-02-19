@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import {
 	BrowserRouter as Router,
 	Switch,
-	Route,
+	Route
 } from 'react-router-dom';
 
 import { Covid19Map } from './pages/Covid-19Map';
@@ -38,7 +38,7 @@ const App = () => {
 						</Route>
 						<Route path={[
 							'/itunes/:search',
-							'/itunes',
+							'/itunes'
 						]}
 						>
 							<Itunes />

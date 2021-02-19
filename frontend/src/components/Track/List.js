@@ -24,10 +24,10 @@ export const TrackList = ({ loading, onClickTrack, tracks }) => (
 TrackList.propTypes = {
 	loading: PropTypes.bool,
 	tracks: PropTypes.arrayOf(PropTypes.shape({})),
-	onClickTrack: PropTypes.func.isRequired,
+	onClickTrack: PropTypes.func.isRequired
 };
 
 TrackList.defaultProps = {
 	loading: false,
-	tracks: [],
+	tracks: []
 };

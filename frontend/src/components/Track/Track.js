@@ -26,7 +26,7 @@ Track.propTypes = {
 	track: PropTypes.shape({
 		trackId: PropTypes.number,
 		artistName: PropTypes.string,
-		trackName: PropTypes.string,
+		trackName: PropTypes.string
 	}).isRequired,
-	onClickTrack: PropTypes.func.isRequired,
+	onClickTrack: PropTypes.func.isRequired
 };

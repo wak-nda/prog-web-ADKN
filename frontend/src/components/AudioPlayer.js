@@ -16,10 +16,10 @@ export const AudioPlayer = ({ track }) => (
 
 AudioPlayer.propTypes = {
 	track: PropTypes.shape({
-		previewUrl: PropTypes.string.isRequired,
-	}),
+		previewUrl: PropTypes.string.isRequired
+	})
 };
 
 AudioPlayer.defaultProps = {
-	track: null,
+	track: null
 };

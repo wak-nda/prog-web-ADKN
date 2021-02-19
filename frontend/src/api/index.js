@@ -8,8 +8,8 @@ export const fetchTotalData = async () => {
         numberOfPeopleInRea: 1454888,
         numberOfDeaths: 15347957,
         numberOfRecovered: 64606679,
-        lastUpdateDate: '2021-01-31',
-        }];
+        lastUpdateDate: '2021-01-31'
+    }];
     // try {
     //     totalData = await axios.get(url)
     //     console.log(totalData)
@@ -18,4 +18,4 @@ export const fetchTotalData = async () => {
     // }
     // console.log(totalData)
     return totalData;
-}
+};

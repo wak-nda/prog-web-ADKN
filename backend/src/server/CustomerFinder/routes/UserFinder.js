@@ -14,6 +14,9 @@ const KEY = "m yincredibl y(!!1!11!)<'SECRET>)Key'!";
  */
 router.post('/api/user', async (ctx) => {
     console.log('ici');
+    console.log(ctx.request.body.mail);
+
+    console.log(ctx.request.body.password);
     var password = crypto.createHash('sha256').update(ctx.request.body.password).digest('hex');
     console.log('ici');
 
@@ -33,13 +36,18 @@ router.post('/api/user', async (ctx) => {
             {
                 "firstName": user.firstName,
                 "lastName": user.lastName,
-                "token": token
+                "token": token,
+                "res" : true
             }
         console.log("Login Success");
         f.success(ctx, JSON.stringify(response));
     } else {
-        console.error("Login Failure");
-        f.failure(ctx, JSON.stringify("There's no user matching that"));
+        const response =
+            {
+                "res": false
+            }
+        console.log("Login failure");
+        f.success(ctx, JSON.stringify(response));
     }
 });
 

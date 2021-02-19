@@ -1,22 +1,22 @@
 import decode from 'jwt-decode';
 
 export default class AuthHelperMethods {
-
 	// Initializing important variables
-	login = (username, password) => {
 
-		// Get a token from api server using the fetch api
-		return this.fetch(`/log-in`, {
+	login = (username, password) => {
+		this.fetch('http://localhost:9000/api/user', {
 			method: 'POST',
 			body: JSON.stringify({
-				username,
-				password
+				mail: username,
+				password: password
 			})
 		}).then(res => {
-
-			this.setToken(res.token) // Setting the token in localStorage
+			console.log('ici');
+			if (res.res) {
+				this.setToken(res.token);// Setting the token in localStorage
+			}
 			return Promise.resolve(res);
-		})
+		});
 	};
 
 
@@ -32,11 +32,9 @@ export default class AuthHelperMethods {
 			if (decoded.exp < Date.now() / 1000) { // Checking if token is expired.
 				return true;
 			}
-			else
-				return false;
-		}
-		catch (err) {
-			console.log("expired check failed! Line 42: AuthService.js");
+			return false;
+		} catch (err) {
+			console.log('expired check failed! Line 42: AuthService.js');
 			return false;
 		}
 	};
@@ -46,51 +44,43 @@ export default class AuthHelperMethods {
 		localStorage.setItem('id_token', idToken)
 	};
 
-	getToken = () => {
-		// Retrieves the user token from localStorage
-		return localStorage.getItem('id_token')
-	};
-
-	logout = () => {
-		// Clear user token and profile data from localStorage
-		localStorage.removeItem('id_token');
-	};
+	getToken = () => localStorage.getItem('id_token');
+	// logout = () => {
+	// 	// Clear user token and profile data from localStorage
+	// 	localStorage.removeItem('id_token');
+	// };
 
 	getConfirm = () => {
 		// Using jwt-decode npm package to decode the token
-		let answer = decode(this.getToken());
-		console.log("Recieved answer!");
+		const answer = decode(this.getToken());
+		console.log('Recieved answer!');
 		return answer;
 	};
 
-	fetch = (url, options) => {
+	fetch = async (url, options) => fetch(url, {
+		crossDomain: true,
+		// headers,
+		...options
+	})
+		.then(response => response.json())
 		// performs api calls sending the required authentication headers
-		const headers = {
-			'Accept': 'application/json',
-			'Content-Type': 'application/json'
-		}
+		// const headers = {
+		// 	Accept: 'application/json',
+		// 	'Content-Type': 'application/json'
+		// };
 		// Setting Authorization header
 		// Authorization: Bearer xxxxxxx.xxxxxxxx.xxxxxx
-		if (this.loggedIn()) {
-			headers['Authorization'] = 'Bearer ' + this.getToken()
-		}
+		// if (this.loggedIn()) {
+		// 	headers['Authorization'] = 'Bearer ' + this.getToken();
+		// }
 
-		return fetch(url, {
-			headers,
-			...options
-		})
-			.then(this._checkStatus)
-			.then(response => response.json())
-	};
+		// return
+	// };
 
-	_checkStatus = (response) => {
+	// checkStatus = (response) => response;
 		// raises an error in case response status is not a success
-		if (response.status >= 200 && response.status < 300) { // Success status lies between 200 to 300
-			return response
-		} else {
-			var error = new Error(response.statusText);
-			error.response = response;
-			throw error;
-		}
-	};
+		// if (response.status >= 200 && response.status < 300) { // Success status lies between 200 to 300
+		// 	return response
+		// }
+	// };
 }

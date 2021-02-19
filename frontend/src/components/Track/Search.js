@@ -37,9 +37,9 @@ export const TrackSearch = memo(({ onClick, onKeyPress }) => {
 
 TrackSearch.propTypes = {
 	onClick: PropTypes.func.isRequired,
-	onKeyPress: PropTypes.func,
+	onKeyPress: PropTypes.func
 };
 
 TrackSearch.defaultProps = {
-	onKeyPress: null,
+	onKeyPress: null
 };

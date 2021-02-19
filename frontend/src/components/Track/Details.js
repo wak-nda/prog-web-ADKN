@@ -47,10 +47,10 @@ TrackDetails.propTypes = {
 		trackName: PropTypes.string,
 		collectionName: PropTypes.string,
 		country: PropTypes.string,
-		primaryGenreName: PropTypes.string,
-	}),
+		primaryGenreName: PropTypes.string
+	})
 };
 
 TrackDetails.defaultProps = {
-	track: null,
+	track: null
 };

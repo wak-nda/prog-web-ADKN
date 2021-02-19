@@ -6,26 +6,38 @@ import { faUserSecret, faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// import AuthHelperMethods from '../services/AuthHelperMethods';
+import { login } from '../services/Login';
+// import {fetchItunesSongs} from "../lib/fetchItunesSongs";
 
 export const Login = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
+	// const Auth = new AuthHelperMethods();
 
 	function validateForm() {
 		return email.length > 0 && password.length > 0;
 	}
 
-	function handleSubmit(event) {
+	async function handleSubmit(event) {
 		event.preventDefault();
-		toast.error('   L\'authentification a échouer ', {
-			position: 'top-center',
-			autoClose: 5000,
-			hideProgressBar: false,
-			closeOnClick: true,
-			pauseOnHover: true,
-			draggable: true,
-			progress: undefined,
-		});
+		const response = await login(email, password);
+
+		// console.table(...response.data);
+		console.log(response.data.res);
+		if (response.data.res) {
+			alert('OK');
+		} else {
+			toast.error('   L\'authentification a échouer ', {
+				position: 'top-center',
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined
+			});
+		}
 	}
 
 	return (
