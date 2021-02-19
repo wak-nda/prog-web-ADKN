@@ -3,7 +3,7 @@ const parse = require('csv-parse');
 const fs = require('fs');
 const path = require('path');
 const url =  require('url');
-import { addDataFromHospital } from '../sdk/DataFromHospital.js';
+const DataFromHospital =  require('../sdk/DataFromHospital');
 
 
 const __filename = url.fileURLToPath(import.meta.url);
@@ -29,7 +29,7 @@ const loadFile = async (filePath) => {
                     }
                     else{
                         output.push(record);
-                        await  addDataFromHospital(record[0],record[1],record[2],record[3],record[4],record[5],record[6]);
+                        await  DataFromHospital.addDataFromHospital(record[0],record[1],record[2],record[3],record[4],record[5],record[6]);
                     }
                     index++;
                 }
