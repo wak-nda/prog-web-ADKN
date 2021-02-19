@@ -3,7 +3,8 @@
  * @version 0.1
  */
 
-import { Users } from '../models/Users.js';
+const Users = require('../models/Users');
+
 
 
 /*************************************************************************************************
@@ -21,4 +22,4 @@ async function getUserByEmailAndPassword(mail, password) {
     return  Users.findOne({'email': mail, 'password': password});
 }
 
-export { getUserByEmailAndPassword }
+module.exports = { getUserByEmailAndPassword };

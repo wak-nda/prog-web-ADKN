@@ -1,14 +1,12 @@
 // import getCSV from 'get-csv';
-import  parse  from 'csv-parse';
-import * as assert  from 'assert'
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+const parse = require('csv-parse');
+const fs = require('fs');
+const path = require('path');
+const url =  require('url');
 import { addDataFromHospital } from '../sdk/DataFromHospital.js';
-import  mongoose from 'mongoose';
 
 
-const __filename = fileURLToPath(import.meta.url);
+const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const loadFile = async (filePath) => {
@@ -35,12 +33,12 @@ const loadFile = async (filePath) => {
                     }
                     index++;
                 }
-            })
+            });
 
             parser.on('end',  async function(){
 
                 resolve({headers, output});
-            })
+            });
 
             parser.write(fileContent);
             parser.end();
@@ -48,6 +46,6 @@ const loadFile = async (filePath) => {
 
         })
     )
-}
+};
 
-export const loadFileCSV = loadFile;
+module.exports = { loadFile };

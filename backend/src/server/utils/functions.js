@@ -23,7 +23,7 @@ function failure408(ctx, data) {
     ctx.body = data;
 }
 
-export {
+module.exports = {
     success,
     failure,
     failure409,

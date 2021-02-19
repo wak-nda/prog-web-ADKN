@@ -1,9 +1,10 @@
-import  KoaRouter  from 'koa-router';
-const DataFromHospitalRouter= new KoaRouter();
-import * as f from '../../utils/functions.js';
+const Router = require('koa-router');
+const router = new Router();
+const f = require('../../utils/functions');
+const DataFromHospital = require('../sdk/DataFromHospital');
+
 // var jwt = require('jsonwebtoken');
 // var crypto = require('crypto');
-import * as DataFromHospital from '../sdk/DataFromHospital.js';
 // const KEY = "m yincredibl y(!!1!11!)<'SECRET>)Key'!";
 // const PUBLIC_VAPID = 'BNOJyTgwrEwK9lbetRcougxkRgLpPs1DX0YCfA5ZzXu4z9p_Et5EnvMja7MGfCqyFCY4FnFnJVICM4bMUcnrxWg';
 // const PRIVATE_VAPID = '_kRzHiscHBIGftfA7IehH9EA3RvBl8SBYhXBAMz6GrI';
@@ -16,18 +17,18 @@ import * as DataFromHospital from '../sdk/DataFromHospital.js';
  * @author Paul Marie
  * @name Route : Récupération de la liste de tous les utilisateurs
  */
-DataFromHospitalRouter.get('/api/getDataFromHospitals', async (ctx) => {
+router.get('/api/getDataFromHospitals', async (ctx) => {
     const data = await DataFromHospital.getDataFromHospital();
     f.success(ctx, data);
 });
 
 
-DataFromHospitalRouter.get('/api/getDataFromHospitalAfterDate/:date', async (ctx) => {
+router.get('/api/getDataFromHospitalAfterDate/:date', async (ctx) => {
     const data = await DataFromHospital.getDataFromHospitalAfterDate(ctx.params.date);
     f.success(ctx, data);
 });
 
-DataFromHospitalRouter.get('/api/getTotalData', async (ctx) => {
+router.get('/api/getTotalData', async (ctx) => {
     const data = await DataFromHospital.getTotalData();
     f.success(ctx, data);
 })
@@ -187,4 +188,5 @@ DataFromHospitalRouter.get('/api/getTotalData', async (ctx) => {
 //
 // });
 
-export const dataFromHospital =  DataFromHospitalRouter;
+module.exports = router;
+

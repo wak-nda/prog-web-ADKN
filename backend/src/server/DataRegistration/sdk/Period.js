@@ -3,14 +3,14 @@
  * @version 0.1
  */
 
-import { PeriodSchema } from '../models/Period.js';
+const PeriodSchema = require('../models/Period');
 
 
 /*************************************************************************************************
  *       ################################  DATA   ############################################   *
  *************************************************************************************************/
 
-async function addPeriod(name,startDate,endDate) {
+async function addPeriod(name, startDate, endDate) {
     await PeriodSchema.create({
         "name": name,
         "startDate": startDate,
@@ -21,8 +21,8 @@ async function addPeriod(name,startDate,endDate) {
     return true;
 }
 
-async function getPeriods(){
-    return await PeriodSchema.find();
+async function getPeriods() {
+    return  PeriodSchema.find();
 }
 
-export { addPeriod, getPeriods }
+module.exports = {addPeriod, getPeriods};

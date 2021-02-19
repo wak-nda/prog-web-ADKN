@@ -1,12 +1,12 @@
-import Koa from 'koa';
-import cors from '@koa/cors';
-import bodyParser from 'koa-bodyparser';
+const Koa = require('koa');
+const cors = require('@koa/cors');
+const bodyParser = require('koa-bodyparser');
 
-import logger from 'koa-logger';
+const logger = require('koa-logger');
 
-import {configDB} from "./config.js";
-import mongoose from 'mongoose';
-import {loadFileCSV} from './src/server/DataRegistration/sdk/loadCVSFile.js '
+const config = require("./config");
+const mongoose = require('mongoose');
+const loadFileCSV = require('./src/server/DataRegistration/sdk/loadCVSFile');
 
 const app = new Koa();
 const PORT = 9000;
@@ -28,7 +28,7 @@ const filePath = "https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1
 //     }
 // })();
 
-mongoose.connect(`mongodb+srv://${configDB.userName}:${configDB.password}@${configDB.host}/${configDB.name}?retryWrites=true&w=majority`, {poolSize: 10, bufferMaxEntries: 0, reconnectTries: 5000, useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect(`mongodb+srv://${config.configDB.userName}:${config.configDB.password}@${config.configDB.host}/${config.configDB.name}?retryWrites=true&w=majority`, {poolSize: 10, bufferMaxEntries: 0, reconnectTries: 5000, useNewUrlParser: true,useUnifiedTopology: true});
 mongoose.set('debug', true);
 
 (async () => {

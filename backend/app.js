@@ -1,14 +1,15 @@
-import Koa  from 'koa';
-import cors from '@koa/cors';
-import bodyParser  from 'koa-bodyparser';
+const Koa = require('koa');
+const cors = require('@koa/cors');
+const bodyParser = require('koa-bodyparser');
 
-import logger from 'koa-logger';
+const logger = require('koa-logger');
 
-import {configDB} from "./config.js";
-import mongoose from 'mongoose';
+const config = require("./config");
+const mongoose = require('mongoose');
 
-import {dataFromHospital} from './src/server/DataRegistration/routes/DataFromHospital.js' ;
-import {usersRouter} from './src/server/CustomerFinder/routes/CustomerFinder.js' ;
+
+const dataFromHospital = require('./src/server/DataRegistration/routes/DataFromHospital');
+const usersRouter = require('./src/server/CustomerFinder/routes/UserFinder');
 
 
 const app = new Koa();
@@ -30,7 +31,7 @@ const server = app.listen(PORT, () => {
 
 });
 
-mongoose.connect(`mongodb+srv://${configDB.userName}:${configDB.password}@${configDB.host}/${configDB.name}?retryWrites=true&w=majority`, {
+mongoose.connect(`mongodb+srv://${config.configDB.userName}:${config.configDB.password}@${config.configDB.host}/${config.configDB.name}?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useCreateIndex: true
 });
@@ -38,4 +39,5 @@ mongoose.connect(`mongodb+srv://${configDB.userName}:${configDB.password}@${conf
 mongoose.set('debug', true);
 
 
-export const serverApp = server  ;
+module.exports = server ;
+

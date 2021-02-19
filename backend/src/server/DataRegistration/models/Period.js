@@ -1,5 +1,6 @@
-import  mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+
 
 let Period = new Schema({
     name: {
@@ -19,4 +20,4 @@ let Period = new Schema({
 
 mongoose.model('period', Period);
 const PeriodSchema = mongoose.model('period');
-export {PeriodSchema} ;
+module.exports = PeriodSchema ;
