@@ -187,4 +187,4 @@ DataFromHospitalRouter.get('/api/getTotalData', async (ctx) => {
 //
 // });
 
-export const dataFromHospital =DataFromHospitalRouter;
+export const dataFromHospital =  DataFromHospitalRouter;
