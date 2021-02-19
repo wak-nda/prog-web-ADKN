@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
+import { useHistory } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import '../styles/css/Login.scss';
 import { faUserSecret, faUser, faKey } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +14,7 @@ import { login } from '../services/Login';
 export const Login = () => {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
-	// const Auth = new AuthHelperMethods();
+	const history = useHistory();
 
 	function validateForm() {
 		return email.length > 0 && password.length > 0;
@@ -26,11 +27,11 @@ export const Login = () => {
 		// console.table(...response.data);
 		console.log(response.data.res);
 		if (response.data.res) {
-			alert('OK');
+			history.push('/home');
 		} else {
 			toast.error('   L\'authentification a échouer ', {
 				position: 'top-center',
-				autoClose: 5000,
+				autoClose: 2000,
 				hideProgressBar: false,
 				closeOnClick: true,
 				pauseOnHover: true,
