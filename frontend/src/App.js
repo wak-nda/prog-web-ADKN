@@ -14,7 +14,6 @@ import { ThemeContext } from './context/ThemeContext';
 import { HistoryContextProvider } from './context/HistoryContext';
 import './App.scss';
 import { Login } from './pages/Login';
-import { CovidTracker } from './pages/CovidTracker/CovidTracker';
 
 const App = () => {
 	const [theme, setTheme] = useState();
@@ -46,9 +45,6 @@ const App = () => {
 						</Route>
 						<Route exact path="/">
 							<Login />
-						</Route>
-						<Route exact path="/covidtracker">
-							<CovidTracker />
 						</Route>
 						<Route path="*">
 							<Error404 />
