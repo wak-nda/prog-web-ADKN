@@ -35,15 +35,22 @@ async function getTotalData(){
     let numberOfDeaths = 0;
     let numberOfRecovered = 0;
     let lastUpdateDate = "";
-    const hospitalDataFromDatabase = await DataFromHospital.find();
-    for (let data of hospitalDataFromDatabase){
-        numberOfHospitalized += data['hosp'];
-        numberOfPeopleInRea += data['rea'];
-        numberOfDeaths += data['dc'];
-        numberOfRecovered += data['rad'];
-        lastUpdateDate = data['jour']
-    }
-    return {'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate};
+    await DataFromHospital.find().then(
+        value => {
+            // let size = value.length;
+            // console.log(size);
+            
+            for (let data of value){ 
+                numberOfHospitalized += data['hosp'];
+                numberOfPeopleInRea += data['rea'];
+                numberOfDeaths += data['dc'];
+                numberOfRecovered += data['rad'];
+                lastUpdateDate = data['jour']
+            }
+        }
+    );
+    
+    return [{'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate}];
 }
 
 async function getDataFromHospitalAfterDate(date){

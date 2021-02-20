@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, Typography, Grid } from '@material-ui/core';
 import CountUp from 'react-countup';
 import cx from 'classnames';
+// import { Line } from 'react-chartjs-2';
 
 import { fetchTotalData } from '../../api';
 
@@ -17,6 +18,26 @@ export const CovidTracker = () => {
         fetchAPI();
     }, []);
 
+    // const lineChart = (
+    //     dailyData.length ? (
+    //     <Line 
+    //         data = {{
+    //             labels: dailyData.map(({date}) => date),
+    //             datasets: [{
+    //                 data: dailyData.map(({confirmed}) => confirmed),
+    //                 label: 'Infected',
+    //                 borderColor: '#3333ff',
+    //                 fill: true,
+    //             }, {
+    //                 data: dailyData.map(({deaths}) => deaths),
+    //                 label: 'Deaths',
+    //                 borderColor: 'red',
+    //                 backgroundColor: 'rgba(255,0,0,0.5)',
+    //                 fill: true,
+    //             }],
+    //             }}/>) : null
+    // );
+
     return (
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
@@ -24,7 +45,7 @@ export const CovidTracker = () => {
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom> Infected</Typography>
                         <Typography variant="h5">
-                            <CountUp start={0} end={data.map(({ numberOfHospitalized }) => numberOfHospitalized)} duration={2.5} separator="," />
+                            <CountUp start={0} end={data.map(({ numberOfHospitalized, numberOfPeopleInRea }) => numberOfHospitalized + numberOfPeopleInRea)} duration={2.5} separator="," />
                         </Typography>
                         {/* <Typography color='textSecondary'>{new Date(lastUpdate).toDateString()}</Typography> */}
                         <Typography variant="body2"> Number of active cases of COVID-19</Typography>
