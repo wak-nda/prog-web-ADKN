@@ -96,6 +96,24 @@ async function getDataFromHospitalBeforeDate(date){
     return dataBeforeDate;
 }
 
+async function getDataFromHospitalInDepartment(department) {
+    let dataFromDepartment= [];
+    await getDataFromHospital().then(
+        value =>   {
+            let size = value.length;
+
+            //Never use for loop again in your life
+            for (let index=0; index<size; index++) {
+                let object = value[index];
+                if (object.dep === department.toString()){
+                    dataFromDepartment.push(object);
+                }
+            }
+        }
+    );
+    return dataFromDepartment;
+}
+
 async function getDataFromHospitalInPeriod(startDate, endDate){
     const startDateToCompare= Date.parse(startDate);
     const endDateToCompare= Date.parse(endDate);
@@ -116,4 +134,4 @@ async function getDataFromHospitalInPeriod(startDate, endDate){
       return dataInPeriod;
 }
 
-export { addDataFromHospital, getDataFromHospital, getDataFromHospitalBeforeDate, getDataFromHospitalInPeriod, getDataFromHospitalAfterDate, getTotalData }
+export { addDataFromHospital, getDataFromHospital, getDataFromHospitalBeforeDate, getDataFromHospitalInPeriod, getDataFromHospitalAfterDate,getDataFromHospitalInDepartment , getTotalData }
