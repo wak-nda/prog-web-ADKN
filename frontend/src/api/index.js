@@ -65,14 +65,12 @@ const monthlydata = [
     }
 ]
 
-const departementData = [
-    {
-        totalConfirmed: 100,
-        totalDeaths: 10,
-        totalRecovered: 50,
-        reportDate: 'dec 2020'
-    }
-]
+const departementData = {
+    totalConfirmed: 100000,
+    totalDeaths: 10000,
+    totalRecovered: 60000,
+    reportDate: 'dec 2020'
+}
 export const fetchTotalData = async () => {
     const totalData = [{
         numberOfHospitalized: 10670743,
@@ -102,12 +100,13 @@ export const fetchMonthlyData = async () => {
             recovered: dailyData.totalRecovered,
             date: dailyData.reportDate
         }));
+        console.log(modifiedData);
         return modifiedData;
     // } catch (error) {
     // }
 }
 
 export const fetchDepartementData = async () => {
-    console.log(departementData)
+    // console.log(departementData)
     return departementData;
 }

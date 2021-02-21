@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react';
 // import CountUp from 'react-countup';
 // import cx from 'classnames';
 
-import { fetchMonthlyData, fetchDepartementData } from '../../api';
+import {Chart } from '../../components/Chart/Chart'
 
-import styles from './CovidTracker.module.scss'
+import { fetchDepartementData } from '../../api';
+
+import styles from './CovidTracker.module.scss';
 
 export const CovidTracker = () => {
     // const [data, setData] = useState([]);
@@ -26,7 +28,7 @@ export const CovidTracker = () => {
         }
         fetchAPI();
         // console.log(departementData);
-    }, []);
+    }, null);
 
     // const lineChart = (
     //     dailyData.length
@@ -56,34 +58,36 @@ export const CovidTracker = () => {
     //     ) : null
     // );
 
-    const barChart = (
-        departementData.length
-        ? (
-            <Bar data={{
-                labels: ['Infectés', 'Soignés', 'Décédés'],
-                datasets: [{
-                    label: 'Individus',
-                    backgroundColor: [
-                        'rgba(0,0,255,0.5)',
-                        'rgba(0,255,0,0.5)',
-                        'rgba(255,0,0,0.5)'
-                    ]
-                }],
-                data: [departementData.map(({totalConfirmed}) => totalConfirmed), departementData.map(({totalRecovered}) => totalRecovered), departementData.map(({totalDeaths}) => totalDeaths)]
-                }}
-            options={{
-                legend: { display: false },
-                title: { display: true, text: 'Current state in this departement' }
-            }}
-            />
-        ) : null
-    )
+    // const barChart = (
+    //     departementData.length
+    //     ? (
+    //         <Bar data={{
+    //             labels: ['Infectés', 'Soignés', 'Décédés'],
+    //             datasets: [{
+    //                 label: 'Individus',
+    //                 backgroundColor: [
+    //                     'rgba(0,0,255,0.5)',
+    //                     'rgba(0,255,0,0.5)',
+    //                     'rgba(255,0,0,0.5)'
+    //                 ]
+    //             }],
+    //             data: [departementData.map(({totalConfirmed}) => totalConfirmed), departementData.map(({totalRecovered}) => totalRecovered), departementData.map(({totalDeaths}) => totalDeaths)]
+    //             }}
+    //         options={{
+    //             legend: { display: false },
+    //             title: { display: true, text: 'Current state in this departement' }
+    //         }}
+    //         />
+    //     ) : null
+    // )
 
     return (
         <div className={styles.container}>
-            {/* <div>{lineChart}</div> */}
+            {/* <div>{lineChart}</div>
             <h1>{departementData.map(({totalConfirmed}) => totalConfirmed)}</h1>
-            {barChart}
+            {barChart} */}
+            <Chart data = {departementData} departement=""/>
+            <Chart data = {departementData} departement = "Alpes-Maritimes"/>
         </div>
     );
 };
