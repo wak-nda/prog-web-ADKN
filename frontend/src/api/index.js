@@ -65,6 +65,14 @@ const monthlydata = [
     }
 ]
 
+const departementData = [
+    {
+        totalConfirmed: 100,
+        totalDeaths: 10,
+        totalRecovered: 50,
+        reportDate: 'dec 2020'
+    }
+]
 export const fetchTotalData = async () => {
     const totalData = [{
         numberOfHospitalized: 10670743,
@@ -85,9 +93,9 @@ export const fetchTotalData = async () => {
 
 export const fetchMonthlyData = async () => {
     // try {
-        const { data } = monthlydata
-        console.log(data)
-        console.log(monthlydata)
+        // const { data } = monthlydata
+        // console.log(data)
+        // console.log(monthlydata)
         const modifiedData = monthlydata.map((dailyData) => ({
             confirmed: dailyData.totalConfirmed,
             deaths: dailyData.totalDeaths,
@@ -97,4 +105,9 @@ export const fetchMonthlyData = async () => {
         return modifiedData;
     // } catch (error) {
     // }
+}
+
+export const fetchDepartementData = async () => {
+    console.log(departementData)
+    return departementData;
 }

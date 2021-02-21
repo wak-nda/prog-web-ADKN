@@ -26,10 +26,8 @@
 
 .container{
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	margin: 50px 0;
+    justify-content: center;
+    width: 85%;
 }
 
 .image {
@@ -39,7 +37,8 @@
 
 @media(max-width : 770px) {
 	.container {
-		margin: 0 10%;
+		margin: 10% 10%;
+		width: 100%;
 	}
 	.image{
 		width: 100%;
