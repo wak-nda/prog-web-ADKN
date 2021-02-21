@@ -1,11 +1,12 @@
-import React, {useState, useEffect} from 'react';
-import { fetchMonthlyData } from '../../api';
+import React, { useState, useEffect } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
+import PropTypes from 'prop-types';
+import { fetchMonthlyData } from '../../api';
 
 import styles from './Chart.module.scss';
 
 export const Chart = ({ data: { totalConfirmed, totalRecovered, totalDeaths }, departement }) => {
-    const [ monthlyData, setMonthlyData ] = useState([]);
+    const [monthlyData, setMonthlyData] = useState([]);
 
     useEffect(() => {
         const fetchAPI = async () => {
@@ -15,49 +16,52 @@ export const Chart = ({ data: { totalConfirmed, totalRecovered, totalDeaths }, d
     }, []);
 
     const lineChart = (
-        monthlyData.length ? (
-        <Line 
-            data = {{
-                labels: monthlyData.map(({date}) => date),
+        monthlyData.length
+        ? (
+            <Line data={{
+                labels: monthlyData.map(({ date }) => date),
                 datasets: [{
-                    data: monthlyData.map(({confirmed}) => confirmed),
+                    data: monthlyData.map(({ confirmed }) => confirmed),
                     label: 'Infected',
                     borderColor: '#3333ff',
-                    fill: true,
+                    fill: true
                 }, {
-                    data: monthlyData.map(({recovered}) => recovered),
+                    data: monthlyData.map(({ recovered }) => recovered),
                     label: 'Recovered',
                     borderColor: 'green',
                     backgroundColor: 'rgba(0,255,0,0.5)',
-                    fill: true,
+                    fill: true
                 }, {
-                    data: monthlyData.map(({deaths}) => deaths),
+                    data: monthlyData.map(({ deaths }) => deaths),
                     label: 'Deaths',
                     borderColor: 'red',
                     backgroundColor: 'rgba(255,0,0,0.5)',
-                    fill: true,
-                }],
-                }}/>) : null
+                    fill: true
+                }]
+                }}
+            />
+        ) : null
     );
 
     const barChart = (
-        totalConfirmed ? (
-            <Bar 
-                data = {{
+        totalConfirmed
+        ? (
+            <Bar
+                data={{
                     labels: ['Infected', 'Recovered', 'Deaths'],
                     datasets: [{
                         label: 'People',
-                        backgroundColor : [
-                            'rgba(0,0,255,0.5)',                            
+                        backgroundColor: [
+                            'rgba(0,0,255,0.5)',
                             'rgba(0,255,0,0.5)',
                             'rgba(255,0,0,0.5)'
                         ],
                         data: [totalConfirmed, totalRecovered, totalDeaths]
                     }]
                 }}
-                options = {{
+                options={{
                     legend: { display: false },
-                    title: { display: true, text: `Current state in ${departement}`},
+                    title: { display: true, text: `Current state in ${departement}` },
                     responsive: true,
                     scales: {
                         yAxes: [{
@@ -77,3 +81,13 @@ export const Chart = ({ data: { totalConfirmed, totalRecovered, totalDeaths }, d
         </div>
     )
 }
+
+Chart.propTypes = {
+	data: PropTypes.shape({
+		totalConfirmed: PropTypes.number,
+		totalDeaths: PropTypes.number,
+		totalRecovered: PropTypes.number,
+        reportDate: PropTypes.string
+	}).isRequired,
+	departement: PropTypes.string.isRequired
+};

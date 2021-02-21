@@ -107,6 +107,6 @@ export const fetchMonthlyData = async () => {
 }
 
 export const fetchDepartementData = async () => {
-    // console.log(departementData)
+    console.log(departementData);
     return departementData;
 }
