@@ -2,6 +2,8 @@
 
 // const url = 'http://localhost:9000/api/getTotalData';
 
+import departement from '../../data/departements.json';
+
 const monthlydata = [
     {
         totalConfirmed: 100,
@@ -109,4 +111,9 @@ export const fetchMonthlyData = async () => {
 export const fetchDepartementData = async () => {
     console.log(departementData);
     return departementData;
+}
+
+export const fetchDepartementNameAndNumber = () => {
+    console.log(departement);
+    return departement;
 }
