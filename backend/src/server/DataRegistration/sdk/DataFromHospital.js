@@ -36,21 +36,77 @@ async function getTotalData(){
     let numberOfDeaths = 0;
     let numberOfRecovered = 0;
     let lastUpdateDate = "";
+    let intermediaire = {};
     await DataFromHospital.find().then(
         value => {
-            // let size = value.length;
-            // console.log(size);
-            
-            for (let data of value){ 
-                numberOfHospitalized += data['hosp'];
-                numberOfPeopleInRea += data['rea'];
-                numberOfDeaths += data['dc'];
-                numberOfRecovered += data['rad'];
-                lastUpdateDate = data['jour']
+            let size = value.length;
+            console.log(size);
+            let counter = 0;
+            let sexe = "";
+            // let jour = ""
+            for(let idx = 0; idx < size; idx++){
+                if(value[idx]['sexe'] === '0'){
+                    if(value[idx]['dep'] in intermediaire){
+                        // console.log(intermediaire[value[idx]['dep']]);
+                        // if(value[idx]['dep'] )
+                        // if( value[idx]['rea'] > intermediaire[value[idx]['dep']]['rea']){
+                        //     temp = value[idx]['rea'] - intermediaire[value[idx]['dep']]['rea'];
+                        //     intermediaire[value[idx]['dep']]['rea'] += temp;
+                        // }
+                        // if( value[idx]['hosp'] > intermediaire[value[idx]['dep']]['hosp']){
+                        //     temp = value[idx]['hosp'] - intermediaire[value[idx]['dep']]['hosp'];
+                        //     intermediaire[value[idx]['dep']]['hosp'] += temp;
+                        // }
+                        // if( value[idx]['rad'] > intermediaire[value[idx]['dep']]['rad']){
+                        //     temp = value[idx]['rad'] - intermediaire[value[idx]['dep']]['rad'];
+                        //     intermediaire[value[idx]['dep']]['rad'] += temp;
+                        // }
+                        // if( value[idx]['dc'] > intermediaire[value[idx]['dep']]['dc']){
+                        //     temp = value[idx]['dc'] - intermediaire[value[idx]['dep']]['dc'];
+                        //     intermediaire[value[idx]['dep']]['dc'] += temp;
+                        // }
+                        // temp = value[idx]['rea'] + intermediaire[value[idx]['dep']]['rea'];
+                        intermediaire[value[idx]['dep']]['rea'] = value[idx]['rea'];
+
+                        // temphosp = value[idx]['hosp'] + intermediaire[value[idx]['dep']]['hosp'];
+                        intermediaire[value[idx]['dep']]['hosp'] = value[idx]['hosp'];
+
+                        // temprad = value[idx]['rad'] + intermediaire[value[idx]['dep']]['rad'];
+                        intermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
+
+                        // tempdc = value[idx]['dc'] + intermediaire[value[idx]['dep']]['dc'];
+                        intermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
+                    }else{
+                        intermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'],}
+                    }
+                    
+                    // if(counter < 10){
+                    //     console.log(value[idx]['dc'] +'-'+ value[idx]['dep'])
+                    //     counter += 1;
+                    //     numberOfDeaths += value[idx]['dc']
+                    // }else{
+
+                    //     break;
+                    // }
+                    // numberOfDeaths += value[idx]['dc']
+                    // numberOfHospitalized += value[idx]['hosp']
+                    // numberOfPeopleInRea += value[idx]['rea']
+                }
             }
+            // for (let data of value){ 
+            //     numberOfHospitalized += data['hosp'];
+            //     numberOfPeopleInRea += data['rea'];
+            //     numberOfDeaths += data['dc'];
+            //     numberOfRecovered += data['rad'];
+            //     lastUpdateDate = data['jour']
+            // }
+            console.log(intermediaire);
         }
     );
-    
+    for (var prop in intermediaire){
+        numberOfPeopleInRea += intermediaire[prop]['dc'];
+    }
+    console.log(numberOfPeopleInRea);
     return [{'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate}];
 }
 
