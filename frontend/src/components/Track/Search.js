@@ -1,7 +1,7 @@
 import { memo, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import './Search.scss';
+import '../../styles/css/Search.scss';
 
 export const TrackSearch = memo(({ onClick, onKeyPress }) => {
 	const [term, setTerm] = useState('');

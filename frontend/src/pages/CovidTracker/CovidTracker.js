@@ -6,7 +6,7 @@ import cx from 'classnames';
 
 import { fetchTotalData } from '../../api';
 
-import styles from './CovidTracker.module.scss'
+import styles from '../../styles/css/CovidTracker.module.scss'
 
 export const CovidTracker = () => {
     const [data, setData] = useState([]);

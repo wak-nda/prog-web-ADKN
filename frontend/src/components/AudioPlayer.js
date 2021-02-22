@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import './AudioPlayer.scss';
+import '../styles/css/AudioPlayer.scss';
 
 export const AudioPlayer = ({ track }) => (
 	<audio
