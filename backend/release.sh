@@ -6,4 +6,4 @@ pm2 stop backendreact
 
 pm2 delete backendreact
 
-pm2 start app.js --name "backendreact" --instances 1 --max-restarts 5
+pm2 start app.js --name "backendreact"
