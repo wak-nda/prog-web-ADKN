@@ -2,7 +2,7 @@
 
 // const url = 'http://localhost:9000/api/getTotalData';
 
-import departement from '../../data/departements.json';
+import departement from '../data/departements.json';
 
 const monthlydata = [
     {
