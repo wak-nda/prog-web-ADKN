@@ -2,12 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import { Chart } from '../../components/Chart/Chart'
 
-import { fetchDepartementData } from '../../api';
-
-import RegionsList from '../../data/regions.json';
-
-import styles from './CovidTracker.module.scss';
-import { AutoComplete } from '../../components/AutoComplete/AutoComplete';
+import styles from '../../styles/css/CovidTracker.module.scss'
 
 export const CovidTracker = () => {
     const [departementData, setDepartementData] = useState([]);

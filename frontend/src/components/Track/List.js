@@ -4,7 +4,7 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import { Track } from './Track';
 
-import './List.scss';
+import '../../styles/css/List.scss';
 
 export const TrackList = ({ loading, onClickTrack, tracks }) => (
 	<div className="TrackList">

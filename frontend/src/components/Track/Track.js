@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import './Track.scss';
+import '../../styles/css/Track.scss';
 import { Link } from 'react-router-dom';
 
 export const Track = ({ track, onClickTrack }) => {

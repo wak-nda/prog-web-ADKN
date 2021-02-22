@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { Button } from 'reactstrap';
 import { HistoryContext, RESET } from '../context/HistoryContext';
 
-import './SearchHistory.scss';
+import '../styles/css/SearchHistory.scss';
 
 export const SearchHistory = () => {
 	const { state, dispatch } = useContext(HistoryContext);
