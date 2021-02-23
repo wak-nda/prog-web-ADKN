@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node app.js",
     "doUpdate": "node update.js",
+    "downloadData": "node contrib.js",
     "test": "mocha test/ -R spec --recursive --exit",
     "dev": "./node_modules/.bin/nodemon app/index.js"
   },
@@ -26,7 +27,9 @@
     "@koa/multer": "^2.0.2",
     "axios": "^0.21.1",
     "firebase-admin": "^8.12.1",
+    "fs-extra": "^9.1.0",
     "get-csv": "^3.0.3",
+    "got": "^11.8.1",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.11.0",
     "koa-bodyparser": "^4.2.1",
