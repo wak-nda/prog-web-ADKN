@@ -176,6 +176,10 @@ p {
 	flex: 1;
 }
 
+.paddZ {
+	padding: 0px !important;
+}
+
 .bodyX{
 	margin-top: 50px;
 }
@@ -516,6 +520,31 @@ span.num {
 	margin: 0.4em;
 }
 
+.bodyXX{
+	overflow-y: auto;
+	overflow-x: hidden;
+	background-color: #fff;
+	max-height: calc( 100vh - 50px ) !important;
+	margin-top: 50px;
+
+	&::-webkit-scrollbar {
+		width: 6px;
+		background-color: #F5F5F5;
+	}
+
+	&::-webkit-scrollbar-track {
+		//-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		background-color: #F5F5F5;
+		//height: 20px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #041524;
+		//height: 20px;
+	}
+}
+
 .scrollable-container.jsx-347752997 {
 	border: 2px solid #6c757d;
 	background-color: rgb(235, 239, 243) !important;
@@ -547,6 +576,14 @@ span.num {
 		background-color: #1976d2;
 		//height: 20px;
 	}
+}
+.remove {
+   margin-left: 0px !important;
+	margin-right: 0px !important;
+}
+
+.removepadding {
+	margin-left: 0px !important;
 }
 
 .menu.jsx-2395746840 {
