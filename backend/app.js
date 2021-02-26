@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 
 const dataFromHospital = require('./src/server/DataRegistration/routes/DataFromHospital');
 const usersRouter = require('./src/server/CustomerFinder/routes/UserFinder');
+const mailingRouter = require('./src/server/EmailSending/routes/EmailSending');
 
 
 const app = new Koa();
@@ -20,6 +21,8 @@ app.use(bodyParser());
 app.use(logger());
 app.use(dataFromHospital.routes());
 app.use(usersRouter.routes());
+app.use(usersRouter.routes());
+app.use(mailingRouter.routes());
 
 const server = app.listen(PORT, () => {
     // loadFileCSV(filePath);

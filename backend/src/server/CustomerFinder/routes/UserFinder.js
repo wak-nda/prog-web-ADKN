@@ -28,7 +28,7 @@ router.post('/api/user', async (ctx) => {
         var token = jwt.sign(payload, KEY, {algorithm: 'HS256', expiresIn: "15d"});
         const response =
             {
-                "name": user.firstName + user.lastName,
+                "name": user.firstName,
                 "token": token,
                 "res" : true
             }
