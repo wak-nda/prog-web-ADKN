@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../styles/css/mail.scss';
-import { faMailBulk, faPenSquare, faComment } from '@fortawesome/free-solid-svg-icons';
+import { faMailBulk, faPenSquare, faComment, faUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,14 +13,16 @@ import { Header } from '../components/Header';
 export const Mailing = () => {
 	const [subject, setSubject] = useState('');
 	const [message, setMessage] = useState('');
+	const [email, setEMail] = useState('');
+
 
 	function validateForm() {
-		return subject.length > 0 && message.length > 0;
+		return email.length > 0 && subject.length > 0 && message.length > 0;
 	}
 
 	async function handleSubmit(event) {
 		event.preventDefault();
-		const response = await SendingMail(subject, message);
+		const response = await SendingMail(subject, message, email);
 		// console.table(...response.data);
 		// console.log(response.data.res);
 		if (response.data.res) {
@@ -33,6 +35,9 @@ export const Mailing = () => {
 				draggable: true,
 				progress: undefined
 			});
+			setMessage('');
+			setSubject('');
+			setEMail('');
 		} else {
 			toast.error('   L\'envoi du message a échoué ', {
 				position: 'bottom-center',
@@ -73,6 +78,15 @@ export const Mailing = () => {
 						/>
 						<Form onSubmit={handleSubmit}>
 							<FontAwesomeIcon icon={faMailBulk} className="iconLogin" />
+							<Form.Group size="lg" controlId="email">
+								<Form.Label><FontAwesomeIcon icon={faUser} /> Email</Form.Label>
+								<Form.Control
+									autoFocus
+									type="email"
+									value={email}
+									onChange={(e) => setEMail(e.target.value)}
+								/>
+							</Form.Group>
 							<Form.Group size="lg" controlId="subject">
 								<Form.Label><FontAwesomeIcon icon={faPenSquare} /> Subject</Form.Label>
 								<Form.Control
@@ -82,7 +96,7 @@ export const Mailing = () => {
 									onChange={(e) => setSubject(e.target.value)}
 								/>
 							</Form.Group>
-							<Form.Group size="lg" controlId="password">
+							<Form.Group size="lg" controlId="msg">
 								<Form.Label> <FontAwesomeIcon icon={faComment} /> Message</Form.Label>
 								<Form.Control as="textarea" rows={5} value={message} onChange={(e) => setMessage(e.target.value)} />
 							</Form.Group>

@@ -1,11 +1,11 @@
 import baseInstance from './api'
 import AuthHelperMethods from './AuthHelperMethods';
 
-export const SendingMail = async (subject, message) => {
+export const SendingMail = async (subject, message, mail) => {
 	const Auth = new AuthHelperMethods();
 	try {
 		const responseJson = await baseInstance.post('api/mailing', {
-			mail: Auth.getMail(),
+			mail: mail,
 			subject: subject,
 			msg: message,
 			name: Auth.getName()
