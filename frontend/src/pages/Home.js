@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ToggleModeNight } from '../components/ToggleModeNight';
+import { Covid19Map } from './Covid-19Map';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -252,6 +253,7 @@ export const Home = () => {
 					</Col>
 					<Col lg="8" className="paddZ">
 						<div className="bodyXX">
+							<Covid19Map />
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
