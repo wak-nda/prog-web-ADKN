@@ -1,15 +1,15 @@
 module.exports = {
 	env: {
-		browser: true,
+		browser: true
 	},
 	extends: [
 		'53js/react',
-		'plugin:jest/recommended',
+		'plugin:jest/recommended'
 	],
 	rules: {
-		'comma-dangle': ["error", "never"],
-		"object-shorthand": ["warn", "never"],
-		'linebreak-style': ["warn", "windows"],
+		'comma-dangle': ['error', 'never'],
+		'object-shorthand': ['warn', 'never'],
+		'linebreak-style': ['warn', 'windows'],
 		'react/jsx-one-expression-per-line': 0, // Buggy
 		'import/prefer-default-export': 0,
 		'react/react-in-jsx-scope': 'warn',
@@ -21,9 +21,9 @@ module.exports = {
 		'arrow-parens': 'warn',
 		indent: 'warn',
 		'object-curly-newline': 'warn',
-		semi: 'warn',
+		semi: 'warn'
 	},
 	settings: {
-		'import/resolver': 'webpack',
-	},
+		'import/resolver': 'webpack'
+	}
 };
