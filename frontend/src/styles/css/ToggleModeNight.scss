@@ -13,8 +13,18 @@
 	.react-toggle--checked .react-toggle-track,
 	.react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
 		background-color: #4d4d4d;
+		margin-top: -7px;
+
 	}
 	.react-toggle--checked .react-toggle-thumb {
 		    border-color: #4d4d4d;
+	}
+
+	.adjust{
+		margin-top: -7px;
+	}
+
+	.adjustI{
+		margin-top: -8px;
 	}
 }
