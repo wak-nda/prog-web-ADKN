@@ -79,8 +79,25 @@ export const Home = () => {
 							</h3>
 						</div>
 						<div>
+							<br />
 							<Container>
 								<Row>
+									<Col>
+										<div className="jsx-2793952281 counter clickable ">
+											<div className="jsx-2793952281 warning-icon"> </div>
+											<div className="jsx-2793952281 value">3 686 813</div>
+											<div className="jsx-2793952281 difference">( + 25 403 )</div>
+											<div className="jsx-2793952281">cas confirmés</div>
+										</div>
+									</Col>
+									<Col>
+										<div className="jsx-2793952281 counter clickable ">
+											<div className="jsx-2793952281 warning-icon"> </div>
+											<div className="jsx-2793952281 value">3 686 813</div>
+											<div className="jsx-2793952281 difference">( + 25 403 )</div>
+											<div className="jsx-2793952281">cas confirmés</div>
+										</div>
+									</Col>
 									{/*<Col>*/}
 
 									{/*</Col>*/}
@@ -88,36 +105,50 @@ export const Home = () => {
 									{/*<Col>*/}
 
 									{/*</Col>*/}
-
-									{/*<Col>*/}
-
-									{/*</Col>*/}
-								</Row>
-								<Row>
-									<Col xs="3">.col-3</Col>
-									<Col xs="auto">.col-auto - variable width content</Col>
-									<Col xs="3">.col-3</Col>
-								</Row>
-								<Row>
-									<Col xs="6">.col-6</Col>
-									<Col xs="6">.col-6</Col>
-								</Row>
-								<Row>
-									<Col xs="6" sm="4">.col-6 .col-sm-4</Col>
-									<Col xs="6" sm="4">.col-6 .col-sm-4</Col>
-									<Col sm="4">.col-sm-4</Col>
-								</Row>
-								<Row>
-									<Col sm={{ size: 6, order: 2, offset: 1 }}>.col-sm-6 .order-sm-2 .offset-sm-1</Col>
-								</Row>
-								<Row>
-									<Col sm="12" md={{ size: 6, offset: 3 }}>.col-sm-12 .col-md-6 .offset-md-3</Col>
-								</Row>
-								<Row>
-									<Col sm={{ size: 'auto', offset: 1 }}>.col-sm-auto .offset-sm-1</Col>
-									<Col sm={{ size: 'auto', offset: 1 }}>.col-sm-auto .offset-sm-1</Col>
 								</Row>
 							</Container>
+							<div className="jsx-1180261630 title policeHobo">Données hospitalières</div>
+							<Container>
+								<Row>
+									<Col>
+										<div className="jsx-2793952281 counter clickable ">
+											<div className="jsx-2793952281 warning-icon"> </div>
+											<div className="jsx-2793952281 value">3 686 813</div>
+											<div className="jsx-2793952281 difference">( + 25 403 )</div>
+											<div className="jsx-2793952281">cas confirmés</div>
+										</div>
+									</Col>
+									<Col>
+										<div className="jsx-2793952281 counter clickable ">
+											<div className="jsx-2793952281 warning-icon"> </div>
+											<div className="jsx-2793952281 value">3 686 813</div>
+											<div className="jsx-2793952281 difference">( + 25 403 )</div>
+											<div className="jsx-2793952281">cas confirmés</div>
+										</div>
+									</Col>
+								</Row>
+								<Row>
+									<Col>
+										<div className="jsx-2793952281 counter clickable ">
+											<div className="jsx-2793952281 warning-icon"> </div>
+											<div className="jsx-2793952281 value">3 686 813</div>
+											<div className="jsx-2793952281 difference">( + 25 403 )</div>
+											<div className="jsx-2793952281">cas confirmés</div>
+										</div>
+									</Col>
+									<Col>
+										<div className="jsx-2793952281 counter clickable ">
+											<div className="jsx-2793952281 warning-icon"> </div>
+											<div className="jsx-2793952281 value">3 686 813</div>
+											<div className="jsx-2793952281 difference">( + 25 403 )</div>
+											<div className="jsx-2793952281">cas confirmés</div>
+										</div>
+									</Col>
+								</Row>
+							</Container>
+							<div className="jsx-1180261630 title policeHobo">Taux d&apos;incidence</div>
+							<br />
+							<br />
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
@@ -212,6 +243,9 @@ export const Home = () => {
 
 						</div>
 					</div>
+				</div>
+				<div className="jsx-2395746840 map">
+					<h1>TEST</h1>
 				</div>
 			</div>
 		</div>

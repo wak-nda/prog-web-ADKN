@@ -556,3 +556,55 @@ span.num {
 	max-width: 550px;
 	box-shadow: rgb(201 211 223) 0px 1px 4px;
 }
+
+.title.jsx-1180261630 {
+	text-align: center;
+	font-size: large;
+	font-weight: bold;
+	padding: 0.5em;
+	margin-top: 0.5em;
+	border-top: 1px solid rgba(14, 30, 35, 0.13);
+}
+
+.counter.jsx-2793952281 {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	margin: 0.5em;
+	color: rgb(255, 153, 71);
+	background-color: rgb(255, 255, 255);
+	border-radius: 0.5em;
+	border: 1px solid rgb(201, 211, 223);
+	padding: 1em;
+	cursor: pointer;
+}
+
+.warning-icon.jsx-2793952281 {
+	position: absolute;
+	top: 0px;
+	left: 10px;
+	cursor: default;
+}
+
+.value.jsx-2793952281 {
+	font-size: x-large;
+	font-weight: bold;
+	margin-right: -12px;
+	display: flex;
+	-webkit-box-pack: center;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.difference.jsx-2793952281 {
+	font-size: small;
+	font-style: italic;
+}
+.map.jsx-2395746840 {
+	display: flex;
+	flex: 1 1 0%;
+	flex-direction: column;
+	height: 100%;
+}
