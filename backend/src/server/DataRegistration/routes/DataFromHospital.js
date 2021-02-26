@@ -51,5 +51,10 @@ router.get('/api/getDataFrance/', async (ctx) => {
     f.success(ctx, dataFrance)
 })
 
+router.get('/api/getDailyDataFrance/', async (ctx) => {
+    const dataFrance = await DataFromHospital.getDailyDataFrance();
+    f.success(ctx, dataFrance)
+})
+
 module.exports = router;
 
