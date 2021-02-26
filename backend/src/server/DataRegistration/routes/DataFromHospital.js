@@ -40,9 +40,10 @@ router.get('/api/getDataFromHospitalInDepartment/:department', async (ctx) => {
     f.success(ctx, data);
 });
 
-router.get('/api/getDataFromHospitalInRegion/:region', async (ctx) => {
-    const data = await DataFromHospital.getDailyDataFromHosptitalInRegion(ctx.params.region);
-    f.success(ctx, data)
+router.get('/api/getDataFromHospitalInRegions/:region', async (ctx) => {
+    const data = await DataFromHospital.getDailyDataFromHosptitalInRegion();
+    const auvergneRhoneAlpes = data[ctx.params.region]
+    f.success(ctx, auvergneRhoneAlpes)
 })
 
 module.exports = router;

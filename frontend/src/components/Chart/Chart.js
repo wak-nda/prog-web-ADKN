@@ -1,13 +1,35 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { fetchMonthlyData } from '../../api';
+import { fetchDailyData } from '../../api';
 
 import styles from './Chart.module.scss';
 
-export const Chart = ({ data: {numberOfHospitalized,numberOfRecovered, numberOfDeaths,lastUpdateDate}, departement, loading }) => {
+export const Chart = () => {
+
+    const [dailyData, setDailyData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const fetchAPI = useCallback(async () => {
+        setLoading(true);
+        try {
+			// const response = await fetchTotalData();
+            // setTotalData(response);
+            const responseDailyData = await fetchDailyData('AuvergneRhoneAlpes');
+            setDailyData(responseDailyData);
+		} catch (e) {
+			// eslint-disable-next-line no-console
+			console.log(e);
+			// setError(true);
+		} finally {
+			setLoading(false);
+		}
+	}, [])
+
+    useEffect(() => {
+        fetchAPI(); 
+    }, []);
 
     if(loading){
         return( <p>
@@ -17,83 +39,104 @@ export const Chart = ({ data: {numberOfHospitalized,numberOfRecovered, numberOfD
 		</p> )
     }
 
-    const [monthlyData, setMonthlyData] = useState([]);
-
-    useEffect(() => {
-        const fetchAPI = async () => {
-            setMonthlyData(await fetchMonthlyData())
-        }
-        fetchAPI();
-    }, []);
-
     // console.log(data)
-    console.log(numberOfHospitalized)
-    const barChartData = {
-        labels: ['Infected', 'Recovered', 'Deaths'],
-        datasets: [{
-            label: 'People',
-            backgroundColor: [
-                'rgba(0,0,255,0.5)',
-                'rgba(0,255,0,0.5)',
-                'rgba(255,0,0,0.5)'
-            ],
-            data: [numberOfHospitalized, numberOfRecovered, numberOfDeaths]
-        }]
-    };
+    // console.log(numberOfHospitalized)
+    // const barChartData = {
+    //     labels: ['Infected', 'Recovered', 'Deaths'],
+    //     datasets: [{
+    //         label: 'People',
+    //         backgroundColor: [
+    //             'rgba(0,0,255,0.5)',
+    //             'rgba(0,255,0,0.5)',
+    //             'rgba(255,0,0,0.5)'
+    //         ],
+    //         data: [numberOfHospitalized, numberOfRecovered, numberOfDeaths]
+    //     }]
+    // };
 
-    const barChartOptions = {
-        legend: { display: false },
-        title: { display: true, text: `Current state in ${departement}` },
-        responsive: true,
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
+    // const barChartOptions = {
+    //     legend: { display: false },
+    //     title: { display: true, text: `Current state in ${departement}` },
+    //     responsive: true,
+    //     scales: {
+    //         yAxes: [{
+    //             ticks: {
+    //                 beginAtZero: true
+    //             }
+    //         }]
+    //     }
+    // }
 
-    const lineChartData = {
-        labels: monthlyData.map(({ date }) => date),
+    const lineChartHospData = {
+        labels: dailyData.map(({ jour }) => jour),
         datasets: [{
-            data: monthlyData.map(({ confirmed }) => confirmed),
-            label: 'Infected',
+            data: dailyData.map(({ hosp }) => hosp),
+            label: 'Hospitalisés',
             borderColor: '#3333ff',
-            fill: true
-        }, {
-            data: monthlyData.map(({ recovered }) => recovered),
-            label: 'Recovered',
-            borderColor: 'green',
-            backgroundColor: 'rgba(0,255,0,0.5)',
-            fill: true
-        }, {
-            data: monthlyData.map(({ deaths }) => deaths),
-            label: 'Deaths',
-            borderColor: 'red',
-            backgroundColor: 'rgba(255,0,0,0.5)',
-            fill: true
+            fill: true,
+            pointRadius: 0
         }]
     }
 
-    const lineChart = (
-        monthlyData.length
+    const lineChartHosp = (
+        dailyData.length
         ? (
-            <Line data={lineChartData} />
+            <Line data={lineChartHospData} />
         ) : null
     );
 
-    const barChart = (
-        numberOfHospitalized
+    const lineChartDeathsData = {
+        labels: dailyData.map(({ jour }) => jour),
+        datasets: [ {
+            data: dailyData.map(({ dc }) => dc),
+            label: 'Décédés',
+            borderColor: 'red',
+            backgroundColor: 'rgba(255,0,0,0.5)',
+            fill: true,
+            pointRadius: 0
+        }]
+    }
+
+    const lineChartDeaths = (
+        dailyData.length
         ? (
-            <Bar data={barChartData} options={barChartOptions} />
+            <Line data={lineChartDeathsData} />
         ) : null
-    )
+    );
+
+    const lineChartRadData = {
+        labels: dailyData.map(({ jour }) => jour),
+        datasets: [ {
+            data: dailyData.map(({ rad }) => rad),
+            label: 'Retour à domicile',
+            borderColor: 'green',
+            backgroundColor: 'rgba(0,255,0,0.5)',
+            fill: true,
+            pointRadius: 0
+        }]
+    }
+
+    const lineChartRad = (
+        dailyData.length
+        ? (
+            <Line data={lineChartRadData} />
+        ) : null
+    );
+
+    // const barChart = (
+    //     numberOfHospitalized
+    //     ? (
+    //         <Bar data={barChartData} options={barChartOptions} />
+    //     ) : null
+    // )
 
     return (
         <div className={styles.container}>
             {/* {departement ? barChart : lineChart} */}
-            {barChart}
+            {/* {barChart} */}
+            {lineChartHosp}
+            {lineChartRad}
+            {lineChartDeaths}
         </div>
     )
 }

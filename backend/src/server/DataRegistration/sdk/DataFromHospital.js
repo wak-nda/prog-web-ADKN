@@ -111,7 +111,7 @@ async function getTotalData(){
     return {'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate};
 }
 
-async function getTotalDataFromHosptitalInRegion(region){
+async function getTotalDataFromHosptitalInRegion(){
     let intermediaire = {};
     await DataFromHospital.find().then(
         value => {
@@ -178,7 +178,7 @@ async function getTotalDataFromHosptitalInRegion(region){
     return Regions
 }
 
-async function getDailyDataFromHosptitalInRegion(region){
+async function getDailyDataFromHosptitalInRegion(){
     let intermediaire = {};
     await DataFromHospital.find().then(
         value => {
@@ -186,15 +186,14 @@ async function getDailyDataFromHosptitalInRegion(region){
             for(let idx = 0; idx < size; idx++){
                 if(value[idx]['sexe'] === '0'){
                     let region = findRegion(value[idx]['dep']);
-                    // console.log(region)
                     if(region in intermediaire){
-                        lastElemmentIdx = intermediaire[region].length - 1;
-                        lastElementDay = intermediaire[region][lastElemmentIdx]['jour']
+                        lastElementIdx = intermediaire[region].length - 1;
+                        lastElementDay = intermediaire[region][lastElementIdx]['jour']
                         if(value[idx]['jour'] === lastElementDay){
-                            intermediaire[region][lastElemmentIdx]['rea'] += value[idx]['rea'];
-                            intermediaire[region][lastElemmentIdx]['hosp'] += value[idx]['hosp'];
-                            intermediaire[region][lastElemmentIdx]['rad'] += value[idx]['rad'];
-                            intermediaire[region][lastElemmentIdx]['dc'] += value[idx]['dc'];
+                            intermediaire[region][lastElementIdx]['rea'] += value[idx]['rea'] ;
+                            intermediaire[region][lastElementIdx]['hosp'] += value[idx]['hosp'] ;
+                            intermediaire[region][lastElementIdx]['rad'] += value[idx]['rad'];
+                            intermediaire[region][lastElementIdx]['dc'] += value[idx]['dc'];
                         }else{
                             intermediaire[region].push({'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']})
                         }
@@ -309,45 +308,44 @@ function findRegion(dep){
     const laReunion = ["974"]
     const mayotte = ["976"]
     if(auvergneRhoneAlpes.includes(dep)){
-        console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa')
-        return "Auvergne-Rhône-Alpes";
+        return "AuvergneRhoneAlpes";
     }
     if(bourgogneFrancheComte.includes(dep)){
-        return "Bourgogne-Franche-Comté";
+        return "BourgogneFrancheComte";
     }
     if(bretagne.includes(dep)){
         return "Bretagne";
     }
     if(centreValDeLoire.includes(dep)){
-        return "Centre-Val de Loire";
+        return "CentreValdeLoire";
     }
     if(corse.includes(dep)){
         return "Corse";
     }
     if(grandEst.includes(dep)){
-        return "Nouvelle-Aquitaine";
+        return "NouvelleAquitaine";
     }
     if(hautsDeFrance.includes(dep)){
-        return "Hauts-de-France";
+        return "HautsdeFrance";
     }
     if(ileDeFrance.includes(dep)){
-        return "Île-de-France";
+        return "IledeFrance";
     }
     if(normandie.includes(dep)){
         return "Normandie";
     }
     if(nouvelleAquitaine.includes(dep)){
-        return "Nouvelle-Aquitaine";
+        return "NouvelleAquitaine";
     }
     
     if(occitanie.includes(dep)){
         return "Occitanie";
     }
     if(paysDeLaLoire.includes(dep)){
-        return "Pays de la Loire";
+        return "PaysdelaLoire";
     }
     if(provenceAlpesCoteDazur.includes(dep)){
-        return "Provence-Alpes-Côte d'Azur";
+        return "ProvenceAlpesCotedAzur";
     }
     if(guadeloupe.includes(dep)){
         return "Guadeloupe";
@@ -359,7 +357,7 @@ function findRegion(dep){
         return "Guyane";
     }
     if(laReunion.includes(dep)){
-        return "La Réunion";
+        return "LaReunion";
     }
     if(mayotte.includes(dep)){
         return "Mayotte";
