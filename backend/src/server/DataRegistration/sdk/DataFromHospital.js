@@ -308,44 +308,44 @@ function findRegion(dep){
     const laReunion = ["974"]
     const mayotte = ["976"]
     if(auvergneRhoneAlpes.includes(dep)){
-        return "AuvergneRhoneAlpes";
+        return "Auvergne-Rhône-Alpes";
     }
     if(bourgogneFrancheComte.includes(dep)){
-        return "BourgogneFrancheComte";
+        return "Bourgogne-Franche-Comté";
     }
     if(bretagne.includes(dep)){
         return "Bretagne";
     }
     if(centreValDeLoire.includes(dep)){
-        return "CentreValdeLoire";
+        return "Centre-Val de Loire";
     }
     if(corse.includes(dep)){
         return "Corse";
     }
     if(grandEst.includes(dep)){
-        return "NouvelleAquitaine";
+        return "Grand Est";
     }
     if(hautsDeFrance.includes(dep)){
-        return "HautsdeFrance";
+        return "Hauts-de-France";
     }
     if(ileDeFrance.includes(dep)){
-        return "IledeFrance";
+        return "Île-de-France";
     }
     if(normandie.includes(dep)){
         return "Normandie";
     }
     if(nouvelleAquitaine.includes(dep)){
-        return "NouvelleAquitaine";
+        return "Nouvelle-Aquitaine";
     }
     
     if(occitanie.includes(dep)){
         return "Occitanie";
     }
     if(paysDeLaLoire.includes(dep)){
-        return "PaysdelaLoire";
+        return "Pays de la Loire";
     }
     if(provenceAlpesCoteDazur.includes(dep)){
-        return "ProvenceAlpesCotedAzur";
+        return "Provence-Alpes-Côte d'Azur";
     }
     if(guadeloupe.includes(dep)){
         return "Guadeloupe";
@@ -357,7 +357,7 @@ function findRegion(dep){
         return "Guyane";
     }
     if(laReunion.includes(dep)){
-        return "LaReunion";
+        return "La Réunion";
     }
     if(mayotte.includes(dep)){
         return "Mayotte";

@@ -5,39 +5,39 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { fetchDailyData } from '../../api';
 
-import styles from './Chart.module.scss';
+import styles from '../../styles/css/Chart.module.scss';
 
-export const Chart = () => {
+export const Chart = ({dailyData}) => {
 
-    const [dailyData, setDailyData] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const fetchAPI = useCallback(async () => {
-        setLoading(true);
-        try {
-			// const response = await fetchTotalData();
-            // setTotalData(response);
-            const responseDailyData = await fetchDailyData('AuvergneRhoneAlpes');
-            setDailyData(responseDailyData);
-		} catch (e) {
-			// eslint-disable-next-line no-console
-			console.log(e);
-			// setError(true);
-		} finally {
-			setLoading(false);
-		}
-	}, [])
+    // const [dailyData, setDailyData] = useState([]);
+    // const [loading, setLoading] = useState(false);
+    // const fetchAPI = useCallback(async () => {
+    //     setLoading(true);
+    //     try {
+	// 		// const response = await fetchTotalData();
+    //         // setTotalData(response);
+    //         const responseDailyData = await fetchDailyData(region);
+    //         setDailyData(responseDailyData);
+	// 	} catch (e) {
+	// 		// eslint-disable-next-line no-console
+	// 		console.log(e);
+	// 		// setError(true);
+	// 	} finally {
+	// 		setLoading(false);
+	// 	}
+	// }, [])
 
-    useEffect(() => {
-        fetchAPI(); 
-    }, []);
+    // useEffect(() => {
+    //     fetchAPI(); 
+    // }, []);
 
-    if(loading){
-        return( <p>
-			{loading && (
-				<FontAwesomeIcon icon={faSpinner} spin className={styles.fa} />
-			)}
-		</p> )
-    }
+    // if(loading){
+    //     return( <p>
+	// 		{loading && (
+	// 			<FontAwesomeIcon icon={faSpinner} spin className={styles.fa} />
+	// 		)}
+	// 	</p> )
+    // }
 
     // console.log(data)
     // console.log(numberOfHospitalized)

@@ -3,6 +3,8 @@ import axios from 'axios';
 const urlTotalData = 'http://localhost:5000/api/getTotalData';
 const urlDailyDataPerRegion = 'http://localhost:5000/api/getDataFromHospitalInRegions';
 
+import regions from "../data/regions.json";
+
 export const fetchTotalData = async () => {
     try {
         const {data} = await axios.get(urlTotalData)
@@ -27,4 +29,9 @@ export const fetchDepartementData = async () => {
 export const fetchDepartementNameAndNumber = () => {
     console.log(departement);
     return departement;
+}
+
+export const fetchRegions = async () => {
+    console.log(regions)
+    return regions
 }
