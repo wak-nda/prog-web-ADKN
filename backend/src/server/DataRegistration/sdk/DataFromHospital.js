@@ -6,7 +6,7 @@
 const DataFromHospital = require('../models/DataFromHospital');
 
 const Regions = require('../data/regions.json');
-
+const dataFranceFromJson = require('../../data/contrib-data.json')
 
 /*************************************************************************************************
  *       ################################  DATA   ############################################   *
@@ -365,6 +365,11 @@ function findRegion(dep){
             
 }
 
+async function getFranceData(){
+    const size = dataFranceFromJson.length
+    return dataFranceFromJson[size - 1]
+}
+
 module.exports = {
     addDataFromHospital,
     getDataFromHospital,
@@ -373,5 +378,6 @@ module.exports = {
     getDataFromHospitalAfterDate,
     getTotalData,
     getTotalDataFromHosptitalInRegion,
-    getDailyDataFromHosptitalInRegion
+    getDailyDataFromHosptitalInRegion,
+    getFranceData
 };
