@@ -22,10 +22,6 @@ async function main() {
         return false
       }
 
-      if (r.code === 'FRA') {
-        return true
-      }
-
       if (r.sourceType === 'ministere-sante' && r.date < '2021-02-28') {
         return true
       }

@@ -2,33 +2,6 @@
   {
     "date": "2020-03-02",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/covid-19-situation-epidemiologique-en-france",
-      "archive": "https://web.archive.org/web/20200303124836/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/covid-19-situation-epidemiologique-en-france"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 178,
-    "deces": 3,
-    "victimes": [
-      {
-        "sexe": "homme",
-        "age": 81
-      },
-      {
-        "sexe": "homme",
-        "age": 60
-      },
-      {
-        "sexe": "femme",
-        "age": 89
-      }
-    ],
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-02",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7sfmt7"
     },
@@ -66,19 +39,6 @@
   {
     "date": "2020-03-03",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200303185725/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 212,
-    "deces": 4,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-03",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7sgicv"
     },
@@ -112,20 +72,6 @@
   {
     "date": "2020-03-04",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/content/download/235529/2526819",
-      "archive": "https://web.archive.org/web/20200305181330/https://www.santepubliquefrance.fr/content/download/234628/link_1_file_to_download/COVID19_PE_20200304.pdf"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 285,
-    "reanimation": 15,
-    "deces": 4,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-04",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7shh99"
     },
@@ -149,19 +95,6 @@
     "deces": 3200,
     "nom": "Monde",
     "code": "WORLD"
-  },
-  {
-    "date": "2020-03-05",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/content/download/235532/2526871"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 423,
-    "reanimation": 23,
-    "deces": 5,
-    "nom": "France",
-    "code": "FRA"
   },
   {
     "date": "2020-03-05",
@@ -201,20 +134,6 @@
   {
     "date": "2020-03-06",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/content/download/235535/2526923",
-      "archive": "https://web.archive.org/web/20200308004050/https://www.santepubliquefrance.fr/content/download/234974/link_1_file_to_download/COVID19_PE_20200306.pdf"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 613,
-    "reanimation": 39,
-    "deces": 9,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-06",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7sj9hs"
     },
@@ -242,20 +161,6 @@
   {
     "date": "2020-03-07",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/content/download/235538/2526975",
-      "archive": "https://web.archive.org/web/20200319120255/https://www.santepubliquefrance.fr/content/download/234974/link_1_file_to_download/COVID19_PE_20200307.pdf"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 949,
-    "reanimation": 45,
-    "deces": 11,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-07",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7ska17"
     },
@@ -279,32 +184,6 @@
     "deces": 3500,
     "nom": "Monde",
     "code": "WORLD"
-  },
-  {
-    "date": "2020-03-08",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200309074325/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 1126,
-    "deces": 19,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-09",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200309183257/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 1412,
-    "deces": 30,
-    "nom": "France",
-    "code": "FRA"
   },
   {
     "date": "2020-03-09",
@@ -336,19 +215,6 @@
   {
     "date": "2020-03-10",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200311105030/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 1784,
-    "deces": 33,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-10",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7smg45"
     },
@@ -372,19 +238,6 @@
     "deces": 4088,
     "nom": "Monde",
     "code": "WORLD"
-  },
-  {
-    "date": "2020-03-11",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200311235725/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 2281,
-    "deces": 48,
-    "nom": "France",
-    "code": "FRA"
   },
   {
     "date": "2020-03-11",
@@ -416,19 +269,6 @@
   {
     "date": "2020-03-12",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200312205456/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 2876,
-    "deces": 61,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-12",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://solidarites-sante.gouv.fr/IMG/pdf/cp_mss_-_covid-19_-_point_de_situation.pdf",
       "archive": "https://web.archive.org/web/20200322192929/https://solidarites-sante.gouv.fr/IMG/pdf/cp_mss_-_covid-19_-_point_de_situation.pdf"
@@ -437,32 +277,6 @@
     "casConfirmes": 2876,
     "deces": 61,
     "reanimation": 129,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-13",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200314005123/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 3661,
-    "deces": 79,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-14",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200314195752/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 4499,
-    "deces": 91,
     "nom": "France",
     "code": "FRA"
   },
@@ -496,19 +310,6 @@
   {
     "date": "2020-03-15",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200316191321/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 5423,
-    "deces": 127,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-15",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://solidarites-sante.gouv.fr/IMG/pdf/cp_mss_-_covid-19_-_point_de_situation_15.03.20_v20h15.pdf",
       "archive": "https://web.archive.org/web/20200322194903/https://solidarites-sante.gouv.fr/IMG/pdf/cp_mss_-_covid-19_-_point_de_situation_15.03.20_v20h15.pdf"
@@ -517,32 +318,6 @@
     "casConfirmes": 5423,
     "deces": 127,
     "hospitalises": 400,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-16",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200316193700/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 6633,
-    "deces": 148,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-17",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200317191451/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 7730,
-    "deces": 175,
     "nom": "France",
     "code": "FRA"
   },
@@ -578,19 +353,6 @@
   {
     "date": "2020-03-18",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200318184308/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 9134,
-    "deces": 244,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-18",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7ssjki"
     },
@@ -604,19 +366,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-18",
-    "hospitalises": 2972,
-    "reanimation": 771,
-    "deces": 218,
-    "gueris": 816,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-03-18",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé",
@@ -628,19 +377,6 @@
     "deces": 8724,
     "nom": "Monde",
     "code": "WORLD"
-  },
-  {
-    "date": "2020-03-19",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200319194637/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 10995,
-    "deces": 372,
-    "nom": "France",
-    "code": "FRA"
   },
   {
     "date": "2020-03-19",
@@ -662,21 +398,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-19",
-    "hospitalises": 4073,
-    "reanimation": 1002,
-    "nouvellesHospitalisations": 2229,
-    "nouvellesReanimations": 438,
-    "deces": 327,
-    "gueris": 1180,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-03-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé",
@@ -693,21 +414,6 @@
   {
     "date": "2020-03-20",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200320185449/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 12612,
-    "deces": 450,
-    "hospitalises": 5226,
-    "reanimation": 1297,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-20",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7sugjb"
     },
@@ -719,21 +425,6 @@
     "gueris": 1587,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-20",
-    "hospitalises": 5226,
-    "reanimation": 1297,
-    "nouvellesHospitalisations": 1256,
-    "nouvellesReanimations": 242,
-    "deces": 450,
-    "gueris": 1587,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-03-20",
@@ -752,21 +443,6 @@
   {
     "date": "2020-03-21",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200321183240/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 14459,
-    "deces": 562,
-    "hospitalises": 6172,
-    "reanimation": 1525,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-21",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://solidarites-sante.gouv.fr/actualites/presse/communiques-de-presse/article/communique-de-presse-covid-19-extension-nationale-et-aggravation-rapide-de-l",
       "archive": "https://web.archive.org/web/20200322150209/https://solidarites-sante.gouv.fr/actualites/presse/communiques-de-presse/article/communique-de-presse-covid-19-extension-nationale-et-aggravation-rapide-de-l"
@@ -776,36 +452,6 @@
     "deces": 562,
     "hospitalises": 6172,
     "reanimation": 1525,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-21",
-    "hospitalises": 5900,
-    "reanimation": 1453,
-    "nouvellesHospitalisations": 1540,
-    "nouvellesReanimations": 298,
-    "deces": 525,
-    "gueris": 1811,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "date": "2020-03-22",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200323121952/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 16689,
-    "deces": 674,
-    "hospitalises": 7240,
-    "reanimation": 1746,
     "nom": "France",
     "code": "FRA"
   },
@@ -825,21 +471,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-22",
-    "hospitalises": 6954,
-    "reanimation": 1674,
-    "nouvellesHospitalisations": 1534,
-    "nouvellesReanimations": 309,
-    "deces": 632,
-    "gueris": 2117,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-03-22",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé",
@@ -856,21 +487,6 @@
   {
     "date": "2020-03-23",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200323185012/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 19856,
-    "deces": 860,
-    "hospitalises": 8675,
-    "reanimation": 2082,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-23",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.pscp.tv/MinSoliSante/1MnxnQnDwOEJO"
     },
@@ -879,34 +495,6 @@
     "deces": 860,
     "hospitalises": 8675,
     "reanimation": 2082,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-23",
-    "hospitalises": 8673,
-    "reanimation": 2080,
-    "nouvellesHospitalisations": 2053,
-    "nouvellesReanimations": 448,
-    "deces": 860,
-    "gueris": 2567,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "date": "2020-03-24",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200324193012/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 22302,
-    "deces": 1100,
     "nom": "France",
     "code": "FRA"
   },
@@ -925,21 +513,6 @@
     "capaciteLitsReanimation": 8000,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-24",
-    "hospitalises": 10163,
-    "reanimation": 2503,
-    "nouvellesHospitalisations": 2618,
-    "nouvellesReanimations": 571,
-    "deces": 1100,
-    "gueris": 3281,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-03-24",
@@ -980,19 +553,6 @@
   {
     "date": "2020-03-25",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200325185410/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 25233,
-    "deces": 1331,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-25",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7sxnzg"
     },
@@ -1005,21 +565,6 @@
     "capaciteLitsReanimation": 8000,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-25",
-    "hospitalises": 12072,
-    "reanimation": 2935,
-    "nouvellesHospitalisations": 3166,
-    "nouvellesReanimations": 607,
-    "deces": 1388,
-    "gueris": 4085,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-03-25",
@@ -1096,19 +641,6 @@
   {
     "date": "2020-03-26",
     "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200326183922/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 29155,
-    "deces": 1696,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "date": "2020-03-26",
-    "source": {
       "nom": "Ministère des Solidarités et de la Santé",
       "url": "https://www.dailymotion.com/video/x7sybze"
     },
@@ -1118,34 +650,6 @@
     "hospitalises": 13904,
     "reanimation": 3375,
     "gueris": 4948,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-26",
-    "hospitalises": 13879,
-    "reanimation": 3351,
-    "nouvellesHospitalisations": 3097,
-    "nouvellesReanimations": 612,
-    "deces": 1696,
-    "gueris": 4947,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "date": "2020-03-27",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200327182518/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 32964,
-    "deces": 1995,
     "nom": "France",
     "code": "FRA"
   },
@@ -1163,34 +667,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-27",
-    "hospitalises": 15701,
-    "reanimation": 3758,
-    "nouvellesHospitalisations": 3059,
-    "nouvellesReanimations": 608,
-    "deces": 1995,
-    "gueris": 5698,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "date": "2020-03-28",
-    "source": {
-      "nom": "Santé publique France",
-      "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde",
-      "archive": "https://web.archive.org/web/20200328214724/https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde"
-    },
-    "sourceType": "sante-publique-france",
-    "casConfirmes": 37575,
-    "deces": 2314,
-    "nom": "France",
-    "code": "FRA"
-  },
-  {
     "date": "2020-03-28",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1202,21 +678,6 @@
     "reanimation": 4273,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-28",
-    "hospitalises": 17580,
-    "reanimation": 4236,
-    "nouvellesHospitalisations": 3353,
-    "nouvellesReanimations": 695,
-    "deces": 2314,
-    "gueris": 6624,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-03-29",
@@ -1231,21 +692,6 @@
     "reanimation": 4632,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-29",
-    "hospitalises": 19311,
-    "reanimation": 4592,
-    "nouvellesHospitalisations": 2685,
-    "nouvellesReanimations": 543,
-    "deces": 2606,
-    "gueris": 7131,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-03-30",
@@ -1263,21 +709,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-30",
-    "hospitalises": 20946,
-    "reanimation": 5056,
-    "nouvellesHospitalisations": 3108,
-    "nouvellesReanimations": 694,
-    "deces": 3024,
-    "gueris": 7923,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-03-31",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé",
@@ -1291,21 +722,6 @@
     "gueris": 9444,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-03-31",
-    "hospitalises": 22672,
-    "reanimation": 5496,
-    "nouvellesHospitalisations": 4146,
-    "nouvellesReanimations": 767,
-    "deces": 3523,
-    "gueris": 9443,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-01",
@@ -1323,21 +739,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-01",
-    "hospitalises": 24543,
-    "reanimation": 5940,
-    "nouvellesHospitalisations": 4281,
-    "nouvellesReanimations": 771,
-    "deces": 4032,
-    "gueris": 10934,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-02",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1351,21 +752,6 @@
     "gueris": 12428,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-02",
-    "hospitalises": 26131,
-    "reanimation": 6305,
-    "nouvellesHospitalisations": 3845,
-    "nouvellesReanimations": 728,
-    "deces": 4503,
-    "gueris": 12427,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-03",
@@ -1383,21 +769,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-03",
-    "hospitalises": 27302,
-    "reanimation": 6556,
-    "nouvellesHospitalisations": 3627,
-    "nouvellesReanimations": 640,
-    "deces": 5091,
-    "gueris": 14007,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-04",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1411,21 +782,6 @@
     "gueris": 15438,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-04",
-    "hospitalises": 28003,
-    "reanimation": 6723,
-    "nouvellesHospitalisations": 2822,
-    "nouvellesReanimations": 502,
-    "deces": 5532,
-    "gueris": 15437,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-05",
@@ -1443,21 +799,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-05",
-    "hospitalises": 28747,
-    "reanimation": 6859,
-    "nouvellesHospitalisations": 1931,
-    "nouvellesReanimations": 390,
-    "deces": 5889,
-    "gueris": 16182,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-06",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1471,21 +812,6 @@
     "gueris": 17250,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-06",
-    "hospitalises": 29569,
-    "reanimation": 6948,
-    "nouvellesHospitalisations": 2754,
-    "nouvellesReanimations": 478,
-    "deces": 6494,
-    "gueris": 17249,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-07",
@@ -1503,21 +829,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-07",
-    "hospitalises": 29871,
-    "reanimation": 7004,
-    "nouvellesHospitalisations": 3277,
-    "nouvellesReanimations": 518,
-    "deces": 7091,
-    "gueris": 19336,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-08",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1531,21 +842,6 @@
     "gueris": 21254,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-08",
-    "hospitalises": 30217,
-    "reanimation": 7019,
-    "nouvellesHospitalisations": 3139,
-    "nouvellesReanimations": 482,
-    "deces": 7632,
-    "gueris": 21253,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-09",
@@ -1563,21 +859,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-09",
-    "hospitalises": 30608,
-    "reanimation": 6937,
-    "nouvellesHospitalisations": 2990,
-    "nouvellesReanimations": 369,
-    "deces": 8044,
-    "gueris": 23205,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-10",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1593,21 +874,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-10",
-    "hospitalises": 31108,
-    "reanimation": 6875,
-    "nouvellesHospitalisations": 3161,
-    "nouvellesReanimations": 431,
-    "deces": 8598,
-    "gueris": 24931,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-11",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1621,21 +887,6 @@
     "gueris": 26391,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-11",
-    "hospitalises": 31159,
-    "reanimation": 6752,
-    "nouvellesHospitalisations": 2044,
-    "nouvellesReanimations": 255,
-    "deces": 8943,
-    "gueris": 26390,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-12",
@@ -1656,21 +907,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-12",
-    "hospitalises": 31665,
-    "reanimation": 6714,
-    "nouvellesHospitalisations": 1688,
-    "nouvellesReanimations": 220,
-    "deces": 9253,
-    "gueris": 27185,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-13",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1687,21 +923,6 @@
     "casPossiblesEhpad": 26222,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-13",
-    "hospitalises": 31952,
-    "reanimation": 6690,
-    "nouvellesHospitalisations": 1257,
-    "nouvellesReanimations": 227,
-    "deces": 9588,
-    "gueris": 27717,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-14",
@@ -1722,21 +943,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-14",
-    "hospitalises": 32131,
-    "reanimation": 6599,
-    "nouvellesHospitalisations": 1965,
-    "nouvellesReanimations": 275,
-    "deces": 10129,
-    "gueris": 28804,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-15",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1753,21 +959,6 @@
     "casPossiblesEhpad": 27264,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-15",
-    "hospitalises": 31623,
-    "reanimation": 6331,
-    "nouvellesHospitalisations": 2415,
-    "nouvellesReanimations": 284,
-    "deces": 10643,
-    "gueris": 30952,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-16",
@@ -1788,21 +979,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-16",
-    "hospitalises": 31172,
-    "reanimation": 6139,
-    "nouvellesHospitalisations": 2084,
-    "nouvellesReanimations": 270,
-    "deces": 11053,
-    "gueris": 32806,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-17",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1819,21 +995,6 @@
     "casPossiblesEhpad": 38717,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-17",
-    "hospitalises": 31061,
-    "reanimation": 5922,
-    "nouvellesHospitalisations": 2166,
-    "nouvellesReanimations": 242,
-    "deces": 11470,
-    "gueris": 34414,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-18",
@@ -1854,21 +1015,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-18",
-    "hospitalises": 30515,
-    "reanimation": 5733,
-    "nouvellesHospitalisations": 1565,
-    "nouvellesReanimations": 206,
-    "deces": 11834,
-    "gueris": 35977,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1885,21 +1031,6 @@
     "casPossiblesEhpad": 40288,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-19",
-    "hospitalises": 30486,
-    "reanimation": 5644,
-    "nouvellesHospitalisations": 890,
-    "nouvellesReanimations": 137,
-    "deces": 12061,
-    "gueris": 36572,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-20",
@@ -1920,21 +1051,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-20",
-    "hospitalises": 30462,
-    "reanimation": 5584,
-    "nouvellesHospitalisations": 1464,
-    "nouvellesReanimations": 208,
-    "deces": 12505,
-    "gueris": 37403,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-21",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -1948,21 +1064,6 @@
     "gueris": 39181,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-21",
-    "hospitalises": 29984,
-    "reanimation": 5334,
-    "nouvellesHospitalisations": 1885,
-    "nouvellesReanimations": 190,
-    "deces": 12892,
-    "gueris": 39175,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-22",
@@ -1979,21 +1080,6 @@
     "casConfirmesEhpad": 25513,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-22",
-    "hospitalises": 29627,
-    "reanimation": 5127,
-    "nouvellesHospitalisations": 1619,
-    "nouvellesReanimations": 183,
-    "deces": 13225,
-    "gueris": 40651,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-23",
@@ -2014,21 +1100,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-23",
-    "hospitalises": 29113,
-    "reanimation": 4967,
-    "nouvellesHospitalisations": 1410,
-    "nouvellesReanimations": 178,
-    "deces": 13536,
-    "gueris": 42082,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-24",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2045,21 +1116,6 @@
     "casPossiblesEhpad": 37251,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-24",
-    "hospitalises": 28554,
-    "reanimation": 4785,
-    "nouvellesHospitalisations": 1346,
-    "nouvellesReanimations": 155,
-    "deces": 13841,
-    "gueris": 43486,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-25",
@@ -2080,21 +1136,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-25",
-    "hospitalises": 28119,
-    "reanimation": 4641,
-    "nouvellesHospitalisations": 999,
-    "nouvellesReanimations": 124,
-    "deces": 14039,
-    "gueris": 44587,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-26",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2111,21 +1152,6 @@
     "casPossiblesEhpad": 37525,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-26",
-    "hospitalises": 28114,
-    "reanimation": 4598,
-    "nouvellesHospitalisations": 481,
-    "nouvellesReanimations": 79,
-    "deces": 14191,
-    "gueris": 44896,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-27",
@@ -2146,21 +1172,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-27",
-    "hospitalises": 27954,
-    "reanimation": 4526,
-    "nouvellesHospitalisations": 964,
-    "nouvellesReanimations": 125,
-    "deces": 14486,
-    "gueris": 45506,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-28",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2177,21 +1188,6 @@
     "casPossiblesEhpad": 39076,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-28",
-    "hospitalises": 27607,
-    "reanimation": 4392,
-    "nouvellesHospitalisations": 1321,
-    "nouvellesReanimations": 153,
-    "deces": 14676,
-    "gueris": 46322,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-04-29",
@@ -2211,21 +1207,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-29",
-    "hospitalises": 26736,
-    "reanimation": 4128,
-    "nouvellesHospitalisations": 1070,
-    "nouvellesReanimations": 110,
-    "deces": 15041,
-    "gueris": 48221,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-04-30",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2241,21 +1222,6 @@
     "casConfirmesEhpad": 32355,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-04-30",
-    "hospitalises": 26192,
-    "reanimation": 3947,
-    "nouvellesHospitalisations": 1048,
-    "nouvellesReanimations": 121,
-    "deces": 15231,
-    "gueris": 49469,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-01",
@@ -2275,21 +1241,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-01",
-    "hospitalises": 25809,
-    "reanimation": 3819,
-    "nouvellesHospitalisations": 668,
-    "nouvellesReanimations": 73,
-    "deces": 15350,
-    "gueris": 50204,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-02",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2305,21 +1256,6 @@
     "casConfirmesEhpad": 33271,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-02",
-    "hospitalises": 25751,
-    "reanimation": 3770,
-    "nouvellesHospitalisations": 453,
-    "nouvellesReanimations": 64,
-    "deces": 15468,
-    "gueris": 50554,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-03",
@@ -2339,21 +1275,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-03",
-    "hospitalises": 25739,
-    "reanimation": 3762,
-    "nouvellesHospitalisations": 345,
-    "nouvellesReanimations": 80,
-    "deces": 15564,
-    "gueris": 50776,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-04",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2369,21 +1290,6 @@
     "casConfirmesEhpad": 33791,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-04",
-    "hospitalises": 25472,
-    "reanimation": 3639,
-    "nouvellesHospitalisations": 689,
-    "nouvellesReanimations": 84,
-    "deces": 15807,
-    "gueris": 51363,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-05",
@@ -2403,21 +1309,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-05",
-    "hospitalises": 24701,
-    "reanimation": 3375,
-    "nouvellesHospitalisations": 987,
-    "nouvellesReanimations": 111,
-    "deces": 16041,
-    "gueris": 52728,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-06",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2433,21 +1324,6 @@
     "casConfirmesEhpad": 34507,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-06",
-    "hospitalises": 23912,
-    "reanimation": 3095,
-    "nouvellesHospitalisations": 833,
-    "nouvellesReanimations": 69,
-    "deces": 16218,
-    "gueris": 53963,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-07",
@@ -2467,21 +1343,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-07",
-    "hospitalises": 23139,
-    "reanimation": 2911,
-    "nouvellesHospitalisations": 728,
-    "nouvellesReanimations": 99,
-    "deces": 16367,
-    "gueris": 55018,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-08",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2497,21 +1358,6 @@
     "casConfirmesEhpad": 34890,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-08",
-    "hospitalises": 22657,
-    "reanimation": 2820,
-    "nouvellesHospitalisations": 510,
-    "nouvellesReanimations": 89,
-    "deces": 16478,
-    "gueris": 55773,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-09",
@@ -2531,21 +1377,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-09",
-    "hospitalises": 22547,
-    "reanimation": 2764,
-    "nouvellesHospitalisations": 265,
-    "nouvellesReanimations": 38,
-    "deces": 16554,
-    "gueris": 56029,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-10",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2561,21 +1392,6 @@
     "casConfirmesEhpad": 35236,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-10",
-    "hospitalises": 22502,
-    "reanimation": 2728,
-    "nouvellesHospitalisations": 253,
-    "nouvellesReanimations": 38,
-    "deces": 16623,
-    "gueris": 56208,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-11",
@@ -2595,21 +1411,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-11",
-    "hospitalises": 22219,
-    "reanimation": 2666,
-    "nouvellesHospitalisations": 523,
-    "nouvellesReanimations": 82,
-    "deces": 16801,
-    "gueris": 56715,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-12",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2625,21 +1426,6 @@
     "casConfirmesEhpad": 35437,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-12",
-    "hospitalises": 21530,
-    "reanimation": 2496,
-    "nouvellesHospitalisations": 670,
-    "nouvellesReanimations": 92,
-    "deces": 16984,
-    "gueris": 57776,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-13",
@@ -2659,21 +1445,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-13",
-    "hospitalises": 21009,
-    "reanimation": 2385,
-    "nouvellesHospitalisations": 543,
-    "nouvellesReanimations": 69,
-    "deces": 17082,
-    "gueris": 58664,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-14",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2689,21 +1460,6 @@
     "casConfirmesEhpad": 35820,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-14",
-    "hospitalises": 20401,
-    "reanimation": 2256,
-    "nouvellesHospitalisations": 542,
-    "nouvellesReanimations": 52,
-    "deces": 17205,
-    "gueris": 59596,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-15",
@@ -2723,21 +1479,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-15",
-    "hospitalises": 19801,
-    "reanimation": 2162,
-    "nouvellesHospitalisations": 438,
-    "nouvellesReanimations": 64,
-    "deces": 17323,
-    "gueris": 60439,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-16",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2753,21 +1494,6 @@
     "casConfirmesEhpad": 36175,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-16",
-    "hospitalises": 19372,
-    "reanimation": 2091,
-    "nouvellesHospitalisations": 350,
-    "nouvellesReanimations": 46,
-    "deces": 17393,
-    "gueris": 61057,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-17",
@@ -2787,21 +1513,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-17",
-    "hospitalises": 19302,
-    "reanimation": 2047,
-    "nouvellesHospitalisations": 152,
-    "nouvellesReanimations": 24,
-    "deces": 17447,
-    "gueris": 61204,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-18",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2817,21 +1528,6 @@
     "casConfirmesEhpad": 36599,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-18",
-    "hospitalises": 18956,
-    "reanimation": 1958,
-    "nouvellesHospitalisations": 375,
-    "nouvellesReanimations": 38,
-    "deces": 17570,
-    "gueris": 61719,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-19",
@@ -2851,21 +1547,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-19",
-    "hospitalises": 18409,
-    "reanimation": 1854,
-    "nouvellesHospitalisations": 506,
-    "nouvellesReanimations": 69,
-    "deces": 17695,
-    "gueris": 62554,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-20",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2881,21 +1562,6 @@
     "casConfirmesEhpad": 36751,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-20",
-    "hospitalises": 17882,
-    "reanimation": 1754,
-    "nouvellesHospitalisations": 432,
-    "nouvellesReanimations": 43,
-    "deces": 17793,
-    "gueris": 63345,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-21",
@@ -2915,21 +1581,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-21",
-    "hospitalises": 17527,
-    "reanimation": 1708,
-    "nouvellesHospitalisations": 271,
-    "nouvellesReanimations": 28,
-    "deces": 17851,
-    "gueris": 63849,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-22",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -2945,21 +1596,6 @@
     "casConfirmesEhpad": 36853,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-22",
-    "hospitalises": 17327,
-    "reanimation": 1664,
-    "nouvellesHospitalisations": 263,
-    "nouvellesReanimations": 36,
-    "deces": 17925,
-    "gueris": 64200,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-23",
@@ -2979,21 +1615,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-23",
-    "hospitalises": 17122,
-    "reanimation": 1628,
-    "nouvellesHospitalisations": 233,
-    "nouvellesReanimations": 30,
-    "deces": 17968,
-    "gueris": 64538,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-24",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3009,21 +1630,6 @@
     "casConfirmesEhpad": 36853,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-24",
-    "hospitalises": 17129,
-    "reanimation": 1618,
-    "nouvellesHospitalisations": 121,
-    "nouvellesReanimations": 24,
-    "deces": 18003,
-    "gueris": 64608,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-25",
@@ -3043,21 +1649,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-25",
-    "hospitalises": 16742,
-    "reanimation": 1572,
-    "nouvellesHospitalisations": 342,
-    "nouvellesReanimations": 45,
-    "deces": 18093,
-    "gueris": 65190,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-26",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3073,21 +1664,6 @@
     "casConfirmesEhpad": 37235,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-26",
-    "hospitalises": 16209,
-    "reanimation": 1519,
-    "nouvellesHospitalisations": 318,
-    "nouvellesReanimations": 37,
-    "deces": 18175,
-    "gueris": 65870,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-27",
@@ -3107,21 +1683,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-27",
-    "hospitalises": 15627,
-    "reanimation": 1467,
-    "nouvellesHospitalisations": 271,
-    "nouvellesReanimations": 32,
-    "deces": 18240,
-    "gueris": 66575,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-28",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3137,21 +1698,6 @@
     "casConfirmesEhpad": 37235,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-28",
-    "hospitalises": 15155,
-    "reanimation": 1395,
-    "nouvellesHospitalisations": 253,
-    "nouvellesReanimations": 36,
-    "deces": 18306,
-    "gueris": 67182,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-29",
@@ -3173,21 +1719,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-29",
-    "hospitalises": 14643,
-    "reanimation": 1328,
-    "nouvellesHospitalisations": 255,
-    "nouvellesReanimations": 29,
-    "deces": 18367,
-    "gueris": 67794,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-05-30",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3205,21 +1736,6 @@
     "nouvellesReanimations": 29,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-30",
-    "hospitalises": 14329,
-    "reanimation": 1293,
-    "nouvellesHospitalisations": 227,
-    "nouvellesReanimations": 29,
-    "deces": 18424,
-    "gueris": 68259,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-05-31",
@@ -3241,21 +1757,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-05-31",
-    "hospitalises": 14271,
-    "reanimation": 1287,
-    "nouvellesHospitalisations": 72,
-    "nouvellesReanimations": 18,
-    "deces": 18455,
-    "gueris": 68346,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-01",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3273,21 +1774,6 @@
     "nouvellesReanimations": 9,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-01",
-    "hospitalises": 14237,
-    "reanimation": 1270,
-    "nouvellesHospitalisations": 89,
-    "nouvellesReanimations": 9,
-    "deces": 18486,
-    "gueris": 68431,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-02",
@@ -3308,21 +1794,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-02",
-    "hospitalises": 13978,
-    "reanimation": 1221,
-    "nouvellesHospitalisations": 229,
-    "nouvellesReanimations": 33,
-    "deces": 18570,
-    "gueris": 68803,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-03",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3339,21 +1810,6 @@
     "nouvellesReanimations": 26,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-03",
-    "hospitalises": 13465,
-    "reanimation": 1179,
-    "nouvellesHospitalisations": 250,
-    "nouvellesReanimations": 26,
-    "deces": 18651,
-    "gueris": 69446,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-04",
@@ -3374,21 +1830,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-04",
-    "hospitalises": 13054,
-    "reanimation": 1133,
-    "nouvellesHospitalisations": 195,
-    "nouvellesReanimations": 23,
-    "deces": 18695,
-    "gueris": 69967,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-05",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3405,21 +1846,6 @@
     "nouvellesReanimations": 19,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-05",
-    "hospitalises": 12650,
-    "reanimation": 1065,
-    "nouvellesHospitalisations": 213,
-    "nouvellesReanimations": 19,
-    "deces": 18741,
-    "gueris": 70494,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-06",
@@ -3440,21 +1866,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-06",
-    "hospitalises": 12433,
-    "reanimation": 1030,
-    "nouvellesHospitalisations": 143,
-    "nouvellesReanimations": 15,
-    "deces": 18772,
-    "gueris": 70796,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-07",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3471,21 +1882,6 @@
     "nouvellesReanimations": 4,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-07",
-    "hospitalises": 12415,
-    "reanimation": 1024,
-    "nouvellesHospitalisations": 37,
-    "nouvellesReanimations": 4,
-    "deces": 18785,
-    "gueris": 70832,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-08",
@@ -3506,21 +1902,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-08",
-    "hospitalises": 12269,
-    "reanimation": 995,
-    "nouvellesHospitalisations": 145,
-    "nouvellesReanimations": 23,
-    "deces": 18839,
-    "gueris": 71052,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-09",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3537,21 +1918,6 @@
     "nouvellesReanimations": 15,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-09",
-    "hospitalises": 11915,
-    "reanimation": 926,
-    "nouvellesHospitalisations": 169,
-    "nouvellesReanimations": 15,
-    "deces": 18892,
-    "gueris": 71496,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-10",
@@ -3572,21 +1938,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-10",
-    "hospitalises": 11632,
-    "reanimation": 904,
-    "nouvellesHospitalisations": 130,
-    "nouvellesReanimations": 23,
-    "deces": 18915,
-    "gueris": 71822,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-11",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3603,21 +1954,6 @@
     "nouvellesReanimations": 26,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-11",
-    "hospitalises": 11420,
-    "reanimation": 875,
-    "nouvellesHospitalisations": 143,
-    "nouvellesReanimations": 26,
-    "deces": 18942,
-    "gueris": 72139,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-12",
@@ -3638,21 +1974,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-12",
-    "hospitalises": 11079,
-    "reanimation": 851,
-    "nouvellesHospitalisations": 136,
-    "nouvellesReanimations": 18,
-    "deces": 18970,
-    "gueris": 72562,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-13",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3669,21 +1990,6 @@
     "nouvellesReanimations": 14,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-13",
-    "hospitalises": 10864,
-    "reanimation": 843,
-    "nouvellesHospitalisations": 68,
-    "nouvellesReanimations": 14,
-    "deces": 18994,
-    "gueris": 72798,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-14",
@@ -3704,21 +2010,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-14",
-    "hospitalises": 10836,
-    "reanimation": 841,
-    "nouvellesHospitalisations": 33,
-    "nouvellesReanimations": 6,
-    "deces": 19003,
-    "gueris": 72849,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-15",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3735,21 +2026,6 @@
     "nouvellesReanimations": 12,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-15",
-    "hospitalises": 10707,
-    "reanimation": 818,
-    "nouvellesHospitalisations": 114,
-    "nouvellesReanimations": 12,
-    "deces": 19032,
-    "gueris": 73034,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-16",
@@ -3770,21 +2046,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-16",
-    "hospitalises": 10490,
-    "reanimation": 792,
-    "nouvellesHospitalisations": 143,
-    "nouvellesReanimations": 14,
-    "deces": 19070,
-    "gueris": 73325,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-17",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3801,21 +2062,6 @@
     "nouvellesReanimations": 14,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-17",
-    "hospitalises": 10222,
-    "reanimation": 744,
-    "nouvellesHospitalisations": 116,
-    "nouvellesReanimations": 14,
-    "deces": 19098,
-    "gueris": 73657,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-18",
@@ -3836,21 +2082,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-18",
-    "hospitalises": 10080,
-    "reanimation": 724,
-    "nouvellesHospitalisations": 136,
-    "nouvellesReanimations": 15,
-    "deces": 19126,
-    "gueris": 73877,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3867,21 +2098,6 @@
     "nouvellesReanimations": 10,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-19",
-    "hospitalises": 9925,
-    "reanimation": 699,
-    "nouvellesHospitalisations": 116,
-    "nouvellesReanimations": 10,
-    "deces": 19140,
-    "gueris": 74107,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-20",
@@ -3902,21 +2118,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-20",
-    "hospitalises": 9792,
-    "reanimation": 687,
-    "nouvellesHospitalisations": 90,
-    "nouvellesReanimations": 7,
-    "deces": 19156,
-    "gueris": 74302,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-21",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3933,21 +2134,6 @@
     "nouvellesReanimations": 5,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-21",
-    "hospitalises": 9778,
-    "reanimation": 687,
-    "nouvellesHospitalisations": 48,
-    "nouvellesReanimations": 5,
-    "deces": 19163,
-    "gueris": 74362,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-22",
@@ -3968,21 +2154,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-22",
-    "hospitalises": 9648,
-    "reanimation": 673,
-    "nouvellesHospitalisations": 142,
-    "nouvellesReanimations": 16,
-    "deces": 19186,
-    "gueris": 74602,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-23",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -3999,21 +2170,6 @@
     "nouvellesReanimations": 15,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-23",
-    "hospitalises": 9446,
-    "reanimation": 654,
-    "nouvellesHospitalisations": 117,
-    "nouvellesReanimations": 15,
-    "deces": 19212,
-    "gueris": 74861,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-24",
@@ -4034,21 +2190,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-24",
-    "hospitalises": 9254,
-    "reanimation": 630,
-    "nouvellesHospitalisations": 97,
-    "nouvellesReanimations": 8,
-    "deces": 19223,
-    "gueris": 75117,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-25",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4065,21 +2206,6 @@
     "nouvellesReanimations": 15,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-25",
-    "hospitalises": 9096,
-    "reanimation": 623,
-    "nouvellesHospitalisations": 124,
-    "nouvellesReanimations": 15,
-    "deces": 19244,
-    "gueris": 75341,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-26",
@@ -4100,21 +2226,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-26",
-    "hospitalises": 8841,
-    "reanimation": 606,
-    "nouvellesHospitalisations": 87,
-    "nouvellesReanimations": 15,
-    "deces": 19270,
-    "gueris": 75639,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-27",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4131,21 +2242,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-27",
-    "hospitalises": 8715,
-    "reanimation": 594,
-    "nouvellesHospitalisations": 55,
-    "nouvellesReanimations": 9,
-    "deces": 19285,
-    "gueris": 75803,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-28",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4160,21 +2256,6 @@
     "casConfirmesEhpad": 37995,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-28",
-    "hospitalises": 8727,
-    "reanimation": 594,
-    "nouvellesHospitalisations": 44,
-    "nouvellesReanimations": 4,
-    "deces": 19287,
-    "gueris": 75833,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-06-29",
@@ -4195,21 +2276,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-29",
-    "hospitalises": 8643,
-    "reanimation": 591,
-    "nouvellesHospitalisations": 102,
-    "nouvellesReanimations": 15,
-    "deces": 19305,
-    "gueris": 75989,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-06-30",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4226,21 +2292,6 @@
     "nouvellesReanimations": 8,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-06-30",
-    "hospitalises": 8491,
-    "reanimation": 574,
-    "nouvellesHospitalisations": 152,
-    "nouvellesReanimations": 8,
-    "deces": 19326,
-    "gueris": 76264,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-01",
@@ -4261,21 +2312,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-01",
-    "hospitalises": 8291,
-    "reanimation": 554,
-    "nouvellesHospitalisations": 106,
-    "nouvellesReanimations": 17,
-    "deces": 19344,
-    "gueris": 76539,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-02",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4292,21 +2328,6 @@
     "nouvellesReanimations": 12,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-02",
-    "hospitalises": 8103,
-    "reanimation": 545,
-    "nouvellesHospitalisations": 93,
-    "nouvellesReanimations": 12,
-    "deces": 19358,
-    "gueris": 76792,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-03",
@@ -4327,21 +2348,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-03",
-    "hospitalises": 7946,
-    "reanimation": 533,
-    "nouvellesHospitalisations": 125,
-    "nouvellesReanimations": 12,
-    "deces": 19376,
-    "gueris": 77049,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-04",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4353,21 +2359,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-04",
-    "hospitalises": 7863,
-    "reanimation": 517,
-    "nouvellesHospitalisations": 47,
-    "nouvellesReanimations": 4,
-    "deces": 19388,
-    "gueris": 77160,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-05",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4377,21 +2368,6 @@
     "casConfirmesEhpad": 38107,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-05",
-    "hospitalises": 7863,
-    "reanimation": 521,
-    "nouvellesHospitalisations": 21,
-    "nouvellesReanimations": 5,
-    "deces": 19390,
-    "gueris": 77179,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-06",
@@ -4412,21 +2388,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-06",
-    "hospitalises": 7806,
-    "reanimation": 521,
-    "nouvellesHospitalisations": 98,
-    "nouvellesReanimations": 10,
-    "deces": 19403,
-    "gueris": 77308,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-07",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4443,21 +2404,6 @@
     "nouvellesReanimations": 21,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-07",
-    "hospitalises": 7550,
-    "reanimation": 511,
-    "nouvellesHospitalisations": 127,
-    "nouvellesReanimations": 21,
-    "deces": 19437,
-    "gueris": 77644,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-08",
@@ -4478,21 +2424,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-08",
-    "hospitalises": 7254,
-    "reanimation": 503,
-    "nouvellesHospitalisations": 83,
-    "nouvellesReanimations": 18,
-    "deces": 19469,
-    "gueris": 77985,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-09",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4509,21 +2440,6 @@
     "nouvellesReanimations": 8,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-09",
-    "hospitalises": 7134,
-    "reanimation": 486,
-    "nouvellesHospitalisations": 79,
-    "nouvellesReanimations": 8,
-    "deces": 19483,
-    "gueris": 78159,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-10",
@@ -4544,21 +2460,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-10",
-    "hospitalises": 7020,
-    "reanimation": 471,
-    "nouvellesHospitalisations": 136,
-    "nouvellesReanimations": 9,
-    "deces": 19508,
-    "gueris": 78377,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-11",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4571,21 +2472,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-11",
-    "hospitalises": 6995,
-    "reanimation": 470,
-    "nouvellesHospitalisations": 57,
-    "nouvellesReanimations": 7,
-    "deces": 19514,
-    "gueris": 78454,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-12",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4596,21 +2482,6 @@
     "casConfirmesEhpad": 39256,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-12",
-    "hospitalises": 6991,
-    "reanimation": 473,
-    "nouvellesHospitalisations": 26,
-    "nouvellesReanimations": 5,
-    "deces": 19515,
-    "gueris": 78486,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-13",
@@ -4631,21 +2502,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-13",
-    "hospitalises": 6941,
-    "reanimation": 467,
-    "nouvellesHospitalisations": 68,
-    "nouvellesReanimations": 10,
-    "deces": 19533,
-    "gueris": 78586,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-14",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4656,21 +2512,6 @@
     "casConfirmesEhpad": 39256,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-14",
-    "hospitalises": 6907,
-    "reanimation": 465,
-    "nouvellesHospitalisations": 61,
-    "nouvellesReanimations": 7,
-    "deces": 19539,
-    "gueris": 78670,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-15",
@@ -4691,21 +2532,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-15",
-    "hospitalises": 6873,
-    "reanimation": 457,
-    "nouvellesHospitalisations": 133,
-    "nouvellesReanimations": 16,
-    "deces": 19559,
-    "gueris": 78809,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-16",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4722,21 +2548,6 @@
     "nouvellesReanimations": 23,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-16",
-    "hospitalises": 6754,
-    "reanimation": 456,
-    "nouvellesHospitalisations": 119,
-    "nouvellesReanimations": 23,
-    "deces": 19577,
-    "gueris": 79025,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-17",
@@ -4757,21 +2568,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-17",
-    "hospitalises": 6646,
-    "reanimation": 452,
-    "nouvellesHospitalisations": 119,
-    "nouvellesReanimations": 17,
-    "deces": 19591,
-    "gueris": 79233,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-18",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4784,21 +2580,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-18",
-    "hospitalises": 6614,
-    "reanimation": 450,
-    "nouvellesHospitalisations": 68,
-    "nouvellesReanimations": 6,
-    "deces": 19599,
-    "gueris": 79322,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4809,21 +2590,6 @@
     "casConfirmesEhpad": 39464,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-19",
-    "hospitalises": 6583,
-    "reanimation": 448,
-    "nouvellesHospitalisations": 36,
-    "nouvellesReanimations": 4,
-    "deces": 19600,
-    "gueris": 79384,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-20",
@@ -4840,21 +2606,6 @@
     "casConfirmesEhpad": 39464,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-20",
-    "hospitalises": 6547,
-    "reanimation": 442,
-    "nouvellesHospitalisations": 137,
-    "nouvellesReanimations": 18,
-    "deces": 19616,
-    "gueris": 79530,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-21",
@@ -4875,21 +2626,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-21",
-    "hospitalises": 6440,
-    "reanimation": 430,
-    "nouvellesHospitalisations": 109,
-    "nouvellesReanimations": 12,
-    "deces": 19629,
-    "gueris": 79723,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-22",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4906,21 +2642,6 @@
     "nouvellesReanimations": 17,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-22",
-    "hospitalises": 6324,
-    "reanimation": 420,
-    "nouvellesHospitalisations": 132,
-    "nouvellesReanimations": 17,
-    "deces": 19636,
-    "gueris": 79946,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-23",
@@ -4941,21 +2662,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-23",
-    "hospitalises": 5915,
-    "reanimation": 411,
-    "nouvellesHospitalisations": 123,
-    "nouvellesReanimations": 13,
-    "deces": 19646,
-    "gueris": 80461,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-24",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -4974,21 +2680,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-24",
-    "hospitalises": 5678,
-    "reanimation": 385,
-    "nouvellesHospitalisations": 126,
-    "nouvellesReanimations": 16,
-    "deces": 19656,
-    "gueris": 80804,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-25",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5000,21 +2691,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-25",
-    "hospitalises": 5634,
-    "reanimation": 368,
-    "nouvellesHospitalisations": 86,
-    "nouvellesReanimations": 8,
-    "deces": 19664,
-    "gueris": 80915,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-26",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5024,21 +2700,6 @@
     "casConfirmesEhpad": 39554,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-26",
-    "hospitalises": 5640,
-    "reanimation": 367,
-    "nouvellesHospitalisations": 36,
-    "nouvellesReanimations": 1,
-    "deces": 19665,
-    "gueris": 80947,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-27",
@@ -5059,21 +2720,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-27",
-    "hospitalises": 5614,
-    "reanimation": 374,
-    "nouvellesHospitalisations": 118,
-    "nouvellesReanimations": 25,
-    "deces": 19673,
-    "gueris": 81071,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-28",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5090,21 +2736,6 @@
     "nouvellesReanimations": 22,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-28",
-    "hospitalises": 5510,
-    "reanimation": 361,
-    "nouvellesHospitalisations": 172,
-    "nouvellesReanimations": 22,
-    "deces": 19688,
-    "gueris": 81300,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-29",
@@ -5125,21 +2756,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-29",
-    "hospitalises": 5409,
-    "reanimation": 356,
-    "nouvellesHospitalisations": 118,
-    "nouvellesReanimations": 14,
-    "deces": 19703,
-    "gueris": 81489,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-07-30",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5156,21 +2772,6 @@
     "nouvellesReanimations": 14,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-30",
-    "hospitalises": 5334,
-    "reanimation": 357,
-    "nouvellesHospitalisations": 116,
-    "nouvellesReanimations": 14,
-    "deces": 19719,
-    "gueris": 81656,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-07-31",
@@ -5191,21 +2792,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-07-31",
-    "hospitalises": 5257,
-    "reanimation": 347,
-    "nouvellesHospitalisations": 152,
-    "nouvellesReanimations": 16,
-    "deces": 19730,
-    "gueris": 81870,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-01",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5218,21 +2804,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-01",
-    "hospitalises": 5177,
-    "reanimation": 344,
-    "nouvellesHospitalisations": 77,
-    "nouvellesReanimations": 11,
-    "deces": 19736,
-    "gueris": 82016,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-02",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5243,21 +2814,6 @@
     "casConfirmesEhpad": 39638,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-02",
-    "hospitalises": 5188,
-    "reanimation": 345,
-    "nouvellesHospitalisations": 25,
-    "nouvellesReanimations": 3,
-    "deces": 19737,
-    "gueris": 82029,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-03",
@@ -5278,21 +2834,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-03",
-    "hospitalises": 5157,
-    "reanimation": 360,
-    "nouvellesHospitalisations": 142,
-    "nouvellesReanimations": 29,
-    "deces": 19759,
-    "gueris": 82155,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-04",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5309,21 +2850,6 @@
     "nouvellesReanimations": 21,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-04",
-    "hospitalises": 5121,
-    "reanimation": 364,
-    "nouvellesHospitalisations": 139,
-    "nouvellesReanimations": 21,
-    "deces": 19770,
-    "gueris": 82307,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-05",
@@ -5344,21 +2870,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-05",
-    "hospitalises": 5107,
-    "reanimation": 360,
-    "nouvellesHospitalisations": 137,
-    "nouvellesReanimations": 15,
-    "deces": 19779,
-    "gueris": 82449,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-06",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5375,21 +2886,6 @@
     "nouvellesReanimations": 21,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-06",
-    "hospitalises": 5019,
-    "reanimation": 366,
-    "nouvellesHospitalisations": 141,
-    "nouvellesReanimations": 21,
-    "deces": 19786,
-    "gueris": 82659,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-07",
@@ -5410,21 +2906,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-07",
-    "hospitalises": 4970,
-    "reanimation": 359,
-    "nouvellesHospitalisations": 136,
-    "nouvellesReanimations": 20,
-    "deces": 19798,
-    "gueris": 82825,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-08",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5437,21 +2918,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-08",
-    "hospitalises": 4981,
-    "reanimation": 366,
-    "nouvellesHospitalisations": 73,
-    "nouvellesReanimations": 12,
-    "deces": 19800,
-    "gueris": 82881,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-09",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5462,21 +2928,6 @@
     "casConfirmesEhpad": 39645,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-09",
-    "hospitalises": 4992,
-    "reanimation": 368,
-    "nouvellesHospitalisations": 14,
-    "nouvellesReanimations": 4,
-    "deces": 19800,
-    "gueris": 82886,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-10",
@@ -5497,21 +2948,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-10",
-    "hospitalises": 5004,
-    "reanimation": 372,
-    "nouvellesHospitalisations": 180,
-    "nouvellesReanimations": 28,
-    "deces": 19814,
-    "gueris": 83036,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-11",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5528,21 +2964,6 @@
     "nouvellesReanimations": 21,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-11",
-    "hospitalises": 4971,
-    "reanimation": 367,
-    "nouvellesHospitalisations": 191,
-    "nouvellesReanimations": 21,
-    "deces": 19829,
-    "gueris": 83226,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-12",
@@ -5563,21 +2984,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-12",
-    "hospitalises": 4850,
-    "reanimation": 355,
-    "nouvellesHospitalisations": 143,
-    "nouvellesReanimations": 17,
-    "deces": 19846,
-    "gueris": 83461,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-13",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5594,21 +3000,6 @@
     "nouvellesReanimations": 25,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-13",
-    "hospitalises": 4824,
-    "reanimation": 351,
-    "nouvellesHospitalisations": 201,
-    "nouvellesReanimations": 25,
-    "deces": 19863,
-    "gueris": 83651,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-14",
@@ -5629,21 +3020,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-14",
-    "hospitalises": 4788,
-    "reanimation": 344,
-    "nouvellesHospitalisations": 173,
-    "nouvellesReanimations": 20,
-    "deces": 19881,
-    "gueris": 83836,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-15",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5657,21 +3033,6 @@
     "nouvellesReanimations": 15,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-15",
-    "hospitalises": 4817,
-    "reanimation": 353,
-    "nouvellesHospitalisations": 87,
-    "nouvellesReanimations": 15,
-    "deces": 19884,
-    "gueris": 83880,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-16",
@@ -5692,21 +3053,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-16",
-    "hospitalises": 4820,
-    "reanimation": 353,
-    "nouvellesHospitalisations": 33,
-    "nouvellesReanimations": 2,
-    "deces": 19885,
-    "gueris": 83909,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-17",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5723,21 +3069,6 @@
     "nouvellesReanimations": 34,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-17",
-    "hospitalises": 4885,
-    "reanimation": 361,
-    "nouvellesHospitalisations": 234,
-    "nouvellesReanimations": 34,
-    "deces": 19904,
-    "gueris": 84053,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-18",
@@ -5758,21 +3089,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-18",
-    "hospitalises": 4783,
-    "reanimation": 357,
-    "nouvellesHospitalisations": 185,
-    "nouvellesReanimations": 28,
-    "deces": 19920,
-    "gueris": 84297,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5789,21 +3105,6 @@
     "nouvellesReanimations": 31,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-19",
-    "hospitalises": 4781,
-    "reanimation": 362,
-    "nouvellesHospitalisations": 162,
-    "nouvellesReanimations": 31,
-    "deces": 19937,
-    "gueris": 84440,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-20",
@@ -5824,21 +3125,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-20",
-    "hospitalises": 4723,
-    "reanimation": 368,
-    "nouvellesHospitalisations": 149,
-    "nouvellesReanimations": 28,
-    "deces": 19949,
-    "gueris": 84615,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-21",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5855,21 +3141,6 @@
     "nouvellesReanimations": 37,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-21",
-    "hospitalises": 4720,
-    "reanimation": 367,
-    "nouvellesHospitalisations": 210,
-    "nouvellesReanimations": 37,
-    "deces": 19972,
-    "gueris": 84802,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-22",
@@ -5890,21 +3161,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-22",
-    "hospitalises": 4685,
-    "reanimation": 368,
-    "nouvellesHospitalisations": 114,
-    "nouvellesReanimations": 10,
-    "deces": 19980,
-    "gueris": 84923,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-23",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5921,21 +3177,6 @@
     "nouvellesReanimations": 6,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-23",
-    "hospitalises": 4683,
-    "reanimation": 371,
-    "nouvellesHospitalisations": 29,
-    "nouvellesReanimations": 6,
-    "deces": 19981,
-    "gueris": 84946,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-24",
@@ -5956,21 +3197,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-24",
-    "hospitalises": 4664,
-    "reanimation": 387,
-    "nouvellesHospitalisations": 233,
-    "nouvellesReanimations": 43,
-    "deces": 19996,
-    "gueris": 85172,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-25",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -5989,21 +3215,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-25",
-    "hospitalises": 4578,
-    "reanimation": 401,
-    "nouvellesHospitalisations": 265,
-    "nouvellesReanimations": 49,
-    "deces": 20016,
-    "gueris": 85494,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-26",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6016,21 +3227,6 @@
     "nouvellesReanimations": 21,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-26",
-    "hospitalises": 4535,
-    "reanimation": 373,
-    "nouvellesHospitalisations": 215,
-    "nouvellesReanimations": 21,
-    "deces": 20034,
-    "gueris": 85731,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-27",
@@ -6051,21 +3247,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-27",
-    "hospitalises": 4517,
-    "reanimation": 375,
-    "nouvellesHospitalisations": 225,
-    "nouvellesReanimations": 32,
-    "deces": 20046,
-    "gueris": 85954,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-28",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6082,21 +3263,6 @@
     "nouvellesReanimations": 32,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-28",
-    "hospitalises": 4517,
-    "reanimation": 381,
-    "nouvellesHospitalisations": 241,
-    "nouvellesReanimations": 32,
-    "deces": 20065,
-    "gueris": 86147,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-29",
@@ -6117,21 +3283,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-29",
-    "hospitalises": 4512,
-    "reanimation": 394,
-    "nouvellesHospitalisations": 135,
-    "nouvellesReanimations": 28,
-    "deces": 20071,
-    "gueris": 86268,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-08-30",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6148,21 +3299,6 @@
     "nouvellesReanimations": 5,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-30",
-    "hospitalises": 4517,
-    "reanimation": 396,
-    "nouvellesHospitalisations": 23,
-    "nouvellesReanimations": 5,
-    "deces": 20075,
-    "gueris": 86280,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-08-31",
@@ -6183,21 +3319,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-08-31",
-    "hospitalises": 4564,
-    "reanimation": 403,
-    "nouvellesHospitalisations": 254,
-    "nouvellesReanimations": 45,
-    "deces": 20104,
-    "gueris": 86439,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-01",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6214,21 +3335,6 @@
     "nouvellesReanimations": 54,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-01",
-    "hospitalises": 4586,
-    "reanimation": 418,
-    "nouvellesHospitalisations": 300,
-    "nouvellesReanimations": 54,
-    "deces": 20123,
-    "gueris": 86682,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-02",
@@ -6249,21 +3355,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-02",
-    "hospitalises": 4614,
-    "reanimation": 440,
-    "nouvellesHospitalisations": 317,
-    "nouvellesReanimations": 57,
-    "deces": 20148,
-    "gueris": 86933,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-03",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6280,21 +3371,6 @@
     "nouvellesReanimations": 55,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-03",
-    "hospitalises": 4625,
-    "reanimation": 458,
-    "nouvellesHospitalisations": 307,
-    "nouvellesReanimations": 55,
-    "deces": 20168,
-    "gueris": 87176,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-04",
@@ -6315,21 +3391,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-04",
-    "hospitalises": 4653,
-    "reanimation": 467,
-    "nouvellesHospitalisations": 292,
-    "nouvellesReanimations": 46,
-    "deces": 20186,
-    "gueris": 87417,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-05",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6346,21 +3407,6 @@
     "nouvellesReanimations": 23,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-05",
-    "hospitalises": 4667,
-    "reanimation": 476,
-    "nouvellesHospitalisations": 168,
-    "nouvellesReanimations": 23,
-    "deces": 20198,
-    "gueris": 87549,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-06",
@@ -6381,21 +3427,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-06",
-    "hospitalises": 4697,
-    "reanimation": 480,
-    "nouvellesHospitalisations": 66,
-    "nouvellesReanimations": 8,
-    "deces": 20201,
-    "gueris": 87578,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-07",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6412,21 +3443,6 @@
     "nouvellesReanimations": 83,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-07",
-    "hospitalises": 4889,
-    "reanimation": 531,
-    "nouvellesHospitalisations": 448,
-    "nouvellesReanimations": 83,
-    "deces": 20226,
-    "gueris": 87806,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-08",
@@ -6447,21 +3463,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-08",
-    "hospitalises": 4942,
-    "reanimation": 568,
-    "nouvellesHospitalisations": 490,
-    "nouvellesReanimations": 86,
-    "deces": 20265,
-    "gueris": 88196,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-09",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6478,21 +3479,6 @@
     "nouvellesReanimations": 71,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-09",
-    "hospitalises": 4985,
-    "reanimation": 593,
-    "nouvellesHospitalisations": 386,
-    "nouvellesReanimations": 71,
-    "deces": 20295,
-    "gueris": 88494,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-10",
@@ -6513,21 +3499,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-10",
-    "hospitalises": 5077,
-    "reanimation": 608,
-    "nouvellesHospitalisations": 352,
-    "nouvellesReanimations": 54,
-    "deces": 20314,
-    "gueris": 88712,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-11",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6544,21 +3515,6 @@
     "nouvellesReanimations": 64,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-11",
-    "hospitalises": 5136,
-    "reanimation": 628,
-    "nouvellesHospitalisations": 447,
-    "nouvellesReanimations": 64,
-    "deces": 20354,
-    "gueris": 89029,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-12",
@@ -6579,21 +3535,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-12",
-    "hospitalises": 5176,
-    "reanimation": 655,
-    "nouvellesHospitalisations": 243,
-    "nouvellesReanimations": 51,
-    "deces": 20371,
-    "gueris": 89201,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-13",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6610,21 +3551,6 @@
     "nouvellesReanimations": 18,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-13",
-    "hospitalises": 5228,
-    "reanimation": 662,
-    "nouvellesHospitalisations": 98,
-    "nouvellesReanimations": 18,
-    "deces": 20377,
-    "gueris": 89240,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-14",
@@ -6645,21 +3571,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-14",
-    "hospitalises": 5479,
-    "reanimation": 705,
-    "nouvellesHospitalisations": 545,
-    "nouvellesReanimations": 104,
-    "deces": 20411,
-    "gueris": 89477,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-15",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6676,21 +3587,6 @@
     "nouvellesReanimations": 117,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-15",
-    "hospitalises": 5660,
-    "reanimation": 752,
-    "nouvellesHospitalisations": 642,
-    "nouvellesReanimations": 117,
-    "deces": 20447,
-    "gueris": 89861,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-16",
@@ -6711,21 +3607,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-16",
-    "hospitalises": 5800,
-    "reanimation": 796,
-    "nouvellesHospitalisations": 649,
-    "nouvellesReanimations": 100,
-    "deces": 20493,
-    "gueris": 90305,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-17",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6742,21 +3623,6 @@
     "nouvellesReanimations": 81,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-17",
-    "hospitalises": 5825,
-    "reanimation": 793,
-    "nouvellesHospitalisations": 599,
-    "nouvellesReanimations": 81,
-    "deces": 20543,
-    "gueris": 90810,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-18",
@@ -6777,21 +3643,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-18",
-    "hospitalises": 5800,
-    "reanimation": 820,
-    "nouvellesHospitalisations": 850,
-    "nouvellesReanimations": 100,
-    "deces": 20665,
-    "gueris": 91544,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6808,21 +3659,6 @@
     "nouvellesReanimations": 73,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-19",
-    "hospitalises": 5493,
-    "reanimation": 827,
-    "nouvellesHospitalisations": 470,
-    "nouvellesReanimations": 73,
-    "deces": 20690,
-    "gueris": 92289,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-20",
@@ -6843,21 +3679,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-20",
-    "hospitalises": 5356,
-    "reanimation": 834,
-    "nouvellesHospitalisations": 139,
-    "nouvellesReanimations": 24,
-    "deces": 20701,
-    "gueris": 92552,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-21",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6874,21 +3695,6 @@
     "nouvellesReanimations": 143,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-21",
-    "hospitalises": 5597,
-    "reanimation": 912,
-    "nouvellesHospitalisations": 754,
-    "nouvellesReanimations": 143,
-    "deces": 20754,
-    "gueris": 92978,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-22",
@@ -6909,21 +3715,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-22",
-    "hospitalises": 5777,
-    "reanimation": 944,
-    "nouvellesHospitalisations": 783,
-    "nouvellesReanimations": 130,
-    "deces": 20821,
-    "gueris": 93508,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-23",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -6940,21 +3731,6 @@
     "nouvellesReanimations": 124,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-23",
-    "hospitalises": 5913,
-    "reanimation": 995,
-    "nouvellesHospitalisations": 649,
-    "nouvellesReanimations": 124,
-    "deces": 20864,
-    "gueris": 93952,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-24",
@@ -6975,21 +3751,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-24",
-    "hospitalises": 6012,
-    "reanimation": 1041,
-    "nouvellesHospitalisations": 613,
-    "nouvellesReanimations": 124,
-    "deces": 20916,
-    "gueris": 94383,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-25",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7006,21 +3767,6 @@
     "nouvellesReanimations": 129,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-25",
-    "hospitalises": 6110,
-    "reanimation": 1092,
-    "nouvellesHospitalisations": 661,
-    "nouvellesReanimations": 129,
-    "deces": 20971,
-    "gueris": 94860,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-26",
@@ -7041,21 +3787,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-26",
-    "hospitalises": 6154,
-    "reanimation": 1105,
-    "nouvellesHospitalisations": 503,
-    "nouvellesReanimations": 89,
-    "deces": 21010,
-    "gueris": 95272,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-27",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7072,21 +3803,6 @@
     "nouvellesReanimations": 47,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-27",
-    "hospitalises": 6235,
-    "reanimation": 1112,
-    "nouvellesHospitalisations": 241,
-    "nouvellesReanimations": 47,
-    "deces": 21037,
-    "gueris": 95395,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-28",
@@ -7107,21 +3823,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-28",
-    "hospitalises": 6397,
-    "reanimation": 1158,
-    "nouvellesHospitalisations": 619,
-    "nouvellesReanimations": 137,
-    "deces": 21118,
-    "gueris": 95743,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-09-29",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7138,21 +3839,6 @@
     "nouvellesReanimations": 165,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-29",
-    "hospitalises": 6482,
-    "reanimation": 1198,
-    "nouvellesHospitalisations": 698,
-    "nouvellesReanimations": 165,
-    "deces": 21177,
-    "gueris": 96296,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-09-30",
@@ -7173,21 +3859,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-09-30",
-    "hospitalises": 6572,
-    "reanimation": 1232,
-    "nouvellesHospitalisations": 650,
-    "nouvellesReanimations": 135,
-    "deces": 21240,
-    "gueris": 96766,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-01",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7204,21 +3875,6 @@
     "nouvellesReanimations": 142,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-01",
-    "hospitalises": 6634,
-    "reanimation": 1259,
-    "nouvellesHospitalisations": 626,
-    "nouvellesReanimations": 142,
-    "deces": 21303,
-    "gueris": 97240,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-02",
@@ -7239,21 +3895,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-02",
-    "hospitalises": 6740,
-    "reanimation": 1270,
-    "nouvellesHospitalisations": 721,
-    "nouvellesReanimations": 120,
-    "deces": 21350,
-    "gueris": 97747,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-03",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7270,21 +3911,6 @@
     "nouvellesReanimations": 103,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-03",
-    "hospitalises": 6740,
-    "reanimation": 1289,
-    "nouvellesHospitalisations": 532,
-    "nouvellesReanimations": 103,
-    "deces": 21393,
-    "gueris": 98199,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-04",
@@ -7305,21 +3931,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-04",
-    "hospitalises": 6964,
-    "reanimation": 1335,
-    "nouvellesHospitalisations": 418,
-    "nouvellesReanimations": 91,
-    "deces": 21425,
-    "gueris": 98343,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-05",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7336,21 +3947,6 @@
     "nouvellesReanimations": 152,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-05",
-    "hospitalises": 7276,
-    "reanimation": 1409,
-    "nouvellesHospitalisations": 710,
-    "nouvellesReanimations": 152,
-    "deces": 21494,
-    "gueris": 98649,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-06",
@@ -7371,21 +3967,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-06",
-    "hospitalises": 7377,
-    "reanimation": 1417,
-    "nouvellesHospitalisations": 829,
-    "nouvellesReanimations": 168,
-    "deces": 21556,
-    "gueris": 99264,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-07",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7402,21 +3983,6 @@
     "nouvellesReanimations": 143,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-07",
-    "hospitalises": 7514,
-    "reanimation": 1406,
-    "nouvellesHospitalisations": 789,
-    "nouvellesReanimations": 143,
-    "deces": 21636,
-    "gueris": 99762,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-08",
@@ -7437,21 +4003,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-08",
-    "hospitalises": 7603,
-    "reanimation": 1418,
-    "nouvellesHospitalisations": 711,
-    "nouvellesReanimations": 114,
-    "deces": 21712,
-    "gueris": 100275,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-09",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7468,21 +4019,6 @@
     "nouvellesReanimations": 150,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-09",
-    "hospitalises": 7843,
-    "reanimation": 1439,
-    "nouvellesHospitalisations": 848,
-    "nouvellesReanimations": 150,
-    "deces": 21774,
-    "gueris": 100797,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-10",
@@ -7503,21 +4039,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-10",
-    "hospitalises": 7976,
-    "reanimation": 1456,
-    "nouvellesHospitalisations": 694,
-    "nouvellesReanimations": 110,
-    "deces": 21828,
-    "gueris": 101280,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-11",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7534,21 +4055,6 @@
     "nouvellesReanimations": 73,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-11",
-    "hospitalises": 8231,
-    "reanimation": 1483,
-    "nouvellesHospitalisations": 503,
-    "nouvellesReanimations": 73,
-    "deces": 21874,
-    "gueris": 101460,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-12",
@@ -7569,21 +4075,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-12",
-    "hospitalises": 8671,
-    "reanimation": 1539,
-    "nouvellesHospitalisations": 976,
-    "nouvellesReanimations": 171,
-    "deces": 21969,
-    "gueris": 101868,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-13",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7600,21 +4091,6 @@
     "nouvellesReanimations": 226,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-13",
-    "hospitalises": 8928,
-    "reanimation": 1633,
-    "nouvellesHospitalisations": 1168,
-    "nouvellesReanimations": 226,
-    "deces": 22053,
-    "gueris": 102649,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-14",
@@ -7635,21 +4111,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-14",
-    "hospitalises": 9173,
-    "reanimation": 1664,
-    "nouvellesHospitalisations": 1133,
-    "nouvellesReanimations": 193,
-    "deces": 22157,
-    "gueris": 103382,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-15",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7666,21 +4127,6 @@
     "nouvellesReanimations": 219,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-15",
-    "hospitalises": 9584,
-    "reanimation": 1741,
-    "nouvellesHospitalisations": 1207,
-    "nouvellesReanimations": 219,
-    "deces": 22245,
-    "gueris": 104051,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-16",
@@ -7701,21 +4147,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-16",
-    "hospitalises": 10021,
-    "reanimation": 1791,
-    "nouvellesHospitalisations": 1225,
-    "nouvellesReanimations": 212,
-    "deces": 22367,
-    "gueris": 104665,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-17",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7732,21 +4163,6 @@
     "nouvellesReanimations": 175,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-17",
-    "hospitalises": 10399,
-    "reanimation": 1868,
-    "nouvellesHospitalisations": 986,
-    "nouvellesReanimations": 175,
-    "deces": 22456,
-    "gueris": 105163,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-18",
@@ -7767,21 +4183,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-18",
-    "hospitalises": 10897,
-    "reanimation": 1939,
-    "nouvellesHospitalisations": 835,
-    "nouvellesReanimations": 147,
-    "deces": 22541,
-    "gueris": 105400,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7798,21 +4199,6 @@
     "nouvellesReanimations": 269,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-19",
-    "hospitalises": 11640,
-    "reanimation": 2090,
-    "nouvellesHospitalisations": 1424,
-    "nouvellesReanimations": 269,
-    "deces": 22687,
-    "gueris": 105904,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-20",
@@ -7833,21 +4219,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-20",
-    "hospitalises": 12435,
-    "reanimation": 2168,
-    "nouvellesHospitalisations": 1943,
-    "nouvellesReanimations": 278,
-    "deces": 22849,
-    "gueris": 106808,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-21",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7864,21 +4235,6 @@
     "nouvellesReanimations": 284,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-21",
-    "hospitalises": 13162,
-    "reanimation": 2239,
-    "nouvellesHospitalisations": 1754,
-    "nouvellesReanimations": 284,
-    "deces": 23012,
-    "gueris": 107621,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-22",
@@ -7899,21 +4255,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-22",
-    "hospitalises": 14009,
-    "reanimation": 2310,
-    "nouvellesHospitalisations": 1998,
-    "nouvellesReanimations": 262,
-    "deces": 23174,
-    "gueris": 108568,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-23",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7930,21 +4271,6 @@
     "nouvellesReanimations": 299,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-23",
-    "hospitalises": 14985,
-    "reanimation": 2432,
-    "nouvellesHospitalisations": 2091,
-    "nouvellesReanimations": 299,
-    "deces": 23358,
-    "gueris": 109455,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-24",
@@ -7965,21 +4291,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-24",
-    "hospitalises": 15637,
-    "reanimation": 2491,
-    "nouvellesHospitalisations": 1667,
-    "nouvellesReanimations": 233,
-    "deces": 23495,
-    "gueris": 110291,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-25",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -7996,21 +4307,6 @@
     "nouvellesReanimations": 191,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-25",
-    "hospitalises": 16454,
-    "reanimation": 2575,
-    "nouvellesHospitalisations": 1298,
-    "nouvellesReanimations": 191,
-    "deces": 23611,
-    "gueris": 110629,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-26",
@@ -8031,21 +4327,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-26",
-    "hospitalises": 17761,
-    "reanimation": 2761,
-    "nouvellesHospitalisations": 2314,
-    "nouvellesReanimations": 357,
-    "deces": 23868,
-    "gueris": 111316,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-27",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8062,21 +4343,6 @@
     "nouvellesReanimations": 431,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-27",
-    "hospitalises": 18955,
-    "reanimation": 2909,
-    "nouvellesHospitalisations": 2988,
-    "nouvellesReanimations": 431,
-    "deces": 24156,
-    "gueris": 112685,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-28",
@@ -8097,21 +4363,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-28",
-    "hospitalises": 20184,
-    "reanimation": 3036,
-    "nouvellesHospitalisations": 2821,
-    "nouvellesReanimations": 372,
-    "deces": 24400,
-    "gueris": 113946,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-29",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8128,21 +4379,6 @@
     "nouvellesReanimations": 395,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-29",
-    "hospitalises": 21160,
-    "reanimation": 3147,
-    "nouvellesHospitalisations": 2607,
-    "nouvellesReanimations": 395,
-    "deces": 24635,
-    "gueris": 115256,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-10-30",
@@ -8163,21 +4399,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-30",
-    "hospitalises": 22153,
-    "reanimation": 3368,
-    "nouvellesHospitalisations": 2563,
-    "nouvellesReanimations": 422,
-    "deces": 24890,
-    "gueris": 116502,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-10-31",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8194,21 +4415,6 @@
     "nouvellesReanimations": 339,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-10-31",
-    "hospitalises": 23013,
-    "reanimation": 3443,
-    "nouvellesHospitalisations": 2274,
-    "nouvellesReanimations": 339,
-    "deces": 25113,
-    "gueris": 117563,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-01",
@@ -8229,21 +4435,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-01",
-    "hospitalises": 24008,
-    "reanimation": 3569,
-    "nouvellesHospitalisations": 1883,
-    "nouvellesReanimations": 289,
-    "deces": 25344,
-    "gueris": 118196,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-02",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8260,21 +4451,6 @@
     "nouvellesReanimations": 430,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-02",
-    "hospitalises": 25120,
-    "reanimation": 3721,
-    "nouvellesHospitalisations": 2547,
-    "nouvellesReanimations": 430,
-    "deces": 25760,
-    "gueris": 119073,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-03",
@@ -8295,21 +4471,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-03",
-    "hospitalises": 26242,
-    "reanimation": 3869,
-    "nouvellesHospitalisations": 3311,
-    "nouvellesReanimations": 469,
-    "deces": 26186,
-    "gueris": 120683,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-04",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8326,21 +4487,6 @@
     "nouvellesReanimations": 540,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-04",
-    "hospitalises": 27511,
-    "reanimation": 4080,
-    "nouvellesHospitalisations": 3681,
-    "nouvellesReanimations": 540,
-    "deces": 26571,
-    "gueris": 122631,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-05",
@@ -8361,21 +4507,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-05",
-    "hospitalises": 28403,
-    "reanimation": 4221,
-    "nouvellesHospitalisations": 2989,
-    "nouvellesReanimations": 447,
-    "deces": 26934,
-    "gueris": 124247,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-06",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8392,21 +4523,6 @@
     "nouvellesReanimations": 434,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-06",
-    "hospitalises": 28955,
-    "reanimation": 4321,
-    "nouvellesHospitalisations": 3140,
-    "nouvellesReanimations": 434,
-    "deces": 27332,
-    "gueris": 126298,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-07",
@@ -8427,21 +4543,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-07",
-    "hospitalises": 29396,
-    "reanimation": 4410,
-    "nouvellesHospitalisations": 2458,
-    "nouvellesReanimations": 394,
-    "deces": 27636,
-    "gueris": 127907,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-08",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8458,21 +4559,6 @@
     "nouvellesReanimations": 323,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-08",
-    "hospitalises": 30217,
-    "reanimation": 4527,
-    "nouvellesHospitalisations": 1814,
-    "nouvellesReanimations": 323,
-    "deces": 27906,
-    "gueris": 128583,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-09",
@@ -8493,21 +4579,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-09",
-    "hospitalises": 31098,
-    "reanimation": 4677,
-    "nouvellesHospitalisations": 2670,
-    "nouvellesReanimations": 484,
-    "deces": 28454,
-    "gueris": 129704,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-10",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8524,21 +4595,6 @@
     "nouvellesReanimations": 473,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-10",
-    "hospitalises": 31477,
-    "reanimation": 4736,
-    "nouvellesHospitalisations": 3168,
-    "nouvellesReanimations": 472,
-    "deces": 28920,
-    "gueris": 131889,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-11",
@@ -8559,21 +4615,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-11",
-    "hospitalises": 31918,
-    "reanimation": 4789,
-    "nouvellesHospitalisations": 2588,
-    "nouvellesReanimations": 351,
-    "deces": 29248,
-    "gueris": 133665,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-12",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8590,21 +4631,6 @@
     "nouvellesReanimations": 386,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-12",
-    "hospitalises": 32654,
-    "reanimation": 4884,
-    "nouvellesHospitalisations": 2371,
-    "nouvellesReanimations": 386,
-    "deces": 29673,
-    "gueris": 134923,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-13",
@@ -8625,21 +4651,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-13",
-    "hospitalises": 32676,
-    "reanimation": 4887,
-    "nouvellesHospitalisations": 2841,
-    "nouvellesReanimations": 473,
-    "deces": 30129,
-    "gueris": 137124,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-14",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8656,21 +4667,6 @@
     "nouvellesReanimations": 326,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-14",
-    "hospitalises": 32468,
-    "reanimation": 4855,
-    "nouvellesHospitalisations": 2202,
-    "nouvellesReanimations": 327,
-    "deces": 30483,
-    "gueris": 139110,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-15",
@@ -8691,21 +4687,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-15",
-    "hospitalises": 33050,
-    "reanimation": 4880,
-    "nouvellesHospitalisations": 1574,
-    "nouvellesReanimations": 270,
-    "deces": 30785,
-    "gueris": 139779,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-16",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8722,21 +4703,6 @@
     "nouvellesReanimations": 366,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-16",
-    "hospitalises": 33466,
-    "reanimation": 4903,
-    "nouvellesHospitalisations": 2065,
-    "nouvellesReanimations": 366,
-    "deces": 31291,
-    "gueris": 140849,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-17",
@@ -8757,21 +4723,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-17",
-    "hospitalises": 33139,
-    "reanimation": 4838,
-    "nouvellesHospitalisations": 2513,
-    "nouvellesReanimations": 382,
-    "deces": 31719,
-    "gueris": 143121,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-18",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8788,21 +4739,6 @@
     "nouvellesReanimations": 357,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-18",
-    "hospitalises": 32811,
-    "reanimation": 4759,
-    "nouvellesHospitalisations": 2435,
-    "nouvellesReanimations": 361,
-    "deces": 32144,
-    "gueris": 145360,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-19",
@@ -8823,21 +4759,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-19",
-    "hospitalises": 32314,
-    "reanimation": 4637,
-    "nouvellesHospitalisations": 2221,
-    "nouvellesReanimations": 311,
-    "deces": 32573,
-    "gueris": 147538,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-20",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8854,21 +4775,6 @@
     "nouvellesReanimations": 263,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-20",
-    "hospitalises": 31875,
-    "reanimation": 4566,
-    "nouvellesHospitalisations": 1968,
-    "nouvellesReanimations": 264,
-    "deces": 32954,
-    "gueris": 149490,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-21",
@@ -8889,21 +4795,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-21",
-    "hospitalises": 31365,
-    "reanimation": 4493,
-    "nouvellesHospitalisations": 1515,
-    "nouvellesReanimations": 220,
-    "deces": 33207,
-    "gueris": 151146,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-22",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8920,21 +4811,6 @@
     "nouvellesReanimations": 171,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-22",
-    "hospitalises": 31522,
-    "reanimation": 4491,
-    "nouvellesHospitalisations": 906,
-    "nouvellesReanimations": 171,
-    "deces": 33421,
-    "gueris": 151650,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-23",
@@ -8955,21 +4831,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-23",
-    "hospitalises": 31449,
-    "reanimation": 4438,
-    "nouvellesHospitalisations": 1380,
-    "nouvellesReanimations": 244,
-    "deces": 33921,
-    "gueris": 152561,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-24",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -8986,21 +4847,6 @@
     "nouvellesReanimations": 269,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-24",
-    "hospitalises": 30594,
-    "reanimation": 4277,
-    "nouvellesHospitalisations": 1786,
-    "nouvellesReanimations": 270,
-    "deces": 34374,
-    "gueris": 154648,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-25",
@@ -9021,21 +4867,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-25",
-    "hospitalises": 29944,
-    "reanimation": 4136,
-    "nouvellesHospitalisations": 1677,
-    "nouvellesReanimations": 258,
-    "deces": 34755,
-    "gueris": 156521,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-26",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9052,21 +4883,6 @@
     "nouvellesReanimations": 192,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-26",
-    "hospitalises": 29282,
-    "reanimation": 4006,
-    "nouvellesHospitalisations": 1460,
-    "nouvellesReanimations": 192,
-    "deces": 35094,
-    "gueris": 158205,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-27",
@@ -9087,21 +4903,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-27",
-    "hospitalises": 28620,
-    "reanimation": 3871,
-    "nouvellesHospitalisations": 1471,
-    "nouvellesReanimations": 206,
-    "deces": 35487,
-    "gueris": 159884,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-28",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9118,21 +4919,6 @@
     "nouvellesReanimations": 122,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-28",
-    "hospitalises": 28139,
-    "reanimation": 3765,
-    "nouvellesHospitalisations": 976,
-    "nouvellesReanimations": 122,
-    "deces": 35700,
-    "gueris": 161106,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11-29",
@@ -9153,21 +4939,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-29",
-    "hospitalises": 28284,
-    "reanimation": 3744,
-    "nouvellesHospitalisations": 652,
-    "nouvellesReanimations": 102,
-    "deces": 35898,
-    "gueris": 161396,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-11-30",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9184,21 +4955,6 @@
     "nouvellesReanimations": 196,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-11-30",
-    "hospitalises": 28229,
-    "reanimation": 3739,
-    "nouvellesHospitalisations": 1257,
-    "nouvellesReanimations": 196,
-    "deces": 36304,
-    "gueris": 162250,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-11_11",
@@ -9236,21 +4992,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-01",
-    "hospitalises": 27611,
-    "reanimation": 3594,
-    "nouvellesHospitalisations": 1572,
-    "nouvellesReanimations": 234,
-    "deces": 36667,
-    "gueris": 163998,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-02",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9267,21 +5008,6 @@
     "nouvellesReanimations": 160,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-02",
-    "hospitalises": 26986,
-    "reanimation": 3478,
-    "nouvellesHospitalisations": 1253,
-    "nouvellesReanimations": 161,
-    "deces": 36976,
-    "gueris": 165532,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-03",
@@ -9302,21 +5028,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-03",
-    "hospitalises": 26675,
-    "reanimation": 3415,
-    "nouvellesHospitalisations": 1450,
-    "nouvellesReanimations": 184,
-    "deces": 37300,
-    "gueris": 166909,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-04",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9333,21 +5044,6 @@
     "nouvellesReanimations": 163,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-04",
-    "hospitalises": 26283,
-    "reanimation": 3283,
-    "nouvellesHospitalisations": 1400,
-    "nouvellesReanimations": 165,
-    "deces": 37582,
-    "gueris": 168321,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-05",
@@ -9368,21 +5064,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-05",
-    "hospitalises": 26040,
-    "reanimation": 3220,
-    "nouvellesHospitalisations": 1019,
-    "nouvellesReanimations": 125,
-    "deces": 37796,
-    "gueris": 169327,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-06",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9399,21 +5080,6 @@
     "nouvellesReanimations": 101,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-06",
-    "hospitalises": 26262,
-    "reanimation": 3210,
-    "nouvellesHospitalisations": 627,
-    "nouvellesReanimations": 101,
-    "deces": 37970,
-    "gueris": 169555,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-07",
@@ -9434,21 +5100,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-07",
-    "hospitalises": 26333,
-    "reanimation": 3188,
-    "nouvellesHospitalisations": 1206,
-    "nouvellesReanimations": 203,
-    "deces": 38336,
-    "gueris": 170254,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-08",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9465,21 +5116,6 @@
     "nouvellesReanimations": 214,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-08",
-    "hospitalises": 25882,
-    "reanimation": 3078,
-    "nouvellesHospitalisations": 1597,
-    "nouvellesReanimations": 214,
-    "deces": 38713,
-    "gueris": 171837,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-09",
@@ -9500,21 +5136,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-09",
-    "hospitalises": 25526,
-    "reanimation": 3031,
-    "nouvellesHospitalisations": 1380,
-    "nouvellesReanimations": 170,
-    "deces": 39009,
-    "gueris": 173216,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-10",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9531,21 +5152,6 @@
     "nouvellesReanimations": 191,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-10",
-    "hospitalises": 25199,
-    "reanimation": 2949,
-    "nouvellesHospitalisations": 1445,
-    "nouvellesReanimations": 191,
-    "deces": 39301,
-    "gueris": 174627,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-11",
@@ -9566,21 +5172,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-11",
-    "hospitalises": 24943,
-    "reanimation": 2874,
-    "nouvellesHospitalisations": 1340,
-    "nouvellesReanimations": 180,
-    "deces": 39605,
-    "gueris": 175860,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-12",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9597,21 +5188,6 @@
     "nouvellesReanimations": 127,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-12",
-    "hospitalises": 24948,
-    "reanimation": 2851,
-    "nouvellesHospitalisations": 1097,
-    "nouvellesReanimations": 127,
-    "deces": 39799,
-    "gueris": 176712,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-13",
@@ -9632,21 +5208,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-13",
-    "hospitalises": 25207,
-    "reanimation": 2861,
-    "nouvellesHospitalisations": 669,
-    "nouvellesReanimations": 89,
-    "deces": 39949,
-    "gueris": 176964,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-14",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9663,21 +5224,6 @@
     "nouvellesReanimations": 209,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-14",
-    "hospitalises": 25449,
-    "reanimation": 2896,
-    "nouvellesHospitalisations": 1324,
-    "nouvellesReanimations": 210,
-    "deces": 40320,
-    "gueris": 177616,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-15",
@@ -9698,21 +5244,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-15",
-    "hospitalises": 25207,
-    "reanimation": 2871,
-    "nouvellesHospitalisations": 1562,
-    "nouvellesReanimations": 211,
-    "deces": 40627,
-    "gueris": 179056,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-16",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9729,21 +5260,6 @@
     "nouvellesReanimations": 219,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-16",
-    "hospitalises": 25282,
-    "reanimation": 2840,
-    "nouvellesHospitalisations": 1664,
-    "nouvellesReanimations": 220,
-    "deces": 40916,
-    "gueris": 180280,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-17",
@@ -9764,21 +5280,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-17",
-    "hospitalises": 25149,
-    "reanimation": 2798,
-    "nouvellesHospitalisations": 1364,
-    "nouvellesReanimations": 151,
-    "deces": 41174,
-    "gueris": 181475,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-18",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9795,21 +5296,6 @@
     "nouvellesReanimations": 176,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-18",
-    "hospitalises": 24945,
-    "reanimation": 2764,
-    "nouvellesHospitalisations": 1285,
-    "nouvellesReanimations": 176,
-    "deces": 41429,
-    "gueris": 182634,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-19",
@@ -9830,21 +5316,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-19",
-    "hospitalises": 24819,
-    "reanimation": 2718,
-    "nouvellesHospitalisations": 1004,
-    "nouvellesReanimations": 123,
-    "deces": 41618,
-    "gueris": 183540,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-20",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9861,21 +5332,6 @@
     "nouvellesReanimations": 91,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-20",
-    "hospitalises": 24961,
-    "reanimation": 2745,
-    "nouvellesHospitalisations": 599,
-    "nouvellesReanimations": 91,
-    "deces": 41749,
-    "gueris": 183775,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-21",
@@ -9896,21 +5352,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-21",
-    "hospitalises": 25201,
-    "reanimation": 2737,
-    "nouvellesHospitalisations": 1284,
-    "nouvellesReanimations": 179,
-    "deces": 42100,
-    "gueris": 184433,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-22",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9927,21 +5368,6 @@
     "nouvellesReanimations": 256,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-22",
-    "hospitalises": 24932,
-    "reanimation": 2719,
-    "nouvellesHospitalisations": 1783,
-    "nouvellesReanimations": 256,
-    "deces": 42481,
-    "gueris": 186027,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-23",
@@ -9962,21 +5388,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-23",
-    "hospitalises": 24852,
-    "reanimation": 2701,
-    "nouvellesHospitalisations": 1426,
-    "nouvellesReanimations": 200,
-    "deces": 42757,
-    "gueris": 187241,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-24",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -9993,21 +5404,6 @@
     "nouvellesReanimations": 186,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-24",
-    "hospitalises": 24607,
-    "reanimation": 2643,
-    "nouvellesHospitalisations": 1454,
-    "nouvellesReanimations": 187,
-    "deces": 43047,
-    "gueris": 188608,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-25",
@@ -10028,21 +5424,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-25",
-    "hospitalises": 24359,
-    "reanimation": 2616,
-    "nouvellesHospitalisations": 743,
-    "nouvellesReanimations": 112,
-    "deces": 43206,
-    "gueris": 189414,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-26",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10059,21 +5440,6 @@
     "nouvellesReanimations": 101,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-26",
-    "hospitalises": 24444,
-    "reanimation": 2640,
-    "nouvellesHospitalisations": 513,
-    "nouvellesReanimations": 101,
-    "deces": 43352,
-    "gueris": 189687,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-27",
@@ -10094,21 +5460,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-27",
-    "hospitalises": 24620,
-    "reanimation": 2650,
-    "nouvellesHospitalisations": 589,
-    "nouvellesReanimations": 107,
-    "deces": 43525,
-    "gueris": 189910,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-28",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10125,21 +5476,6 @@
     "nouvellesReanimations": 229,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-28",
-    "hospitalises": 24645,
-    "reanimation": 2694,
-    "nouvellesHospitalisations": 1217,
-    "nouvellesReanimations": 229,
-    "deces": 43888,
-    "gueris": 190691,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-29",
@@ -10160,21 +5496,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-29",
-    "hospitalises": 24743,
-    "reanimation": 2666,
-    "nouvellesHospitalisations": 1627,
-    "nouvellesReanimations": 251,
-    "deces": 44272,
-    "gueris": 191775,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2020-12-30",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10191,21 +5512,6 @@
     "nouvellesReanimations": 209,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-30",
-    "hospitalises": 24560,
-    "reanimation": 2652,
-    "nouvellesHospitalisations": 1404,
-    "nouvellesReanimations": 209,
-    "deces": 44575,
-    "gueris": 193014,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2020-12-31",
@@ -10226,21 +5532,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2020-12-31",
-    "hospitalises": 24407,
-    "reanimation": 2625,
-    "nouvellesHospitalisations": 1317,
-    "nouvellesReanimations": 177,
-    "deces": 44826,
-    "gueris": 194190,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-01",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10257,21 +5548,6 @@
     "nouvellesReanimations": 99,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-01",
-    "hospitalises": 24263,
-    "reanimation": 2609,
-    "nouvellesHospitalisations": 677,
-    "nouvellesReanimations": 99,
-    "deces": 44959,
-    "gueris": 194870,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-02",
@@ -10292,21 +5568,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-02",
-    "hospitalises": 24458,
-    "reanimation": 2632,
-    "nouvellesHospitalisations": 646,
-    "nouvellesReanimations": 101,
-    "deces": 45115,
-    "gueris": 195143,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-03",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10323,21 +5584,6 @@
     "nouvellesReanimations": 101,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-03",
-    "hospitalises": 24780,
-    "reanimation": 2665,
-    "nouvellesHospitalisations": 657,
-    "nouvellesReanimations": 101,
-    "deces": 45231,
-    "gueris": 195355,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-04",
@@ -10358,21 +5604,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-04",
-    "hospitalises": 24962,
-    "reanimation": 2657,
-    "nouvellesHospitalisations": 1262,
-    "nouvellesReanimations": 246,
-    "deces": 45609,
-    "gueris": 196006,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-05",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10389,21 +5620,6 @@
     "nouvellesReanimations": 244,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-05",
-    "hospitalises": 24871,
-    "reanimation": 2616,
-    "nouvellesHospitalisations": 1747,
-    "nouvellesReanimations": 245,
-    "deces": 45954,
-    "gueris": 197472,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-06",
@@ -10424,21 +5640,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-06",
-    "hospitalises": 24708,
-    "reanimation": 2607,
-    "nouvellesHospitalisations": 1438,
-    "nouvellesReanimations": 234,
-    "deces": 46237,
-    "gueris": 198725,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-07",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10455,21 +5656,6 @@
     "nouvellesReanimations": 180,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-07",
-    "hospitalises": 24488,
-    "reanimation": 2573,
-    "nouvellesHospitalisations": 1441,
-    "nouvellesReanimations": 181,
-    "deces": 46513,
-    "gueris": 200048,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-08",
@@ -10490,21 +5676,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-08",
-    "hospitalises": 24377,
-    "reanimation": 2606,
-    "nouvellesHospitalisations": 1445,
-    "nouvellesReanimations": 245,
-    "deces": 46789,
-    "gueris": 201255,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-09",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10521,21 +5692,6 @@
     "nouvellesReanimations": 143,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-09",
-    "hospitalises": 24240,
-    "reanimation": 2600,
-    "nouvellesHospitalisations": 944,
-    "nouvellesReanimations": 143,
-    "deces": 46957,
-    "gueris": 202134,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-10",
@@ -10556,21 +5712,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-10",
-    "hospitalises": 24526,
-    "reanimation": 2620,
-    "nouvellesHospitalisations": 729,
-    "nouvellesReanimations": 118,
-    "deces": 47108,
-    "gueris": 202398,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-11",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10587,21 +5728,6 @@
     "nouvellesReanimations": 208,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-11",
-    "hospitalises": 24812,
-    "reanimation": 2666,
-    "nouvellesHospitalisations": 1289,
-    "nouvellesReanimations": 208,
-    "deces": 47418,
-    "gueris": 203041,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-12",
@@ -10622,21 +5748,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-12",
-    "hospitalises": 24703,
-    "reanimation": 2678,
-    "nouvellesHospitalisations": 1660,
-    "nouvellesReanimations": 258,
-    "deces": 47773,
-    "gueris": 204359,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-13",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10653,21 +5764,6 @@
     "nouvellesReanimations": 208,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-13",
-    "hospitalises": 24735,
-    "reanimation": 2701,
-    "nouvellesHospitalisations": 1588,
-    "nouvellesReanimations": 208,
-    "deces": 48002,
-    "gueris": 205641,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-14",
@@ -10688,21 +5784,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-14",
-    "hospitalises": 24983,
-    "reanimation": 2716,
-    "nouvellesHospitalisations": 1691,
-    "nouvellesReanimations": 206,
-    "deces": 48284,
-    "gueris": 206771,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-15",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10719,21 +5800,6 @@
     "nouvellesReanimations": 249,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-15",
-    "hospitalises": 25009,
-    "reanimation": 2730,
-    "nouvellesHospitalisations": 1634,
-    "nouvellesReanimations": 249,
-    "deces": 48564,
-    "gueris": 208040,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-16",
@@ -10754,21 +5820,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-16",
-    "hospitalises": 24985,
-    "reanimation": 2731,
-    "nouvellesHospitalisations": 1199,
-    "nouvellesReanimations": 188,
-    "deces": 48757,
-    "gueris": 209025,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-17",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10785,21 +5836,6 @@
     "nouvellesReanimations": 136,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-17",
-    "hospitalises": 25235,
-    "reanimation": 2766,
-    "nouvellesHospitalisations": 698,
-    "nouvellesReanimations": 136,
-    "deces": 48898,
-    "gueris": 209312,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-18",
@@ -10820,21 +5856,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-18",
-    "hospitalises": 25584,
-    "reanimation": 2803,
-    "nouvellesHospitalisations": 1666,
-    "nouvellesReanimations": 254,
-    "deces": 49301,
-    "gueris": 210169,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10851,21 +5872,6 @@
     "nouvellesReanimations": 313,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-19",
-    "hospitalises": 25532,
-    "reanimation": 2829,
-    "nouvellesHospitalisations": 1995,
-    "nouvellesReanimations": 315,
-    "deces": 49670,
-    "gueris": 211785,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-20",
@@ -10886,21 +5892,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-20",
-    "hospitalises": 25650,
-    "reanimation": 2842,
-    "nouvellesHospitalisations": 1911,
-    "nouvellesReanimations": 292,
-    "deces": 49980,
-    "gueris": 213211,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-21",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10917,21 +5908,6 @@
     "nouvellesReanimations": 252,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-21",
-    "hospitalises": 25699,
-    "reanimation": 2866,
-    "nouvellesHospitalisations": 1759,
-    "nouvellesReanimations": 253,
-    "deces": 50326,
-    "gueris": 214507,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-22",
@@ -10952,21 +5928,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-22",
-    "hospitalises": 25872,
-    "reanimation": 2902,
-    "nouvellesHospitalisations": 1861,
-    "nouvellesReanimations": 270,
-    "deces": 50645,
-    "gueris": 215791,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-23",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -10983,21 +5944,6 @@
     "nouvellesReanimations": 172,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-23",
-    "hospitalises": 25864,
-    "reanimation": 2886,
-    "nouvellesHospitalisations": 1174,
-    "nouvellesReanimations": 172,
-    "deces": 50875,
-    "gueris": 216694,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-24",
@@ -11018,21 +5964,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-24",
-    "hospitalises": 26357,
-    "reanimation": 2955,
-    "nouvellesHospitalisations": 918,
-    "nouvellesReanimations": 175,
-    "deces": 51047,
-    "gueris": 216934,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-25",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11049,21 +5980,6 @@
     "nouvellesReanimations": 298,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-25",
-    "hospitalises": 26888,
-    "reanimation": 3031,
-    "nouvellesHospitalisations": 1773,
-    "nouvellesReanimations": 299,
-    "deces": 51492,
-    "gueris": 217677,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-26",
@@ -11084,21 +6000,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-26",
-    "hospitalises": 27005,
-    "reanimation": 3071,
-    "nouvellesHospitalisations": 2006,
-    "nouvellesReanimations": 343,
-    "deces": 51842,
-    "gueris": 219121,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-27",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11115,21 +6016,6 @@
     "nouvellesReanimations": 318,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-27",
-    "hospitalises": 27131,
-    "reanimation": 3097,
-    "nouvellesHospitalisations": 1933,
-    "nouvellesReanimations": 318,
-    "deces": 52192,
-    "gueris": 220539,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-28",
@@ -11150,21 +6036,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-28",
-    "hospitalises": 27128,
-    "reanimation": 3101,
-    "nouvellesHospitalisations": 1726,
-    "nouvellesReanimations": 272,
-    "deces": 52536,
-    "gueris": 221872,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-29",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11181,21 +6052,6 @@
     "nouvellesReanimations": 271,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-29",
-    "hospitalises": 27270,
-    "reanimation": 3120,
-    "nouvellesHospitalisations": 1823,
-    "nouvellesReanimations": 271,
-    "deces": 52891,
-    "gueris": 223143,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-01-30",
@@ -11216,21 +6072,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-30",
-    "hospitalises": 27242,
-    "reanimation": 3103,
-    "nouvellesHospitalisations": 1176,
-    "nouvellesReanimations": 192,
-    "deces": 53133,
-    "gueris": 224089,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-01-31",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11247,21 +6088,6 @@
     "nouvellesReanimations": 148,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-01-31",
-    "hospitalises": 27573,
-    "reanimation": 3148,
-    "nouvellesHospitalisations": 816,
-    "nouvellesReanimations": 148,
-    "deces": 53328,
-    "gueris": 224375,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-01",
@@ -11282,21 +6108,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-01",
-    "hospitalises": 27874,
-    "reanimation": 3218,
-    "nouvellesHospitalisations": 1750,
-    "nouvellesReanimations": 318,
-    "deces": 53783,
-    "gueris": 225288,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-02",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11313,21 +6124,6 @@
     "nouvellesReanimations": 368,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-02",
-    "hospitalises": 28029,
-    "reanimation": 3270,
-    "nouvellesHospitalisations": 2189,
-    "nouvellesReanimations": 369,
-    "deces": 54187,
-    "gueris": 226865,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-03",
@@ -11348,21 +6144,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-03",
-    "hospitalises": 27953,
-    "reanimation": 3267,
-    "nouvellesHospitalisations": 1882,
-    "nouvellesReanimations": 275,
-    "deces": 54544,
-    "gueris": 228441,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-04",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11379,21 +6160,6 @@
     "nouvellesReanimations": 275,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-04",
-    "hospitalises": 27766,
-    "reanimation": 3240,
-    "nouvellesHospitalisations": 1752,
-    "nouvellesReanimations": 275,
-    "deces": 54901,
-    "gueris": 229944,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-05",
@@ -11414,21 +6180,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-05",
-    "hospitalises": 27572,
-    "reanimation": 3235,
-    "nouvellesHospitalisations": 1719,
-    "nouvellesReanimations": 255,
-    "deces": 55194,
-    "gueris": 231518,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-06",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11445,21 +6196,6 @@
     "nouvellesReanimations": 168,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-06",
-    "hospitalises": 27327,
-    "reanimation": 3215,
-    "nouvellesHospitalisations": 1126,
-    "nouvellesReanimations": 168,
-    "deces": 55385,
-    "gueris": 232662,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-07",
@@ -11480,21 +6216,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-07",
-    "hospitalises": 27652,
-    "reanimation": 3262,
-    "nouvellesHospitalisations": 790,
-    "nouvellesReanimations": 160,
-    "deces": 55556,
-    "gueris": 232946,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-08",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11511,21 +6232,6 @@
     "nouvellesReanimations": 355,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-08",
-    "hospitalises": 27995,
-    "reanimation": 3353,
-    "nouvellesHospitalisations": 1893,
-    "nouvellesReanimations": 356,
-    "deces": 56014,
-    "gueris": 233962,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-09",
@@ -11546,21 +6252,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-09",
-    "hospitalises": 27634,
-    "reanimation": 3332,
-    "nouvellesHospitalisations": 1931,
-    "nouvellesReanimations": 334,
-    "deces": 56450,
-    "gueris": 235686,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-10",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11577,21 +6268,6 @@
     "nouvellesReanimations": 282,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-10",
-    "hospitalises": 27417,
-    "reanimation": 3309,
-    "nouvellesHospitalisations": 1525,
-    "nouvellesReanimations": 282,
-    "deces": 56746,
-    "gueris": 237082,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-11",
@@ -11612,21 +6288,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-11",
-    "hospitalises": 26963,
-    "reanimation": 3327,
-    "nouvellesHospitalisations": 1618,
-    "nouvellesReanimations": 269,
-    "deces": 57106,
-    "gueris": 238722,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-12",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11643,21 +6304,6 @@
     "nouvellesReanimations": 264,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-12",
-    "hospitalises": 26424,
-    "reanimation": 3298,
-    "nouvellesHospitalisations": 1405,
-    "nouvellesReanimations": 264,
-    "deces": 57423,
-    "gueris": 240259,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-13",
@@ -11678,21 +6324,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-13",
-    "hospitalises": 26196,
-    "reanimation": 3294,
-    "nouvellesHospitalisations": 1085,
-    "nouvellesReanimations": 191,
-    "deces": 57622,
-    "gueris": 241323,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-14",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11709,21 +6340,6 @@
     "nouvellesReanimations": 113,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-14",
-    "hospitalises": 26401,
-    "reanimation": 3299,
-    "nouvellesHospitalisations": 651,
-    "nouvellesReanimations": 113,
-    "deces": 57789,
-    "gueris": 241597,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-15",
@@ -11744,21 +6360,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-15",
-    "hospitalises": 26478,
-    "reanimation": 3371,
-    "nouvellesHospitalisations": 1431,
-    "nouvellesReanimations": 306,
-    "deces": 58201,
-    "gueris": 242497,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-16",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11775,21 +6376,6 @@
     "nouvellesReanimations": 322,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-16",
-    "hospitalises": 26195,
-    "reanimation": 3338,
-    "nouvellesHospitalisations": 1857,
-    "nouvellesReanimations": 323,
-    "deces": 58552,
-    "gueris": 244207,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   },
   {
     "date": "2021-02-17",
@@ -11810,21 +6396,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-17",
-    "hospitalises": 25929,
-    "reanimation": 3340,
-    "nouvellesHospitalisations": 1559,
-    "nouvellesReanimations": 311,
-    "deces": 58862,
-    "gueris": 245706,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-18",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11843,21 +6414,6 @@
     "code": "FRA"
   },
   {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-18",
-    "hospitalises": 25717,
-    "reanimation": 3384,
-    "nouvellesHospitalisations": 1490,
-    "nouvellesReanimations": 262,
-    "deces": 59133,
-    "gueris": 247096,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
     "date": "2021-02-19",
     "source": {
       "nom": "Ministère des Solidarités et de la Santé"
@@ -11874,125 +6430,5 @@
     "nouvellesReanimations": 308,
     "nom": "France",
     "code": "FRA"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-19",
-    "hospitalises": 25506,
-    "reanimation": 3380,
-    "nouvellesHospitalisations": 1543,
-    "nouvellesReanimations": 309,
-    "deces": 59458,
-    "gueris": 248457,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-20",
-    "hospitalises": 25269,
-    "reanimation": 3369,
-    "nouvellesHospitalisations": 1029,
-    "nouvellesReanimations": 195,
-    "deces": 59641,
-    "gueris": 249520,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-21",
-    "hospitalises": 25464,
-    "reanimation": 3392,
-    "nouvellesHospitalisations": 593,
-    "nouvellesReanimations": 141,
-    "deces": 59800,
-    "gueris": 249727,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-22",
-    "hospitalises": 25831,
-    "reanimation": 3407,
-    "nouvellesHospitalisations": 1529,
-    "nouvellesReanimations": 274,
-    "deces": 60133,
-    "gueris": 250532,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-23",
-    "hospitalises": 25660,
-    "reanimation": 3435,
-    "nouvellesHospitalisations": 1780,
-    "nouvellesReanimations": 345,
-    "deces": 60443,
-    "gueris": 252083,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-24",
-    "hospitalises": 25614,
-    "reanimation": 3436,
-    "nouvellesHospitalisations": 1636,
-    "nouvellesReanimations": 319,
-    "deces": 60720,
-    "gueris": 253450,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-25",
-    "hospitalises": 25317,
-    "reanimation": 3430,
-    "nouvellesHospitalisations": 1454,
-    "nouvellesReanimations": 301,
-    "deces": 60981,
-    "gueris": 254868,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
-  },
-  {
-    "code": "FRA",
-    "nom": "France",
-    "date": "2021-02-26",
-    "hospitalises": 25130,
-    "reanimation": 3445,
-    "nouvellesHospitalisations": 1634,
-    "nouvellesReanimations": 303,
-    "deces": 61265,
-    "gueris": 256326,
-    "source": {
-      "nom": "OpenCOVID19-fr"
-    },
-    "sourceType": "opencovid19-fr"
   }
 ]

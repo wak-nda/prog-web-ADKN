@@ -135,11 +135,19 @@ async function getDataFromHospitalInPeriod(startDate, endDate){
     return dataInPeriod;
 }
 
+const dataFranceFromJson = require('../../data/contrib-data.json')
+
+async function getFranceData(){
+    const size = dataFranceFromJson.length
+    return dataFranceFromJson[size - 1]
+}
+
 module.exports = {
     addDataFromHospital,
     getDataFromHospital,
     getDataFromHospitalBeforeDate,
     getDataFromHospitalInPeriod,
     getDataFromHospitalAfterDate,
-    getTotalData
+    getTotalData,
+    getFranceData
 };
