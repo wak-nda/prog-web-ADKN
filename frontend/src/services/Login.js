@@ -9,7 +9,7 @@ export const login = async (email, password) => {
 		});
 		if (responseJson.data.res) {
 			const Auth = new AuthHelperMethods();
-			Auth.setToken(responseJson.data.token)
+			Auth.setToken(responseJson.data.token, email, responseJson.data.name)
 		}
 		return responseJson;
 	} catch (err) {

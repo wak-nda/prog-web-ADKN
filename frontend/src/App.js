@@ -15,6 +15,7 @@ import { HistoryContextProvider } from './context/HistoryContext';
 import './App.scss';
 import { Login } from './pages/Login';
 import { Home } from './pages/Home';
+import { Mailing } from './pages/Mailing';
 
 const App = () => {
 	const [theme, setTheme] = useState();
@@ -49,6 +50,9 @@ const App = () => {
 						</Route>
 						<Route path="/home">
 							<Home />
+						</Route>
+						<Route path="/mailing">
+							<Mailing />
 						</Route>
 						<Route path="*">
 							<Error404 />

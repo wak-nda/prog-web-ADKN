@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map, GeoJSON } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import './MapComponent.scss';
+import '../styles/css/MapComponent.scss';
 
 export const MapComponent = (countries) => {
 	// console.log(countries);

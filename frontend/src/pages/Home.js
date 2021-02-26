@@ -1,14 +1,14 @@
 import React from 'react';
 import { Col, Container, Row } from 'reactstrap';
-import { useHistory } from 'react-router-dom';
 import '../styles/css/Home.scss';
 import '../styles/family.css';
-import { faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import logo from '../assets/logo.jpg';
-import AuthHelperMethods from '../services/AuthHelperMethods';
+import { faWindowClose, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+import { useHistory } from 'react-router-dom';
 import { ToggleModeNight } from '../components/ToggleModeNight';
 import { Covid19Map } from './Covid-19Map';
+import logo from '../assets/logo.jpg';
+import AuthHelperMethods from '../services/AuthHelperMethods';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -24,6 +24,14 @@ export const Home = () => {
 		}
 	}
 
+	function navigateToContact() {
+		history.push('/mailing');
+	}
+
+	function navigateToHome() {
+		history.push('/');
+	}
+
 	return (
 		<div>
 			<div>
@@ -32,14 +40,18 @@ export const Home = () => {
 						<Col>
 							<div className="toolbar" role="banner">
 								{/*<a>*/}
-								<img
-									alt="logo"
-									width="70"
-									src={logo}
-								/>
-								{/*</a>*/}
+								<a onClick={navigateToHome}>
+									<img
+										alt="logo"
+										width="70"
+										src={logo}
+									/>
+								</a>
 								<span className="policeHero right">Covid19 - Stats</span>
 								<div className="spacer"> </div>
+								<a onClick={navigateToContact}>
+									<FontAwesomeIcon icon={faEnvelopeOpenText} className="iconMailing colI" />
+								</a>
 								<a onClick={logout}>
 									<FontAwesomeIcon icon={faWindowClose} className="iconLogin colI" />
 								</a>
@@ -52,7 +64,6 @@ export const Home = () => {
 					</Row>
 				</Container>
 			</div>
-
 			<Container className="remove" fluid>
 				<Row>
 					<Col lg="4" className="paddZ">
@@ -70,7 +81,6 @@ export const Home = () => {
 												stroke="currentColor"
 												strokeWidth="2"
 												strokeLinecap="round"
-												strokelinejoin="round"
 											>
 												<line x1="18" y1="20" x2="18" y2="10" />
 												<line x1="12" y1="20" x2="12" y2="4" />

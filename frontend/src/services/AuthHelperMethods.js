@@ -25,12 +25,19 @@ export default class AuthHelperMethods {
 		}
 	};
 
-	setToken = (idToken) => {
+	setToken = (idToken, email, name) => {
 		// Saves user token to localStorage
-		localStorage.setItem('id_token', idToken)
+		localStorage.setItem('id_token', idToken);
+		localStorage.setItem('email', email);
+		localStorage.setItem('name', name);
 	};
 
 	getToken = () => localStorage.getItem('id_token');
+
+	getMail = () => localStorage.getItem('email');
+
+	getName = () => localStorage.getItem('name');
+
 
 	logout = () => {
 		// Clear user token and profile data from localStorage

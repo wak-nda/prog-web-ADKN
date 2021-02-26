@@ -12,24 +12,27 @@ router.post('/api/mailing', async (ctx) => {
         .connect('381049ba9918bba1264fa0a8885d53ae', '2d5024c1a1cdbf4d89ec7690c3a982d5');
     const tag = "<h3>";
     const endingTag = "</h3>";
+    const sender = "<h1> FROM : "+email+"</h1><br>";
+    const sname  = "<h1> NAME : "+name+"</h1><br><br>";
+    const m = tag.concat(msg, endingTag);
     const request = mailjet
         .post("send", {'version': 'v3.1'})
         .request({
             "Messages": [
                 {
                     "From": {
-                        "Email": "pkoffi5@gmail.com",
-                        "Name": "Merveille"
+                        "Email": "COVID19@paulkoffi.com",
+                        "Name": "paulkoffi.com"
                     },
                     "To": [
                         {
-                            "Email": email,
-                            "Name" : name
+                            "Email": "pkoffi5@gmail.com",
+                            "Name" : "koffi"
                         }
                     ],
-                    "Subject": subject,
+                    "Subject": "COVID19_SITE : "+subject,
                     "TextPart": "My first Mailjet email",
-                    "HTMLPart": tag.concat(msg, endingTag),
+                    "HTMLPart": sender.concat(sname, m),
                     "CustomID": "AppGettingStartedTest"
                 }
             ]
