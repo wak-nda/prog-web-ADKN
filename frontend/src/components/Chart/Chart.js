@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Line, Bar } from 'react-chartjs-2';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { fetchMonthlyData } from '../../api';
 
 import styles from './Chart.module.scss';
 
-export const Chart = ({ data: { totalConfirmed, totalRecovered, totalDeaths }, departement }) => {
+export const Chart = ({ data: {numberOfHospitalized,numberOfRecovered, numberOfDeaths,lastUpdateDate}, departement, loading }) => {
+
+    if(loading){
+        return( <p>
+			{loading && (
+				<FontAwesomeIcon icon={faSpinner} spin className={styles.fa} />
+			)}
+		</p> )
+    }
+
     const [monthlyData, setMonthlyData] = useState([]);
 
     useEffect(() => {
@@ -15,6 +26,8 @@ export const Chart = ({ data: { totalConfirmed, totalRecovered, totalDeaths }, d
         fetchAPI();
     }, []);
 
+    // console.log(data)
+    console.log(numberOfHospitalized)
     const barChartData = {
         labels: ['Infected', 'Recovered', 'Deaths'],
         datasets: [{
@@ -24,7 +37,7 @@ export const Chart = ({ data: { totalConfirmed, totalRecovered, totalDeaths }, d
                 'rgba(0,255,0,0.5)',
                 'rgba(255,0,0,0.5)'
             ],
-            data: [totalConfirmed, totalRecovered, totalDeaths]
+            data: [numberOfHospitalized, numberOfRecovered, numberOfDeaths]
         }]
     };
 
@@ -71,7 +84,7 @@ export const Chart = ({ data: { totalConfirmed, totalRecovered, totalDeaths }, d
     );
 
     const barChart = (
-        totalConfirmed
+        numberOfHospitalized
         ? (
             <Bar data={barChartData} options={barChartOptions} />
         ) : null
@@ -79,17 +92,18 @@ export const Chart = ({ data: { totalConfirmed, totalRecovered, totalDeaths }, d
 
     return (
         <div className={styles.container}>
-            {departement ? barChart : lineChart}
+            {/* {departement ? barChart : lineChart} */}
+            {barChart}
         </div>
     )
 }
 
-Chart.propTypes = {
-	data: PropTypes.shape({
-		totalConfirmed: PropTypes.number,
-		totalDeaths: PropTypes.number,
-		totalRecovered: PropTypes.number,
-        reportDate: PropTypes.string
-	}).isRequired,
-	departement: PropTypes.string.isRequired
-};
+// Chart.propTypes = {
+// 	data: PropTypes.shape({
+// 		numberOfHospitalized: PropTypes.number,
+// 		numberOfDeaths: PropTypes.number,
+// 		numberOfRecovered: PropTypes.number,
+//      lastUpdateDate: PropTypes.string
+// 	}).isRequired,
+// 	departement: PropTypes.string.isRequired
+// };

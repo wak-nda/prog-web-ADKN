@@ -1,29 +1,34 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
 import { Chart } from '../../components/Chart/Chart'
-
 import styles from '../../styles/css/CovidTracker.module.scss'
+import { fetchTotalData } from '../../api/index'
 
 export const CovidTracker = () => {
-    const [departementData, setDepartementData] = useState([]);
-    const [region, setRegion] = useState("");
+    const [totalData, setTotalData] = useState([]);
+    const [loading, setLoading] = useState(false);
+    const fetchAPI = useCallback(async () => {
+        setLoading(true);
+        try {
+			const response = await fetchTotalData();
+            setTotalData(response);
+		} catch (e) {
+			// eslint-disable-next-line no-console
+			console.log(e);
+			setError(true);
+		} finally {
+			setLoading(false);
+		}
+	}, [])
 
     useEffect(() => {
-        const fetchAPI = async () => {
-            setDepartementData(await fetchDepartementData())
-        }
-        fetchAPI();
+        fetchAPI(); 
     }, []);
+    // console.log(totalData.data);
     return (
         <div className={styles.container}>
-            <AutoComplete data={RegionsList} onSelect={region => setRegion(region)} />
-            <div> {region && (
-                        <pre className="text-left">
-                            {JSON.stringify(region, 0, 2)}
-                        </pre>
-                    )}</div>
-            <Chart data={departementData} departement="" />
-            <Chart data={departementData} departement="Alpes-Maritimes" />
+            {/* <Chart data={totalData} departement="" loading={loading} /> */}
+            <Chart data={totalData} departement="Alpes-Maritimes" loading={loading}  />
         </div>
     );
 };

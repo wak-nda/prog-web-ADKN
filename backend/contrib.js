@@ -1,4 +1,5 @@
-const {readJson} = require('fs-extra')
+const {outputJson} = require('fs-extra')
+const {join} = require('path')
 const got = require('got')
 
 async function fetchJson(url) {
@@ -7,15 +8,9 @@ async function fetchJson(url) {
 }
   
 async function loadJson(dataSource) {
-    if (dataSource.startsWith('http')) {
-      return fetchJson(dataSource)
-    }
-  
-    return readJson(dataSource)
+  return fetchJson(dataSource)
 }
 
-const {join} = require('path')
-const {outputJson} = require('fs-extra')
 
 const CONTRIB_DATA_URL = 'https://raw.githubusercontent.com/opencovid19-fr/data/master/dist/chiffres-cles.json'
 

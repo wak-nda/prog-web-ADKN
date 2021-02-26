@@ -98,7 +98,7 @@ async function getTotalData(){
             //     numberOfRecovered += data['rad'];
             //     lastUpdateDate = data['jour']
             // }
-            console.log(intermediaire);
+            // console.log(intermediaire);
         }
     );
     for (var prop in intermediaire){
@@ -107,8 +107,8 @@ async function getTotalData(){
         numberOfHospitalized += intermediaire[prop]['hosp'];
         numberOfPeopleInRea += intermediaire[prop]['rea'];
     }
-    console.log(numberOfPeopleInRea);
-    return [{'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate}];
+    // console.log(numberOfPeopleInRea);
+    return {'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate};
 }
 
 async function getTotalDataFromHosptitalInRegion(region){
