@@ -30,6 +30,7 @@ export default class AuthHelperMethods {
 		localStorage.setItem('id_token', idToken);
 		localStorage.setItem('email', email);
 		localStorage.setItem('name', name);
+		localStorage.setItem('dark', 'dark');
 	};
 
 	getToken = () => localStorage.getItem('id_token');
