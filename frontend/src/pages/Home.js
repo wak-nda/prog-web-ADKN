@@ -99,7 +99,7 @@ export const Home = () => {
 
 	if (loading) {
         return (
-			<p>
+			<p className="centerP">
 				{loading && (
 					<FontAwesomeIcon icon={faSpinner} spin className="fa" />
 				)}
