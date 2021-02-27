@@ -250,7 +250,7 @@ export const Home = () => {
 										<div className={`${theme === 'dark' ? 'jsx-1180261630 title policeHobo textWhite' : 'jsx-1180261630 title policeHobo'}`}>Taux d&apos;incidence</div>
 										<br />
 										<br />
-										<Container>
+										<Container className="whiteB">
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
 										</Container>
 										<h1>TEST</h1>

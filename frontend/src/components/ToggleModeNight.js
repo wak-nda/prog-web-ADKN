@@ -11,7 +11,7 @@ export const ToggleModeNight = () => {
 	const { changeThemeContext } = useContext(ThemeContext);
 
 	const handleChangeMode = (e) => {
-		const themeValue = e.target.checked ? 'light' : 'dark';
+		const themeValue = e.target.checked ? 'dark' : 'light';
 		localStorage.setItem('dark', themeValue);
 		changeThemeContext(themeValue);
 	};
@@ -35,7 +35,7 @@ export const ToggleModeNight = () => {
 						)
 					}}
 					// defaultChecked={theme === localStorage.getItem('dark')}
-					checked={localStorage.getItem('dark') !== 'dark'}
+					checked={localStorage.getItem('dark') !== 'light'}
 					onChange={handleChangeMode}
 				/>
 			)}
