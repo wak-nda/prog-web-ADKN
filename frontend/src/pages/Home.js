@@ -16,9 +16,15 @@ import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
 // import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
-import { fetchTotalDataFrance, fetchTotalDataHospFrance, fetchDailyDataFrance } from '../services/FetchData';
+import {
+	fetchTotalDataFrance,
+	fetchTotalDataHospFrance,
+	fetchDailyDataFrance,
+	fetchMockData
+} from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
+import { DisplayTable } from '../components/DisplayTable';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -79,10 +85,11 @@ export const Home = () => {
 	const [franceData, setFranceData] = useState([]);
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
+	const [data, setData] = useState([]);
 	// const [regions, setRegions] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const [hospDataComp, setHosp] = useState([]);
+	// const [hospDataComp, setHosp] = useState([]);
 
 	const fetchAPI = useCallback(async () => {
 		setLoading(true);
@@ -90,10 +97,13 @@ export const Home = () => {
 			const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHospFrance();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
+			const dataT = await fetchMockData();
+
 			// const responseRegions = await fetchRegions();
 			setDailyDataFrance(responseDailyDataFrance);
 			setFranceData(responseFranceData);
 			setHospData(responseHospData);
+			setData(dataT);
 			// setRegions(responseRegions);
 		} catch (e) {
 			// eslint-disable-next-line no-console
@@ -119,11 +129,6 @@ export const Home = () => {
 	useEffect(() => {
 		fetchAPI();
 	}, [fetchAPI]);
-
-	useEffect(() => {
-		// alert('a');
-		setHosp('b');
-	}, [hospDataComp]);
 
 	if (loading) {
 		return (
@@ -304,6 +309,7 @@ export const Home = () => {
 								Data vizualisation ~
 							</h2>
 							<br />
+							<DisplayTable dataR={data} />
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
