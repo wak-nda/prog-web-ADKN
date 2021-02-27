@@ -12,7 +12,7 @@ import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
 // import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
-import { fetchTotalDataFrance, fetchTotalDataHospFrance, fetchDailyDataFrance, fetchRegions } from '../services/FetchData';
+import { fetchTotalDataFrance, fetchTotalDataHospFrance, fetchDailyDataFrance } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
 
@@ -75,7 +75,8 @@ export const Home = () => {
 	const [franceData, setFranceData] = useState([]);
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
-	const [regions, setRegions] = useState([]);
+	// const [regions, setRegions] = useState([]);
+	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
 
 	const fetchAPI = useCallback(async () => {
@@ -84,11 +85,24 @@ export const Home = () => {
             const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHospFrance();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
-			const responseRegions = await fetchRegions();
+			// const responseRegions = await fetchRegions();
 			setDailyDataFrance(responseDailyDataFrance)
             setFranceData(responseFranceData);
 			setHospData(responseHospData);
-			setRegions(responseRegions);
+			// setRegions(responseRegions);
+		} catch (e) {
+			// eslint-disable-next-line no-console
+			console.log(e);
+		} finally {
+			setLoading(false);
+		}
+	}, [])
+
+	const handleRegionChange = useCallback(async (region) => {
+        try {
+            // const responseDailyData = await fetchDailyData(region);
+            // setDailyData(responseDailyData);
+            setRegionSelected(region)
 		} catch (e) {
 			// eslint-disable-next-line no-console
 			console.log(e);
@@ -111,8 +125,8 @@ export const Home = () => {
 		)
     }
 
-	console.log(dailyDataFrance);
-	console.log(regions)
+	// console.log(dailyDataFrance);
+	// console.log(regions)
 
 	if (Auth.loggedIn()) {
 		history.push('/');
@@ -272,7 +286,7 @@ export const Home = () => {
 					<Col lg="8" className="paddZ">
 						<div className="bodyXX">
 							<Covid19Map />
-							<RegionPicker />
+							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
