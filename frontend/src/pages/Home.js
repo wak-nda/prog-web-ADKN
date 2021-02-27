@@ -1,18 +1,50 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import '../styles/css/Home.scss';
 import '../styles/family.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowClose, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+import { faWindowClose, faEnvelopeOpenText, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 import { ToggleModeNight } from '../components/ToggleModeNight';
 import { Covid19Map } from './Covid-19Map';
 import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
+import { fetchTotalDataFrance } from '../services/FetchData';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
 	const history = useHistory();
+	const [franceData, setFranceData] = useState([])
+	const [loading, setLoading] = useState(false);
+
+	const fetchAPI = useCallback(async () => {
+        setLoading(true);
+        try {
+            const responseDailyData = await fetchTotalDataFrance();
+            setFranceData(responseDailyData);
+		} catch (e) {
+			// eslint-disable-next-line no-console
+			console.log(e);
+		} finally {
+			setLoading(false);
+		}
+	}, [])
+
+	useEffect(() => {
+		fetchAPI();
+    }, [fetchAPI]);
+
+	if (loading) {
+        return (
+			<p>
+				{loading && (
+					<FontAwesomeIcon icon={faSpinner} spin className="fa" />
+				)}
+			</p>
+		)
+    }
+
+	console.log(franceData.data);
 
 	if (Auth.loggedIn()) {
 		history.push('/');
@@ -100,17 +132,17 @@ export const Home = () => {
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{franceData.data ? franceData.data.casConfirmes : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de cas confirmés</div>
 													</div>
 												</Col>
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{franceData.data ? franceData.data.deces : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de décès</div>
 													</div>
 												</Col>
 												{/*<Col>*/}
