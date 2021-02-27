@@ -312,53 +312,7 @@ export const Home = () => {
 								Data vizualisation ~
 							</h2>
 							<br />
-							<DisplayTable dataR={data} />
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-
+							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
 						</div>
 					</Col>
 				</Row>
