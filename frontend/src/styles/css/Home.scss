@@ -8,7 +8,7 @@
 	border-radius: 50%;
 	margin-top: -10px;
 	padding: 20px;
-	border : 3px solid black;
+	border: 3px solid black;
 }
 
 .colI {
@@ -18,7 +18,7 @@
 }
 
 .colI:hover {
-	color : black !important;
+	color: black !important;
 }
 
 .rel {
@@ -42,7 +42,7 @@
 	}
 }
 
-.scrollToTop{
+.scrollToTop {
 	position: fixed;
 	bottom: 40px;
 	right: 50px;
@@ -70,30 +70,30 @@
 
 // ################ ANIMATION SCROLL
 
-$red:#F44336;
+$red: #F44336;
 
 @mixin transform($in) {
-	transform:$in;
-	-webkit-transform:$in;
-	-moz-transform:$in;
-	-o-transform:$in;
-	-ms-transform:$in;
+	transform: $in;
+	-webkit-transform: $in;
+	-moz-transform: $in;
+	-o-transform: $in;
+	-ms-transform: $in;
 }
 
 @mixin animation($in) {
-	animation:$in;
-	-webkit-animation:$in;
-	-moz-animation:$in;
-	-o-animation:$in;
+	animation: $in;
+	-webkit-animation: $in;
+	-moz-animation: $in;
+	-o-animation: $in;
 	//-ms-animation:$in;
 }
 
 .scrollToTop {
-	color:#fff;
+	color: #fff;
 
 	&:hover {
-		border-color:$red;
-		color:$red;
+		border-color: $red;
+		color: $red;
 
 		@include animation(shakeThatBooty 0.3s linear 1);
 	}
@@ -111,7 +111,7 @@ $red:#F44336;
 	}
 }
 
-.alignC{
+.alignC {
 	text-align: center;
 	margin-top: -40px !important;
 }
@@ -149,8 +149,9 @@ $red:#F44336;
 }
 
 .colI:hover {
-	color : black !important;
+	color: black !important;
 }
+
 :host {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: 14px;
@@ -169,11 +170,11 @@ h6 {
 	margin: 8px 0;
 }
 
-.imgLink{
+.imgLink {
 
 }
 
-img,a {
+img, a {
 	outline: 0;
 }
 
@@ -189,7 +190,7 @@ p {
 	padding: 0px !important;
 }
 
-.bodyX{
+.bodyX {
 	margin-top: 50px;
 }
 
@@ -209,7 +210,7 @@ p {
 }
 
 .right {
- margin-left: 35%;
+	margin-left: 35%;
 }
 
 .toolbar img {
@@ -223,6 +224,11 @@ p {
 
 .toolbar #twitter-logo:hover {
 	opacity: 0.8;
+}
+
+.fa {
+	font-size: 12em;
+	color: #4aa0fb;
 }
 
 .content {
@@ -368,7 +374,7 @@ a:hover {
 }
 
 .terminal pre {
-	font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+	font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
 	color: white;
 	padding: 0 1rem 1rem;
 	margin: 0;
@@ -412,17 +418,17 @@ footer a {
 	align-items: center;
 	font-size: 12px;
 	padding: 3px 10px;
-	border: 1px solid rgba(27,31,35,.2);
+	border: 1px solid rgba(27, 31, 35, .2);
 	border-radius: 3px;
-	background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
+	background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);
 	margin-left: 4px;
 	font-weight: 600;
-	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }
 
 .github-star-badge:hover {
-	background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-	border-color: rgba(27,31,35,.35);
+	background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);
+	border-color: rgba(27, 31, 35, .35);
 	background-position: -.5em;
 }
 
@@ -444,7 +450,7 @@ svg#clouds {
 /* Responsive Styles */
 @media screen and (max-width: 767px) {
 
-	.card-container > *:not(.circle-link) ,
+	.card-container > *:not(.circle-link),
 	.terminal {
 		width: 100%;
 	}
@@ -472,13 +478,13 @@ svg#clouds {
 }
 
 
-
 a.fa-bell {
 	position: relative;
 	font-size: 2em;
 	color: grey;
 	cursor: pointer;
 }
+
 span.fa-comment {
 	position: absolute;
 	font-size: 0.6em;
@@ -486,6 +492,7 @@ span.fa-comment {
 	color: red;
 	right: -4px;
 }
+
 span.num {
 	position: absolute;
 	font-size: 0.3em;
@@ -493,7 +500,6 @@ span.num {
 	color: #fff;
 	right: 2px;
 }
-
 
 
 // sidebar
@@ -529,11 +535,15 @@ span.num {
 	margin: 0.4em;
 }
 
-.bodyXX{
+.greenG {
+	background-color: #d2ac71 !important;
+}
+
+.bodyXX {
 	overflow-y: auto;
 	overflow-x: hidden;
 	background-color: #fff;
-	max-height: calc( 100vh - 50px ) !important;
+	max-height: calc(100vh - 50px) !important;
 	margin-top: 50px;
 
 	&::-webkit-scrollbar {
@@ -574,7 +584,7 @@ span.num {
 	flex: 1;
 	overflow-y: auto;
 	overflow-x: hidden;
-	max-height: calc( 100vh - 50px ) !important;
+	max-height: calc(100vh - 50px) !important;
 
 	&::-webkit-scrollbar {
 		width: 6px;
@@ -593,8 +603,9 @@ span.num {
 		//height: 20px;
 	}
 }
+
 .remove {
-   margin-left: 0px !important;
+	margin-left: 0px !important;
 	margin-right: 0px !important;
 }
 
@@ -655,6 +666,7 @@ span.num {
 	font-size: small;
 	font-style: italic;
 }
+
 .map.jsx-2395746840 {
 	display: flex;
 	flex: 1 1 0%;
@@ -662,14 +674,3 @@ span.num {
 	height: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-	.header.jsx-3941331650 {
-		background-color: #29c05d !important;
-	}
-}
-
-@media (prefers-color-scheme: light) {
-	.header.jsx-3941331650 {
-		background-color: white !important;
-	}
-}

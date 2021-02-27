@@ -1,15 +1,16 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import '../styles/css/Home.scss';
 import '../styles/family.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowClose, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+import { faWindowClose, faEnvelopeOpenText, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 import { ToggleModeNight } from '../components/ToggleModeNight';
 import { Covid19Map } from './Covid-19Map';
 import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
+import { fetchTotalDataFrance, fetchTotalDataHosp } from '../services/FetchData';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -51,6 +52,40 @@ export const Home = () => {
 	// 			darkM = event.matches;
 	// 		}
 	// 	});
+	const [franceData, setFranceData] = useState([])
+	const [hospData, setHospData] = useState([])
+	const [loading, setLoading] = useState(false);
+
+	const fetchAPI = useCallback(async () => {
+        setLoading(true);
+        try {
+            const responseFranceData = await fetchTotalDataFrance();
+			const responseHospData = await fetchTotalDataHosp();
+            setFranceData(responseFranceData);
+			setHospData(responseHospData);
+		} catch (e) {
+			// eslint-disable-next-line no-console
+			console.log(e);
+		} finally {
+			setLoading(false);
+		}
+	}, [])
+
+	useEffect(() => {
+		fetchAPI();
+    }, [fetchAPI]);
+
+	if (loading) {
+        return (
+			<p>
+				{loading && (
+					<FontAwesomeIcon icon={faSpinner} spin className="fa" />
+				)}
+			</p>
+		)
+    }
+
+	console.log(hospData.data);
 
 	if (Auth.loggedIn()) {
 		history.push('/');
@@ -108,7 +143,7 @@ export const Home = () => {
 						<div className="bodyX">
 							<div className="jsx-2395746840 menu">
 								<div className={`${theme === 'dark' ? 'jsx-347752997 scrollable-container blackG' : 'jsx-347752997 scrollable-container'}`}>
-									<div className="jsx-3941331650 header">
+									<div className={`${theme === 'dark' ? 'jsx-3941331650 header greenG' : 'jsx-3941331650 header'}`}>
 										<div className={`${theme === 'dark' ? 'jsx-3941331650 back blackG' : 'jsx-3941331650 back'}`}>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
@@ -138,17 +173,17 @@ export const Home = () => {
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{franceData.data ? franceData.data.casConfirmes : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de cas confirmés</div>
 													</div>
 												</Col>
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{franceData.data ? franceData.data.deces : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de décès</div>
 													</div>
 												</Col>
 												{/*<Col>*/}
@@ -166,17 +201,17 @@ export const Home = () => {
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfHospitalized : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de patients hospitalisé</div>
 													</div>
 												</Col>
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfPeopleInRea : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de patients en réanimation</div>
 													</div>
 												</Col>
 											</Row>
@@ -184,17 +219,18 @@ export const Home = () => {
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfRecovered : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">cNombre de retours à domicile</div>
 													</div>
 												</Col>
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfDeaths : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+
+														<div className="jsx-2793952281"><br />Nombre de déces</div>
 													</div>
 												</Col>
 											</Row>
