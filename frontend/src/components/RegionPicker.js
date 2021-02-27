@@ -4,8 +4,7 @@ import PropTypes from 'prop-types';
 
 import { fetchRegions } from '../services/FetchData';
 
-export const RegionPicker = (({ handleRegionChange, region }) =>{
-
+export const RegionPicker = (({ handleRegionChange, region }) => {
     const [fetchedRegions, setFetchedRegions] = useState([]);
     useEffect(() => {
         const fetchAPI = async () => {
@@ -19,13 +18,13 @@ export const RegionPicker = (({ handleRegionChange, region }) =>{
             <FormGroup controlId="exampleForm.ControlSelect1">
                 <Label for="exampleSelect">Etat courant de la région : {region}</Label>
                 <Input type="select" name="select" id="exampleSelect" onChange={(e) => handleRegionChange(e.target.value)}>
-                    <option value=''>{region}</option>
-                    {fetchedRegions.map(({name}) => <option value={name}>{name}</option>)}
+                    <option>{region}</option>
+                    {fetchedRegions.map(({ name }) => <option value={name}>{name}</option>)}
                 </Input>
             </FormGroup>
-        </Form>    
+        </Form>
     )
-    }   
+    }
 )
 
 RegionPicker.propTypes = {

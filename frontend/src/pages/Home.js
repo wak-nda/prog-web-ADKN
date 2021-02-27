@@ -111,7 +111,8 @@ export const Home = () => {
 		)
     }
 
-	// console.log(dailyDataFrance);
+	console.log(dailyDataFrance);
+	console.log(regions)
 
 	if (Auth.loggedIn()) {
 		history.push('/');
