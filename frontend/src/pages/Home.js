@@ -95,9 +95,15 @@ export const Home = () => {
 		setLoading(true);
 		try {
 			const responseFranceData = await fetchTotalDataFrance();
+			// alert('ok');
 			const responseHospData = await fetchTotalDataHospFrance();
+			// alert('ok');
+
 			const responseDailyDataFrance = await fetchDailyDataFrance();
+			// alert('ok');
+
 			const dataT = await fetchMockData();
+			// alert('ok');
 
 			// const responseRegions = await fetchRegions();
 			setDailyDataFrance(responseDailyDataFrance);
@@ -310,51 +316,7 @@ export const Home = () => {
 							</h2>
 							<br />
 							<DisplayTable dataR={data} />
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
+							<br />
 
 						</div>
 					</Col>
