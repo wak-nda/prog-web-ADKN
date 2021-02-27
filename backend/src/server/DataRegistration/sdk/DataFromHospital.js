@@ -158,6 +158,143 @@ async function getDailyDataFrance(){
     return dataFranceFromJson.filter(r => r.code === 'FRA' && r.deces !== undefined && r.sourceType ==="ministere-sante");
 }
 
+async function getTotalDataFromHosptitalInRegions(){
+    let depIntermediaire = {};
+    let regionIntermediaire = {};
+
+    await DataFromHospital.find().then(
+        value => {
+            let size = value.length;
+            for(let idx = 0; idx < size; idx++){
+                if(value[idx]['sexe'] === '0'){
+                    if(value[idx]['dep'] in depIntermediaire){
+                        depIntermediaire[value[idx]['dep']]['rea'] += value[idx]['rea'];
+
+                        depIntermediaire[value[idx]['dep']]['hosp'] += value[idx]['hosp'];
+
+                        depIntermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
+
+                        depIntermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
+
+                        depIntermediaire[value[idx]['dep']]['jour'] = value[idx]['jour'];
+                    }else{
+                        depIntermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}
+                    }
+                }
+            }
+            // console.log(intermediaire);
+        }
+    );
+    // console.log(Regions):
+    const depKeysData = Object.keys(depIntermediaire); 
+    // console.log(keysData)
+    for (let idxKey = 0; idxKey < depKeysData.length; idxKey++){
+        // console.log(keysData)
+        let depKey = depKeysData[idxKey]
+        let region = findRegion(depKey);
+
+        if(region in regionIntermediaire){
+                regionIntermediaire[region]['numberOfPeopleInRea'] += depIntermediaire[depKey]['rea'];
+                regionIntermediaire[region]['numberOfHospitalized'] += depIntermediaire[depKey]['hosp'];
+                regionIntermediaire[region]['numberOfDeaths'] += depIntermediaire[depKey]['dc']
+                regionIntermediaire[region]['numberOfRecovered'] += depIntermediaire[depKey]['rad']
+                regionIntermediaire[region]['jour'] = depIntermediaire[depKey]['jour']
+        }else{
+            regionIntermediaire[region] = {'numberOfPeopleInRea': depIntermediaire[depKey]['rea'], 'numberOfHospitalized': depIntermediaire[depKey]['hosp'], 'numberOfRecovered': depIntermediaire[depKey]['rad'], 'numberOfDeaths': depIntermediaire[depKey]['dc'], 'jour': depIntermediaire[depKey]['jour']}
+        }
+        // for(let idx = 0; idx < Regions.length; idx++){
+        //     if(Regions[idx]['departements'].includes(key)){
+        //         // console.log(Regions[idx]['name'])
+        //         Regions[idx]['numberOfHospitalized'] += depIntermediaire[key]['hosp']
+        //         Regions[idx]['numberOfPeopleInRea'] += depIntermediaire[key]['rea']
+        //         Regions[idx]['numberOfDeaths'] += depIntermediaire[key]['dc']
+        //         Regions[idx]['numberOfRecovered'] += depIntermediaire[key]['rad']
+        //     }
+        // }
+    }
+    // for (let idx = 0; idx < Regions.length; idx++){
+    //     console.log(Regions[idx]['name'])
+    // }
+    return regionIntermediaire
+}
+
+function findRegion(dep){
+    const auvergneRhoneAlpes = ["01","03","07","15","26","38","42","43","69","63","73","74"];
+    const bourgogneFrancheComte = ["21","25","39","58","70","71","89","90"];
+    const bretagne = ["22","29","35","56"];
+    const centreValDeLoire = ["18","28","36","37","41","45"]
+    const corse = ["2A","2B"]
+    const grandEst = ["08","10","51","52","54","55","57","67","68","88"]
+    const hautsDeFrance = ["02","59","60","62","80"]
+    const ileDeFrance = ["75","77","78","91","92","93","94","95"];
+    const normandie = ["14","27","50","61","76"]
+    const nouvelleAquitaine = ["16","17","19","23","24","33","40","47","64","79","86","87"]
+    const occitanie = ["09","11","12","30","31","32","34","46","48","65","66","81","82"]
+    const paysDeLaLoire = ["44","49","53","72","85" ]
+    const provenceAlpesCoteDazur = ["04","05","06","13","83","84"]
+    const guadeloupe = ["971"]
+    const martinique = ["972"]
+    const guyane = ["973"] 
+    const laReunion = ["974"]
+    const mayotte = ["976"]
+    if(auvergneRhoneAlpes.includes(dep)){
+        return "Auvergne-Rhône-Alpes";
+    }
+    if(bourgogneFrancheComte.includes(dep)){
+        return "Bourgogne-Franche-Comté";
+    }
+    if(bretagne.includes(dep)){
+        return "Bretagne";
+    }
+    if(centreValDeLoire.includes(dep)){
+        return "Centre-Val de Loire";
+    }
+    if(corse.includes(dep)){
+        return "Corse";
+    }
+    if(grandEst.includes(dep)){
+        return "Grand Est";
+    }
+    if(hautsDeFrance.includes(dep)){
+        return "Hauts-de-France";
+    }
+    if(ileDeFrance.includes(dep)){
+        return "Île-de-France";
+    }
+    if(normandie.includes(dep)){
+        return "Normandie";
+    }
+    if(nouvelleAquitaine.includes(dep)){
+        return "Nouvelle-Aquitaine";
+    }
+    
+    if(occitanie.includes(dep)){
+        return "Occitanie";
+    }
+    if(paysDeLaLoire.includes(dep)){
+        return "Pays de la Loire";
+    }
+    if(provenceAlpesCoteDazur.includes(dep)){
+        return "Provence-Alpes-Côte d'Azur";
+    }
+    if(guadeloupe.includes(dep)){
+        return "Guadeloupe";
+    }
+    if(martinique.includes(dep)){
+        return "Martinique";
+    }
+    if(guyane.includes(dep)){
+        return "Guyane";
+    }
+    if(laReunion.includes(dep)){
+        return "La Réunion";
+    }
+    if(mayotte.includes(dep)){
+        return "Mayotte";
+    }
+            
+}
+
 module.exports = {
     addDataFromHospital,
     getDataFromHospital,
@@ -166,5 +303,6 @@ module.exports = {
     getDataFromHospitalAfterDate,
     getTotalData,
     getFranceData,
-    getDailyDataFrance
+    getDailyDataFrance,
+    getTotalDataFromHosptitalInRegions
 };
