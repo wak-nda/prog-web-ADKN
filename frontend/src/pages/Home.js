@@ -20,7 +20,8 @@ import {
 	fetchTotalDataFrance,
 	fetchTotalDataHospFrance,
 	fetchDailyDataFrance,
-	fetchMockData
+	fetchMockData,
+	fetchTotalDataHospRegions
 } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
@@ -86,7 +87,7 @@ export const Home = () => {
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
 	const [data, setData] = useState([]);
-	// const [regions, setRegions] = useState([]);
+	const [regionsHospTotalData, setRegionsHospTotalData] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
 	// const [hospDataComp, setHosp] = useState([]);
@@ -97,12 +98,14 @@ export const Home = () => {
 			const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHospFrance();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
+			const responseHospDataRegions = await fetchTotalDataHospRegions();
 			const dataT = await fetchMockData();
 
 			// const responseRegions = await fetchRegions();
 			setDailyDataFrance(responseDailyDataFrance);
 			setFranceData(responseFranceData);
 			setHospData(responseHospData);
+			setRegionsHospTotalData(responseHospDataRegions);
 			setData(dataT);
 			// setRegions(responseRegions);
 		} catch (e) {
@@ -309,53 +312,9 @@ export const Home = () => {
 								Data vizualisation ~
 							</h2>
 							<br />
-							<DisplayTable dataR={data} />
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-
+							<DisplayTable className="marginE" dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
+							<br />
+							<br />
 						</div>
 					</Col>
 				</Row>

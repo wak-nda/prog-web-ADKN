@@ -21,6 +21,11 @@ export const fetchTotalDataHospRegions = async () => {
 	return totalDataHospRegions;
 };
 
+export const fetchDailyDataHospRegion = async (region) => {
+    const dailyDataHospRegion = await baseInstance.get(`api/getHopsDataInRegions/${region}`);
+    return dailyDataHospRegion;
+}
+
 export const fetchMockData = async () => [
 	{
 		regionName: 'Grand Est',

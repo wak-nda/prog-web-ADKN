@@ -37,7 +37,7 @@ async function getTotalData(){
     let numberOfRecovered = 0;
     let lastUpdateDate = "";
     let intermediaire = {};
-    await DataFromHospital.find().then(
+    await DataFromHospital.find().limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
@@ -150,7 +150,7 @@ async function getDataFromHospitalInPeriod(startDate, endDate){
 const dataFranceFromJson = require('../../data/contrib-data.json')
 
 async function getFranceData(){
-    const size = dataFranceFromJson.length
+    const size = dataFranceFromJson.length;
     return dataFranceFromJson[size - 1]
 }
 
@@ -162,7 +162,7 @@ async function getTotalDataFromHosptitalInRegions(){
     let depIntermediaire = {};
     let regionIntermediaire = [];
 
-    await DataFromHospital.find().then(
+    await DataFromHospital.find().limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
@@ -205,6 +205,41 @@ async function getTotalDataFromHosptitalInRegions(){
             }
         }
     }
+    return regionIntermediaire
+}
+
+async function getDailyDataFromHosptitalInRegions(){
+    let regionIntermediaire = [];
+    await DataFromHospital.find().then(
+        value => {
+            let size = value.length;
+            for(let idx = 0; idx < size; idx++){
+                if(value[idx]['sexe'] === '0'){
+                    let region = findRegion(value[idx]['dep']);
+                    let sizeRegion = regionIntermediaire.length
+                    if(sizeRegion === 0){
+                        regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
+                    }else {
+                        const foundReg = regionIntermediaire.find(reg => reg.regionName === region)
+                        if(foundReg){
+                            lastElementIdx = foundReg.dailyDatas.length - 1;
+                            lastElementDay = foundReg.dailyDatas[lastElementIdx]['jour']
+                            if(lastElementDay == value[idx]['jour']){
+                                foundReg.dailyDatas['rea'] += value[idx]['rea'];
+                                foundReg.dailyDatas['hosp'] += value[idx]['hosp'];
+                                foundReg.dailyDatas['dc'] += value[idx]['dc']
+                                foundReg.dailyDatas['rad'] += value[idx]['rad']
+                            }else{
+                                foundReg.dailyDatas.push({'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']})
+                            }
+                        }else{
+                            regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
+                        }
+                    }
+                }
+            }
+        }
+    );
     return regionIntermediaire
 }
 
@@ -294,5 +329,6 @@ module.exports = {
     getTotalData,
     getFranceData,
     getDailyDataFrance,
-    getTotalDataFromHosptitalInRegions
+    getTotalDataFromHosptitalInRegions,
+    getDailyDataFromHosptitalInRegions
 };
