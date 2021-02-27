@@ -26,7 +26,7 @@ export const Home = () => {
 	// localStorage.setItem('dark', 'dark');
 	// let darkM = 'dark';
 
-	const modeMe = (e: any) => {
+	const modeMe = (e) => {
 		// alert('a changer');
 		const newColorScheme = e.matches ? 'dark' : 'light';
 		if (localStorage.getItem('dark') === newColorScheme) {
