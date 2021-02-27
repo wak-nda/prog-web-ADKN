@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useContext } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import '../styles/css/Home.scss';
 import '../styles/family.css';
@@ -9,12 +9,49 @@ import { ToggleModeNight } from '../components/ToggleModeNight';
 import { Covid19Map } from './Covid-19Map';
 import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
+import { ThemeContext } from '../context/ThemeContext';
 import { fetchTotalDataFrance, fetchTotalDataHosp, fetchDailyDataFrance } from '../services/FetchData';
-import { ChartsFrance } from '../components/ChartsFrance';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
 	const history = useHistory();
+	const { theme, changeThemeContext } = useContext(ThemeContext);
+
+	// let darkM = false;
+
+	// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	// 	// dark mode
+	// 	alert('dark');
+	// }
+	// localStorage.setItem('dark', 'dark');
+	// let darkM = 'dark';
+
+	const modeMe = (e: any) => {
+		// alert('a changer');
+		const newColorScheme = e.matches ? 'dark' : 'light';
+		if (localStorage.getItem('dark') === newColorScheme) {
+			// alert('ol');
+		} else {
+			// alert('ch');
+			localStorage.setItem('dark', newColorScheme);
+			changeThemeContext(e.matches ? 'dark' : 'light');
+			// darkM = localStorage.getItem('dark');
+		}
+	};
+//To watch for changes:
+	window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', modeMe);
+	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', modeMe);
+
+
+
+	// window.matchMedia('(prefers-color-scheme: dark)')
+	// 	.addEventListener('change', event => {
+	// 		if (event.matches !== darkM) {
+	// 			//dark mode
+	// 			console.log(event.matches);
+	// 			darkM = event.matches;
+	// 		}
+	// 	});
 	const [franceData, setFranceData] = useState([]);
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
@@ -108,9 +145,9 @@ export const Home = () => {
 					<Col lg="4" className="paddZ">
 						<div className="bodyX">
 							<div className="jsx-2395746840 menu">
-								<div className="jsx-347752997 scrollable-container">
-									<div className="jsx-3941331650 header">
-										<div className="jsx-3941331650 back">
+								<div className={`${theme === 'dark' ? 'jsx-347752997 scrollable-container blackG' : 'jsx-347752997 scrollable-container'}`}>
+									<div className={`${theme === 'dark' ? 'jsx-3941331650 header greenG' : 'jsx-3941331650 header'}`}>
+										<div className={`${theme === 'dark' ? 'jsx-3941331650 back blackG' : 'jsx-3941331650 back'}`}>
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
 												width="24"
@@ -125,7 +162,7 @@ export const Home = () => {
 												<line x1="12" y1="20" x2="12" y2="4" />
 												<line x1="6" y1="20" x2="6" y2="14" />
 											</svg>
-											<span className="jsx-3941331650 policeHobo">France</span>
+											<span className={`${theme === 'dark' ? 'jsx-3941331650 policeHobo textWhite' : 'jsx-3941331650 policeHobo'}`}>France</span>
 										</div>
 										<h3 className="jsx-3941331650">
 											COVID-19 - France
@@ -195,7 +232,8 @@ export const Home = () => {
 														<div className="jsx-2793952281 warning-icon"> </div>
 														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfDeaths : 0}</div>
 														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
-														<div className="jsx-2793952281">Nombre de déces</div>
+
+														<div className="jsx-2793952281"><br />Nombre de déces</div>
 													</div>
 												</Col>
 											</Row>

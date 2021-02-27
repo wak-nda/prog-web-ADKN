@@ -11,7 +11,8 @@ export const ToggleModeNight = () => {
 	const { theme, changeThemeContext } = useContext(ThemeContext);
 
 	const handleChangeMode = (e) => {
-		const themeValue = e.target.checked ? 'dark' : 'light';
+		const themeValue = e.target.checked ? 'light' : 'dark';
+		localStorage.setItem('dark', themeValue);
 		changeThemeContext(themeValue);
 	};
 	return (
@@ -33,7 +34,8 @@ export const ToggleModeNight = () => {
 							<FontAwesomeIcon class="adjustI" icon={faSun} className="fa faSun" />
 						)
 					}}
-					defaultChecked={theme === 'dark'}
+					defaultChecked={theme === localStorage.getItem('dark')}
+					checked={localStorage.getItem('dark') !== 'dark'}
 					onChange={handleChangeMode}
 				/>
 			)}

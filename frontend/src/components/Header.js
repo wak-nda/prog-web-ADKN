@@ -30,7 +30,7 @@ export const Header = ({ mailing }) => {
 	}
 
 	function navigateToHome() {
-		history.push('/');
+		history.push('/home');
 	}
 
 	return (
