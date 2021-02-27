@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom';
 
 import { Covid19Map } from './pages/Covid-19Map';
-import { Itunes } from './pages/Itunes';
 import { Error404 } from './pages/Error404';
 import useLocalStorage from './lib/useLocalStorage';
 import { ThemeContext } from './context/ThemeContext';
@@ -37,13 +36,6 @@ const App = () => {
 					<Switch>
 						<Route path="/covid-19-map">
 							<Covid19Map />
-						</Route>
-						<Route path={[
-							'/itunes/:search',
-							'/itunes'
-						]}
-						>
-							<Itunes />
 						</Route>
 						<Route exact path="/">
 							<Login />
