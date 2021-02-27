@@ -1,9 +1,13 @@
-import React, { useState, useEffect, useCallback, useContext } from 'react';
+import React, {
+	useState, useEffect, useCallback, useContext
+} from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import '../styles/css/Home.scss';
 import '../styles/family.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowClose, faEnvelopeOpenText, faSpinner, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
+import {
+	faWindowClose, faEnvelopeOpenText, faSpinner, faChalkboardTeacher
+} from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import { ToggleModeNight } from '../components/ToggleModeNight';
@@ -68,7 +72,7 @@ export const Home = () => {
 			});
 		}
 	};
-//To watch for changes:
+	//To watch for changes:
 	window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', modeMe);
 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', modeMe);
 
@@ -78,18 +82,17 @@ export const Home = () => {
 	// const [regions, setRegions] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
-	const [hospDataComp] = useState([]);
-
+	const [hospDataComp, setHosp] = useState([]);
 
 	const fetchAPI = useCallback(async () => {
-        setLoading(true);
-        try {
-            const responseFranceData = await fetchTotalDataFrance();
+		setLoading(true);
+		try {
+			const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHospFrance();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
 			// const responseRegions = await fetchRegions();
-			setDailyDataFrance(responseDailyDataFrance)
-            setFranceData(responseFranceData);
+			setDailyDataFrance(responseDailyDataFrance);
+			setFranceData(responseFranceData);
 			setHospData(responseHospData);
 			// setRegions(responseRegions);
 		} catch (e) {
@@ -98,13 +101,13 @@ export const Home = () => {
 		} finally {
 			setLoading(false);
 		}
-	}, [])
+	}, []);
 
 	const handleRegionChange = useCallback(async (region) => {
-        try {
-            // const responseDailyData = await fetchDailyData(region);
-            // setDailyData(responseDailyData);
-            setRegionSelected(region)
+		try {
+			// const responseDailyData = await fetchDailyData(region);
+			// setDailyData(responseDailyData);
+			setRegionSelected(region);
 		} catch (e) {
 			// eslint-disable-next-line no-console
 			console.log(e);
@@ -115,21 +118,22 @@ export const Home = () => {
 
 	useEffect(() => {
 		fetchAPI();
-    }, [fetchAPI]);
+	}, [fetchAPI]);
 
-	// useEffect(() => {
-	// 	alert('a');
-	// }, [hospDataComp]);
+	useEffect(() => {
+		// alert('a');
+		setHosp('b');
+	}, [hospDataComp]);
 
 	if (loading) {
-        return (
+		return (
 			<p className="centerP">
 				{loading && (
 					<FontAwesomeIcon icon={faSpinner} spin className="fa" />
 				)}
 			</p>
-		)
-    }
+		);
+	}
 
 	// console.log(dailyDataFrance);
 	// console.log(regions)
@@ -279,7 +283,7 @@ export const Home = () => {
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
 										</Container>
 										<Container className="whiteF">
-	                                          <div> </div>
+											<div> </div>
 										</Container>
 										<Container className="grayFooter">
 											<p className="textF">~ 🌐 ~</p>
@@ -293,12 +297,13 @@ export const Home = () => {
 						<div className="bodyXX">
 							<Covid19Map />
 							<br />
+
+							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
 							<h2 className="centerText">
 								~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
 								Data vizualisation ~
 							</h2>
-							<h1>TEST</h1>
-							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
+							<br />
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
