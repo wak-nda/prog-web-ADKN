@@ -39,7 +39,6 @@ export default class AuthHelperMethods {
 
 	getName = () => localStorage.getItem('name');
 
-
 	logout = () => {
 		// Clear user token and profile data from localStorage
 		localStorage.removeItem('id_token');

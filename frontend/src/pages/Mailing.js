@@ -2,7 +2,9 @@ import React, { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../styles/css/mail.scss';
-import { faMailBulk, faPenSquare, faComment, faUser } from '@fortawesome/free-solid-svg-icons';
+import {
+	faMailBulk, faPenSquare, faComment, faUser
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -16,7 +18,6 @@ export const Mailing = () => {
 	const [message, setMessage] = useState('');
 	const [email, setEMail] = useState('');
 	const { theme } = useContext(ThemeContext);
-
 
 	function validateForm() {
 		return email.length > 0 && subject.length > 0 && message.length > 0;

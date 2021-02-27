@@ -330,5 +330,5 @@ module.exports = {
     getFranceData,
     getDailyDataFrance,
     getTotalDataFromHosptitalInRegions,
-    getDailyDataFromHosptitalInRegions
+    getDataFromHospitalInDepartment
 };

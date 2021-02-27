@@ -22,9 +22,9 @@ export const fetchTotalDataHospRegions = async () => {
 };
 
 export const fetchDailyDataHospRegion = async (region) => {
-    const dailyDataHospRegion = await baseInstance.get(`api/getHopsDataInRegions/${region}`);
-    return dailyDataHospRegion;
-}
+	const dailyDataHospRegion = await baseInstance.get(`api/getHopsDataInRegions/${region}`);
+	return dailyDataHospRegion;
+};
 
 export const fetchMockData = async () => [
 	{

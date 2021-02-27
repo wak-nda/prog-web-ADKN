@@ -1,4 +1,4 @@
-import baseInstance from './api'
+import baseInstance from './api';
 import AuthHelperMethods from './AuthHelperMethods';
 
 export const login = async (email, password) => {
@@ -9,7 +9,7 @@ export const login = async (email, password) => {
 		});
 		if (responseJson.data.res) {
 			const Auth = new AuthHelperMethods();
-			Auth.setToken(responseJson.data.token, email, responseJson.data.name)
+			Auth.setToken(responseJson.data.token, email, responseJson.data.name);
 		}
 		return responseJson;
 	} catch (err) {
@@ -18,4 +18,3 @@ export const login = async (email, password) => {
 		return { data: { res: false } };
 	}
 };
-

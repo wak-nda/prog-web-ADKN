@@ -35,7 +35,7 @@ mongoose.set('debug', true);
     try {
         console.log(`Updating`);
         const results = await loadFileCSV(filePath);
-        //console.table(results)
+
     } catch (e) {
         console.error(e);
     }

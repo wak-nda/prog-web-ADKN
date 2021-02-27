@@ -38,7 +38,7 @@ export const HistoryContextProvider = ({ children }) => {
 		initialState
 	);
 	return (
-		<HistoryContext.Provider value={{ state, dispatch }}>
+		<HistoryContext.Provider value={{ state: state, dispatch: dispatch }}>
 			{children}
 		</HistoryContext.Provider>
 	);

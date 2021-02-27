@@ -144,8 +144,7 @@ export const Home = () => {
 	}
 
 	// console.log(dailyDataFrance);
-	// console.log(regions)
-
+	// console.log(regions);
 	if (Auth.loggedIn()) {
 		history.push('/');
 	}

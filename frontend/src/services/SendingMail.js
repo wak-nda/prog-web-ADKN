@@ -1,4 +1,4 @@
-import baseInstance from './api'
+import baseInstance from './api';
 import AuthHelperMethods from './AuthHelperMethods';
 
 export const SendingMail = async (subject, message, mail) => {
@@ -17,4 +17,3 @@ export const SendingMail = async (subject, message, mail) => {
 		return { data: { res: false } };
 	}
 };
-
