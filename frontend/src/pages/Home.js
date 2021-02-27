@@ -20,7 +20,8 @@ import {
 	fetchTotalDataFrance,
 	fetchTotalDataHospFrance,
 	fetchDailyDataFrance,
-	fetchMockData
+	fetchMockData,
+	fetchTotalDataHospRegions
 } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
@@ -86,7 +87,7 @@ export const Home = () => {
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
 	const [data, setData] = useState([]);
-	// const [regions, setRegions] = useState([]);
+	const [regionsHospTotalData, setRegionsHospTotalData] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
 	// const [hospDataComp, setHosp] = useState([]);
@@ -95,20 +96,16 @@ export const Home = () => {
 		setLoading(true);
 		try {
 			const responseFranceData = await fetchTotalDataFrance();
-			// alert('ok');
 			const responseHospData = await fetchTotalDataHospFrance();
-			// alert('ok');
-
 			const responseDailyDataFrance = await fetchDailyDataFrance();
-			// alert('ok');
-
+			const responseHospDataRegions = await fetchTotalDataHospRegions();
 			const dataT = await fetchMockData();
-			// alert('ok');
 
 			// const responseRegions = await fetchRegions();
 			setDailyDataFrance(responseDailyDataFrance);
 			setFranceData(responseFranceData);
 			setHospData(responseHospData);
+			setRegionsHospTotalData(responseHospDataRegions);
 			setData(dataT);
 			// setRegions(responseRegions);
 		} catch (e) {
@@ -316,7 +313,51 @@ export const Home = () => {
 							</h2>
 							<br />
 							<DisplayTable dataR={data} />
-							<br />
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
+							<h1>TEST</h1>
 
 						</div>
 					</Col>
