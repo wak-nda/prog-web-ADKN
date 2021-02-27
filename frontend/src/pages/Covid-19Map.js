@@ -7,6 +7,7 @@ import { legendItems } from '../entities/LegendItems'
 
 export const Covid19Map = () => {
 	const [countries, setCountries] = useState([]);
+	//const [departments, setDepartments] = useState([]);
 	const legendItemsReverse = [...legendItems].reverse();
 	// console.log(legendItemsReverse);
 
@@ -14,9 +15,10 @@ export const Covid19Map = () => {
 		// console.log("load");
 		const loadCountriesTask = new LoadCountriesTask();
 		loadCountriesTask.load(setCountries);
+		console.log(countries);
 	};
 
-	useEffect(load, []);
+	useEffect(load, [countries]);
 
 	return (
 		<div>

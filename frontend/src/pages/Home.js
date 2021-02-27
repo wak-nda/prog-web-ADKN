@@ -1,9 +1,13 @@
-import React, { useState, useEffect, useCallback, useContext } from 'react';
+import React, {
+	useState, useEffect, useCallback, useContext
+} from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import '../styles/css/Home.scss';
 import '../styles/family.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowClose, faEnvelopeOpenText, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import {
+	faWindowClose, faEnvelopeOpenText, faSpinner, faChalkboardTeacher
+} from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import { ToggleModeNight } from '../components/ToggleModeNight';
@@ -12,9 +16,16 @@ import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
 // import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
-import { fetchTotalDataFrance, fetchTotalDataHospFrance, fetchDailyDataFrance, fetchTotalDataHospRegions } from '../services/FetchData';
+import {
+	fetchTotalDataFrance,
+	fetchTotalDataHospFrance,
+	fetchDailyDataFrance,
+	fetchMockData,
+	fetchTotalDataHospRegions
+} from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
+import { DisplayTable } from '../components/DisplayTable';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -68,62 +79,67 @@ export const Home = () => {
 			});
 		}
 	};
-//To watch for changes:
+	//To watch for changes:
 	window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', modeMe);
 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', modeMe);
 
 	const [franceData, setFranceData] = useState([]);
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
-	const [regionsHospData, setRegionsHospData] = useState([]);
+	const [data, setData] = useState([]);
+	// const [regions, setRegions] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
+	// const [hospDataComp, setHosp] = useState([]);
 
 	const fetchAPI = useCallback(async () => {
-        setLoading(true);
-        try {
-            const responseFranceData = await fetchTotalDataFrance();
+		setLoading(true);
+		try {
+			const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHospFrance();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
-			const responseRegionsHospData = await fetchTotalDataHospRegions();
-			setDailyDataFrance(responseDailyDataFrance)
-            setFranceData(responseFranceData);
+			const dataT = await fetchMockData();
+
+			// const responseRegions = await fetchRegions();
+			setDailyDataFrance(responseDailyDataFrance);
+			setFranceData(responseFranceData);
 			setHospData(responseHospData);
-			setRegionsHospData(responseRegionsHospData);
+			setData(dataT);
+			// setRegions(responseRegions);
 		} catch (e) {
 			// eslint-disable-next-line no-console
 			console.log(e);
 		} finally {
 			setLoading(false);
 		}
-	}, [])
+	}, []);
 
 	const handleRegionChange = useCallback(async (region) => {
-        try {
-            // const responseDailyData = await fetchDailyData(region);
-            // setDailyData(responseDailyData);
-            setRegionSelected(region)
+		try {
+			// const responseDailyData = await fetchDailyData(region);
+			// setDailyData(responseDailyData);
+			setRegionSelected(region);
 		} catch (e) {
 			// eslint-disable-next-line no-console
 			console.log(e);
 		} finally {
 			setLoading(false);
 		}
-	}, [])
+	}, []);
 
 	useEffect(() => {
 		fetchAPI();
-    }, [fetchAPI]);
+	}, [fetchAPI]);
 
 	if (loading) {
-        return (
+		return (
 			<p className="centerP">
 				{loading && (
 					<FontAwesomeIcon icon={faSpinner} spin className="fa" />
 				)}
 			</p>
-		)
-    }
+		);
+	}
 
 	// console.log(dailyDataFrance);
 	console.log(regionsHospData)
@@ -273,7 +289,7 @@ export const Home = () => {
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
 										</Container>
 										<Container className="whiteF">
-	                                          <div> </div>
+											<div> </div>
 										</Container>
 										<Container className="grayFooter">
 											<p className="textF">~ 🌐 ~</p>
@@ -286,7 +302,15 @@ export const Home = () => {
 					<Col lg="8" className="paddZ">
 						<div className="bodyXX">
 							<Covid19Map />
+							<br />
+
 							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
+							<h2 className="centerText">
+								~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
+								Data vizualisation ~
+							</h2>
+							<br />
+							<DisplayTable dataR={data} />
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
