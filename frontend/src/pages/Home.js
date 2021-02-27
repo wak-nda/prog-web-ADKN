@@ -5,12 +5,14 @@ import '../styles/family.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWindowClose, faEnvelopeOpenText, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
+import { confirmAlert } from 'react-confirm-alert'; // Import
 import { ToggleModeNight } from '../components/ToggleModeNight';
 import { Covid19Map } from './Covid-19Map';
 import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
 import { fetchTotalDataFrance, fetchTotalDataHosp } from '../services/FetchData';
+// import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -33,8 +35,23 @@ export const Home = () => {
 			// alert('ol');
 		} else {
 			// alert('ch');
-			localStorage.setItem('dark', newColorScheme);
-			changeThemeContext(e.matches ? 'dark' : 'light');
+			confirmAlert({
+				title: `Basculer en mode ${newColorScheme}`,
+				message: 'Confirmer ?',
+				buttons: [
+					{
+						label: 'Yes',
+						onClick: () => {
+							localStorage.setItem('dark', newColorScheme);
+							changeThemeContext(e.matches ? 'dark' : 'light');
+						}
+					},
+					{
+						label: 'No',
+						onClick: () => {}
+					}
+				]
+			});
 			// darkM = localStorage.getItem('dark');
 		}
 	};
