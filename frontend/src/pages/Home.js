@@ -117,9 +117,9 @@ export const Home = () => {
 		fetchAPI();
     }, [fetchAPI]);
 
-	useEffect(() => {
-		alert('a');
-	}, [hospDataComp]);
+	// useEffect(() => {
+	// 	alert('a');
+	// }, [hospDataComp]);
 
 	if (loading) {
         return (
