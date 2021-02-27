@@ -154,6 +154,10 @@ async function getFranceData(){
     return dataFranceFromJson[size - 1]
 }
 
+async function getDailyDataFrance(){
+    return dataFranceFromJson.filter(r => r.code === 'FRA' && r.deces !== undefined && r.sourceType ==="ministere-sante");
+}
+
 module.exports = {
     addDataFromHospital,
     getDataFromHospital,
@@ -161,5 +165,6 @@ module.exports = {
     getDataFromHospitalInPeriod,
     getDataFromHospitalAfterDate,
     getTotalData,
-    getFranceData
+    getFranceData,
+    getDailyDataFrance
 };

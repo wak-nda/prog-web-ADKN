@@ -9,3 +9,8 @@ export const fetchTotalDataHosp = async () => {
     const totalDataHosp = await baseInstance.get('api/getTotalData');
     return totalDataHosp;
 }
+
+export const fetchDailyDataFrance = async () => {
+    const dailyDataFrance = await baseInstance.get('api/getDailyDataFrance');
+    return dailyDataFrance;
+}

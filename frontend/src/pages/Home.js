@@ -13,6 +13,8 @@ import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
 import { fetchTotalDataFrance, fetchTotalDataHosp } from '../services/FetchData';
 // import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import { fetchTotalDataFrance, fetchTotalDataHosp, fetchDailyDataFrance } from '../services/FetchData';
+import { ChartsFrance } from '../components/ChartsFrance';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -28,7 +30,7 @@ export const Home = () => {
 	// localStorage.setItem('dark', 'dark');
 	// let darkM = 'dark';
 
-	const modeMe = (e: any) => {
+	const modeMe = (e) => {
 		// alert('a changer');
 		const newColorScheme = e.matches ? 'dark' : 'light';
 		if (localStorage.getItem('dark') === newColorScheme) {
@@ -69,8 +71,9 @@ export const Home = () => {
 	// 			darkM = event.matches;
 	// 		}
 	// 	});
-	const [franceData, setFranceData] = useState([])
-	const [hospData, setHospData] = useState([])
+	const [franceData, setFranceData] = useState([]);
+	const [hospData, setHospData] = useState([]);
+	const [dailyDataFrance, setDailyDataFrance] = useState([]);
 	const [loading, setLoading] = useState(false);
 
 	const fetchAPI = useCallback(async () => {
@@ -78,6 +81,8 @@ export const Home = () => {
         try {
             const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHosp();
+			const responseDailyDataFrance = await fetchDailyDataFrance();
+			setDailyDataFrance(responseDailyDataFrance)
             setFranceData(responseFranceData);
 			setHospData(responseHospData);
 		} catch (e) {
@@ -102,7 +107,7 @@ export const Home = () => {
 		)
     }
 
-	console.log(hospData.data);
+	console.log(dailyDataFrance);
 
 	if (Auth.loggedIn()) {
 		history.push('/');
@@ -238,7 +243,7 @@ export const Home = () => {
 														<div className="jsx-2793952281 warning-icon"> </div>
 														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfRecovered : 0}</div>
 														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
-														<div className="jsx-2793952281">cNombre de retours à domicile</div>
+														<div className="jsx-2793952281">Nombre de retours à domicile</div>
 													</div>
 												</Col>
 												<Col>
@@ -255,6 +260,9 @@ export const Home = () => {
 										<div className="jsx-1180261630 title policeHobo">Taux d&apos;incidence</div>
 										<br />
 										<br />
+										<Container>
+											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
+										</Container>
 										<h1>TEST</h1>
 										<h1>TEST</h1>
 										<h1>TEST</h1>
