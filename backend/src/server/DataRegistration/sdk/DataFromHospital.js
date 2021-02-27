@@ -36,22 +36,34 @@ async function getTotalData(){
     let numberOfDeaths = 0;
     let numberOfRecovered = 0;
     let lastUpdateDate = "";
+    let intermediaire = {};
     await DataFromHospital.find().then(
         value => {
-            // let size = value.length;
-            // console.log(size);
-            
-            for (let data of value){ 
-                numberOfHospitalized += data['hosp'];
-                numberOfPeopleInRea += data['rea'];
-                numberOfDeaths += data['dc'];
-                numberOfRecovered += data['rad'];
-                lastUpdateDate = data['jour']
+            let size = value.length;
+            for(let idx = 0; idx < size; idx++){
+                if(value[idx]['sexe'] === '0'){
+                    if(value[idx]['dep'] in intermediaire){
+                        intermediaire[value[idx]['dep']]['rea'] = value[idx]['rea'];
+
+                        intermediaire[value[idx]['dep']]['hosp'] = value[idx]['hosp'];
+
+                        intermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
+
+                        intermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
+                    }else{
+                        intermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc']}
+                    }
+                }
             }
         }
     );
-    
-    return [{'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate}];
+    for (var prop in intermediaire){
+        numberOfDeaths += intermediaire[prop]['dc'];
+        numberOfRecovered += intermediaire[prop]['rad'];
+        numberOfHospitalized += intermediaire[prop]['hosp'];
+        numberOfPeopleInRea += intermediaire[prop]['rea'];
+    }
+    return {'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate};
 }
 
 async function getDataFromHospitalAfterDate(date){

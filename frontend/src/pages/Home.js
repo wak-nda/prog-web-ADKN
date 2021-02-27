@@ -9,19 +9,22 @@ import { ToggleModeNight } from '../components/ToggleModeNight';
 import { Covid19Map } from './Covid-19Map';
 import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
-import { fetchTotalDataFrance } from '../services/FetchData';
+import { fetchTotalDataFrance, fetchTotalDataHosp } from '../services/FetchData';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
 	const history = useHistory();
 	const [franceData, setFranceData] = useState([])
+	const [hospData, setHospData] = useState([])
 	const [loading, setLoading] = useState(false);
 
 	const fetchAPI = useCallback(async () => {
         setLoading(true);
         try {
-            const responseDailyData = await fetchTotalDataFrance();
-            setFranceData(responseDailyData);
+            const responseFranceData = await fetchTotalDataFrance();
+			const responseHospData = await fetchTotalDataHosp();
+            setFranceData(responseFranceData);
+			setHospData(responseHospData);
 		} catch (e) {
 			// eslint-disable-next-line no-console
 			console.log(e);
@@ -44,7 +47,7 @@ export const Home = () => {
 		)
     }
 
-	console.log(franceData.data);
+	console.log(hospData.data);
 
 	if (Auth.loggedIn()) {
 		history.push('/');
@@ -160,17 +163,17 @@ export const Home = () => {
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfHospitalized : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de patients hospitalisé</div>
 													</div>
 												</Col>
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfPeopleInRea : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de patients en réanimation</div>
 													</div>
 												</Col>
 											</Row>
@@ -178,17 +181,17 @@ export const Home = () => {
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfRecovered : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">cNombre de retours à domicile</div>
 													</div>
 												</Col>
 												<Col>
 													<div className="jsx-2793952281 counter clickable ">
 														<div className="jsx-2793952281 warning-icon"> </div>
-														<div className="jsx-2793952281 value">3 686 813</div>
-														<div className="jsx-2793952281 difference">( + 25 403 )</div>
-														<div className="jsx-2793952281">cas confirmés</div>
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfDeaths : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de déces</div>
 													</div>
 												</Col>
 											</Row>
