@@ -18,7 +18,6 @@ export const RegionPicker = (({ handleRegionChange, region }) => {
             <FormGroup controlId="exampleForm.ControlSelect1">
                 <Label for="exampleSelect">Etat courant de la région : {region}</Label>
                 <Input type="select" name="select" id="exampleSelect" onChange={(e) => handleRegionChange(e.target.value)}>
-                    <option>{region}</option>
                     {fetchedRegions.map(({ name }) => <option value={name}>{name}</option>)}
                 </Input>
             </FormGroup>

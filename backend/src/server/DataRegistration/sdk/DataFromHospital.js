@@ -208,6 +208,41 @@ async function getTotalDataFromHosptitalInRegions(){
     return regionIntermediaire
 }
 
+async function getDailyDataFromHosptitalInRegions(){
+    let regionIntermediaire = [];
+    await DataFromHospital.find().then(
+        value => {
+            let size = value.length;
+            for(let idx = 0; idx < size; idx++){
+                if(value[idx]['sexe'] === '0'){
+                    let region = findRegion(value[idx]['dep']);
+                    let sizeRegion = regionIntermediaire.length
+                    if(sizeRegion === 0){
+                        regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
+                    }else {
+                        const foundReg = regionIntermediaire.find(reg => reg.regionName === region)
+                        if(foundReg){
+                            lastElementIdx = foundReg.dailyDatas.length - 1;
+                            lastElementDay = foundReg.dailyDatas[lastElementIdx]['jour']
+                            if(lastElementDay == value[idx]['jour']){
+                                foundReg.dailyDatas['rea'] += value[idx]['rea'];
+                                foundReg.dailyDatas['hosp'] += value[idx]['hosp'];
+                                foundReg.dailyDatas['dc'] += value[idx]['dc']
+                                foundReg.dailyDatas['rad'] += value[idx]['rad']
+                            }else{
+                                foundReg.dailyDatas.push({'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']})
+                            }
+                        }else{
+                            regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
+                        }
+                    }
+                }
+            }
+        }
+    );
+    return regionIntermediaire
+}
+
 function findRegion(dep){
     const auvergneRhoneAlpes = ["01","03","07","15","26","38","42","43","69","63","73","74"];
     const bourgogneFrancheComte = ["21","25","39","58","70","71","89","90"];
@@ -294,5 +329,6 @@ module.exports = {
     getTotalData,
     getFranceData,
     getDailyDataFrance,
-    getTotalDataFromHosptitalInRegions
+    getTotalDataFromHosptitalInRegions,
+    getDailyDataFromHosptitalInRegions
 };

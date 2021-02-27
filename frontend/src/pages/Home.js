@@ -12,7 +12,7 @@ import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
 // import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
-import { fetchTotalDataFrance, fetchTotalDataHospFrance, fetchDailyDataFrance } from '../services/FetchData';
+import { fetchTotalDataFrance, fetchTotalDataHospFrance, fetchDailyDataFrance, fetchTotalDataHospRegions } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
 
@@ -75,7 +75,7 @@ export const Home = () => {
 	const [franceData, setFranceData] = useState([]);
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
-	// const [regions, setRegions] = useState([]);
+	const [regionsHospData, setRegionsHospData] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
 
@@ -85,11 +85,11 @@ export const Home = () => {
             const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHospFrance();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
-			// const responseRegions = await fetchRegions();
+			const responseRegionsHospData = await fetchTotalDataHospRegions();
 			setDailyDataFrance(responseDailyDataFrance)
             setFranceData(responseFranceData);
 			setHospData(responseHospData);
-			// setRegions(responseRegions);
+			setRegionsHospData(responseRegionsHospData);
 		} catch (e) {
 			// eslint-disable-next-line no-console
 			console.log(e);
@@ -126,7 +126,7 @@ export const Home = () => {
     }
 
 	// console.log(dailyDataFrance);
-	// console.log(regions)
+	console.log(regionsHospData)
 
 	if (Auth.loggedIn()) {
 		history.push('/');
