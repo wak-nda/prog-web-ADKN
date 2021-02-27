@@ -160,7 +160,7 @@ async function getDailyDataFrance(){
 
 async function getTotalDataFromHosptitalInRegions(){
     let depIntermediaire = {};
-    let regionIntermediaire = {};
+    let regionIntermediaire = [];
 
     await DataFromHospital.find().then(
         value => {
@@ -182,39 +182,29 @@ async function getTotalDataFromHosptitalInRegions(){
                     }
                 }
             }
-            // console.log(intermediaire);
         }
     );
-    // console.log(Regions):
     const depKeysData = Object.keys(depIntermediaire); 
-    // console.log(keysData)
     for (let idxKey = 0; idxKey < depKeysData.length; idxKey++){
-        // console.log(keysData)
         let depKey = depKeysData[idxKey]
         let region = findRegion(depKey);
-
-        if(region in regionIntermediaire){
-                regionIntermediaire[region]['numberOfPeopleInRea'] += depIntermediaire[depKey]['rea'];
-                regionIntermediaire[region]['numberOfHospitalized'] += depIntermediaire[depKey]['hosp'];
-                regionIntermediaire[region]['numberOfDeaths'] += depIntermediaire[depKey]['dc']
-                regionIntermediaire[region]['numberOfRecovered'] += depIntermediaire[depKey]['rad']
-                regionIntermediaire[region]['jour'] = depIntermediaire[depKey]['jour']
-        }else{
-            regionIntermediaire[region] = {'numberOfPeopleInRea': depIntermediaire[depKey]['rea'], 'numberOfHospitalized': depIntermediaire[depKey]['hosp'], 'numberOfRecovered': depIntermediaire[depKey]['rad'], 'numberOfDeaths': depIntermediaire[depKey]['dc'], 'jour': depIntermediaire[depKey]['jour']}
+        let sizeRegion = regionIntermediaire.length
+        if(sizeRegion === 0){
+            regionIntermediaire.push({'regionName': region,'numberOfPeopleInRea': depIntermediaire[depKey]['rea'], 'numberOfHospitalized': depIntermediaire[depKey]['hosp'], 'numberOfRecovered': depIntermediaire[depKey]['rad'], 'numberOfDeaths': depIntermediaire[depKey]['dc'], 'jour': depIntermediaire[depKey]['jour']})
         }
-        // for(let idx = 0; idx < Regions.length; idx++){
-        //     if(Regions[idx]['departements'].includes(key)){
-        //         // console.log(Regions[idx]['name'])
-        //         Regions[idx]['numberOfHospitalized'] += depIntermediaire[key]['hosp']
-        //         Regions[idx]['numberOfPeopleInRea'] += depIntermediaire[key]['rea']
-        //         Regions[idx]['numberOfDeaths'] += depIntermediaire[key]['dc']
-        //         Regions[idx]['numberOfRecovered'] += depIntermediaire[key]['rad']
-        //     }
-        // }
+        else{
+            const foundReg = regionIntermediaire.find(reg => reg.regionName === region)
+            if(foundReg){
+                foundReg['numberOfPeopleInRea'] += depIntermediaire[depKey]['rea'];
+                foundReg['numberOfHospitalized'] += depIntermediaire[depKey]['hosp'];
+                foundReg['numberOfDeaths'] += depIntermediaire[depKey]['dc']
+                foundReg['numberOfRecovered'] += depIntermediaire[depKey]['rad']
+                foundReg['jour'] = depIntermediaire[depKey]['jour']
+            }else{
+                regionIntermediaire.push({'regionName': region,'numberOfPeopleInRea': depIntermediaire[depKey]['rea'], 'numberOfHospitalized': depIntermediaire[depKey]['hosp'], 'numberOfRecovered': depIntermediaire[depKey]['rad'], 'numberOfDeaths': depIntermediaire[depKey]['dc'], 'jour': depIntermediaire[depKey]['jour']})
+            }
+        }
     }
-    // for (let idx = 0; idx < Regions.length; idx++){
-    //     console.log(Regions[idx]['name'])
-    // }
     return regionIntermediaire
 }
 
