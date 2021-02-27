@@ -21,7 +21,7 @@ export const MapComponent = (countries) => {
 	};
 
 	return (
-		<Map style={{ height: '85vh' }} zoom={2} center={[20, 100]}>
+		<Map style={{ height: '85vh' }} zoom={6} center={[46.632192999999995, 2.578289871490562]}>
 			<GeoJSON
 				style={mapStyle}
 				data={countries.countries}

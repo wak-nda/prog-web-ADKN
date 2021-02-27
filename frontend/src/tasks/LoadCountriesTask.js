@@ -20,7 +20,7 @@ export class LoadCountriesTask {
 				this.#processCovidData(result.data);
 			}
 		});
-		// setState(features);
+		setState(features);
 	};
 
 	#processCovidData = (covidCountries) => {
