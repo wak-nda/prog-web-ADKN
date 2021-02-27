@@ -11,7 +11,6 @@ import { Covid19Map } from './Covid-19Map';
 import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
-import { fetchTotalDataFrance, fetchTotalDataHosp } from '../services/FetchData';
 // import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 import { fetchTotalDataFrance, fetchTotalDataHosp, fetchDailyDataFrance } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
