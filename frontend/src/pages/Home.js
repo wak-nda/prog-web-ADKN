@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'reactstrap';
 import '../styles/css/Home.scss';
 import '../styles/family.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWindowClose, faEnvelopeOpenText, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faWindowClose, faEnvelopeOpenText, faSpinner, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import { ToggleModeNight } from '../components/ToggleModeNight';
@@ -75,6 +75,8 @@ export const Home = () => {
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
 	const [loading, setLoading] = useState(false);
+	const [hospDataComp] = useState([]);
+
 
 	const fetchAPI = useCallback(async () => {
         setLoading(true);
@@ -82,7 +84,7 @@ export const Home = () => {
             const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHosp();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
-			setDailyDataFrance(responseDailyDataFrance)
+			setDailyDataFrance(responseDailyDataFrance);
             setFranceData(responseFranceData);
 			setHospData(responseHospData);
 		} catch (e) {
@@ -91,11 +93,15 @@ export const Home = () => {
 		} finally {
 			setLoading(false);
 		}
-	}, [])
+	}, []);
 
 	useEffect(() => {
 		fetchAPI();
     }, [fetchAPI]);
+
+	useEffect(() => {
+		alert('a');
+	}, [hospDataComp]);
 
 	if (loading) {
         return (
@@ -267,6 +273,11 @@ export const Home = () => {
 					<Col lg="8" className="paddZ">
 						<div className="bodyXX">
 							<Covid19Map />
+							<br />
+							<h2 className="centerText">
+								~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
+								Data vizualisation ~
+							</h2>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
