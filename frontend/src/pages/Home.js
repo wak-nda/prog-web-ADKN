@@ -20,13 +20,34 @@ export const Home = () => {
 	const history = useHistory();
 	const { theme, changeThemeContext } = useContext(ThemeContext);
 
+	// verifier le thème actuel de windows
+	const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	if (window.matchMedia && (defaultTheme !== localStorage.getItem('dark'))) {
+		// dark mode
+		confirmAlert({
+			title: `Basculer en mode ${defaultTheme}`,
+			message: 'Confirmer ?',
+			buttons: [
+				{
+					label: 'Yes',
+					onClick: () => {
+						localStorage.setItem('dark', defaultTheme);
+						changeThemeContext(defaultTheme);
+					}
+				},
+				{
+					label: 'No',
+					onClick: () => {}
+				}
+			]
+		});
+	}
+
 	const modeMe = (e) => {
-		// alert('a changer');
 		const newColorScheme = e.matches ? 'dark' : 'light';
 		if (localStorage.getItem('dark') === newColorScheme) {
-			// alert('ol');
+			//alert(old)
 		} else {
-			// alert('ch');
 			confirmAlert({
 				title: `Basculer en mode ${newColorScheme}`,
 				message: 'Confirmer ?',
@@ -44,7 +65,6 @@ export const Home = () => {
 					}
 				]
 			});
-			// darkM = localStorage.getItem('dark');
 		}
 	};
 //To watch for changes:
