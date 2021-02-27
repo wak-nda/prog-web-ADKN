@@ -11,6 +11,7 @@ import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
 import { fetchTotalDataFrance, fetchTotalDataHosp, fetchDailyDataFrance } from '../services/FetchData';
+import { ChartsFrance } from '../components/ChartsFrance';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
