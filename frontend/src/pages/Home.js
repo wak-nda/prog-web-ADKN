@@ -87,7 +87,7 @@ export const Home = () => {
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
 	const [data, setData] = useState([]);
-	// const [regions, setRegions] = useState([]);
+	const [regionsHospTotalData, setRegionsHospTotalData] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
 	// const [hospDataComp, setHosp] = useState([]);
@@ -98,12 +98,14 @@ export const Home = () => {
 			const responseFranceData = await fetchTotalDataFrance();
 			const responseHospData = await fetchTotalDataHospFrance();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
+			const responseHospDataRegions = await fetchTotalDataHospRegions();
 			const dataT = await fetchMockData();
 
 			// const responseRegions = await fetchRegions();
 			setDailyDataFrance(responseDailyDataFrance);
 			setFranceData(responseFranceData);
 			setHospData(responseHospData);
+			setRegionsHospTotalData(responseHospDataRegions);
 			setData(dataT);
 			// setRegions(responseRegions);
 		} catch (e) {
@@ -142,7 +144,8 @@ export const Home = () => {
 	}
 
 	// console.log(dailyDataFrance);
-	console.log(regionsHospData)
+	console.log(data)
+	console.log(regionsHospTotalData.data)
 
 	if (Auth.loggedIn()) {
 		history.push('/');
@@ -310,7 +313,7 @@ export const Home = () => {
 								Data vizualisation ~
 							</h2>
 							<br />
-							<DisplayTable dataR={data} />
+							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
