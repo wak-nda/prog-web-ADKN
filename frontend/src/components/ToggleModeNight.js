@@ -8,7 +8,7 @@ import 'react-toggle/style.css';
 import '../styles/css/ToggleModeNight.scss';
 
 export const ToggleModeNight = () => {
-	const { theme, changeThemeContext } = useContext(ThemeContext);
+	const { changeThemeContext } = useContext(ThemeContext);
 
 	const handleChangeMode = (e) => {
 		const themeValue = e.target.checked ? 'light' : 'dark';
@@ -34,7 +34,7 @@ export const ToggleModeNight = () => {
 							<FontAwesomeIcon class="adjustI" icon={faSun} className="fa faSun" />
 						)
 					}}
-					defaultChecked={theme === localStorage.getItem('dark')}
+					// defaultChecked={theme === localStorage.getItem('dark')}
 					checked={localStorage.getItem('dark') !== 'dark'}
 					onChange={handleChangeMode}
 				/>

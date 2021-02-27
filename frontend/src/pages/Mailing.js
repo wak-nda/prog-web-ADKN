@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import '../styles/css/mail.scss';
@@ -9,11 +9,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Container, Row } from 'reactstrap';
 import { SendingMail } from '../services/SendingMail';
 import { Header } from '../components/Header';
+import { ThemeContext } from '../context/ThemeContext';
 
 export const Mailing = () => {
 	const [subject, setSubject] = useState('');
 	const [message, setMessage] = useState('');
 	const [email, setEMail] = useState('');
+	const { theme } = useContext(ThemeContext);
 
 
 	function validateForm() {
@@ -52,9 +54,9 @@ export const Mailing = () => {
 	}
 
 	return (
-		<div>
+		<div className={`${theme === 'dark' ? 'remove black ov' : 'remove ov'}`}>
 			<Header mailing />
-			<Container className="remove" fluid>
+			<Container className={`${theme === 'dark' ? 'remove black' : 'remove'}`} fluid>
 				<Row>
 					<div className="Mail">
 						{/*<div className="textC">*/}

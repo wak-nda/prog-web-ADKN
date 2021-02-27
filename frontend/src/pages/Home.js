@@ -20,15 +20,6 @@ export const Home = () => {
 	const history = useHistory();
 	const { theme, changeThemeContext } = useContext(ThemeContext);
 
-	// let darkM = false;
-
-	// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-	// 	// dark mode
-	// 	alert('dark');
-	// }
-	// localStorage.setItem('dark', 'dark');
-	// let darkM = 'dark';
-
 	const modeMe = (e) => {
 		// alert('a changer');
 		const newColorScheme = e.matches ? 'dark' : 'light';
@@ -60,16 +51,6 @@ export const Home = () => {
 	window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', modeMe);
 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', modeMe);
 
-
-
-	// window.matchMedia('(prefers-color-scheme: dark)')
-	// 	.addEventListener('change', event => {
-	// 		if (event.matches !== darkM) {
-	// 			//dark mode
-	// 			console.log(event.matches);
-	// 			darkM = event.matches;
-	// 		}
-	// 	});
 	const [franceData, setFranceData] = useState([]);
 	const [hospData, setHospData] = useState([]);
 	const [dailyDataFrance, setDailyDataFrance] = useState([]);
@@ -150,10 +131,6 @@ export const Home = () => {
 									<FontAwesomeIcon icon={faWindowClose} className="iconLogin colI" />
 								</a>
 							</div>
-							{/*<h1>Home</h1>*/}
-							{/*<Link to="/itunes">Itunes APP</Link>*/}
-							{/*<br />*/}
-							{/*<Link to="/covid-19-map">Covid-19 map</Link>*/}
 						</Col>
 					</Row>
 				</Container>
@@ -192,16 +169,14 @@ export const Home = () => {
 										<Container>
 											<Row>
 												<Col>
-													<div className="jsx-2793952281 counter clickable ">
-														<div className="jsx-2793952281 warning-icon"> </div>
+													<div className="jsx-2793952281 counter clickable orange">
 														<div className="jsx-2793952281 value">{franceData.data ? franceData.data.casConfirmes : 0}</div>
 														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
 														<div className="jsx-2793952281">Nombre de cas confirmés</div>
 													</div>
 												</Col>
 												<Col>
-													<div className="jsx-2793952281 counter clickable ">
-														<div className="jsx-2793952281 warning-icon"> </div>
+													<div className="jsx-2793952281 counter clickable red">
 														<div className="jsx-2793952281 value">{franceData.data ? franceData.data.deces : 0}</div>
 														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
 														<div className="jsx-2793952281">Nombre de décès</div>
@@ -216,20 +191,18 @@ export const Home = () => {
 												{/*</Col>*/}
 											</Row>
 										</Container>
-										<div className="jsx-1180261630 title policeHobo">Données hospitalières</div>
+										<div className={`${theme === 'dark' ? 'jsx-1180261630 title policeHobo textWhite' : 'jsx-1180261630 title policeHobo'}`}>Données hospitalières</div>
 										<Container>
 											<Row>
 												<Col>
-													<div className="jsx-2793952281 counter clickable ">
-														<div className="jsx-2793952281 warning-icon"> </div>
+													<div className="jsx-2793952281 counter clickable orange">
 														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfHospitalized : 0}</div>
 														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
 														<div className="jsx-2793952281">Nombre de patients hospitalisé</div>
 													</div>
 												</Col>
 												<Col>
-													<div className="jsx-2793952281 counter clickable ">
-														<div className="jsx-2793952281 warning-icon"> </div>
+													<div className="jsx-2793952281 counter clickable blue">
 														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfPeopleInRea : 0}</div>
 														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
 														<div className="jsx-2793952281">Nombre de patients en réanimation</div>
@@ -238,16 +211,14 @@ export const Home = () => {
 											</Row>
 											<Row>
 												<Col>
-													<div className="jsx-2793952281 counter clickable ">
-														<div className="jsx-2793952281 warning-icon"> </div>
+													<div className="jsx-2793952281 counter clickable green">
 														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfRecovered : 0}</div>
 														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
 														<div className="jsx-2793952281">Nombre de retours à domicile</div>
 													</div>
 												</Col>
 												<Col>
-													<div className="jsx-2793952281 counter clickable ">
-														<div className="jsx-2793952281 warning-icon"> </div>
+													<div className="jsx-2793952281 counter clickable red">
 														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfDeaths : 0}</div>
 														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
 
@@ -256,7 +227,7 @@ export const Home = () => {
 												</Col>
 											</Row>
 										</Container>
-										<div className="jsx-1180261630 title policeHobo">Taux d&apos;incidence</div>
+										<div className={`${theme === 'dark' ? 'jsx-1180261630 title policeHobo textWhite' : 'jsx-1180261630 title policeHobo'}`}>Taux d&apos;incidence</div>
 										<br />
 										<br />
 										<Container>
