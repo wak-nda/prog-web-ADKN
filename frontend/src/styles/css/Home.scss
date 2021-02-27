@@ -554,9 +554,17 @@ span.num {
 	}
 }
 
+.blackG {
+	background-color: black !important;
+}
+
+.textWhite {
+	color: white !important;
+}
+
 .scrollable-container.jsx-347752997 {
 	border: 2px solid #6c757d;
-	background-color: rgb(235, 239, 243) !important;
+	background-color: rgb(235, 239, 243);
 	display: flex;
 	-webkit-flex-direction: column;
 	-ms-flex-direction: column;
@@ -566,7 +574,6 @@ span.num {
 	flex: 1;
 	overflow-y: auto;
 	overflow-x: hidden;
-	background-color: #fff;
 	max-height: calc( 100vh - 50px ) !important;
 
 	&::-webkit-scrollbar {
@@ -653,4 +660,16 @@ span.num {
 	flex: 1 1 0%;
 	flex-direction: column;
 	height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+	.header.jsx-3941331650 {
+		background-color: #29c05d !important;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	.header.jsx-3941331650 {
+		background-color: white !important;
+	}
 }
