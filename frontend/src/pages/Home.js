@@ -253,98 +253,12 @@ export const Home = () => {
 										<Container className="whiteB">
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
 										</Container>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TEST</h1>
-										<h1>TESTA</h1>
-
+										<Container className="whiteF">
+	                                          <div> </div>
+										</Container>
+										<Container className="grayFooter">
+											<p className="textF">~ 🌐 ~</p>
+										</Container>
 									</div>
 								</div>
 							</div>
