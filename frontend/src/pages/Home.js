@@ -312,7 +312,9 @@ export const Home = () => {
 								Data vizualisation ~
 							</h2>
 							<br />
-							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
+							<DisplayTable className="marginE" dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
+							<br />
+							<br />
 						</div>
 					</Col>
 				</Row>

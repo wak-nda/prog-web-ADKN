@@ -5,7 +5,7 @@ import {
 import '../styles/css/Home.scss';
 import '../styles/css/DisplayTable.scss';
 import '../styles/family.css';
-import 'rsuite-table/dist/css/rsuite-table.css';
+// import 'rsuite-table/dist/css/rsuite-table.css';
 import PropTypes from 'prop-types';
 
 export const DisplayTable = ({ dataR }) => {
