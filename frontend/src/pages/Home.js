@@ -37,29 +37,6 @@ export const Home = () => {
 	const history = useHistory();
 	const { theme, changeThemeContext } = useContext(ThemeContext);
 
-	// verifier le thème actuel de windows
-	// const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-	// if (window.matchMedia && (defaultTheme !== localStorage.getItem('dark'))) {
-	// 	// dark mode
-	// 	confirmAlert({
-	// 		title: `Basculer en mode ${defaultTheme}`,
-	// 		message: 'Confirmer ?',
-	// 		buttons: [
-	// 			{
-	// 				label: 'Yes',
-	// 				onClick: () => {
-	// 					localStorage.setItem('dark', defaultTheme);
-	// 					changeThemeContext(defaultTheme);
-	// 				}
-	// 			},
-	// 			{
-	// 				label: 'No',
-	// 				onClick: () => {}
-	// 			}
-	// 		]
-	// 	});
-	// }
-
 	const modeMe = (e) => {
 		const newColorScheme = e.matches ? 'dark' : 'light';
 		if (localStorage.getItem('dark') === newColorScheme) {
@@ -337,9 +314,10 @@ export const Home = () => {
 					<Col lg="8" className="paddZ">
 						<div className={`${theme === 'dark' ? 'bodyXXB' : 'bodyXX'}`}>
 							<div className="mappicker">
+								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
+								<br />
 								<Covid19Map selection={typeSelected} />
 								<br />
-								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
 							</div>
 
 							<div className="regionpicker">

@@ -60,13 +60,6 @@ export const Mailing = () => {
 			<Container className={`${theme === 'dark' ? 'remove black' : 'remove'}`} fluid>
 				<Row>
 					<div className="Mail">
-						{/*<div className="textC">*/}
-						{/*	<img*/}
-						{/*		className="round imgH"*/}
-						{/*		src="../assets/img/transport-public-user-interface-train-icon-design.jpg"*/}
-						{/*		alt="imgNotFound"*/}
-						{/*	/>*/}
-						{/*</div>*/}
 						<ToastContainer
 							className="leftN"
 							position="bottom-center"

@@ -27,8 +27,6 @@ export const Login = () => {
 	async function handleSubmit(event) {
 		event.preventDefault();
 		const response = await login(email, password);
-		// console.table(...response.data);
-		// console.log(response.data.res);
 		if (response.data.res) {
 			history.push('/home');
 		} else {
@@ -46,13 +44,6 @@ export const Login = () => {
 
 	return (
 		<div className="Login">
-			{/*<div className="textC">*/}
-			{/*	<img*/}
-			{/*		className="round imgH"*/}
-			{/*		src="../assets/img/transport-public-user-interface-train-icon-design.jpg"*/}
-			{/*		alt="imgNotFound"*/}
-			{/*	/>*/}
-			{/*</div>*/}
 			<ToastContainer
 				position="top-center"
 				autoClose={5000}

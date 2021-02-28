@@ -86,8 +86,6 @@ export const getLegendsItemsByType = async (type) => {
 			`0 - ${dv - 1}`,
 			'#ebd4d4',
 			(cases) => cases > 0 && cases < dv
-		),
-
-		new LegendItem('No Data', '#acc4ff', () => true)
+		)
 	];
 };
