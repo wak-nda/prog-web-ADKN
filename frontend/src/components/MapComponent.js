@@ -5,8 +5,8 @@ import {
 import 'leaflet/dist/leaflet.css';
 import '../styles/css/MapComponent.scss';
 
-export const MapComponent = (countries) => {
-	// console.log(countries);
+export const MapComponent = (params) => {
+	console.log(params);
 	const mapStyle = {
 		fillColor: 'white',
 		weight: 1,
@@ -82,7 +82,7 @@ export const MapComponent = (countries) => {
 			</LayersControl>
 			<GeoJSON
 				style={mapStyle}
-				data={countries.countries}
+				data={params.departments}
 				onEachFeature={onEachCountry}
 			/>
 		</Map>
