@@ -12,17 +12,61 @@ To do this, we used official and free-to-use hospital data from the French gover
 These data can be found [here](https://www.data.gouv.fr/fr/datasets/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19).
 
 ## Implemented features
-**1- Visualisation :**\
-Nous avon implémenté 4 types de visualisation :
-* **Un résumé en chiffres** (Voir figure suivante - partie 1) permettant d'avoir un aperçu rapide des chiffres clés de l'épidémie.
-* **Une carte de la France** (Voir figure suivante - partie 2) qui permet d'avoir un visuel sur les départements et le nombre de cas relevés dans chaque département.\
-
-  
+**1- visualization :**\
+We have implemented 4 types of visualization :
+* **A summary in figures** (See following figure - part 1) allowing to have a quick overview of the key figures of the epidemic.
+* **A map of France** (See following figure - part 2) produced from [Leaflet](https://react-leaflet.js.org/) and [OpenStreetMap](https://www.openstreetmap.fr/) which provides a visual on the departments and the number of cases identified in each department.\
+A legend associated with the map makes it possible to identify the departments from the least impacted to the most impacted.
   <p align="center">
-        <img src="./resources/architecture.jpg"/>
+        <img src="./resources/visu1.PNG"/>
+    </p>
+* **Graphs** (See following figure - part 3) allowing to have an evolution of the epidemic according to the incidence rate, the number of infected cases and the number of deaths.
+* **A list (Table)** (See following figure - part 4) allowing to have the figures of people hospitalized, resuscitated, deceased and returns home.
+<p align="center">
+        <img src="./resources/visu2.PNG"/>
+    </p>
+
+**2- Filters :**\
+We have implemented filters according to hospitalizations - returns home - resuscitation - deaths which modify the card with each modification and filters according to the regions of France which modify the table when selected (see following figures).
+<p align="center">
+        <img src="./resources/visu3.png"/>
+    </p>
+<p align="center">
+        <img src="./resources/visu4.png"/>
+    </p>
+
+**3- Theme :**\
+On the application, a button allows you to switch from light mode to dark mode and vice versa in order to allow accessibility (see following figures).
+<p align="center">
+        <img src="./resources/visu5.png"/>
+    </p>
+
+**4- HTML5 - Database :**\
+The browser API is used to detect the user's current region or location.
+Statistical data is retrieved from government servers but is not updated regularly because we have set up a database in the backend.
+As a result, we retrieved the data available on February 21 at 7:03 p.m. and put it into the database.
+
+**4- Authentication :**\
+A login interface is displayed on the home page of the site. To connect, you must enter the following information (see following figure):
+  * Email : ``pkoffi5@gmail.com``
+  * Password : ``paul``
+<p align="center">
+        <img src="./resources/visu6.png"/>
+    </p>
+
+**5- Deployment of the online application :**\
+The developed website has been hosted on a server and can be viewed at this address: [Covid Tracking](http://paulkoffi.fr).
+
+**6- Contact form with sending email and validation of fields :**\
+A contact form is used to send an email to the user who enters his information in order to keep him informed of the site's statistics.
+<p align="center">
+        <img src="./resources/visu7.png"/>
     </p>
 
 ## Project architecture
+Our application is subdivided into 3 different parts : the frontend, the backend and the database.\
+Statistics on the pandemic are retrieved from the government site and are stored in a MongoDB database.\
+The frontend (in react) is addressed to the backend (in node js) to have the data and the backend in turn is addressed to the database to return the stored data.
 
 ## How to use this repository ?
 * The `main` branch (the default branch) contains the latest stable version of the system.
