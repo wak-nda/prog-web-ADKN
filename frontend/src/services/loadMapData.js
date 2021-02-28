@@ -22,25 +22,28 @@ export const getMaxHosp = async () => {
 export const getLegendsItemsByType = async (type) => {
 	let val = 0;
 	const v = await baseInstance.get('api/getMaxSumByDeps');
+	console.log('message ');
 	// alert(v.data.maxHos);
-	alert(type);
-	if (type === 'Hospitalisation') {
-		alert('oco');
+	console.log(type);
+	if (type[0] === 'Hospitalisation') {
+		//alert('oco');
+		// console.log(type[0]);
 		val = v.data.maxHos;
 	}
-	if (type === 'Decès') {
+	if (type[0] === 'Decès') {
+		// console.log(type[0]);
 		val = v.data.maxDec;
 	}
-	if (type === 'Reanimation') {
+	if (type[0] === 'Reanimation') {
 		val = v.data.maxRea;
 	}
-	if (type === 'Retour à domicile') {
+	if (type[0] === 'Retour à domicile') {
 		val = v.data.maxRad;
 	}
 	const modulo = val % 5;
 	const dv = (modulo !== 0) ? (((val - modulo) + 5) / 5) : (val / 5);
-	console.log('UCU');
-	console.table(v);
+	//console.log('UCU');
+	//console.table(v);
 	const b2 = dv * 2;
 	const b3 = dv * 3;
 	const b4 = dv * 4;

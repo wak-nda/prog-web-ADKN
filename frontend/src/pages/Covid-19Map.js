@@ -30,7 +30,7 @@ export const Covid19Map = ({ selection }) => {
 				const l = await getLegendsItemsByType(selection);
 				setlegendItemsReverse(l.reverse());
 				const loadDepartmentsTask = new LoadDepartmentsTask();
-				await loadDepartmentsTask.load(setDepartments);
+				await loadDepartmentsTask.load(setDepartments, selection);
 			} catch (e) {
 				// eslint-disable-next-line no-console
 				console.log(e);

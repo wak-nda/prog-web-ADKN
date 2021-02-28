@@ -11,7 +11,7 @@ export const MapComponent = (params) => {
 		fillColor: 'white',
 		weight: 1,
 		color: 'black',
-		fillOpacity: 0.5
+		fillOpacity: 1
 	};
 
 	const center = [46.632192999999995, 2.578289871490562];
