@@ -22,7 +22,8 @@ import {
 	fetchTotalDataHospFrance,
 	fetchDailyDataFrance,
 	fetchMockData,
-	fetchTotalDataHospRegions, fetchDailyDataHospRegion
+	fetchTotalDataHospRegions, fetchDailyDataHospRegion,
+	fetchCurrentTauxIncidenceFrance, fetchWeeklyTauxIncidenceFrance
 } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
@@ -95,6 +96,8 @@ export const Home = () => {
 	const [loading, setLoading] = useState(false);
 	const [loading2, setLoading2] = useState(false);
 	const [typeSelected, setTypeSelected] = useState(['Hospitalisation']);
+	const [currentTauxIncidenceFrance, setCurrentTauxIncidenceFrance] = useState([]);
+	const [weeklyTauxIncidenceFrance, setWeeklyTauxIncidenceFrance] = useState([]);
 
 	// const [hospDataComp, setHosp] = useState([]);
 	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
@@ -106,6 +109,8 @@ export const Home = () => {
 			const responseHospData = await fetchTotalDataHospFrance();
 			const responseDailyDataFrance = await fetchDailyDataFrance();
 			const responseHospDataRegions = await fetchTotalDataHospRegions();
+			const resoponseCurrentTauxIncidenceFrance = await fetchCurrentTauxIncidenceFrance();
+			const responseWeeklyTauxIncidenceFrance = await fetchWeeklyTauxIncidenceFrance();
 			const dataT = await fetchMockData();
 
 			// const responseRegions = await fetchRegions();
@@ -114,6 +119,8 @@ export const Home = () => {
 			setHospData(responseHospData);
 			setRegionsHospTotalData(responseHospDataRegions);
 			setData(dataT);
+			setCurrentTauxIncidenceFrance(resoponseCurrentTauxIncidenceFrance);
+			setWeeklyTauxIncidenceFrance(responseWeeklyTauxIncidenceFrance);
 			// setRegions(responseRegions);
 		} catch (e) {
 			// eslint-disable-next-line no-console
@@ -162,6 +169,7 @@ export const Home = () => {
 
 	// console.log(dailyDataFrance);
 	// console.log(regions);
+	console.log(weeklyTauxIncidenceFrance)
 	if (Auth.loggedIn()) {
 		history.push('/');
 	}
@@ -301,8 +309,24 @@ export const Home = () => {
 											</Row>
 										</Container>
 										<div className={`${theme === 'dark' ? 'jsx-1180261630 title policeHobo textWhite' : 'jsx-1180261630 title policeHobo'}`}>Taux d&apos;incidence</div>
-										<br />
-										<br />
+										<Container>
+											<Row>
+												<Col>
+													<div className="jsx-2793952281 counter clickable orange">
+														<div className="jsx-2793952281 value">{currentTauxIncidenceFrance.data ? currentTauxIncidenceFrance.data.tauxIncidence : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														{/* <div className="jsx-2793952281">Nombre de patients hospitalisé</div> */}
+													</div>
+												</Col>
+												<Col>
+													<div className="jsx-2793952281 counter clickable blue">
+														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfPeopleInRea : 0}</div>
+														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+														<div className="jsx-2793952281">Nombre de patients en réanimation</div>
+													</div>
+												</Col>
+											</Row>
+										</Container>
 										<Container className={`${theme === 'dark' ? 'grayD' : 'whiteB'}`}>
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
 										</Container>
