@@ -3,11 +3,8 @@ import PropTypes from 'prop-types';
 import { Loading } from '../components/Loading';
 import { MapComponent } from '../components/MapComponent';
 import { Legend } from '../components/Legend';
-// import { LoadCountriesTask } from '../tasks/LoadCountriesTask';
-//import { useCurrentLocation } from '../services/Location';
 import { LoadDepartmentsTask } from '../tasks/LoadDepartmentsTask';
 import { getLegendsItemsByType } from '../services/loadMapData';
-
 
 export const Covid19Map = ({ selection }) => {
 	// const [countries, setCountries] = useState([]);
@@ -75,7 +72,6 @@ export const Covid19Map = ({ selection }) => {
 		</div>
 	);
 };
-
 
 Covid19Map.propTypes = {
 	selection: PropTypes.string
