@@ -53,6 +53,31 @@ async function getTotalDataFromHosptitalInRegions(){
     return regionIntermediaire
 }
 
+async function getDailyDataFromHosptitalInRegions(region){
+    let regionIntermediaire = {'regionName': region, 'dailyDatas':[]};
+    await HospitalDataRegion.find({"reg":region, "sexe":'0'}).exec().then((rep) => {
+        for(let prop in rep){
+            let sizeDatas = regionIntermediaire.dailyDatas.length
+            if(sizeDatas === 0){
+                regionIntermediaire = {'regionName': region, 'dailyDatas': [{'rea': rep[prop]['rea'], 'hosp': rep[prop]['hosp'], 'rad': rep[prop]['rad'], 'dc': rep[prop]['dc'], 'jour': rep[prop]['jour']}]};
+            }else {
+                lastElementIdx = regionIntermediaire.dailyDatas.length - 1;
+                lastElementDay = regionIntermediaire.dailyDatas[lastElementIdx]['jour']
+                if(lastElementDay == rep[prop]['jour']){
+                    regionIntermediaire.dailyDatas['rea'] += rep[prop]['rea'];
+                    regionIntermediaire.dailyDatas['hosp'] += rep[prop]['hosp'];
+                    regionIntermediaire.dailyDatas['dc'] += rep[prop]['dc']
+                    regionIntermediaire.dailyDatas['rad'] += rep[prop]['rad']
+                }else{
+                    regionIntermediaire.dailyDatas.push({'rea': rep[prop]['rea'], 'hosp': rep[prop]['hosp'], 'rad': rep[prop]['rad'], 'dc': rep[prop]['dc'], 'jour': rep[prop]['jour']})
+                }
+            }
+        }
+    });
+    return regionIntermediaire
+}
+
 module.exports = {
-    getTotalDataFromHosptitalInRegions
+    getTotalDataFromHosptitalInRegions,
+    getDailyDataFromHosptitalInRegions
 };
