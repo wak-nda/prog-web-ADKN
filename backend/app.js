@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const dataFromHospital = require('./src/server/DataRegistration/routes/DataFromHospital');
 const usersRouter = require('./src/server/CustomerFinder/routes/UserFinder');
 const mailingRouter = require('./src/server/EmailSending/routes/EmailSending');
+const tauxIncidenceRouter = require('./src/server/TauxDincidence/routes/TauxIncidenceRoutes');
 
 
 const app = new Koa();
@@ -23,6 +24,7 @@ app.use(dataFromHospital.routes());
 app.use(usersRouter.routes());
 app.use(usersRouter.routes());
 app.use(mailingRouter.routes());
+app.use(tauxIncidenceRouter.routes());
 
 const server = app.listen(PORT, () => {
     // loadFileCSV(filePath);

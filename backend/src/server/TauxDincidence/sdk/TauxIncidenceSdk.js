@@ -19,6 +19,12 @@ async function addDataTauxIncidence(pays, week, pop, positifs, tauxIncidence) {
     return true;
 }
 
+async function getDataTauxIncidenceFrance(){
+    const data = await TauxIncidenceModel.find()
+    return data
+}
+
 module.exports = {
-    addDataTauxIncidence
+    addDataTauxIncidence,
+    getDataTauxIncidenceFrance
 }
