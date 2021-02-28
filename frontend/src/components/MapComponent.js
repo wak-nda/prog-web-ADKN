@@ -4,17 +4,17 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../styles/css/MapComponent.scss';
+import PropTypes from 'prop-types';
 
-export const MapComponent = (params) => {
-	console.log(params);
+export const MapComponent = (props) => {
 	const mapStyle = {
 		fillColor: 'white',
 		weight: 1,
 		color: 'black',
 		fillOpacity: 1
 	};
-
-	const center = [46.632192999999995, 2.578289871490562];
+	const { departments, location } = props;
+	const center = [location.latitude, location.longitude];
 	const rectangle = [
 		[51.49, -0.08],
 		[51.5, -0.06]
@@ -82,9 +82,17 @@ export const MapComponent = (params) => {
 			</LayersControl>
 			<GeoJSON
 				style={mapStyle}
-				data={params.departments}
+				data={departments}
 				onEachFeature={onEachCountry}
 			/>
 		</Map>
 	);
+};
+
+MapComponent.propTypes = {
+	departments: PropTypes.instanceOf(Array).isRequired,
+	location: PropTypes.arrayOf(PropTypes.shape({
+		longitude: PropTypes.number.isRequired,
+		latitude: PropTypes.number.isRequired
+	})).isRequired
 };

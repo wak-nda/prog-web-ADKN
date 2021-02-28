@@ -12,6 +12,7 @@ import { useHistory } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import { ToggleModeNight } from '../components/ToggleModeNight';
 import { Covid19Map } from './Covid-19Map';
+
 import logo from '../assets/logo.jpg';
 import AuthHelperMethods from '../services/AuthHelperMethods';
 import { ThemeContext } from '../context/ThemeContext';
@@ -123,8 +124,8 @@ export const Home = () => {
 	}, []);
 
 	const handleDataTypeChange = useCallback(async (dataType) => {
-				// alert(dataType);
-				setTypeSelected(dataType);
+		// alert(dataType);
+		setTypeSelected(dataType);
 	}, []);
 
 	const handleRegionChange = useCallback(async (region) => {
@@ -135,7 +136,7 @@ export const Home = () => {
 			try {
 				const responseDailyData = await fetchDailyDataHospRegion(region);
 				setRegionDailyDataHosp(responseDailyData);
-				setRegionSelected(region)
+				setRegionSelected(region);
 			} catch (e) {
 				// eslint-disable-next-line no-console
 				console.log(e);
@@ -160,8 +161,7 @@ export const Home = () => {
 	}
 
 	// console.log(dailyDataFrance);
-	// console.log(regions)
-
+	// console.log(regions);
 	if (Auth.loggedIn()) {
 		history.push('/');
 	}
@@ -336,7 +336,6 @@ export const Home = () => {
 								)}
 								<ChartsRegion dailyData={regionDailyDataHosp.data && loading2 !== true ? regionDailyDataHosp.data.dailyDatas : []} />
 							</div>
-
 
 							<div className={`${theme === 'dark' ? 'invarB' : 'invar'}`}>
 								<h2 className={`${theme === 'dark' ? 'centerText white' : 'centerText'}`}>

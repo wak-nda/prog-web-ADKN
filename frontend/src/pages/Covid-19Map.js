@@ -6,23 +6,25 @@ import { Legend } from '../components/Legend';
 import { LoadDepartmentsTask } from '../tasks/LoadDepartmentsTask';
 import { getLegendsItemsByType } from '../services/loadMapData';
 
-
 export const Covid19Map = ({ selection }) => {
 	// const [countries, setCountries] = useState([]);
 	const [departments, setDepartments] = useState([]);
+	//const legendItemsReverse = [...legendItems].reverse();
+	const [location, setUserLocation] = useState();
+	//console.log(useCurrentLocation(geolocationOptions));
 	const [legendItemsReverse, setlegendItemsReverse] = useState([]);
 	// console.log(legendItemsReverse);
+	const handleSuccess = (position) => {
+		const { latitude, longitude } = position.coords;
 
-	/*const load = () => {
-		// console.log("load");
-		// const loadCountriesTask = new LoadCountriesTask();
-		// loadCountriesTask.load(setCountries);
-		// console.log(countries);
-		const loadDepartmentsTask = new LoadDepartmentsTask();
-		await loadDepartmentsTask.load(setDepartments);
-		// console.log(departments);
-	};*/
-
+		setUserLocation({
+			latitude: latitude,
+			longitude: longitude
+		});
+	};
+	// const loadLocation = () => {
+	//
+	// };
 	useEffect(() => {
 		(async () => {
 			try {
@@ -50,6 +52,11 @@ export const Covid19Map = ({ selection }) => {
 	// 	})();
 	// }, [selection]);
 
+	useEffect(() => {
+		navigator.geolocation.getCurrentPosition(handleSuccess);
+		//console.log(location);
+	}, []);
+
 	//useEffect(load, [countries, departments]);
 
 	return (
@@ -58,14 +65,13 @@ export const Covid19Map = ({ selection }) => {
 				<Loading />
 			) : (
 				<div>
-					<MapComponent departments={departments} />
+					<MapComponent departments={departments} location={location} />
 					<Legend legendItems={legendItemsReverse} />
 				</div>
 			)}
 		</div>
 	);
 };
-
 
 Covid19Map.propTypes = {
 	selection: PropTypes.string

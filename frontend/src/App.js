@@ -30,7 +30,7 @@ const App = () => {
 	}, [storageMode]);
 
 	return (
-		<ThemeContext.Provider value={{ theme, changeThemeContext }}>
+		<ThemeContext.Provider value={{ theme: theme, changeThemeContext: changeThemeContext }}>
 			<HistoryContextProvider>
 				<Router>
 					<Switch>
