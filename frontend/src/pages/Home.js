@@ -21,11 +21,12 @@ import {
 	fetchTotalDataHospFrance,
 	fetchDailyDataFrance,
 	fetchMockData,
-	fetchTotalDataHospRegions
+	fetchTotalDataHospRegions, fetchDailyDataHospRegion
 } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
 import { DisplayTable } from '../components/DisplayTable';
+import { ChartsRegion } from '../components/ChartsRegions';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -90,7 +91,10 @@ export const Home = () => {
 	const [regionsHospTotalData, setRegionsHospTotalData] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
+	const [loading2, setLoading2] = useState(false);
+
 	// const [hospDataComp, setHosp] = useState([]);
+	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
 
 	const fetchAPI = useCallback(async () => {
 		setLoading(true);
@@ -117,15 +121,20 @@ export const Home = () => {
 	}, []);
 
 	const handleRegionChange = useCallback(async (region) => {
-		try {
-			// const responseDailyData = await fetchDailyData(region);
-			// setDailyData(responseDailyData);
-			setRegionSelected(region);
-		} catch (e) {
-			// eslint-disable-next-line no-console
-			console.log(e);
-		} finally {
-			setLoading(false);
+		if (region === 'Aucune') {
+			setRegionDailyDataHosp([]);
+		} else {
+			setLoading2(true);
+			try {
+				const responseDailyData = await fetchDailyDataHospRegion(region);
+				setRegionDailyDataHosp(responseDailyData);
+				setRegionSelected(region)
+			} catch (e) {
+				// eslint-disable-next-line no-console
+				console.log(e);
+			} finally {
+				setLoading2(false);
+			}
 		}
 	}, []);
 
@@ -306,7 +315,19 @@ export const Home = () => {
 							<Covid19Map />
 							<br />
 
-							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
+							<div className="regionpicker">
+								<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
+								<br />
+								<br />
+								{ (loading2 === false) ? null : (
+									<p className="centerP">
+										<FontAwesomeIcon icon={faSpinner} spin className="fa" />
+									</p>
+								)}
+								<ChartsRegion dailyData={regionDailyDataHosp.data && loading2 !== true ? regionDailyDataHosp.data.dailyDatas : []} />
+							</div>
+
+
 							<div className={`${theme === 'dark' ? 'invarB' : 'invar'}`}>
 								<h2 className={`${theme === 'dark' ? 'centerText white' : 'centerText'}`}>
 									~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
