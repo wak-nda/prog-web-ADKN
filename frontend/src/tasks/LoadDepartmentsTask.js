@@ -1,8 +1,8 @@
 // import papa from 'papaparse';
 import { features } from '../data/departments.json';
 // import { features } from '../data/regionsLayer.json';
-import { legendItems } from '../entities/LegendItems';
-import { getDeptNumbers } from '../services/loadMapData';
+import { getDeptNumbers, getMaxHosp } from '../services/loadMapData';
+import { LegendItem } from '../entities/LegendItem';
 
 export class LoadDepartmentsTask {
 	covidUrl =
@@ -35,7 +35,58 @@ export class LoadDepartmentsTask {
 	};
 
 	#processCovidData = async (covidDepartments) => {
-		console.log(this.mapDepartments)
+		console.log(this.mapDepartments);
+
+
+		const valM = await getMaxHosp();
+		const modulo = valM % 5;
+
+		const dv = (modulo !== 0) ? (((valM - modulo) + 5) / 5) : (valM / 5);
+		console.log(`V ${dv}`);
+		const b2 = dv * 2;
+		const b3 = dv * 3;
+		const b4 = dv * 4;
+		const b5 = dv * 5;
+
+		const legendI = [
+			new LegendItem(
+				`${b5} +`,
+				'#741f1f',
+				// "#8b0000",
+				(cases) => cases >= 1_000_000,
+				'white'
+			),
+
+			new LegendItem(
+				`${b3} - ${b4 - 1}`,
+				// "#741f1f",
+				'#9c2929',
+				(cases) => cases >= b4 && cases < b5,
+				'White'
+			),
+
+			new LegendItem(
+				`${b2} - ${b3 - 1}`,
+				'#c57f7f',
+				(cases) => cases >= b2 && cases < b3
+			),
+
+			new LegendItem(
+				`${dv} - ${b2 - 1}`,
+				'#d8aaaa',
+				(cases) => cases >= dv && cases < b2
+			),
+
+			new LegendItem(
+				`0 - ${dv - 1}`,
+				'#ebd4d4',
+				(cases) => cases > 0 && cases < dv
+			),
+
+			new LegendItem('No Data', '#acc4ff', () => true)
+		];
+		console.table(legendI);
+
 		for (let i = 0; i < this.mapDepartments.length; i += 1) {
 			const depFromJSON = this.mapDepartments[i];
 
@@ -82,15 +133,15 @@ export class LoadDepartmentsTask {
 			);
 			console.log(covidDepartment);*/
 			//break;
-			this.#setDepartmentColor(depFromJSON);
+			this.#setDepartmentColor(depFromJSON, legendI);
 		}
 
-		console.log(this.mapDepartments)
+		console.log(this.mapDepartments);
 		this.setState(this.mapDepartments);
-	}
+	};
 
-	#setDepartmentColor = (dep) => {
-		const legendItem = legendItems.find((item) => item.isFor(dep.properties.hosp));
+	#setDepartmentColor = (dep, lg) => {
+		const legendItem = lg.find((item) => item.isFor(dep.properties.hosp));
 
 		if (legendItem != null) dep.properties.color = legendItem.color;
 	};

@@ -93,7 +93,7 @@ export const Home = () => {
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [loading2, setLoading2] = useState(false);
-	const [typeSelected, setTypeSelected] = useState(['Reanimation']);
+	const [typeSelected, setTypeSelected] = useState(['Hospitalisation']);
 
 	// const [hospDataComp, setHosp] = useState([]);
 	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
@@ -123,6 +123,7 @@ export const Home = () => {
 	}, []);
 
 	const handleDataTypeChange = useCallback(async (dataType) => {
+				// alert(dataType);
 				setTypeSelected(dataType);
 	}, []);
 

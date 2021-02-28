@@ -1,12 +1,12 @@
 [
 	{
-		"name": "Reanimation"
+		"name": "Hospitalisation"
 	},
 	{
 		"name": "Decès"
 	},
 	{
-		"name": "Hospitalisation"
+		"name": "Reanimation"
 	},
 	{
 		"name": "Retour à domicile"

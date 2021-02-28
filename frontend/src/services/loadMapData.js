@@ -11,3 +11,8 @@ export const getDeptNumbers = async () => {
 	// console.log(deptNumbers);
 	return deptNumbers;
 };
+
+export const getMaxHosp = async () => {
+	const maxHosp = await baseInstance.get('api/getMaxSumByDeps');
+	return maxHosp.data.maxHos;
+};
