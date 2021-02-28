@@ -212,7 +212,7 @@ async function getTotalDataFromHosptitalInRegions(){
 
 async function getDailyDataFromHosptitalInRegions(){
     let regionIntermediaire = [];
-    await DataFromHospital.find({sexe: '0'}).limit(10000).then(
+    await DataFromHospital.find().limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
@@ -320,6 +320,24 @@ function findRegion(dep){
             
 }
 
+async function sumDataByDepartment(dep){
+    return await DataFromHospital
+        .aggregate([
+            { $match: { dep: dep.toString() } },
+            {
+                $group:
+                    {
+                        _id: dep.toString(),
+                        sum_rea: { $sum: '$rea' },
+                        sum_hosp: { $sum: '$hosp' },
+                        sum_rad: { $sum: '$rad' },
+                        sum_dc : { $sum: '$dc' }
+                    }
+            }
+        ])
+        .exec();
+}
+
 module.exports = {
     addDataFromHospital,
     getDataFromHospital,
@@ -331,6 +349,7 @@ module.exports = {
     getDailyDataFrance,
     getTotalDataFromHosptitalInRegions,
     getDailyDataFromHosptitalInRegions,
+    sumDataByDepartment,
     addHospDataRegion,
     findRegion
 };

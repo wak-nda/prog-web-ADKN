@@ -21,8 +21,7 @@ import {
 	fetchTotalDataHospFrance,
 	fetchDailyDataFrance,
 	fetchMockData,
-	fetchTotalDataHospRegions,
-	fetchDailyDataHospRegion
+	fetchTotalDataHospRegions, fetchDailyDataHospRegion
 } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
@@ -91,9 +90,11 @@ export const Home = () => {
 	const [data, setData] = useState([]);
 	const [regionsHospTotalData, setRegionsHospTotalData] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
-	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
 	const [loading, setLoading] = useState(false);
+	const [loading2, setLoading2] = useState(false);
+
 	// const [hospDataComp, setHosp] = useState([]);
+	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
 
 	const fetchAPI = useCallback(async () => {
 		setLoading(true);
@@ -120,14 +121,20 @@ export const Home = () => {
 	}, []);
 
 	const handleRegionChange = useCallback(async (region) => {
-		try {
-			const responseDailyData = await fetchDailyDataHospRegion(region);
-			// setDailyData(responseDailyData);
-			setRegionDailyDataHosp(responseDailyData);
-			setRegionSelected(region)
-		} catch (e) {
-			// eslint-disable-next-line no-console
-			console.log(e);
+		if (region === 'Aucune') {
+			setRegionDailyDataHosp([]);
+		} else {
+			setLoading2(true);
+			try {
+				const responseDailyData = await fetchDailyDataHospRegion(region);
+				setRegionDailyDataHosp(responseDailyData);
+				setRegionSelected(region)
+			} catch (e) {
+				// eslint-disable-next-line no-console
+				console.log(e);
+			} finally {
+				setLoading2(false);
+			}
 		}
 	}, []);
 
@@ -147,7 +154,7 @@ export const Home = () => {
 
 	// console.log(dailyDataFrance);
 	// console.log(regions)
-	console.log(regionDailyDataHosp)
+
 	if (Auth.loggedIn()) {
 		history.push('/');
 	}
@@ -289,13 +296,13 @@ export const Home = () => {
 										<div className={`${theme === 'dark' ? 'jsx-1180261630 title policeHobo textWhite' : 'jsx-1180261630 title policeHobo'}`}>Taux d&apos;incidence</div>
 										<br />
 										<br />
-										<Container className="whiteB">
+										<Container className={`${theme === 'dark' ? 'grayD' : 'whiteB'}`}>
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
 										</Container>
-										<Container className="whiteF">
+										<Container className={`${theme === 'dark' ? 'blackF' : 'whiteF'}`}>
 											<div> </div>
 										</Container>
-										<Container className="grayFooter">
+										<Container className={`${theme === 'dark' ? 'grayO' : 'grayFooter'}`}>
 											<p className="textF">~ 🌐 ~</p>
 										</Container>
 									</div>
@@ -304,20 +311,33 @@ export const Home = () => {
 						</div>
 					</Col>
 					<Col lg="8" className="paddZ">
-						<div className="bodyXX">
+						<div className={`${theme === 'dark' ? 'bodyXXB' : 'bodyXX'}`}>
 							<Covid19Map />
 							<br />
 
-							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
-							<h2 className="centerText">
-								~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
-								Data vizualisation ~
-							</h2>
-							<ChartsRegion dailyData={regionDailyDataHosp.data ? regionDailyDataHosp.data.dailyDatas : []} />
-							<br />
-							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
-							<br />
-							<br />
+							<div className="regionpicker">
+								<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
+								<br />
+								<br />
+								{ (loading2 === false) ? null : (
+									<p className="centerP">
+										<FontAwesomeIcon icon={faSpinner} spin className="fa" />
+									</p>
+								)}
+								<ChartsRegion dailyData={regionDailyDataHosp.data && loading2 !== true ? regionDailyDataHosp.data.dailyDatas : []} />
+							</div>
+
+
+							<div className={`${theme === 'dark' ? 'invarB' : 'invar'}`}>
+								<h2 className={`${theme === 'dark' ? 'centerText white' : 'centerText'}`}>
+									~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
+									Data vizualisation ~
+								</h2>
+								<br />
+								<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
+								<br />
+								<br />
+							</div>
 						</div>
 					</Col>
 				</Row>
