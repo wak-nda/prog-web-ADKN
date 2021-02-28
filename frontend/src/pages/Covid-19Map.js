@@ -5,8 +5,9 @@ import { MapComponent } from '../components/MapComponent';
 import { Legend } from '../components/Legend';
 import { LoadDepartmentsTask } from '../tasks/LoadDepartmentsTask';
 import { getLegendsItemsByType } from '../services/loadMapData';
+// import {fetchDataType} from "../services/FetchData";
 
-export const Covid19Map = ({ selection }) => {
+export const Covid19Map = (props) => {
 	// const [countries, setCountries] = useState([]);
 	const [departments, setDepartments] = useState([]);
 	//const legendItemsReverse = [...legendItems].reverse();
@@ -14,6 +15,7 @@ export const Covid19Map = ({ selection }) => {
 	//console.log(useCurrentLocation(geolocationOptions));
 	const [legendItemsReverse, setlegendItemsReverse] = useState([]);
 	// console.log(legendItemsReverse);
+	const { selection } = props;
 	const handleSuccess = (position) => {
 		const { latitude, longitude } = position.coords;
 
@@ -57,6 +59,8 @@ export const Covid19Map = ({ selection }) => {
 		//console.log(location);
 	}, []);
 
+	// const data = dataType;
+
 	//useEffect(load, [countries, departments]);
 
 	return (
@@ -65,7 +69,7 @@ export const Covid19Map = ({ selection }) => {
 				<Loading />
 			) : (
 				<div>
-					<MapComponent departments={departments} location={location} />
+					<MapComponent location={location} selection={selection} />
 					<Legend legendItems={legendItemsReverse} />
 				</div>
 			)}

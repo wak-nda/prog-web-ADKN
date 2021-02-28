@@ -50,10 +50,7 @@ export class LoadDepartmentsTask {
 			depFromJSON.properties.rea = 0;
 			depFromJSON.properties.rad = 0;
 			depFromJSON.properties.dc = 0;
-			depFromJSON.properties.HOSP_TEXT = '0';
-			depFromJSON.properties.REA_TEXT = '0';
-			depFromJSON.properties.RAD_TEXT = '0';
-			depFromJSON.properties.DC_TEXT = '0';
+			depFromJSON.properties.TEXT = '0';
 
 			if (covidDepartment != null) {
 				const hosp = Number(covidDepartment.sum_hosp);
@@ -65,7 +62,30 @@ export class LoadDepartmentsTask {
 				depFromJSON.properties.rea = rea;
 				depFromJSON.properties.rad = rad;
 				depFromJSON.properties.dc = dc;
-				depFromJSON.properties.HOSP_TEXT = this.#formatNumberWithCommas(
+				if (!Array.isArray(selection)) {
+					selection = [selection];
+				}
+				if (selection[0] === 'Hospitalisation') {
+					depFromJSON.properties.TEXT = this.#formatNumberWithCommas(
+						hosp
+					);
+				}
+				if (selection[0] === 'Decès') {
+					depFromJSON.properties.TEXT = this.#formatNumberWithCommas(
+						dc
+					);
+				}
+				if (selection[0] === 'Reanimation') {
+					depFromJSON.properties.TEXT = this.#formatNumberWithCommas(
+						rea
+					);
+				}
+				if (selection[0] === 'Retour à domicile') {
+					depFromJSON.properties.TEXT = this.#formatNumberWithCommas(
+						rad
+					);
+				}
+				/*depFromJSON.properties.HOSP_TEXT = this.#formatNumberWithCommas(
 					hosp
 				);
 				depFromJSON.properties.REA_TEXT = this.#formatNumberWithCommas(
@@ -76,7 +96,7 @@ export class LoadDepartmentsTask {
 				);
 				depFromJSON.properties.DC_TEXT = this.#formatNumberWithCommas(
 					dc
-				);
+				);*/
 			}
 			/*const covidDepartment = covidDepartments.find(
 				// eslint-disable-next-line no-underscore-dangle
