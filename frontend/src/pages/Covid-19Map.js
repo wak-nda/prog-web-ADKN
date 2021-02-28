@@ -26,6 +26,9 @@ export const Covid19Map = ({ selection }) => {
 	useEffect(() => {
 		(async () => {
 			try {
+				// alert(selection);
+				const l = await getLegendsItemsByType(selection);
+				setlegendItemsReverse(l.reverse());
 				const loadDepartmentsTask = new LoadDepartmentsTask();
 				await loadDepartmentsTask.load(setDepartments);
 			} catch (e) {
@@ -33,20 +36,19 @@ export const Covid19Map = ({ selection }) => {
 				console.log(e);
 			}
 		})();
-	}, [departments]);
+	}, [departments, selection]);
 
-	useEffect(() => {
-		(async () => {
-			try {
-				alert(selection);
-				const l = await getLegendsItemsByType(selection);
-				setlegendItemsReverse(l.reverse());
-			} catch (e) {
-				// eslint-disable-next-line no-console
-				console.log(e);
-			}
-		})();
-	}, [selection]);
+	// useEffect(() => {
+	// 	(async () => {
+	// 		try {
+	// 			const l = await getLegendsItemsByType(selection);
+	// 			setlegendItemsReverse(l.reverse());
+	// 		} catch (e) {
+	// 			// eslint-disable-next-line no-console
+	// 			console.log(e);
+	// 		}
+	// 	})();
+	// }, [selection]);
 
 	//useEffect(load, [countries, departments]);
 

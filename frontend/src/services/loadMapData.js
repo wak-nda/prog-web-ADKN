@@ -22,7 +22,10 @@ export const getMaxHosp = async () => {
 export const getLegendsItemsByType = async (type) => {
 	let val = 0;
 	const v = await baseInstance.get('api/getMaxSumByDeps');
+	// alert(v.data.maxHos);
+	alert(type);
 	if (type === 'Hospitalisation') {
+		alert('oco');
 		val = v.data.maxHos;
 	}
 	if (type === 'Decès') {
@@ -36,7 +39,8 @@ export const getLegendsItemsByType = async (type) => {
 	}
 	const modulo = val % 5;
 	const dv = (modulo !== 0) ? (((val - modulo) + 5) / 5) : (val / 5);
-	console.log(`V ${dv}`);
+	console.log('UCU');
+	console.table(v);
 	const b2 = dv * 2;
 	const b3 = dv * 3;
 	const b4 = dv * 4;
