@@ -145,7 +145,10 @@ $red: #F44336;
 	margin-top: 20px;
 	text-align: center;
 	//margin-top: 600px !important;
+}
 
+.white{
+	color: white !important;
 }
 
 //<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -607,6 +610,12 @@ span.num {
 .invar {
 	padding-top: 45px;
 	background-color: white !important;
+	color: black !important;
+}
+
+.invarB {
+	padding-top: 45px;
+	background-color: #041524 !important;
 	color: black !important;
 }
 

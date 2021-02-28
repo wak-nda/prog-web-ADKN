@@ -307,8 +307,8 @@ export const Home = () => {
 							<br />
 
 							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
-							<div className="invar">
-								<h2 className="centerText">
+							<div className={`${theme === 'dark' ? 'invarB' : 'invar'}`}>
+								<h2 className={`${theme === 'dark' ? 'centerText white' : 'centerText'}`}>
 									~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
 									Data vizualisation ~
 								</h2>
