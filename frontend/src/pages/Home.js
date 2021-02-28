@@ -6,7 +6,7 @@ import '../styles/css/Home.scss';
 import '../styles/family.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	faWindowClose, faEnvelopeOpenText, faSpinner, faChalkboardTeacher
+	faWindowClose, faEnvelopeOpenText, faSpinner, faChalkboardTeacher, faFan
 } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
@@ -146,7 +146,7 @@ export const Home = () => {
 		return (
 			<p className="centerP">
 				{loading && (
-					<FontAwesomeIcon icon={faSpinner} spin className="fa" />
+					<FontAwesomeIcon icon={faFan} spin className="fa" />
 				)}
 			</p>
 		);
