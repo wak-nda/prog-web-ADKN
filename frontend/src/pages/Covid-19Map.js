@@ -19,7 +19,7 @@ export const Covid19Map = () => {
 		// console.log(countries);
 		const loadDepartmentsTask = new LoadDepartmentsTask();
 		loadDepartmentsTask.load(setDepartments);
-		console.log(departments);
+		// console.log(departments);
 	};
 
 	useEffect(load, [countries, departments]);

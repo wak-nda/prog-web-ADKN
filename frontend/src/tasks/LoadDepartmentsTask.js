@@ -1,6 +1,9 @@
-import papa from 'papaparse';
+// import papa from 'papaparse';
 import { features } from '../data/departments.json';
+// import { features } from '../data/regionsLayer.json';
 import { legendItems } from '../entities/LegendItems';
+// import { getDeptNumbers } from '../services/loadMapData';
+// import { getDeptNumbers } from '../services/loadMapData';
 
 export class LoadDepartmentsTask {
 	covidUrl =
@@ -10,44 +13,81 @@ export class LoadDepartmentsTask {
 
 	mapDepartments = features;
 
-	load = (setState) => {
+	load = async (setState) => {
 		this.setState = setState;
-		papa.parse(this.covidUrl, {
+		/*papa.parse(this.covidUrl, {
 			download: true,
 			header: true,
 			complete: (result) => {
 				// console.log(result);
 				this.#processCovidData(result.data);
 			}
-		});
+		});*/
+		/*try {
+			// eslint-disable-next-line no-await-in-loop
+			const response = await getDeptNumbers();
+			const depts = response.data;
+			console.log(depts);
+			this.#processCovidData(depts);
+		} catch (e) {
+			console.log(e);
+		}*/
+		// await this.#processCovidData();
 		setState(features);
 	};
 
-	#processCovidData = (covidDepartments) => {
+	#processCovidData = async (covidDepartments) => {
+		console.log(this.mapDepartments)
 		for (let i = 0; i < this.mapDepartments.length; i += 1) {
 			const depFromJSON = this.mapDepartments[i];
-			const covidDepartment = covidDepartments.find(
-				(depFromData) => depFromJSON.properties.dep === depFromData.dep
-			);
-			console.log(covidDepartment);
 
-			depFromJSON.properties.confirmed = 0;
-			depFromJSON.properties.CONFIRMEDTEXT = '0';
+			const covidDepartment = covidDepartments.find(
+				// eslint-disable-next-line no-underscore-dangle
+				(depFromData) => depFromJSON.properties.dep === depFromData._id
+			);
+
+			depFromJSON.properties.hosp = 0;
+			depFromJSON.properties.rea = 0;
+			depFromJSON.properties.rad = 0;
+			depFromJSON.properties.dc = 0;
+			depFromJSON.properties.HOSP_TEXT = '0';
+			depFromJSON.properties.REA_TEXT = '0';
+			depFromJSON.properties.RAD_TEXT = '0';
+			depFromJSON.properties.DC_TEXT = '0';
 
 			if (covidDepartment != null) {
-				const confirmed = Number(covidDepartment.Confirmed);
-				covidDepartments.filter((dep) => dep === depFromJSON.properties.dep).map((filteredDep) => (console.log(filteredDep)));
-				// console.log(confirmed);
-				depFromJSON.properties.confirmed = confirmed;
-				// countryFromCSV.properties.CONFIRMEDTEXT = confirmed;
-				depFromJSON.properties.CONFIRMEDTEXT = this.#formatNumberWithCommas(
-					confirmed
+				const hosp = Number(covidDepartment.sum_hosp);
+				const rea = Number(covidDepartment.sum_rea);
+				const rad = Number(covidDepartment.sum_rad);
+				const dc = Number(covidDepartment.sum_dc);
+				//console.log(hosp, rea, rad, dc);
+				depFromJSON.properties.hosp = hosp;
+				depFromJSON.properties.rea = rea;
+				depFromJSON.properties.rad = rad;
+				depFromJSON.properties.dc = dc;
+				depFromJSON.properties.HOSP_TEXT = this.#formatNumberWithCommas(
+					hosp
+				);
+				depFromJSON.properties.REA_TEXT = this.#formatNumberWithCommas(
+					rea
+				);
+				depFromJSON.properties.RAD_TEXT = this.#formatNumberWithCommas(
+					rad
+				);
+				depFromJSON.properties.DC_TEXT = this.#formatNumberWithCommas(
+					dc
 				);
 			}
-			break;
+			/*const covidDepartment = covidDepartments.find(
+				// eslint-disable-next-line no-underscore-dangle
+				(depFromData) => depFromJSON.properties.dep === depFromData._id
+			);
+			console.log(covidDepartment);*/
+			//break;
 			//this.#setDepartmentColor(depFromCSV);
 		}
 
+		console.log(this.mapDepartments)
 		this.setState(this.mapDepartments);
 	}
 

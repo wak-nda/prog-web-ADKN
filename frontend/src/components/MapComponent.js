@@ -6,7 +6,7 @@ import 'leaflet/dist/leaflet.css';
 import '../styles/css/MapComponent.scss';
 
 export const MapComponent = (params) => {
-	// console.log(params);
+	console.log(params);
 	const mapStyle = {
 		fillColor: 'white',
 		weight: 1,
@@ -23,9 +23,9 @@ export const MapComponent = (params) => {
 	const onEachCountry = (country, layer) => {
 		// console.log(country.properties.CONFIRMEDTEXT);
 		layer.options.fillColor = country.properties.color;
-		const name = country.properties.ADMIN;
-		const confirmedText = country.properties.CONFIRMEDTEXT;
-		layer.bindPopup(`${name} ${confirmedText}`);
+		const name = country.properties.nom;
+		const text = country.properties.HOSP_TEXT;
+		layer.bindPopup(`${name} ${text}`);
 	};
 
 	return (
