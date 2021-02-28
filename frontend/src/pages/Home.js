@@ -21,11 +21,13 @@ import {
 	fetchTotalDataHospFrance,
 	fetchDailyDataFrance,
 	fetchMockData,
-	fetchTotalDataHospRegions
+	fetchTotalDataHospRegions,
+	fetchDailyDataHospRegion
 } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
 import { DisplayTable } from '../components/DisplayTable';
+import { ChartsRegion } from '../components/ChartsRegions';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -287,13 +289,13 @@ export const Home = () => {
 										<div className={`${theme === 'dark' ? 'jsx-1180261630 title policeHobo textWhite' : 'jsx-1180261630 title policeHobo'}`}>Taux d&apos;incidence</div>
 										<br />
 										<br />
-										<Container className={`${theme === 'dark' ? 'grayD' : 'whiteB'}`}>
+										<Container className="whiteB">
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
 										</Container>
-										<Container className={`${theme === 'dark' ? 'blackF' : 'whiteF'}`}>
+										<Container className="whiteF">
 											<div> </div>
 										</Container>
-										<Container className={`${theme === 'dark' ? 'grayO' : 'grayFooter'}`}>
+										<Container className="grayFooter">
 											<p className="textF">~ 🌐 ~</p>
 										</Container>
 									</div>
@@ -302,22 +304,19 @@ export const Home = () => {
 						</div>
 					</Col>
 					<Col lg="8" className="paddZ">
-						<div className={`${theme === 'dark' ? 'bodyXXB' : 'bodyXX'}`}>
+						<div className="bodyXX">
 							<Covid19Map />
 							<br />
 
 							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
-
-							<div className="invar">
-								<h2 className="centerText">
-									~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
-									Data vizualisation ~
-								</h2>
-								<br />
-								<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
-								<br />
-								<br />
-							</div>
+							<h2 className="centerText">
+								~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
+								Data vizualisation ~
+							</h2>
+							<br />
+							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
+							<br />
+							<br />
 						</div>
 					</Col>
 				</Row>
