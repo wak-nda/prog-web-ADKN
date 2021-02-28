@@ -287,13 +287,13 @@ export const Home = () => {
 										<div className={`${theme === 'dark' ? 'jsx-1180261630 title policeHobo textWhite' : 'jsx-1180261630 title policeHobo'}`}>Taux d&apos;incidence</div>
 										<br />
 										<br />
-										<Container className="whiteB">
+										<Container className={`${theme === 'dark' ? 'grayD' : 'whiteB'}`}>
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
 										</Container>
-										<Container className="whiteF">
+										<Container className={`${theme === 'dark' ? 'blackF' : 'whiteF'}`}>
 											<div> </div>
 										</Container>
-										<Container className="grayFooter">
+										<Container className={`${theme === 'dark' ? 'grayO' : 'grayFooter'}`}>
 											<p className="textF">~ 🌐 ~</p>
 										</Container>
 									</div>
@@ -302,19 +302,21 @@ export const Home = () => {
 						</div>
 					</Col>
 					<Col lg="8" className="paddZ">
-						<div className="bodyXX">
+						<div className={`${theme === 'dark' ? 'bodyXXB' : 'bodyXX'}`}>
 							<Covid19Map />
 							<br />
 
 							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
-							<h2 className="centerText">
-								~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
-								Data vizualisation ~
-							</h2>
-							<br />
-							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
-							<br />
-							<br />
+							<div className={`${theme === 'dark' ? 'invarB' : 'invar'}`}>
+								<h2 className={`${theme === 'dark' ? 'centerText white' : 'centerText'}`}>
+									~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
+									Data vizualisation ~
+								</h2>
+								<br />
+								<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
+								<br />
+								<br />
+							</div>
 						</div>
 					</Col>
 				</Row>

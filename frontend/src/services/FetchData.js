@@ -23,6 +23,7 @@ export const fetchTotalDataHospRegions = async () => {
 
 export const fetchDailyDataHospRegion = async (region) => {
     const dailyDataHospRegion = await baseInstance.get(`api/getHopsDataInRegions/${region}`);
+	console.log(dailyDataHospRegion)
     return dailyDataHospRegion;
 }
 
