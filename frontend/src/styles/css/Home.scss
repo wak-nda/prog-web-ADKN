@@ -142,9 +142,9 @@ $red: #F44336;
 }
 
 .centerText{
-	//margin-top: 20px;
+	margin-top: 20px;
 	text-align: center;
-	margin-top: 600px !important;
+	//margin-top: 600px !important;
 
 }
 
@@ -554,11 +554,37 @@ span.num {
 }
 
 .bodyXX {
+	 overflow-y: auto;
+	 overflow-x: hidden;
+	 background-color: #fff;
+	 max-height: calc(100vh - 50px) !important;
+	 margin-top: 50px;
+
+	 &::-webkit-scrollbar {
+		 width: 6px;
+		 background-color: #F5F5F5;
+	 }
+
+	 &::-webkit-scrollbar-track {
+		 //-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		 background-color: #F5F5F5;
+		 //height: 20px;
+	 }
+
+	 &::-webkit-scrollbar-thumb {
+		 background-color: #041524;
+		 //height: 20px;
+	 }
+ }
+
+.bodyXXB {
 	overflow-y: auto;
 	overflow-x: hidden;
-	background-color: #fff;
+	background-color: #061e35;
 	max-height: calc(100vh - 50px) !important;
 	margin-top: 50px;
+	color: white !important;
 
 	&::-webkit-scrollbar {
 		width: 6px;
@@ -576,6 +602,42 @@ span.num {
 		background-color: #041524;
 		//height: 20px;
 	}
+}
+
+.invar {
+	padding-top: 45px;
+	background-color: white !important;
+	color: black !important;
+}
+
+//.bodyXX2 {
+//	overflow-y: auto;
+//	overflow-x: hidden;
+//	background-color: #fff;
+//	max-height: calc(100vh - 50px) !important;
+//	margin-top: 50px;
+//
+//	&::-webkit-scrollbar {
+//		width: 6px;
+//		background-color: #F5F5F5;
+//	}
+//
+//	&::-webkit-scrollbar-track {
+//		//-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//		-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//		background-color: #F5F5F5;
+//		//height: 20px;
+//	}
+//
+//	&::-webkit-scrollbar-thumb {
+//		background-color: #041524;
+//		//height: 20px;
+//	}
+//}
+
+
+.grayD{
+	background-color: rgb(51, 51, 51);
 }
 
 .blackG {
@@ -630,18 +692,20 @@ span.num {
 .whiteF{
 	background-color: #ebeff3 !important;
 	height: 55px;
-	//margin: 0 !important;
 	padding: 0 !important;
-	//width: 100px;
 }
+
+.blackF{
+	background-color: #041524 !important;
+	height: 55px;
+	padding: 0 !important;
+}
+
 
 .grayFooter {
 	height: 60px;
 	text-align: center;
 	background-color: white !important;
-
-
-
 	.textF{
 		font-size: 30px;
 		position: relative;
@@ -649,6 +713,19 @@ span.num {
 		//margin-top: 20px;
 	}
 }
+
+.grayO {
+	height: 60px;
+	text-align: center;
+	background-color: #D2AC71 !important;
+	.textF{
+		font-size: 30px;
+		position: relative;
+		top: 7px;
+		//margin-top: 20px;
+	}
+}
+
 
 .remove {
 	margin-left: 0px !important;
