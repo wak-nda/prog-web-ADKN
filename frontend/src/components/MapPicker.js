@@ -15,7 +15,7 @@ export const MapPicker = (({ handleDataTypeChange, dataType }) => {
 			fetchAPI();
 		}, []);
 		return (
-			<Form className="centerF">
+			<Form className="centerFT">
 				<FormGroup controlId="exampleForm.ControlSelect1">
 					<Label for="exampleSelect"><FontAwesomeIcon icon={faSortAmountDownAlt} /> Filtré par : {dataType}</Label>
 					<Input type="select" className="selectStyle" name="select" id="exampleSelect" onChange={(e) => handleDataTypeChange(e.target.value)}>

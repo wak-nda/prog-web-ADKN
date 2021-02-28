@@ -337,9 +337,10 @@ export const Home = () => {
 					<Col lg="8" className="paddZ">
 						<div className={`${theme === 'dark' ? 'bodyXXB' : 'bodyXX'}`}>
 							<div className="mappicker">
+								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
+								<br />
 								<Covid19Map selection={typeSelected} />
 								<br />
-								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
 							</div>
 
 							<div className="regionpicker">
