@@ -15,7 +15,7 @@ const loadFile = async (filePath) => {
             const output = [];
             const headers = [];
 
-            const fileContent =  fs.readFileSync(path.resolve( __dirname,"../data/donnees-hospitalieres.csv"));
+            const fileContent =  fs.readFileSync(path.resolve( __dirname,"../data/donnees-hospitalieres-covid19-2021-02-21-19h03.csv"));
             const parser = parse({
                 delimiter: ';'
             })
@@ -29,7 +29,8 @@ const loadFile = async (filePath) => {
                     }
                     else{
                         output.push(record);
-                        await  DataFromHospital.addDataFromHospital(record[0],record[1],record[2],record[3],record[4],record[5],record[6]);
+                        const region = DataFromHospital.findRegion(record[0]);
+                        await  DataFromHospital.addHospDataRegion(record[0],region,record[1],record[2],record[3],record[4],record[5],record[6]);
                     }
                     index++;
                 }
