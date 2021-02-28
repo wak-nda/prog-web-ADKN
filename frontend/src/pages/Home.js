@@ -30,6 +30,7 @@ import { RegionPicker } from '../components/RegionPicker';
 import { DisplayTable } from '../components/DisplayTable';
 import { ChartsRegion } from '../components/ChartsRegions';
 import { MapPicker } from '../components/MapPicker';
+import { ChartTauxIncidenceFrance } from '../components/ChartTauxIncidence';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -310,22 +311,14 @@ export const Home = () => {
 										</Container>
 										<div className={`${theme === 'dark' ? 'jsx-1180261630 title policeHobo textWhite' : 'jsx-1180261630 title policeHobo'}`}>Taux d&apos;incidence</div>
 										<Container>
-											<Row>
-												<Col>
-													<div className="jsx-2793952281 counter clickable orange">
-														<div className="jsx-2793952281 value">{currentTauxIncidenceFrance.data ? currentTauxIncidenceFrance.data.tauxIncidence : 0}</div>
-														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
-														{/* <div className="jsx-2793952281">Nombre de patients hospitalisé</div> */}
-													</div>
-												</Col>
-												<Col>
-													<div className="jsx-2793952281 counter clickable blue">
-														<div className="jsx-2793952281 value">{hospData.data ? hospData.data.numberOfPeopleInRea : 0}</div>
-														{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
-														<div className="jsx-2793952281">Nombre de patients en réanimation</div>
-													</div>
-												</Col>
-											</Row>
+											<Col>
+												<div className="jsx-2793952281 counter clickable orange">
+													<div className="jsx-2793952281 value">{currentTauxIncidenceFrance.data ? currentTauxIncidenceFrance.data.tauxIncidence : 0}</div>
+													{/* <div className="jsx-2793952281 difference">( + 25 403 )</div> */}
+													{/* <div className="jsx-2793952281">Nombre de patients hospitalisé</div> */}
+												</div>
+												<ChartTauxIncidenceFrance weeklyDataFrance={weeklyTauxIncidenceFrance.data ? weeklyTauxIncidenceFrance.data : []} />
+											</Col>
 										</Container>
 										<Container className={`${theme === 'dark' ? 'grayD' : 'whiteB'}`}>
 											<ChartsFrance dailyDataFrance={dailyDataFrance.data ? dailyDataFrance.data : [{ date: '', casConfirmes: 0, deces: 0 }]} />
