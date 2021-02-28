@@ -1,0 +1,59 @@
+@media all and (min-width: 480px) {
+	.Mail {
+		//padding-top: 20px;
+		z-index: 10 !important;
+		margin-top: 7%;
+		margin-left: 35%;
+		width: 400px;
+	}
+
+	.Mail form {
+		border: 2px solid black;
+		padding: 20px;
+		border-radius: 5px;
+		margin: 0 auto;
+		max-width: 320px;
+		position: relative;
+		margin-top: 12% !important;
+		z-index: 10 !important;
+
+		.iconLogin {
+			font-size: 60px;
+			position: relative;
+			left: 110px;
+			top: -55px;
+			z-index: 1000 !important;
+		}
+
+
+	}
+
+	//.form-group {
+	//	margin-top: -30px !important;
+	//}
+}
+
+.textC{
+	text-align: center !important;
+}
+
+.imgH{
+	height: 4rem;
+}
+
+.leftN{
+	margin-left: -30px !important;
+}
+
+.black {
+	background-color: black !important;
+	color: white !important;
+	padding-bottom: 60px;
+	.Mail form {
+		border: 2px solid white !important;
+	}
+}
+
+.body{
+	overflow: hidden !important;
+}

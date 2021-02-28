@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Hospitalisation"
+	},
+	{
+		"name": "Decès"
+	},
+	{
+		"name": "Reanimation"
+	},
+	{
+		"name": "Retour à domicile"
+	}
+]

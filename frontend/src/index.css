@@ -1,0 +1,9 @@
+body,
+html {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	font-family: 'Public Sans', sans-serif;
+	  -webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
