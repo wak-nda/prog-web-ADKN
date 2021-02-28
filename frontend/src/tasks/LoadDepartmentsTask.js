@@ -90,7 +90,7 @@ export class LoadDepartmentsTask {
 	}
 
 	#setDepartmentColor = (dep) => {
-		const legendItem = legendItems.find((item) => item.isFor(dep.properties.confirmed));
+		const legendItem = legendItems.find((item) => item.isFor(dep.properties.hosp));
 
 		if (legendItem != null) dep.properties.color = legendItem.color;
 	};
