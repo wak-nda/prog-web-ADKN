@@ -3,7 +3,7 @@ const parse = require('csv-parse');
 const fs = require('fs');
 const path = require('path');
 const url =  require('url');
-const DataFromHospital =  require('../sdk/DataFromHospital');
+const TauxIncidenceSdk = require('./TauxIncidenceSdk')
 
 
 const __filename = url.fileURLToPath(import.meta.url);
@@ -15,7 +15,7 @@ const loadFile = async (filePath) => {
             const output = [];
             const headers = [];
 
-            const fileContent =  fs.readFileSync(path.resolve( __dirname,"../data/donnees-hospitalieres-covid19-2021-02-21-19h03.csv"));
+            const fileContent =  fs.readFileSync(path.resolve( __dirname,"../data/sp-pe-std-heb-fra-2021-02-27-19h20.csv"));
             const parser = parse({
                 delimiter: ';'
             })
@@ -29,8 +29,7 @@ const loadFile = async (filePath) => {
                     }
                     else{
                         output.push(record);
-                        const region = DataFromHospital.findRegion(record[0]);
-                        await  DataFromHospital.addHospDataRegion(record[0],region,record[1],record[2],record[3],record[4],record[5],record[6]);
+                        await  TauxIncidenceSdk.addDataTauxIncidence(record[0],record[1],record[2],record[3],record[4]);
                     }
                     index++;
                 }
