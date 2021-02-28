@@ -47,7 +47,7 @@ export class LoadCountriesTask {
 		}
 
 		this.setState(this.mapCountries);
-	}
+	};
 
 	#setCountryColor = (country) => {
 		const legendItem = legendItems.find((item) => item.isFor(country.properties.confirmed));

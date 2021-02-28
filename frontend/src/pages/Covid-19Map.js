@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react';
-//import { setPosition } from 'leaflet/src/dom/DomUtil';
+import PropTypes from 'prop-types';
 import { Loading } from '../components/Loading';
 import { MapComponent } from '../components/MapComponent';
 import { Legend } from '../components/Legend';
 // import { LoadCountriesTask } from '../tasks/LoadCountriesTask';
 //import { useCurrentLocation } from '../services/Location';
 import { LoadDepartmentsTask } from '../tasks/LoadDepartmentsTask';
-import { legendItems } from '../entities/LegendItems';
+import { getLegendsItemsByType } from '../services/loadMapData';
 
-export const Covid19Map = () => {
+
+export const Covid19Map = ({ selection }) => {
 	// const [countries, setCountries] = useState([]);
 	const [departments, setDepartments] = useState([]);
-	const legendItemsReverse = [...legendItems].reverse();
+	//const legendItemsReverse = [...legendItems].reverse();
 	const [location, setUserLocation] = useState();
 	//console.log(useCurrentLocation(geolocationOptions));
+	const [legendItemsReverse, setlegendItemsReverse] = useState([]);
 	// console.log(legendItemsReverse);
 	const handleSuccess = (position) => {
 		const { latitude, longitude } = position.coords;
@@ -29,6 +31,9 @@ export const Covid19Map = () => {
 	useEffect(() => {
 		(async () => {
 			try {
+				// alert(selection);
+				const l = await getLegendsItemsByType(selection);
+				setlegendItemsReverse(l.reverse());
 				const loadDepartmentsTask = new LoadDepartmentsTask();
 				await loadDepartmentsTask.load(setDepartments);
 			} catch (e) {
@@ -36,7 +41,19 @@ export const Covid19Map = () => {
 				console.log(e);
 			}
 		})();
-	}, [departments]);
+	}, [departments, selection]);
+
+	// useEffect(() => {
+	// 	(async () => {
+	// 		try {
+	// 			const l = await getLegendsItemsByType(selection);
+	// 			setlegendItemsReverse(l.reverse());
+	// 		} catch (e) {
+	// 			// eslint-disable-next-line no-console
+	// 			console.log(e);
+	// 		}
+	// 	})();
+	// }, [selection]);
 
 	useEffect(() => {
 		navigator.geolocation.getCurrentPosition(handleSuccess);
@@ -57,4 +74,13 @@ export const Covid19Map = () => {
 			)}
 		</div>
 	);
+};
+
+
+Covid19Map.propTypes = {
+	selection: PropTypes.string
+};
+
+Covid19Map.defaultProps = {
+	selection: 'Hospitalisation'
 };
