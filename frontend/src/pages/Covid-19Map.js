@@ -3,11 +3,12 @@ import { Loading } from '../components/Loading';
 import { MapComponent } from '../components/MapComponent';
 import { Legend } from '../components/Legend';
 import { LoadCountriesTask } from '../tasks/LoadCountriesTask';
+import { LoadDepartmentsTask } from '../tasks/LoadDepartmentsTask';
 import { legendItems } from '../entities/LegendItems'
 
 export const Covid19Map = () => {
 	const [countries, setCountries] = useState([]);
-	//const [departments, setDepartments] = useState([]);
+	const [departments, setDepartments] = useState([]);
 	const legendItemsReverse = [...legendItems].reverse();
 	// console.log(legendItemsReverse);
 
@@ -15,10 +16,13 @@ export const Covid19Map = () => {
 		// console.log("load");
 		const loadCountriesTask = new LoadCountriesTask();
 		loadCountriesTask.load(setCountries);
-		console.log(countries);
+		// console.log(countries);
+		const loadDepartmentsTask = new LoadDepartmentsTask();
+		loadDepartmentsTask.load(setDepartments);
+		console.log(departments);
 	};
 
-	useEffect(load, [countries]);
+	useEffect(load, [countries, departments]);
 
 	return (
 		<div>
@@ -26,7 +30,7 @@ export const Covid19Map = () => {
 				<Loading />
 			) : (
 				<div>
-					<MapComponent countries={countries} />
+					<MapComponent countries={countries} departments={departments} />
 					<Legend legendItems={legendItemsReverse} />
 				</div>
 			)}

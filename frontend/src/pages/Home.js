@@ -146,9 +146,8 @@ export const Home = () => {
 	}
 
 	// console.log(dailyDataFrance);
-	// console.log(data)
+	// console.log(regions)
 	console.log(regionDailyDataHosp)
-
 	if (Auth.loggedIn()) {
 		history.push('/');
 	}
@@ -316,53 +315,9 @@ export const Home = () => {
 							</h2>
 							<ChartsRegion dailyData={regionDailyDataHosp.data ? regionDailyDataHosp.data : []} />
 							<br />
-							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data.dailyDatas : data} />
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-							<h1>TEST</h1>
-
+							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
+							<br />
+							<br />
 						</div>
 					</Col>
 				</Row>

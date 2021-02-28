@@ -3,8 +3,9 @@ import {
 	Table, Column, HeaderCell, Cell
 } from 'rsuite-table';
 import '../styles/css/Home.scss';
+import '../styles/css/DisplayTable.scss';
 import '../styles/family.css';
-import 'rsuite-table/dist/css/rsuite-table.css';
+// import 'rsuite-table/dist/css/rsuite-table.css';
 import PropTypes from 'prop-types';
 
 export const DisplayTable = ({ dataR }) => {
@@ -51,28 +52,28 @@ export const DisplayTable = ({ dataR }) => {
 					console.log(data);
 				}}
 			>
-				<Column width={70} align="center" fixed>
-					<HeaderCell>Id</HeaderCell>
+				<Column width={200} align="center" fixed>
+					<HeaderCell>Region</HeaderCell>
 					<Cell dataKey="regionName" />
 				</Column>
 				<Column width={200} fixed>
-					<HeaderCell>First Name</HeaderCell>
+					<HeaderCell>Reanimation</HeaderCell>
 					<Cell dataKey="numberOfPeopleInRea" />
 				</Column>
 				<Column width={200}>
-					<HeaderCell>Last Name</HeaderCell>
+					<HeaderCell>Hospitalisés</HeaderCell>
 					<Cell dataKey="numberOfHospitalized" />
 				</Column>
 				<Column width={200}>
 					<HeaderCell>City</HeaderCell>
 					<Cell dataKey="numberOfRecovered" />
 				</Column>
-				<Column width={200}>
-					<HeaderCell>Street</HeaderCell>
+				<Column width={200} className="redC">
+					<HeaderCell>Morts</HeaderCell>
 					<Cell dataKey="numberOfDeaths" />
 				</Column>
 				<Column width={300}>
-					<HeaderCell>Company Name</HeaderCell>
+					<HeaderCell>Date</HeaderCell>
 					<Cell dataKey="jour" />
 				</Column>
 				{/*<Column width={300}>*/}

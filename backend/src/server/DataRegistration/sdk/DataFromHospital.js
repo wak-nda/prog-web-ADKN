@@ -37,7 +37,7 @@ async function getTotalData(){
     let numberOfRecovered = 0;
     let lastUpdateDate = "";
     let intermediaire = {};
-    await DataFromHospital.find().then(
+    await DataFromHospital.find().limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
@@ -150,7 +150,7 @@ async function getDataFromHospitalInPeriod(startDate, endDate){
 const dataFranceFromJson = require('../../data/contrib-data.json')
 
 async function getFranceData(){
-    const size = dataFranceFromJson.length
+    const size = dataFranceFromJson.length;
     return dataFranceFromJson[size - 1]
 }
 
@@ -162,7 +162,7 @@ async function getTotalDataFromHosptitalInRegions(){
     let depIntermediaire = {};
     let regionIntermediaire = [];
 
-    await DataFromHospital.find().then(
+    await DataFromHospital.find().limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
