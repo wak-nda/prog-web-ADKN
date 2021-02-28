@@ -65,7 +65,7 @@ export const DisplayTable = ({ dataR }) => {
 					<Cell dataKey="numberOfHospitalized" />
 				</Column>
 				<Column width={200}>
-					<HeaderCell>City</HeaderCell>
+					<HeaderCell>Retour à domicile</HeaderCell>
 					<Cell dataKey="numberOfRecovered" />
 				</Column>
 				<Column width={200} className="redC">

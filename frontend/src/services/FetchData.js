@@ -1,5 +1,7 @@
 import baseInstance from './api';
 import regions from '../data/regions.json';
+import typeData from '../data/typeData.json';
+
 
 export const fetchTotalDataFrance = async () => {
 	const totalDataFrance = await baseInstance.get('api/getDataFrance');
@@ -58,3 +60,6 @@ export const fetchRegions = async () => {
 	console.log(regions);
 	return regions;
 };
+
+export const fetchDataType = async () => typeData;
+

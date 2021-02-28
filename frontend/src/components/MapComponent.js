@@ -21,11 +21,11 @@ export const MapComponent = (params) => {
 	];
 
 	const onEachCountry = (country, layer) => {
+		// console.log(country.properties.CONFIRMEDTEXT);
 		layer.options.fillColor = country.properties.color;
-		const name = country.properties.ADMIN;
-		const confirmedText = country.properties.CONFIRMEDTEXT;
-		// console.log(name, confirmedText);
-		layer.bindPopup(`${name} ${confirmedText}`);
+		const name = country.properties.nom;
+		const text = country.properties.HOSP_TEXT;
+		layer.bindPopup(`${name} ${text}`);
 	};
 
 	return (

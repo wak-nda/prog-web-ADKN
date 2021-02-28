@@ -184,7 +184,7 @@ async function getTotalDataFromHosptitalInRegions(){
             }
         }
     );
-    const depKeysData = Object.keys(depIntermediaire); 
+    const depKeysData = Object.keys(depIntermediaire);
     for (let idxKey = 0; idxKey < depKeysData.length; idxKey++){
         let depKey = depKeysData[idxKey]
         let region = findRegion(depKey);
@@ -210,7 +210,7 @@ async function getTotalDataFromHosptitalInRegions(){
 
 async function getDailyDataFromHosptitalInRegions(){
     let regionIntermediaire = [];
-    await DataFromHospital.find().then(
+    await DataFromHospital.find().limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
@@ -259,7 +259,7 @@ function findRegion(dep){
     const provenceAlpesCoteDazur = ["04","05","06","13","83","84"]
     const guadeloupe = ["971"]
     const martinique = ["972"]
-    const guyane = ["973"] 
+    const guyane = ["973"]
     const laReunion = ["974"]
     const mayotte = ["976"]
     if(auvergneRhoneAlpes.includes(dep)){
@@ -292,7 +292,7 @@ function findRegion(dep){
     if(nouvelleAquitaine.includes(dep)){
         return "Nouvelle-Aquitaine";
     }
-    
+
     if(occitanie.includes(dep)){
         return "Occitanie";
     }
@@ -317,7 +317,7 @@ function findRegion(dep){
     if(mayotte.includes(dep)){
         return "Mayotte";
     }
-            
+
 }
 
 async function sumDataByDepartment(dep){
@@ -328,6 +328,40 @@ async function sumDataByDepartment(dep){
                 $group:
                     {
                         _id: dep.toString(),
+                        sum_rea: { $sum: '$rea' },
+                        sum_hosp: { $sum: '$hosp' },
+                        sum_rad: { $sum: '$rad' },
+                        sum_dc : { $sum: '$dc' }
+                    }
+            }
+        ])
+        .exec();
+}
+
+async function sumDataByDepartments(){
+    return await DataFromHospital
+        .aggregate([
+            {
+                $group:
+                    {
+                        _id: '$dep' ,
+                        sum_rea: { $sum: '$rea' },
+                        sum_hosp: { $sum: '$hosp' },
+                        sum_rad: { $sum: '$rad' },
+                        sum_dc : { $sum: '$dc' }
+                    }
+            }
+        ])
+        .exec();
+}
+
+async function sumData(){
+    return await DataFromHospital
+        .aggregate([
+            {
+                $group:
+                    {
+                        _id: '1000000000000' ,
                         sum_rea: { $sum: '$rea' },
                         sum_hosp: { $sum: '$hosp' },
                         sum_rad: { $sum: '$rad' },
@@ -349,5 +383,7 @@ module.exports = {
     getDailyDataFrance,
     getTotalDataFromHosptitalInRegions,
     getDailyDataFromHosptitalInRegions,
-    sumDataByDepartment
+    sumDataByDepartment,
+    sumDataByDepartments,
+    sumData
 };

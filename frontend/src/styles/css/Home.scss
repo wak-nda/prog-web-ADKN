@@ -615,8 +615,22 @@ span.num {
 
 .invarB {
 	padding-top: 45px;
-	background-color: #041524 !important;
+	background-color: #061e35;
 	color: black !important;
+}
+
+.regionpicker{
+	border-bottom: 3px solid #21424d;
+	padding-bottom: 40px;
+	padding-top: 100px;
+	border-top: 3px solid #21424d;
+	margin-top: 30px;
+}
+
+.mappicker{
+	padding-bottom: 40px;
+	//padding-top: 10px;
+	//margin-top: 30px;
 }
 
 //.bodyXX2 {

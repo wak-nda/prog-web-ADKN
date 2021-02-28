@@ -6,7 +6,7 @@ import '../styles/css/Home.scss';
 import '../styles/family.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-	faWindowClose, faEnvelopeOpenText, faSpinner, faChalkboardTeacher
+	faWindowClose, faEnvelopeOpenText, faSpinner, faChalkboardTeacher, faFan
 } from '@fortawesome/free-solid-svg-icons';
 import { useHistory } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
@@ -21,11 +21,13 @@ import {
 	fetchTotalDataHospFrance,
 	fetchDailyDataFrance,
 	fetchMockData,
-	fetchTotalDataHospRegions
+	fetchTotalDataHospRegions, fetchDailyDataHospRegion
 } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
 import { DisplayTable } from '../components/DisplayTable';
+import { ChartsRegion } from '../components/ChartsRegions';
+import { MapPicker } from '../components/MapPicker';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -90,7 +92,11 @@ export const Home = () => {
 	const [regionsHospTotalData, setRegionsHospTotalData] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
+	const [loading2, setLoading2] = useState(false);
+	const [typeSelected, setTypeSelected] = useState(['Reanimation']);
+
 	// const [hospDataComp, setHosp] = useState([]);
+	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
 
 	const fetchAPI = useCallback(async () => {
 		setLoading(true);
@@ -116,16 +122,25 @@ export const Home = () => {
 		}
 	}, []);
 
+	const handleDataTypeChange = useCallback(async (dataType) => {
+				setTypeSelected(dataType);
+	}, []);
+
 	const handleRegionChange = useCallback(async (region) => {
-		try {
-			// const responseDailyData = await fetchDailyData(region);
-			// setDailyData(responseDailyData);
-			setRegionSelected(region);
-		} catch (e) {
-			// eslint-disable-next-line no-console
-			console.log(e);
-		} finally {
-			setLoading(false);
+		if (region === 'Aucune') {
+			setRegionDailyDataHosp([]);
+		} else {
+			setLoading2(true);
+			try {
+				const responseDailyData = await fetchDailyDataHospRegion(region);
+				setRegionDailyDataHosp(responseDailyData);
+				setRegionSelected(region)
+			} catch (e) {
+				// eslint-disable-next-line no-console
+				console.log(e);
+			} finally {
+				setLoading2(false);
+			}
 		}
 	}, []);
 
@@ -137,7 +152,7 @@ export const Home = () => {
 		return (
 			<p className="centerP">
 				{loading && (
-					<FontAwesomeIcon icon={faSpinner} spin className="fa" />
+					<FontAwesomeIcon icon={faFan} spin className="fa" />
 				)}
 			</p>
 		);
@@ -302,10 +317,25 @@ export const Home = () => {
 					</Col>
 					<Col lg="8" className="paddZ">
 						<div className={`${theme === 'dark' ? 'bodyXXB' : 'bodyXX'}`}>
-							<Covid19Map />
-							<br />
+							<div className="mappicker">
+								<Covid19Map />
+								<br />
+								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
+							</div>
 
-							<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
+							<div className="regionpicker">
+								<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
+								<br />
+								<br />
+								{ (loading2 === false) ? null : (
+									<p className="centerP">
+										<FontAwesomeIcon icon={faSpinner} spin className="fa" />
+									</p>
+								)}
+								<ChartsRegion dailyData={regionDailyDataHosp.data && loading2 !== true ? regionDailyDataHosp.data.dailyDatas : []} />
+							</div>
+
+
 							<div className={`${theme === 'dark' ? 'invarB' : 'invar'}`}>
 								<h2 className={`${theme === 'dark' ? 'centerText white' : 'centerText'}`}>
 									~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />

@@ -2,35 +2,47 @@ import React, { useEffect, useState } from 'react';
 import { Loading } from '../components/Loading';
 import { MapComponent } from '../components/MapComponent';
 import { Legend } from '../components/Legend';
-import { LoadCountriesTask } from '../tasks/LoadCountriesTask';
+// import { LoadCountriesTask } from '../tasks/LoadCountriesTask';
 import { LoadDepartmentsTask } from '../tasks/LoadDepartmentsTask';
-import { legendItems } from '../entities/LegendItems'
+import { legendItems } from '../entities/LegendItems';
 
 export const Covid19Map = () => {
-	const [countries, setCountries] = useState([]);
+	// const [countries, setCountries] = useState([]);
 	const [departments, setDepartments] = useState([]);
 	const legendItemsReverse = [...legendItems].reverse();
 	// console.log(legendItemsReverse);
 
-	const load = () => {
+	/*const load = () => {
 		// console.log("load");
-		const loadCountriesTask = new LoadCountriesTask();
-		loadCountriesTask.load(setCountries);
+		// const loadCountriesTask = new LoadCountriesTask();
+		// loadCountriesTask.load(setCountries);
 		// console.log(countries);
 		const loadDepartmentsTask = new LoadDepartmentsTask();
-		loadDepartmentsTask.load(setDepartments);
-		console.log(departments);
-	};
+		await loadDepartmentsTask.load(setDepartments);
+		// console.log(departments);
+	};*/
 
-	useEffect(load, [countries, departments]);
+	useEffect(() => {
+		(async () => {
+			try {
+				const loadDepartmentsTask = new LoadDepartmentsTask();
+				await loadDepartmentsTask.load(setDepartments);
+			} catch (e) {
+				// eslint-disable-next-line no-console
+				console.log(e);
+			}
+		})();
+	}, [departments]);
+
+	//useEffect(load, [countries, departments]);
 
 	return (
 		<div>
-			{countries.length === 0 ? (
+			{departments.length === 0 ? (
 				<Loading />
 			) : (
 				<div>
-					<MapComponent countries={countries} departments={departments} />
+					<MapComponent departments={departments} />
 					<Legend legendItems={legendItemsReverse} />
 				</div>
 			)}
