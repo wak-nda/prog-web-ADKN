@@ -6,8 +6,8 @@ const url =  require('url');
 const DataFromHospital =  require('../sdk/DataFromHospital');
 
 
-const __filename = url.fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// const __filename = url.fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
 
 const loadFile = async (filePath) => {
     return new Promise(
@@ -15,7 +15,7 @@ const loadFile = async (filePath) => {
             const output = [];
             const headers = [];
 
-            const fileContent =  fs.readFileSync(path.resolve( __dirname,"../data/donnees-hospitalieres-covid19-2021-02-21-19h03.csv"));
+            const fileContent =  fs.readFileSync(path.resolve( __dirname,"../data/donnees-hospitalieres.csv"));
             const parser = parse({
                 delimiter: ';'
             })
@@ -29,8 +29,7 @@ const loadFile = async (filePath) => {
                     }
                     else{
                         output.push(record);
-                        const region = DataFromHospital.findRegion(record[0]);
-                        await  DataFromHospital.addHospDataRegion(record[0],region,record[1],record[2],record[3],record[4],record[5],record[6]);
+                        await  DataFromHospital.addDataFromHospital(record[0],record[1],record[2],record[3],record[4],record[5],record[6]);
                     }
                     index++;
                 }

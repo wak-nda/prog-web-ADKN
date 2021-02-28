@@ -63,3 +63,12 @@ export const fetchRegions = async () => {
 
 export const fetchDataType = async () => typeData;
 
+export const fetchCurrentTauxIncidenceFrance = () => {
+	const currentTauxIncidence = await baseInstance.get('api/getCurrentTauxIncidenceFrance');
+	return currentTauxIncidence;
+}
+
+export const fetchWeeklyTauxIncidenceFrance = () => {
+	const weeklyTauxIncidence = await baseInstance.get('api/getWeeklyTauxIncidenceFrance');
+	return weeklyTauxIncidence;
+}

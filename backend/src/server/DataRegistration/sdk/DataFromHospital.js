@@ -4,6 +4,7 @@
  */
 
 const DataFromHospital = require('../models/DataFromHospital');
+const HospitalDataRegion = require('../models/HospitalDataRegion');
 
 
 
@@ -14,6 +15,22 @@ const DataFromHospital = require('../models/DataFromHospital');
 async function addDataFromHospital(dep,sexe,jour,hosp,rea,rad,dc) {
     await DataFromHospital.create({
         "dep": dep,
+        "sexe": sexe,
+        "jour": jour,
+        "hosp": Number(hosp),
+        "rea": Number(rea),
+        "dc": Number(dc),
+        "rad": Number(rad)
+    }, function (err, user) {
+        if (err) console.log(err);
+    });
+    return true;
+}
+
+async function addHospDataRegion(dep,reg,sexe,jour,hosp,rea,rad,dc) {
+    await HospitalDataRegion.create({
+        "dep": dep,
+        "reg": reg,
         "sexe": sexe,
         "jour": jour,
         "hosp": Number(hosp),
@@ -374,6 +391,7 @@ async function sumData(){
 
 module.exports = {
     addDataFromHospital,
+    addHospDataRegion,
     getDataFromHospital,
     getDataFromHospitalBeforeDate,
     getDataFromHospitalInPeriod,
@@ -385,5 +403,6 @@ module.exports = {
     getDailyDataFromHosptitalInRegions,
     sumDataByDepartment,
     sumDataByDepartments,
-    sumData
+    sumData,
+    findRegion
 };

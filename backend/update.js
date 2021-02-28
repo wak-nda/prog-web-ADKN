@@ -7,7 +7,7 @@ const logger = require('koa-logger');
 const config = require("./config");
 const mongoose = require('mongoose');
 const loadFileCSV = require('./src/server/DataRegistration/sdk/loadCVSFile');
-const loadFileCSVTauxIncidence = require('./src/server/TauxDincidence/sdk/loadCSVTauxIncidence');
+// const loadFileCSVTauxIncidence = require('./src/server/TauxDincidence/sdk/loadCSVTauxIncidence');
 
 const app = new Koa();
 const PORT = 9000;
@@ -35,8 +35,8 @@ mongoose.set('debug', true);
 (async () => {
     try {
         console.log(`Updating`);
-        const results = await loadFileCSV(filePath);
-        const resultsTauxIncidence = await loadFileCSVTauxIncidence.loadFile(filePath);
+        const results = await loadFileCSV.loadFile(filePath);
+        // const resultsTauxIncidence = await loadFileCSVTauxIncidence.loadFile(filePath);
         //console.table(results)
     } catch (e) {
         console.error(e);
