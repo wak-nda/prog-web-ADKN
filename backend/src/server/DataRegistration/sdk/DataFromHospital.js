@@ -229,7 +229,7 @@ async function getTotalDataFromHosptitalInRegions(){
 
 async function getDailyDataFromHosptitalInRegions(){
     let regionIntermediaire = [];
-    await DataFromHospital.find().limit(10000).then(
+    await DataFromHospital.find().then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
