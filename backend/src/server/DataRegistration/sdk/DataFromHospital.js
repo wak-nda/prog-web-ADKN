@@ -26,6 +26,22 @@ async function addDataFromHospital(dep,sexe,jour,hosp,rea,rad,dc) {
     return true;
 }
 
+async function addHospDataRegion(dep,reg,sexe,jour,hosp,rea,rad,dc) {
+    await DataFromHospital.create({
+        "dep": dep,
+        "reg": reg,
+        "sexe": sexe,
+        "jour": jour,
+        "hosp": Number(hosp),
+        "rea": Number(rea),
+        "dc": Number(dc),
+        "rad": Number(rad)
+    }, function (err, user) {
+        if (err) console.log(err);
+    });
+    return true;
+}
+
 async function getDataFromHospital(){
     return DataFromHospital.find();
 }
@@ -37,23 +53,11 @@ async function getTotalData(){
     let numberOfRecovered = 0;
     let lastUpdateDate = "";
     let intermediaire = {};
-    await DataFromHospital.find().limit(10000).then(
+    await DataFromHospital.find({ sexe: '0', jour: '2021-02-21'}).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
-                if(value[idx]['sexe'] === '0'){
-                    if(value[idx]['dep'] in intermediaire){
-                        intermediaire[value[idx]['dep']]['rea'] = value[idx]['rea'];
-
-                        intermediaire[value[idx]['dep']]['hosp'] = value[idx]['hosp'];
-
-                        intermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
-
-                        intermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
-                    }else{
-                        intermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc']}
-                    }
-                }
+                intermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc']}
             }
         }
     );
@@ -162,24 +166,22 @@ async function getTotalDataFromHosptitalInRegions(){
     let depIntermediaire = {};
     let regionIntermediaire = [];
 
-    await DataFromHospital.find().limit(10000).then(
+    await DataFromHospital.find({sexe: '0'}).limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
-                if(value[idx]['sexe'] === '0'){
-                    if(value[idx]['dep'] in depIntermediaire){
-                        depIntermediaire[value[idx]['dep']]['rea'] += value[idx]['rea'];
+                if(value[idx]['dep'] in depIntermediaire){
+                    depIntermediaire[value[idx]['dep']]['rea'] += value[idx]['rea'];
 
-                        depIntermediaire[value[idx]['dep']]['hosp'] += value[idx]['hosp'];
+                    depIntermediaire[value[idx]['dep']]['hosp'] += value[idx]['hosp'];
 
-                        depIntermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
+                    depIntermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
 
-                        depIntermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
+                    depIntermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
 
-                        depIntermediaire[value[idx]['dep']]['jour'] = value[idx]['jour'];
-                    }else{
-                        depIntermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}
-                    }
+                    depIntermediaire[value[idx]['dep']]['jour'] = value[idx]['jour'];
+                }else{
+                    depIntermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}
                 }
             }
         }
@@ -210,31 +212,29 @@ async function getTotalDataFromHosptitalInRegions(){
 
 async function getDailyDataFromHosptitalInRegions(){
     let regionIntermediaire = [];
-    await DataFromHospital.find().then(
+    await DataFromHospital.find({sexe: '0'}).limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
-                if(value[idx]['sexe'] === '0'){
-                    let region = findRegion(value[idx]['dep']);
-                    let sizeRegion = regionIntermediaire.length
-                    if(sizeRegion === 0){
-                        regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
-                    }else {
-                        const foundReg = regionIntermediaire.find(reg => reg.regionName === region)
-                        if(foundReg){
-                            lastElementIdx = foundReg.dailyDatas.length - 1;
-                            lastElementDay = foundReg.dailyDatas[lastElementIdx]['jour']
-                            if(lastElementDay == value[idx]['jour']){
-                                foundReg.dailyDatas['rea'] += value[idx]['rea'];
-                                foundReg.dailyDatas['hosp'] += value[idx]['hosp'];
-                                foundReg.dailyDatas['dc'] += value[idx]['dc']
-                                foundReg.dailyDatas['rad'] += value[idx]['rad']
-                            }else{
-                                foundReg.dailyDatas.push({'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']})
-                            }
+                let region = findRegion(value[idx]['dep']);
+                let sizeRegion = regionIntermediaire.length
+                if(sizeRegion === 0){
+                    regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
+                }else {
+                    const foundReg = regionIntermediaire.find(reg => reg.regionName === region)
+                    if(foundReg){
+                        lastElementIdx = foundReg.dailyDatas.length - 1;
+                        lastElementDay = foundReg.dailyDatas[lastElementIdx]['jour']
+                        if(lastElementDay == value[idx]['jour']){
+                            foundReg.dailyDatas['rea'] += value[idx]['rea'];
+                            foundReg.dailyDatas['hosp'] += value[idx]['hosp'];
+                            foundReg.dailyDatas['dc'] += value[idx]['dc']
+                            foundReg.dailyDatas['rad'] += value[idx]['rad']
                         }else{
-                            regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
+                            foundReg.dailyDatas.push({'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']})
                         }
+                    }else{
+                        regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
                     }
                 }
             }
@@ -330,5 +330,7 @@ module.exports = {
     getFranceData,
     getDailyDataFrance,
     getTotalDataFromHosptitalInRegions,
-    getDailyDataFromHosptitalInRegions
+    getDailyDataFromHosptitalInRegions,
+    addHospDataRegion,
+    findRegion
 };
