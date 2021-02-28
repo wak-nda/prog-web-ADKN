@@ -56,7 +56,6 @@ async function getTotalDataFromHosptitalInRegions(){
 async function getDailyDataFromHosptitalInRegions(region){
     let regionIntermediaire = {'regionName': region, 'dailyDatas':[]};
     await HospitalDataRegion.find({"reg":region, "sexe":'0'}).exec().then((rep) => {
-        // console.log(rep)
         for(let prop in rep){
             let sizeDatas = regionIntermediaire.dailyDatas.length
             if(sizeDatas === 0){
@@ -64,7 +63,6 @@ async function getDailyDataFromHosptitalInRegions(region){
             }else {
                 lastElementIdx = regionIntermediaire.dailyDatas.length - 1;
                 lastElementDay = regionIntermediaire.dailyDatas[lastElementIdx]['jour']
-                // console.log(lastElementDay)
                 if(lastElementDay == rep[prop]['jour']){
                     regionIntermediaire.dailyDatas['rea'] += rep[prop]['rea'];
                     regionIntermediaire.dailyDatas['hosp'] += rep[prop]['hosp'];
@@ -75,38 +73,7 @@ async function getDailyDataFromHosptitalInRegions(region){
                 }
             }
         }
-    })
-       
-    // await DataFromHospital.find().limit(10000).then(
-    //     value => {
-    //         let size = value.length;
-    //         for(let idx = 0; idx < size; idx++){
-    //             if(value[idx]['sexe'] === '0'){
-    //                 let region = findRegion(value[idx]['dep']);
-    //                 let sizeRegion = regionIntermediaire.length
-    //                 if(sizeRegion === 0){
-    //                     regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
-    //                 }else {
-    //                     const foundReg = regionIntermediaire.find(reg => reg.regionName === region)
-    //                     if(foundReg){
-    //                         lastElementIdx = foundReg.dailyDatas.length - 1;
-    //                         lastElementDay = foundReg.dailyDatas[lastElementIdx]['jour']
-    //                         if(lastElementDay == value[idx]['jour']){
-    //                             foundReg.dailyDatas['rea'] += value[idx]['rea'];
-    //                             foundReg.dailyDatas['hosp'] += value[idx]['hosp'];
-    //                             foundReg.dailyDatas['dc'] += value[idx]['dc']
-    //                             foundReg.dailyDatas['rad'] += value[idx]['rad']
-    //                         }else{
-    //                             foundReg.dailyDatas.push({'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']})
-    //                         }
-    //                     }else{
-    //                         regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // );
+    });
     return regionIntermediaire
 }
 
