@@ -179,7 +179,9 @@ async function getTotalDataFromHosptitalInRegions(){
     let depIntermediaire = {};
     let regionIntermediaire = [];
 
-    await DataFromHospital.find().limit(10000).then(
+    // const val = await DataFromHospital.find({jour: '2021-02-21'});
+
+    await DataFromHospital.find().then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){

@@ -2,6 +2,7 @@ const Router = require('koa-router');
 const router = new Router();
 const f = require('../../utils/functions');
 const DataFromHospital = require('../sdk/DataFromHospital');
+const HopistalDataRegion = require('../sdk/HospitalDataRegionsdk');
 
 
 /**
@@ -51,9 +52,14 @@ router.get('/api/getDailyDataFrance', async (ctx) => {
 });
 
 router.get('/api/getHopsDataInRegions', async (ctx) => {
-    const dataRegions = await DataFromHospital.getTotalDataFromHosptitalInRegions();
+    const dataRegions = await HopistalDataRegion.getTotalDataFromHosptitalInRegions();
     f.success(ctx, dataRegions)
 });
+
+// router.get('/api/getHopsDataInRegionsSecond', async (ctx) => {
+//     const dataRegions = await HopistalDataRegion.getTotalDataFromHosptitalInRegions();
+//     f.success(ctx, dataRegions)
+// });
 
 router.get('/api/getHopsDataInRegions/:region', async (ctx) => {
     const dataRegions = await DataFromHospital.getDailyDataFromHosptitalInRegions();
