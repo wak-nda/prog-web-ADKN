@@ -135,8 +135,6 @@ $red: #F44336;
 }
 
 .marginE {
-	margin-left: 20px !important;
-	margin-right: 20px !important;
 }
 
 .dataIcon {
@@ -144,8 +142,10 @@ $red: #F44336;
 }
 
 .centerText{
-	margin-top: 20px;
+	//margin-top: 20px;
 	text-align: center;
+	margin-top: 600px !important;
+
 }
 
 //<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
