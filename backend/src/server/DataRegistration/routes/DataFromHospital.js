@@ -61,5 +61,16 @@ router.get('/api/getHopsDataInRegions/:region', async (ctx) => {
     f.success(ctx, dataRegion)
 });
 
+router.get('/api/getSumByDep/:dep', async (ctx) => {
+     await DataFromHospital.sumDataByDepartment(ctx.params.dep).then((rep) => {
+        console.log('oco');
+        console.log(rep);
+        f.success(ctx, rep);
+    })
+    .catch((err) => {
+        f.failure(ctx,err);
+    });
+});
+
 module.exports = router;
 
