@@ -16,7 +16,7 @@ export const MapComponent = (props) => {
 		fillOpacity: 1
 	};
 	const { departments, location, selection } = props;
-	const center = [location.latitude, location.longitude];
+	const center = (location !== undefined) ? [location.latitude, location.longitude] : [43.62076628265244, 7.056909980675045];
 	const rectangle = [
 		[51.49, -0.08],
 		[51.5, -0.06]
