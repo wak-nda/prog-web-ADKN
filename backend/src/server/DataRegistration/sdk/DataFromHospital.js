@@ -26,22 +26,6 @@ async function addDataFromHospital(dep,sexe,jour,hosp,rea,rad,dc) {
     return true;
 }
 
-async function addHospDataRegion(dep,reg,sexe,jour,hosp,rea,rad,dc) {
-    await DataFromHospital.create({
-        "dep": dep,
-        "reg": reg,
-        "sexe": sexe,
-        "jour": jour,
-        "hosp": Number(hosp),
-        "rea": Number(rea),
-        "dc": Number(dc),
-        "rad": Number(rad)
-    }, function (err, user) {
-        if (err) console.log(err);
-    });
-    return true;
-}
-
 async function getDataFromHospital(){
     return DataFromHospital.find();
 }
@@ -53,11 +37,23 @@ async function getTotalData(){
     let numberOfRecovered = 0;
     let lastUpdateDate = "";
     let intermediaire = {};
-    await DataFromHospital.find({ sexe: '0', jour: '2021-02-21'}).then(
+    await DataFromHospital.find().limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
-                intermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc']}
+                if(value[idx]['sexe'] === '0'){
+                    if(value[idx]['dep'] in intermediaire){
+                        intermediaire[value[idx]['dep']]['rea'] = value[idx]['rea'];
+
+                        intermediaire[value[idx]['dep']]['hosp'] = value[idx]['hosp'];
+
+                        intermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
+
+                        intermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
+                    }else{
+                        intermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc']}
+                    }
+                }
             }
         }
     );
@@ -166,27 +162,29 @@ async function getTotalDataFromHosptitalInRegions(){
     let depIntermediaire = {};
     let regionIntermediaire = [];
 
-    await DataFromHospital.find({sexe: '0'}).limit(10000).then(
+    await DataFromHospital.find().limit(10000).then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
-                if(value[idx]['dep'] in depIntermediaire){
-                    depIntermediaire[value[idx]['dep']]['rea'] += value[idx]['rea'];
+                if(value[idx]['sexe'] === '0'){
+                    if(value[idx]['dep'] in depIntermediaire){
+                        depIntermediaire[value[idx]['dep']]['rea'] += value[idx]['rea'];
 
-                    depIntermediaire[value[idx]['dep']]['hosp'] += value[idx]['hosp'];
+                        depIntermediaire[value[idx]['dep']]['hosp'] += value[idx]['hosp'];
 
-                    depIntermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
+                        depIntermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
 
-                    depIntermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
+                        depIntermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
 
-                    depIntermediaire[value[idx]['dep']]['jour'] = value[idx]['jour'];
-                }else{
-                    depIntermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}
+                        depIntermediaire[value[idx]['dep']]['jour'] = value[idx]['jour'];
+                    }else{
+                        depIntermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}
+                    }
                 }
             }
         }
     );
-    const depKeysData = Object.keys(depIntermediaire); 
+    const depKeysData = Object.keys(depIntermediaire);
     for (let idxKey = 0; idxKey < depKeysData.length; idxKey++){
         let depKey = depKeysData[idxKey]
         let region = findRegion(depKey);
@@ -216,25 +214,27 @@ async function getDailyDataFromHosptitalInRegions(){
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){
-                let region = findRegion(value[idx]['dep']);
-                let sizeRegion = regionIntermediaire.length
-                if(sizeRegion === 0){
-                    regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
-                }else {
-                    const foundReg = regionIntermediaire.find(reg => reg.regionName === region)
-                    if(foundReg){
-                        lastElementIdx = foundReg.dailyDatas.length - 1;
-                        lastElementDay = foundReg.dailyDatas[lastElementIdx]['jour']
-                        if(lastElementDay == value[idx]['jour']){
-                            foundReg.dailyDatas['rea'] += value[idx]['rea'];
-                            foundReg.dailyDatas['hosp'] += value[idx]['hosp'];
-                            foundReg.dailyDatas['dc'] += value[idx]['dc']
-                            foundReg.dailyDatas['rad'] += value[idx]['rad']
-                        }else{
-                            foundReg.dailyDatas.push({'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']})
-                        }
-                    }else{
+                if(value[idx]['sexe'] === '0'){
+                    let region = findRegion(value[idx]['dep']);
+                    let sizeRegion = regionIntermediaire.length
+                    if(sizeRegion === 0){
                         regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
+                    }else {
+                        const foundReg = regionIntermediaire.find(reg => reg.regionName === region)
+                        if(foundReg){
+                            lastElementIdx = foundReg.dailyDatas.length - 1;
+                            lastElementDay = foundReg.dailyDatas[lastElementIdx]['jour']
+                            if(lastElementDay == value[idx]['jour']){
+                                foundReg.dailyDatas['rea'] += value[idx]['rea'];
+                                foundReg.dailyDatas['hosp'] += value[idx]['hosp'];
+                                foundReg.dailyDatas['dc'] += value[idx]['dc']
+                                foundReg.dailyDatas['rad'] += value[idx]['rad']
+                            }else{
+                                foundReg.dailyDatas.push({'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']})
+                            }
+                        }else{
+                            regionIntermediaire.push({'regionName': region, 'dailyDatas': [{'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc'], 'jour': value[idx]['jour']}]})
+                        }
                     }
                 }
             }
@@ -259,7 +259,7 @@ function findRegion(dep){
     const provenceAlpesCoteDazur = ["04","05","06","13","83","84"]
     const guadeloupe = ["971"]
     const martinique = ["972"]
-    const guyane = ["973"] 
+    const guyane = ["973"]
     const laReunion = ["974"]
     const mayotte = ["976"]
     if(auvergneRhoneAlpes.includes(dep)){
@@ -292,7 +292,7 @@ function findRegion(dep){
     if(nouvelleAquitaine.includes(dep)){
         return "Nouvelle-Aquitaine";
     }
-    
+
     if(occitanie.includes(dep)){
         return "Occitanie";
     }
@@ -317,7 +317,7 @@ function findRegion(dep){
     if(mayotte.includes(dep)){
         return "Mayotte";
     }
-            
+
 }
 
 async function sumDataByDepartment(dep){
@@ -328,6 +328,23 @@ async function sumDataByDepartment(dep){
                 $group:
                     {
                         _id: dep.toString(),
+                        sum_rea: { $sum: '$rea' },
+                        sum_hosp: { $sum: '$hosp' },
+                        sum_rad: { $sum: '$rad' },
+                        sum_dc : { $sum: '$dc' }
+                    }
+            }
+        ])
+        .exec();
+}
+
+async function sumDataByDepartments(){
+    return await DataFromHospital
+        .aggregate([
+            {
+                $group:
+                    {
+                        _id: '$dep' ,
                         sum_rea: { $sum: '$rea' },
                         sum_hosp: { $sum: '$hosp' },
                         sum_rad: { $sum: '$rad' },
@@ -350,6 +367,5 @@ module.exports = {
     getTotalDataFromHosptitalInRegions,
     getDailyDataFromHosptitalInRegions,
     sumDataByDepartment,
-    addHospDataRegion,
-    findRegion
+    sumDataByDepartments
 };
