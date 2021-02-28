@@ -320,7 +320,7 @@ export const Home = () => {
 					<Col lg="8" className="paddZ">
 						<div className={`${theme === 'dark' ? 'bodyXXB' : 'bodyXX'}`}>
 							<div className="mappicker">
-								<Covid19Map />
+								<Covid19Map selection={typeSelected} />
 								<br />
 								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
 							</div>

@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import { Loading } from '../components/Loading';
 import { MapComponent } from '../components/MapComponent';
 import { Legend } from '../components/Legend';
-// import { LoadCountriesTask } from '../tasks/LoadCountriesTask';
 import { LoadDepartmentsTask } from '../tasks/LoadDepartmentsTask';
-import { legendItems } from '../entities/LegendItems';
+import { getLegendsItemsByType } from '../services/loadMapData';
 
-export const Covid19Map = () => {
+
+export const Covid19Map = ({ selection }) => {
 	// const [countries, setCountries] = useState([]);
 	const [departments, setDepartments] = useState([]);
-	const legendItemsReverse = [...legendItems].reverse();
+	const [legendItemsReverse, setlegendItemsReverse] = useState([]);
 	// console.log(legendItemsReverse);
 
 	/*const load = () => {
@@ -34,6 +35,19 @@ export const Covid19Map = () => {
 		})();
 	}, [departments]);
 
+	useEffect(() => {
+		(async () => {
+			try {
+				alert(selection);
+				const l = await getLegendsItemsByType(selection);
+				setlegendItemsReverse(l.reverse());
+			} catch (e) {
+				// eslint-disable-next-line no-console
+				console.log(e);
+			}
+		})();
+	}, [selection]);
+
 	//useEffect(load, [countries, departments]);
 
 	return (
@@ -48,4 +62,13 @@ export const Covid19Map = () => {
 			)}
 		</div>
 	);
+};
+
+
+Covid19Map.propTypes = {
+	selection: PropTypes.string
+};
+
+Covid19Map.defaultProps = {
+	selection: 'Hospitalisation'
 };
