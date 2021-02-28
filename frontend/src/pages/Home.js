@@ -313,7 +313,7 @@ export const Home = () => {
 								~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
 								Data vizualisation ~
 							</h2>
-							<ChartsRegion dailyData={regionDailyDataHosp.data ? regionDailyDataHosp.data : []} />
+							<ChartsRegion dailyData={regionDailyDataHosp.data ? regionDailyDataHosp.data.dailyDatas : []} />
 							<br />
 							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
 							<br />
