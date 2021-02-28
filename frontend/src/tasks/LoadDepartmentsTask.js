@@ -4,7 +4,7 @@ import { legendItems } from '../entities/LegendItems';
 
 export class LoadDepartmentsTask {
 	covidUrl =
-		'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv';
+		'https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7';
 
 	setState = null;
 
@@ -25,24 +25,26 @@ export class LoadDepartmentsTask {
 
 	#processCovidData = (covidDepartments) => {
 		for (let i = 0; i < this.mapDepartments.length; i += 1) {
-			const depFromCSV = this.mapDepartments[i];
-			//console.log(country);
+			const depFromJSON = this.mapDepartments[i];
 			const covidDepartment = covidDepartments.find(
-				(depFromData) => depFromCSV.properties.ISO_A3 === depFromData.ISO3
+				(depFromData) => depFromJSON.properties.dep === depFromData.dep
 			);
+			console.log(covidDepartment);
 
-			depFromCSV.properties.confirmed = 0;
-			depFromCSV.properties.CONFIRMEDTEXT = '0';
+			depFromJSON.properties.confirmed = 0;
+			depFromJSON.properties.CONFIRMEDTEXT = '0';
 
 			if (covidDepartment != null) {
 				const confirmed = Number(covidDepartment.Confirmed);
+				covidDepartments.filter((dep) => dep === depFromJSON.properties.dep).map((filteredDep) => (console.log(filteredDep)));
 				// console.log(confirmed);
-				depFromCSV.properties.confirmed = confirmed;
+				depFromJSON.properties.confirmed = confirmed;
 				// countryFromCSV.properties.CONFIRMEDTEXT = confirmed;
-				depFromCSV.properties.CONFIRMEDTEXT = this.#formatNumberWithCommas(
+				depFromJSON.properties.CONFIRMEDTEXT = this.#formatNumberWithCommas(
 					confirmed
 				);
 			}
+			break;
 			//this.#setDepartmentColor(depFromCSV);
 		}
 
