@@ -27,6 +27,7 @@ import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
 import { DisplayTable } from '../components/DisplayTable';
 import { ChartsRegion } from '../components/ChartsRegions';
+import { MapPicker } from '../components/MapPicker';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -92,6 +93,7 @@ export const Home = () => {
 	const [regionSelected, setRegionSelected] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [loading2, setLoading2] = useState(false);
+	const [typeSelected, setTypeSelected] = useState(['Reanimation']);
 
 	// const [hospDataComp, setHosp] = useState([]);
 	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
@@ -118,6 +120,10 @@ export const Home = () => {
 		} finally {
 			setLoading(false);
 		}
+	}, []);
+
+	const handleDataTypeChange = useCallback(async (dataType) => {
+				setTypeSelected(dataType);
 	}, []);
 
 	const handleRegionChange = useCallback(async (region) => {
@@ -312,8 +318,11 @@ export const Home = () => {
 					</Col>
 					<Col lg="8" className="paddZ">
 						<div className={`${theme === 'dark' ? 'bodyXXB' : 'bodyXX'}`}>
-							<Covid19Map />
-							<br />
+							<div className="mappicker">
+								<Covid19Map />
+								<br />
+								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
+							</div>
 
 							<div className="regionpicker">
 								<RegionPicker handleRegionChange={handleRegionChange} region={regionSelected} />
