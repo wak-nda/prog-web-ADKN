@@ -21,11 +21,13 @@ import {
 	fetchTotalDataHospFrance,
 	fetchDailyDataFrance,
 	fetchMockData,
-	fetchTotalDataHospRegions
+	fetchTotalDataHospRegions,
+	fetchDailyDataHospRegion
 } from '../services/FetchData';
 import { ChartsFrance } from '../components/ChartsFrance';
 import { RegionPicker } from '../components/RegionPicker';
 import { DisplayTable } from '../components/DisplayTable';
+import { ChartsRegion } from '../components/ChartsRegions';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
@@ -89,6 +91,7 @@ export const Home = () => {
 	const [data, setData] = useState([]);
 	const [regionsHospTotalData, setRegionsHospTotalData] = useState([]);
 	const [regionSelected, setRegionSelected] = useState([]);
+	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
 	const [loading, setLoading] = useState(false);
 	// const [hospDataComp, setHosp] = useState([]);
 
@@ -118,14 +121,13 @@ export const Home = () => {
 
 	const handleRegionChange = useCallback(async (region) => {
 		try {
-			// const responseDailyData = await fetchDailyData(region);
+			const responseDailyData = await fetchDailyDataHospRegion(region);
 			// setDailyData(responseDailyData);
-			setRegionSelected(region);
+			setRegionDailyDataHosp(responseDailyData);
+			setRegionSelected(region)
 		} catch (e) {
 			// eslint-disable-next-line no-console
 			console.log(e);
-		} finally {
-			setLoading(false);
 		}
 	}, []);
 
@@ -144,8 +146,8 @@ export const Home = () => {
 	}
 
 	// console.log(dailyDataFrance);
-	console.log(data)
-	console.log(regionsHospTotalData.data)
+	// console.log(data)
+	console.log(regionDailyDataHosp)
 
 	if (Auth.loggedIn()) {
 		history.push('/');
@@ -312,8 +314,9 @@ export const Home = () => {
 								~ <FontAwesomeIcon icon={faChalkboardTeacher} className="dataIcon" />
 								Data vizualisation ~
 							</h2>
+							<ChartsRegion dailyData={regionDailyDataHosp.data ? regionDailyDataHosp.data : []} />
 							<br />
-							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data : data} />
+							<DisplayTable dataR={regionsHospTotalData.data ? regionsHospTotalData.data.dailyDatas : data} />
 							<h1>TEST</h1>
 							<h1>TEST</h1>
 							<h1>TEST</h1>
