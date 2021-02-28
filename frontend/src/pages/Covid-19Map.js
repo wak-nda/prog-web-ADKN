@@ -38,7 +38,7 @@ export const Covid19Map = ({ selection }) => {
 				console.log(e);
 			}
 		})();
-	}, [departments, selection]);
+	}, [selection]);
 
 	// useEffect(() => {
 	// 	(async () => {
@@ -65,7 +65,7 @@ export const Covid19Map = ({ selection }) => {
 				<Loading />
 			) : (
 				<div>
-					<MapComponent departments={departments} location={location} />
+					<MapComponent departments={departments} location={location} selection={selection} />
 					<Legend legendItems={legendItemsReverse} />
 				</div>
 			)}
@@ -74,9 +74,9 @@ export const Covid19Map = ({ selection }) => {
 };
 
 Covid19Map.propTypes = {
-	selection: PropTypes.string
+	selection: PropTypes.string.isRequired
 };
 
-Covid19Map.defaultProps = {
-	selection: 'Hospitalisation'
-};
+// Covid19Map.defaultProps = {
+// 	selection: 'Hospitalisation'
+// };

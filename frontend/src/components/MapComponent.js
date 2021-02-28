@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
 	Map, GeoJSON, LayersControl, TileLayer, Marker, Popup, LayerGroup, Circle, FeatureGroup, Rectangle
 } from 'react-leaflet';
@@ -7,13 +7,15 @@ import '../styles/css/MapComponent.scss';
 import PropTypes from 'prop-types';
 
 export const MapComponent = (props) => {
+	const [key, setKey] = useState([]);
+
 	const mapStyle = {
 		fillColor: 'white',
 		weight: 1,
 		color: 'black',
 		fillOpacity: 1
 	};
-	const { departments, location } = props;
+	const { departments, location, selection } = props;
 	const center = [location.latitude, location.longitude];
 	const rectangle = [
 		[51.49, -0.08],
@@ -24,9 +26,15 @@ export const MapComponent = (props) => {
 		// console.log(country.properties.CONFIRMEDTEXT);
 		layer.options.fillColor = country.properties.color;
 		const name = country.properties.nom;
-		const text = country.properties.HOSP_TEXT;
+		const text = country.properties.TEXT;
 		layer.bindPopup(`${name} ${text}`);
 	};
+
+	useEffect(() => {
+		setKey(new Date().toLocaleString());
+		//console.log(location);
+	}, [selection]);
+
 
 	return (
 		<Map style={{ height: '85vh' }} zoom={6} center={center}>
@@ -83,6 +91,7 @@ export const MapComponent = (props) => {
 			<GeoJSON
 				style={mapStyle}
 				data={departments}
+				key={key}
 				onEachFeature={onEachCountry}
 			/>
 		</Map>
@@ -94,5 +103,6 @@ MapComponent.propTypes = {
 	location: PropTypes.arrayOf(PropTypes.shape({
 		longitude: PropTypes.number.isRequired,
 		latitude: PropTypes.number.isRequired
-	})).isRequired
+	})).isRequired,
+    selection: PropTypes.string.isRequired
 };

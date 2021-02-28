@@ -10,7 +10,7 @@ export class LoadDepartmentsTask {
 
 	setState = null;
 
-	mapDepartments = features;
+	mapDepartments = [...features];
 
 	load = async (setState, selection) => {
 		this.setState = setState;
@@ -31,7 +31,7 @@ export class LoadDepartmentsTask {
 			console.log(e);
 		}
 		// await this.#processCovidData();
-		setState(features);
+		setState(this.mapDepartments);
 	};
 
 	#processCovidData = async (covidDepartments, selection) => {
@@ -65,18 +65,31 @@ export class LoadDepartmentsTask {
 				depFromJSON.properties.rea = rea;
 				depFromJSON.properties.rad = rad;
 				depFromJSON.properties.dc = dc;
-				depFromJSON.properties.HOSP_TEXT = this.#formatNumberWithCommas(
-					hosp
-				);
-				depFromJSON.properties.REA_TEXT = this.#formatNumberWithCommas(
-					rea
-				);
-				depFromJSON.properties.RAD_TEXT = this.#formatNumberWithCommas(
-					rad
-				);
-				depFromJSON.properties.DC_TEXT = this.#formatNumberWithCommas(
-					dc
-				);
+
+				let d = selection;
+				if (!Array.isArray(d)) {
+					d = [d];
+				}
+				if (d[0] === 'Hospitalisation') {
+					depFromJSON.properties.TEXT = this.#formatNumberWithCommas(
+						hosp
+					);
+				}
+				if (d[0] === 'Decès') {
+					depFromJSON.properties.TEXT = this.#formatNumberWithCommas(
+						dc
+					);
+				}
+				if (d[0] === 'Reanimation') {
+					depFromJSON.properties.TEXT = this.#formatNumberWithCommas(
+						rea
+					);
+				}
+				if (d[0] === 'Retour à domicile') {
+					depFromJSON.properties.TEXT = this.#formatNumberWithCommas(
+						rad
+					);
+				}
 			}
 			/*const covidDepartment = covidDepartments.find(
 				// eslint-disable-next-line no-underscore-dangle
