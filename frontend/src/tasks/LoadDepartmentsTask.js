@@ -2,8 +2,7 @@
 import { features } from '../data/departments.json';
 // import { features } from '../data/regionsLayer.json';
 import { legendItems } from '../entities/LegendItems';
-// import { getDeptNumbers } from '../services/loadMapData';
-// import { getDeptNumbers } from '../services/loadMapData';
+import { getDeptNumbers } from '../services/loadMapData';
 
 export class LoadDepartmentsTask {
 	covidUrl =
@@ -23,15 +22,14 @@ export class LoadDepartmentsTask {
 				this.#processCovidData(result.data);
 			}
 		});*/
-		/*try {
-			// eslint-disable-next-line no-await-in-loop
+		try {
 			const response = await getDeptNumbers();
 			const depts = response.data;
 			console.log(depts);
-			this.#processCovidData(depts);
+			await this.#processCovidData(depts);
 		} catch (e) {
 			console.log(e);
-		}*/
+		}
 		// await this.#processCovidData();
 		setState(features);
 	};
@@ -43,7 +41,7 @@ export class LoadDepartmentsTask {
 
 			const covidDepartment = covidDepartments.find(
 				// eslint-disable-next-line no-underscore-dangle
-				(depFromData) => depFromJSON.properties.dep === depFromData._id
+				(depFromData) => depFromJSON.properties.code === depFromData._id
 			);
 
 			depFromJSON.properties.hosp = 0;
@@ -84,7 +82,7 @@ export class LoadDepartmentsTask {
 			);
 			console.log(covidDepartment);*/
 			//break;
-			//this.#setDepartmentColor(depFromCSV);
+			this.#setDepartmentColor(depFromJSON);
 		}
 
 		console.log(this.mapDepartments)
