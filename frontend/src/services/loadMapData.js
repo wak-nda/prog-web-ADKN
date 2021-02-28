@@ -18,7 +18,6 @@ export const getMaxHosp = async () => {
 	return maxHosp.data.maxHos;
 };
 
-
 export const getLegendsItemsByType = async (type) => {
 	if (!Array.isArray(type)) {
 		type = [type];

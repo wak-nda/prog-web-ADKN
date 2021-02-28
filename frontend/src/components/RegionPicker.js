@@ -16,6 +16,7 @@ export const RegionPicker = (({ handleRegionChange, region }) => {
 		};
 		fetchAPI();
 	}, []);
+
 	// console.log(fetchedRegions);
 	return (
 		<Form className="centerF">

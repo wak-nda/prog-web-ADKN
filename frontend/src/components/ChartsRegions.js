@@ -1,75 +1,136 @@
-import React from 'react';
-import { Line } from 'react-chartjs-2';
+// import React, { useEffect, useState } from 'react';
+import Chart from 'react-apexcharts';
 import PropTypes from 'prop-types';
-
+//import { useEffect } from 'react';
 import styles from '../styles/css/ChartsFrance.module.scss';
 
-export const ChartsRegion = ({ dailyData }) => {
-    const lineChartHospData = {
-        labels: dailyData.map(({ jour }) => jour),
-        datasets: [{
-            data: dailyData.map(({ hosp }) => hosp),
-            label: 'Hospitalisés',
-            borderColor: '#3333ff',
-            fill: true,
-            pointRadius: 0
-        }]
-    }
+export const ChartsRegion = ({ dailyData, periods }) => {
+	//const [result, setResult] = useState([]);
+	console.log(periods);
+	const lineChartHospData = {
+		series: [{
+			data: dailyData.map((data) => ({ x: data.jour, y: data.hosp })),
+			name: 'Hospitalisés'
+		}],
+		xaxis: {
+			type: 'datetime',
+			labels: {
+				show: true,
+				rotate: -45
+			}
+		},
+		options: {
+			annotations: {
+				xaxis: [{
+					x: '2020-03-29',
+					x2: '2020-04-13',
+					strokeDashArray: 0,
+					borderColor: '#775dd0',
+					label: {
+						borderColor: '#775DD0',
+						style: {
+							color: '#fff',
+							background: '#775DD0'
+						},
+						text: '1er Confinement (total)'
+					}
+				}]
+			}
+		}
+	};
+	const lineChartHosp = (
+		dailyData.length && periods.length
+			? (
+				<Chart options={lineChartHospData.options} series={lineChartHospData.series} type="line" width="1000" />
+			) : null
+	);
 
-    const lineChartHosp = (
-        dailyData.length
-        ? (
-            <Line data={lineChartHospData} />
-        ) : null
-    );
+	const lineChartDeathsData = {
+		series: [{
+			data: dailyData.map((data) => ({ x: data.jour, y: data.dc })),
+			name: 'Hospitalisés'
+		}],
+		xaxis: {
+			type: 'datetime',
+			labels: {
+				show: true,
+				rotate: -45
+			}
+		},
+		options: {
+			annotations: {
+				xaxis: [{
+					x: '2020-03-29',
+					x2: '2020-04-13',
+					strokeDashArray: 0,
+					borderColor: '#775dd0',
+					label: {
+						borderColor: '#775DD0',
+						style: {
+							color: '#fff',
+							background: '#775DD0'
+						},
+						text: '1er Confinement (total)'
+					}
+				}]
+			}
+		}
+	};
+	const lineChartDeaths = (
+		dailyData.length && periods.length
+			? (
+				<Chart options={lineChartDeathsData.options} series={lineChartDeathsData.series} type="line" width="1000" />
+			) : null
+	);
 
-    const lineChartDeathsData = {
-        labels: dailyData.map(({ jour }) => jour),
-        datasets: [{
-            data: dailyData.map(({ dc }) => dc),
-            label: 'Décédés',
-            borderColor: 'red',
-            backgroundColor: 'rgba(255,0,0,0.5)',
-            fill: true,
-            pointRadius: 0
-        }]
-    }
+	const lineChartRadData = {
+		series: [{
+			data: dailyData.map((data) => ({ x: data.jour, y: data.rad })),
+			name: 'Hospitalisés'
+		}],
+		xaxis: {
+			type: 'datetime',
+			labels: {
+				show: true,
+				rotate: -45
+			}
+		},
+		options: {
+			annotations: {
+				xaxis: [{
+					x: '2020-03-29',
+					x2: '2020-04-13',
+					strokeDashArray: 0,
+					borderColor: '#775dd0',
+					label: {
+						borderColor: '#775DD0',
+						style: {
+							color: '#fff',
+							background: '#775DD0'
+						},
+						text: '1er Confinement (total)'
+					}
+				}]
+			}
+		}
+	};
+	const lineChartRad = (
+		dailyData.length && periods.length
+			? (
+				<Chart options={lineChartRadData.options} series={lineChartRadData.series} type="line" width="1000" />
+			) : null
+	);
 
-    const lineChartDeaths = (
-        dailyData.length
-        ? (
-            <Line data={lineChartDeathsData} />
-        ) : null
-    );
-
-    const lineChartRadData = {
-        labels: dailyData.map(({ jour }) => jour),
-        datasets: [{
-            data: dailyData.map(({ rad }) => rad),
-            label: 'Retour à domicile',
-            borderColor: 'green',
-            backgroundColor: 'rgba(0,255,0,0.5)',
-            fill: true,
-            pointRadius: 0
-        }]
-    }
-
-    const lineChartRad = (
-        dailyData.length
-        ? (
-            <Line data={lineChartRadData} />
-        ) : null
-    );
-
-    return (
-        <div className={styles.container}>
-            {lineChartHosp}
-            {lineChartRad}
-            {lineChartDeaths}
-        </div>
-    )
-}
+	return (
+		<div className={styles.container}>
+			{lineChartHosp}
+			{lineChartDeaths}
+			{lineChartRad}
+		</div>
+	);
+};
 
 ChartsRegion.propTypes = {
-	dailyData: PropTypes.shape([]).isRequired
+	dailyData: PropTypes.shape([]).isRequired,
+	periods: PropTypes.instanceOf(Array).isRequired
 };
