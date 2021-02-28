@@ -20,6 +20,10 @@ export const getMaxHosp = async () => {
 
 
 export const getLegendsItemsByType = async (type) => {
+	if (!Array.isArray(type)) {
+		type = [type];
+	}
+
 	let val = 0;
 	const v = await baseInstance.get('api/getMaxSumByDeps');
 	console.log('message ');

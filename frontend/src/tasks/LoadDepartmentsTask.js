@@ -92,6 +92,9 @@ export class LoadDepartmentsTask {
 	};
 
 	#setDepartmentColor = (dep, lg, selection) => {
+		if (!Array.isArray(selection)) {
+			selection = [selection];
+		}
 		let legend;
 		if (selection[0] === 'Hospitalisation') {
 			legend = lg.find((item) => item.isFor(dep.properties.hosp));
