@@ -71,7 +71,16 @@ router.get('/api/getSumByDep/:dep', async (ctx) => {
 });
 
 router.get('/api/getSumByDeps', async (ctx) => {
-    await DataFromHospital.sumDataByDepartments(ctx.params.dep).then((rep) => {
+    await DataFromHospital.sumDataByDepartments().then((rep) => {
+        f.success(ctx, rep);
+    })
+        .catch((err) => {
+            f.failure(ctx,err);
+        });
+});
+
+router.get('/api/getSum', async (ctx) => {
+    await DataFromHospital.sumData().then((rep) => {
         f.success(ctx, rep);
     })
         .catch((err) => {

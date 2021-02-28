@@ -355,6 +355,23 @@ async function sumDataByDepartments(){
         .exec();
 }
 
+async function sumData(){
+    return await DataFromHospital
+        .aggregate([
+            {
+                $group:
+                    {
+                        _id: '1000000000000' ,
+                        sum_rea: { $sum: '$rea' },
+                        sum_hosp: { $sum: '$hosp' },
+                        sum_rad: { $sum: '$rad' },
+                        sum_dc : { $sum: '$dc' }
+                    }
+            }
+        ])
+        .exec();
+}
+
 module.exports = {
     addDataFromHospital,
     getDataFromHospital,
@@ -367,5 +384,6 @@ module.exports = {
     getTotalDataFromHosptitalInRegions,
     getDailyDataFromHosptitalInRegions,
     sumDataByDepartment,
-    sumDataByDepartments
+    sumDataByDepartments,
+    sumData
 };
