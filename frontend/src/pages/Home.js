@@ -30,12 +30,36 @@ import { RegionPicker } from '../components/RegionPicker';
 import { DisplayTable } from '../components/DisplayTable';
 import { ChartsRegion } from '../components/ChartsRegions';
 import { MapPicker } from '../components/MapPicker';
+import { getPeriods } from '../services/getPeriods';
 import { ChartTauxIncidenceFrance } from '../components/ChartTauxIncidence';
 
 export const Home = () => {
 	const Auth = new AuthHelperMethods();
 	const history = useHistory();
 	const { theme, changeThemeContext } = useContext(ThemeContext);
+
+	// verifier le thème actuel de windows
+	// const defaultTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+	// if (window.matchMedia && (defaultTheme !== localStorage.getItem('dark'))) {
+	// 	// dark mode
+	// 	confirmAlert({
+	// 		title: `Basculer en mode ${defaultTheme}`,
+	// 		message: 'Confirmer ?',
+	// 		buttons: [
+	// 			{
+	// 				label: 'Yes',
+	// 				onClick: () => {
+	// 					localStorage.setItem('dark', defaultTheme);
+	// 					changeThemeContext(defaultTheme);
+	// 				}
+	// 			},
+	// 			{
+	// 				label: 'No',
+	// 				onClick: () => {}
+	// 			}
+	// 		]
+	// 	});
+	// }
 
 	const modeMe = (e) => {
 		const newColorScheme = e.matches ? 'dark' : 'light';
@@ -79,7 +103,7 @@ export const Home = () => {
 
 	// const [hospDataComp, setHosp] = useState([]);
 	const [regionDailyDataHosp, setRegionDailyDataHosp] = useState([]);
-
+	const [allPeriods, setAllPeriods] = useState([]);
 	const fetchAPI = useCallback(async () => {
 		setLoading(true);
 		try {
@@ -120,8 +144,10 @@ export const Home = () => {
 			setLoading2(true);
 			try {
 				const responseDailyData = await fetchDailyDataHospRegion(region);
+				const periodsValue = await getPeriods();
 				setRegionDailyDataHosp(responseDailyData);
 				setRegionSelected(region);
+				setAllPeriods(periodsValue);
 			} catch (e) {
 				// eslint-disable-next-line no-console
 				console.log(e);
@@ -318,6 +344,7 @@ export const Home = () => {
 								<br />
 								<Covid19Map selection={typeSelected} />
 								<br />
+								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
 							</div>
 
 							<div className="regionpicker">
@@ -329,7 +356,7 @@ export const Home = () => {
 										<FontAwesomeIcon icon={faSpinner} spin className="fa" />
 									</p>
 								)}
-								<ChartsRegion dailyData={regionDailyDataHosp.data && loading2 !== true ? regionDailyDataHosp.data.dailyDatas : []} />
+								<ChartsRegion periods={allPeriods.data} dailyData={regionDailyDataHosp.data && loading2 !== true ? regionDailyDataHosp.data.dailyDatas : []} />
 							</div>
 
 							<div className={`${theme === 'dark' ? 'invarB' : 'invar'}`}>
