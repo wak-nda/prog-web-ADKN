@@ -53,33 +53,29 @@ async function getTotalData(){
     let numberOfDeaths = 0;
     let numberOfRecovered = 0;
     let lastUpdateDate = "";
-    let intermediaire = {};
-    await DataFromHospital.find().limit(10000).then(
-        value => {
-            let size = value.length;
-            for(let idx = 0; idx < size; idx++){
-                if(value[idx]['sexe'] === '0'){
-                    if(value[idx]['dep'] in intermediaire){
-                        intermediaire[value[idx]['dep']]['rea'] = value[idx]['rea'];
 
-                        intermediaire[value[idx]['dep']]['hosp'] = value[idx]['hosp'];
-
-                        intermediaire[value[idx]['dep']]['rad'] = value[idx]['rad'];
-
-                        intermediaire[value[idx]['dep']]['dc'] = value[idx]['dc'];
-                    }else{
-                        intermediaire[value[idx]['dep']] = {'rea': value[idx]['rea'], 'hosp': value[idx]['hosp'], 'rad': value[idx]['rad'], 'dc': value[idx]['dc']}
-                    }
-                }
+    await HospitalDataRegion.aggregate([
+        {"$match": {"sexe": '0', 'jour':'2021-02-21'}},
+        {
+            "$group": {
+                "_id": '$jour',
+                "sumHosp" : {$sum : '$hosp'},
+                "sumRea": {$sum: '$rea'}, 
+                "sumDc": {$sum: '$dc'},
+                "sumRad": {$sum: '$rad'}
             }
         }
-    );
-    for (var prop in intermediaire){
-        numberOfDeaths += intermediaire[prop]['dc'];
-        numberOfRecovered += intermediaire[prop]['rad'];
-        numberOfHospitalized += intermediaire[prop]['hosp'];
-        numberOfPeopleInRea += intermediaire[prop]['rea'];
-    }
+    ])
+    .exec()
+    .then((rep) => {
+        numberOfDeaths = rep[0].sumDc,
+        numberOfHospitalized = rep[0].sumHosp,
+        numberOfPeopleInRea = rep[0].sumRea,
+        numberOfRecovered = rep[0].sumRad
+    })
+    .catch((err) => {
+        throw err;
+    });
     return {'numberOfHospitalized' : numberOfHospitalized, 'numberOfPeopleInRea': numberOfPeopleInRea, 'numberOfDeaths': numberOfDeaths, 'numberOfRecovered': numberOfRecovered, 'lastUpdateDate': lastUpdateDate};
 }
 
@@ -179,8 +175,6 @@ async function getTotalDataFromHosptitalInRegions(){
     let depIntermediaire = {};
     let regionIntermediaire = [];
 
-    // const val = await DataFromHospital.find({jour: '2021-02-21'});
-
     await DataFromHospital.find().then(
         value => {
             let size = value.length;
@@ -229,7 +223,7 @@ async function getTotalDataFromHosptitalInRegions(){
 
 async function getDailyDataFromHosptitalInRegions(){
     let regionIntermediaire = [];
-    await DataFromHospital.find().limit(10000).then(
+    await DataFromHospital.find().then(
         value => {
             let size = value.length;
             for(let idx = 0; idx < size; idx++){

@@ -61,10 +61,15 @@ router.get('/api/getHopsDataInRegions', async (ctx) => {
 //     f.success(ctx, dataRegions)
 // });
 
+// router.get('/api/getHopsDataInRegions/:region', async (ctx) => {
+//     const dataRegions = await DataFromHospital.getDailyDataFromHosptitalInRegions();
+//     const dataRegion = dataRegions.find(reg => reg.regionName === ctx.params.region)
+//     f.success(ctx, dataRegion)
+// });
+
 router.get('/api/getHopsDataInRegions/:region', async (ctx) => {
-    const dataRegions = await DataFromHospital.getDailyDataFromHosptitalInRegions();
-    const dataRegion = dataRegions.find(reg => reg.regionName === ctx.params.region)
-    f.success(ctx, dataRegion)
+    const dataRegions = await HopistalDataRegion.getDailyDataFromHosptitalInRegions(ctx.params.region);
+    f.success(ctx, dataRegions)
 });
 
 router.get('/api/getSumByDep/:dep', async (ctx) => {
