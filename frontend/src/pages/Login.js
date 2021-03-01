@@ -7,8 +7,9 @@ import { faUserSecret, faUser, faKey } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import AuthHelperMethods from '../services/AuthHelperMethods';
+// import AuthHelperMethods from '../services/AuthHelperMethods';
 import { login } from '../services/Login';
+import AuthHelperMethods from '../services/AuthHelperMethods';
 
 export const Login = () => {
 	const [email, setEmail] = useState('');

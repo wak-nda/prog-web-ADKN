@@ -344,7 +344,6 @@ export const Home = () => {
 								<br />
 								<Covid19Map selection={typeSelected} />
 								<br />
-								<MapPicker handleDataTypeChange={handleDataTypeChange} dataType={typeSelected} />
 							</div>
 
 							<div className="regionpicker">
